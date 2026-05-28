@@ -3,19 +3,13 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="google-site-verification" content="k8S3mn2vvZS9HIfyJ6pAamCOArNZoVwovXcb573A2Kk"/>
-<meta name="viewport" content="width=1280, initial-scale=0.25"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>PDFPro | Professional PDF Tools</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --red:#E02020;--red-dark:#B31515;--red-light:#FF4444;
-  --navy:#0D1B2A;--navy-light:#243852;
-  --cream:#F8F5F0;--cream-dark:#EDE9E2;
-  --text:#0D1B2A;--text-muted:#5A6A7A;
-  --white:#FFFFFF;--border:#D8D0C4;
-}
+:root{--red:#E02020;--red-dark:#B31515;--red-light:#FF4444;--navy:#0D1B2A;--navy-light:#243852;--cream:#F8F5F0;--cream-dark:#EDE9E2;--text:#0D1B2A;--text-muted:#5A6A7A;--white:#FFFFFF;--border:#D8D0C4;}
 html{scroll-behavior:smooth}
 body{background:var(--cream);color:var(--text);overflow-x:hidden}
 body.rtl{direction:rtl;font-family:'Heebo',sans-serif}
@@ -136,17 +130,14 @@ footer{background:var(--navy);padding:3rem;border-top:2px solid rgba(255,255,255
 @keyframes spin{to{transform:rotate(360deg)}}
 .spinner{width:20px;height:20px;border:2px solid rgba(255,255,255,0.3);border-top-color:white;border-radius:50%;animation:spin 0.8s linear infinite;display:inline-block;vertical-align:middle;margin-left:0.5rem}
 
-/* ══ MOBILE ═══════════════════════════════════════════════════════════ */
+/* ══ MOBILE ═══════════════════════════════════════════════════ */
 @media(max-width:768px){
-  /* Nav */
   nav{padding:0 1rem;height:56px}
   .nav-links{display:none}
   .logo{font-size:1.3rem}
   .lang-btn{padding:0.25rem 0.5rem;font-size:0.72rem}
   .nav-cta{padding:0.45rem 1rem;font-size:0.82rem}
   #api-status{display:none}
-
-  /* Hero */
   .hero{padding:2rem 1rem;min-height:auto}
   .hero-inner{grid-template-columns:1fr;gap:1.5rem}
   .hero h1{font-size:2rem}
@@ -154,85 +145,38 @@ footer{background:var(--navy);padding:3rem;border-top:2px solid rgba(255,255,255
   .stat-num{font-size:1.4rem}
   .upload-card{padding:1.2rem}
   .upload-zone{padding:1.5rem 1rem}
-
-  /* Tools section */
   .section{padding:2rem 1rem}
   .section-title{font-size:1.6rem}
   .section-header{margin-bottom:1.5rem}
-
-  /* Tabs - horizontal scroll */
-  .tools-tabs{
-    flex-wrap:nowrap;overflow-x:auto;
-    justify-content:flex-start;
-    padding-bottom:0.5rem;
-    -webkit-overflow-scrolling:touch;
-    scrollbar-width:none;
-  }
+  .tools-tabs{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;padding-bottom:0.5rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
   .tools-tabs::-webkit-scrollbar{display:none}
   .tab-btn{flex-shrink:0;padding:0.4rem 0.9rem;font-size:0.82rem}
-
-  /* Tool cards — single column like PDFLeader */
-  .tools-grid{
-    grid-template-columns:1fr;
-    gap:0.6rem;
-    background:var(--white);
-    border-radius:16px;
-    border:1px solid var(--border);
-    overflow:hidden;
-    padding:0;
-  }
-  .tool-card{
-    display:flex;
-    align-items:center;
-    gap:1rem;
-    padding:1rem 1.2rem;
-    border:none;
-    border-bottom:1px solid var(--border);
-    border-radius:0;
-    transform:none !important;
-    box-shadow:none !important;
-  }
+  .tools-grid{grid-template-columns:1fr;gap:0;background:var(--white);border-radius:16px;border:1px solid var(--border);overflow:hidden;padding:0}
+  .tool-card{display:flex;align-items:center;gap:1rem;padding:0.9rem 1.2rem;border:none;border-bottom:1px solid var(--border);border-radius:0;transform:none !important;box-shadow:none !important}
   .tool-card:last-child{border-bottom:none}
-  .tool-card:hover{background:#fafafa;border-color:var(--border)}
-  .tool-icon{width:40px;height:40px;margin-bottom:0;flex-shrink:0}
-  .tool-icon svg{width:20px;height:20px}
-  .tool-card-body{flex:1;min-width:0}
-  .tool-badges{margin-bottom:0.25rem}
-  .tool-card h3{font-size:0.9rem;margin-bottom:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .tool-card p{display:block;font-size:0.75rem;margin-top:0.1rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .tool-card-arrow{color:var(--text-muted);font-size:1rem;flex-shrink:0}
-
-  /* Features */
+  .tool-card:active{background:#fafafa}
+  .tool-icon{width:38px;height:38px;margin-bottom:0;flex-shrink:0}
+  .tool-icon svg{width:19px;height:19px}
+  .tool-card-body{flex:1;min-width:0;text-align:left}
+  .rtl .tool-card-body{text-align:right}
+  .tool-badges{margin-bottom:0.2rem}
+  .tool-card h3{font-size:0.88rem;margin-bottom:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .tool-card p{display:block;font-size:0.73rem;margin-top:0.05rem;color:var(--text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .tool-card-arrow{color:#d1d5db;font-size:1rem;flex-shrink:0}
   .features-section{padding:3rem 1rem}
   .features-grid{grid-template-columns:1fr;gap:1rem}
-
-  /* Footer */
   footer{padding:2rem 1rem}
   .footer-inner{grid-template-columns:1fr;gap:1.5rem}
   .footer-bottom{flex-direction:column;align-items:center;text-align:center}
-
-  /* Modal — bottom sheet */
+  /* Modal bottom sheet */
   .modal-overlay{align-items:flex-end}
-  .modal{
-    width:100%;max-width:100%;max-height:92vh;
-    border-radius:20px 20px 0 0;
-    padding:0.5rem 1.2rem 2rem;
-    transform:translateY(100%);
-    transition:transform 0.3s cubic-bezier(0.4,0,0.2,1);
-  }
+  .modal{width:100%;max-width:100%;max-height:92vh;border-radius:20px 20px 0 0;padding:0.5rem 1.2rem 2rem;transform:translateY(100%);transition:transform 0.3s cubic-bezier(0.4,0,0.2,1)}
   .modal-overlay.open .modal{transform:translateY(0)}
-  .modal::before{
-    content:'';display:block;width:40px;height:4px;
-    background:var(--border);border-radius:2px;
-    margin:0.8rem auto 1.2rem;
-  }
+  .modal::before{content:'';display:block;width:40px;height:4px;background:var(--border);border-radius:2px;margin:0.8rem auto 1.2rem}
   .ltr .modal-close{right:1.2rem}.rtl .modal-close{left:1.2rem}
   .modal h2{font-size:1.2rem;padding-right:2rem}
   .rtl .modal h2{padding-right:0;padding-left:2rem}
-  .modal-dropzone{
-    padding:2.5rem 1rem;border-radius:14px;
-    background:#f8f9ff;border:2px dashed #c7d2fe;
-  }
+  .modal-dropzone{padding:2.5rem 1rem;border-radius:14px;background:#f8f9ff;border:2px dashed #c7d2fe}
   .modal-dropzone svg{width:48px;height:48px;display:block;margin:0 auto 0.8rem}
   .modal-dropzone p{font-size:1rem;font-weight:600;color:var(--text)}
   .process-btn{padding:1rem;font-size:1.05rem;border-radius:12px;margin-top:0.5rem}
@@ -240,9 +184,7 @@ footer{background:var(--navy);padding:3rem;border-top:2px solid rgba(255,255,255
   .modal-options label{font-size:0.9rem}
   .modal-options select,.modal-options input{padding:0.75rem 1rem;font-size:0.95rem;border-radius:10px}
 }
-@media(max-width:380px){
-  .hero h1{font-size:1.7rem}
-}
+@media(max-width:380px){.hero h1{font-size:1.7rem}}
 </style>
 </head>
 <body class="ltr">
@@ -251,7 +193,7 @@ footer{background:var(--navy);padding:3rem;border-top:2px solid rgba(255,255,255
   <ul class="nav-links">
     <li><a href="#tools" data-t="nav_tools">Tools</a></li>
     <li><a href="#features" data-t="nav_features">Features</a></li>
-    <li><a href="#" data-t="nav_pricing">Pricing</a></li>
+    <li><a href="/pricing/" data-t="nav_pricing">Pricing</a></li>
   </ul>
   <div class="nav-right">
     <span class="api-status offline" id="api-status"><span class="api-dot"></span><span id="api-status-text">Connecting...</span></span>
@@ -262,7 +204,6 @@ footer{background:var(--navy);padding:3rem;border-top:2px solid rgba(255,255,255
     <button class="nav-cta" onclick="document.getElementById('tools').scrollIntoView({behavior:'smooth'})" data-t="nav_cta">Get Started</button>
   </div>
 </nav>
-
 <section class="hero">
   <div class="hero-inner">
     <div>
@@ -286,13 +227,10 @@ footer{background:var(--navy);padding:3rem;border-top:2px solid rgba(255,255,255
         <select id="hero-tool-select"><option value="" data-t="select_action">— Select an action —</option></select>
       </div>
       <button class="upload-btn" onclick="startHeroProcess()" data-t="upload_btn">Select file &amp; action ➜</button>
-      <div class="upload-formats">
-        <span class="fmt-badge">PDF</span><span class="fmt-badge">WORD</span><span class="fmt-badge">EXCEL</span><span class="fmt-badge">PPT</span><span class="fmt-badge">JPG</span>
-      </div>
+      <div class="upload-formats"><span class="fmt-badge">PDF</span><span class="fmt-badge">WORD</span><span class="fmt-badge">EXCEL</span><span class="fmt-badge">PPT</span><span class="fmt-badge">JPG</span></div>
     </div>
   </div>
 </section>
-
 <section class="section" id="tools">
   <div class="section-header">
     <div class="section-label" data-t="tools_label">All tools in one place</div>
@@ -302,7 +240,6 @@ footer{background:var(--navy);padding:3rem;border-top:2px solid rgba(255,255,255
   <div class="tools-tabs" id="tools-tabs"></div>
   <div class="tools-grid" id="tools-grid"></div>
 </section>
-
 <section class="features-section" id="features">
   <div class="features-inner">
     <div class="section-header">
@@ -313,21 +250,32 @@ footer{background:var(--navy);padding:3rem;border-top:2px solid rgba(255,255,255
       <div class="feature-card"><div class="feature-num">01</div><h3 data-t="feat1_h">Works in your browser</h3><p data-t="feat1_p">No software to install. Work from any device, anywhere.</p></div>
       <div class="feature-card"><div class="feature-num">02</div><h3 data-t="feat2_h">Complete privacy</h3><p data-t="feat2_p">Files are automatically deleted from our servers after one hour.</p></div>
       <div class="feature-card"><div class="feature-num">03</div><h3 data-t="feat3_h">Maximum quality</h3><p data-t="feat3_p">Our conversion engines preserve formatting and fonts exactly as they are.</p></div>
-      <div class="feature-card"><div class="feature-num">04</div><h3 data-t="feat4_h">Hebrew &amp; RTL support</h3><p data-t="feat4_p">Hebrew and Arabic documents handled with maximum precision and automatic RTL detection.</p></div>
+      <div class="feature-card"><div class="feature-num">04</div><h3 data-t="feat4_h">Hebrew &amp; RTL support</h3><p data-t="feat4_p">Hebrew and Arabic documents handled with maximum precision and RTL detection.</p></div>
     </div>
   </div>
 </section>
-
 <footer>
   <div class="footer-inner">
     <div class="footer-brand"><a href="/" class="logo">PDF<span>Pro</span></a><p data-t="footer_desc">The leading platform for PDF processing — fast, secure and professional.</p></div>
-    <div class="footer-col"><h4 data-t="footer_tools">Tools</h4><ul><li><a href="#" data-t="f_convert">Convert PDF</a></li><li><a href="#" data-t="f_edit">Edit PDF</a></li><li><a href="#" data-t="f_merge">Merge PDF</a></li><li><a href="#">OCR</a></li></ul></div>
-    <div class="footer-col"><h4 data-t="footer_company">Company</h4><ul><li><a href="#" data-t="f_about">About</a></li><li><a href="#">Blog</a></li><li><a href="#" data-t="f_contact">Contact</a></li></ul></div>
-    <div class="footer-col"><h4 data-t="footer_support">Support</h4><ul><li><a href="#" data-t="f_help">Help Center</a></li><li><a href="#" data-t="f_privacy">Privacy Policy</a></li><li><a href="#" data-t="f_terms">Terms of Use</a></li></ul></div>
+    <div class="footer-col"><h4 data-t="footer_tools">Tools</h4><ul>
+      <li><a href="#" data-t="f_convert">Convert PDF</a></li>
+      <li><a href="#" data-t="f_edit">Edit PDF</a></li>
+      <li><a href="#" data-t="f_merge">Merge PDF</a></li>
+      <li><a href="#" onclick="openModal('ocr');return false">OCR</a></li>
+    </ul></div>
+    <div class="footer-col"><h4 data-t="footer_company">Company</h4><ul>
+      <li><a href="/about/" data-t="f_about">About</a></li>
+      <li><a href="/blog/" data-t="f_blog">Blog</a></li>
+      <li><a href="/contact/" data-t="f_contact">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h4 data-t="footer_support">Support</h4><ul>
+      <li><a href="/help/" data-t="f_help">Help Center</a></li>
+      <li><a href="/privacy/" data-t="f_privacy">Privacy Policy</a></li>
+      <li><a href="/terms/" data-t="f_terms">Terms of Use</a></li>
+    </ul></div>
   </div>
   <div class="footer-bottom"><span data-t="footer_copy">© 2026 PDFPro. All rights reserved.</span><span>🌍 Made with ❤️</span></div>
 </footer>
-
 <div class="modal-overlay" id="modal-overlay" onclick="closeModalOnBg(event)">
   <div class="modal">
     <button class="modal-close" onclick="closeModal()">✕</button>
@@ -354,9 +302,9 @@ footer{background:var(--navy);padding:3rem;border-top:2px solid rgba(255,255,255
   </div>
 </div>
 <script>
-const API = 'https://pdfproweb.onrender.com';
+const API='https://pdfproweb.onrender.com';
 
-const FORMAT_BADGES = {
+const FORMAT_BADGES={
   'pdf-to-word':   [['PDF','#E02020'],['WORD','#2B5797']],
   'pdf-to-excel':  [['PDF','#E02020'],['XLS','#217346']],
   'pdf-to-pptx':   [['PDF','#E02020'],['PPT','#D24726']],
@@ -364,7 +312,7 @@ const FORMAT_BADGES = {
   'office-to-pdf': [['DOC','#2B5797'],['PDF','#E02020']],
   'images-to-pdf': [['IMG','#7B4FD4'],['PDF','#E02020']],
   'merge':         [['PDF','#E02020'],['+PDF','#1A8A72']],
-  'split':         [['PDF','#E02020'],['2\u00D7','#D47E10']],
+  'split':         [['PDF','#E02020'],['2x','#D47E10']],
   'compress':      [['PDF','#E02020'],['ZIP','#1A8A72']],
   'rotate':        [['PDF','#E02020'],['\u21BB','#3B6FE0']],
   'watermark':     [['PDF','#E02020'],['\uD83D\uDD0F','#5A6A7A']],
@@ -375,17 +323,17 @@ const FORMAT_BADGES = {
   'translate':     [['PDF','#E02020'],['\uD83C\uDF0D','#5A6A7A']],
 };
 
-function makeBadges(key) {
-  const badges = FORMAT_BADGES[key] || [];
-  return badges.map((b,i) => {
-    const [label, color] = b;
-    const arrow = i === 0 && badges.length > 1 ? '<span style="color:#9ca3af;font-size:0.7rem;margin:0 1px">\u2192</span>' : '';
-    return `<span style="background:${color};color:white;font-size:0.62rem;font-weight:700;padding:0.18rem 0.45rem;border-radius:4px;letter-spacing:0.3px">${label}</span>${arrow}`;
+function makeBadges(key){
+  const badges=FORMAT_BADGES[key]||[];
+  return badges.map((b,i)=>{
+    const[label,color]=b;
+    const arrow=i===0&&badges.length>1?'<span style="color:#9ca3af;font-size:0.7rem;margin:0 2px">\u2192</span>':'';
+    return `<span style="background:${color};color:white;font-size:0.6rem;font-weight:700;padding:0.15rem 0.4rem;border-radius:3px">${label}</span>${arrow}`;
   }).join('');
 }
 
-const T = {
-  en: {
+const T={
+  en:{
     nav_tools:'Tools',nav_features:'Features',nav_pricing:'Pricing',nav_cta:'Get Started',
     hero_badge:'Over 2 million active users',
     hero_h1:'Professional<br/>PDF Tools<br/>for <em>Everyone</em>',
@@ -401,12 +349,12 @@ const T = {
     feat1_h:'Works in your browser',feat1_p:'No software to install. Work from any device, anywhere.',
     feat2_h:'Complete privacy',feat2_p:'Files are automatically deleted from our servers after one hour.',
     feat3_h:'Maximum quality',feat3_p:'Our conversion engines preserve formatting and fonts exactly as they are.',
-    feat4_h:'Hebrew & RTL support',feat4_p:'Hebrew and Arabic documents handled with maximum precision and automatic RTL detection.',
+    feat4_h:'Hebrew & RTL support',feat4_p:'Hebrew and Arabic documents handled with maximum precision and RTL detection.',
     footer_desc:'The leading platform for PDF processing \u2014 fast, secure and professional.',
     footer_tools:'Tools',footer_company:'Company',footer_support:'Support',
     f_convert:'Convert PDF',f_edit:'Edit PDF',f_merge:'Merge PDF',
-    f_about:'About',f_contact:'Contact',f_help:'Help Center',
-    f_privacy:'Privacy Policy',f_terms:'Terms of Use',
+    f_about:'About',f_blog:'Blog',f_contact:'Contact',
+    f_help:'Help Center',f_privacy:'Privacy Policy',f_terms:'Terms of Use',
     footer_copy:'\u00A9 2026 PDFPro. All rights reserved.',
     modal_drop:'Click or drag a file here',process_btn:'Process File',
     api_online:'Server online',api_offline:'Server offline',
@@ -432,22 +380,12 @@ const T = {
       {k:'sign',         t:'Digital Signature',    d:'Sign documents electronically',         cat:'edit'},
       {k:'protect',      t:'Password Protect',     d:'Encrypt PDF with a password',           cat:'edit'},
       {k:'redact',       t:'Redact Text',          d:'Permanently hide sensitive info',       cat:'edit'},
-      {k:'ocr',          t:'OCR \u2014 Extract Text', d:'Extract text from images and scans',cat:'other'},
+      {k:'ocr',          t:'OCR \u2014 Extract Text',d:'Extract text from images and scans', cat:'other'},
       {k:'translate',    t:'Translate PDF',        d:'Translate documents into 40+ languages',cat:'other'},
     ],
-    tool_opts:{
-      level_label:'Compression level',level_opts:['Low','Medium','High','Extreme'],
-      dpi_label:'Quality (DPI)',format_label:'Format',
-      page_size_label:'Page size',angle_label:'Rotation angle',
-      wm_text_label:'Watermark text',wm_opacity_label:'Opacity (0.1\u20131.0)',
-      sig_label:'Name for signature',pass_label:'Password',
-      redact_label:'Text to redact (comma-separated)',
-      ocr_lang_label:'Language',ocr_fmt_label:'Output format',
-      translate_lang_label:'Target language',translate_layout_label:'Preserve layout',
-      ranges_label:'Page ranges (e.g. 1-3,4-6)',yes:'Yes',no:'No',
-    }
+    tool_opts:{level_label:'Compression level',level_opts:['Low','Medium','High','Extreme'],dpi_label:'Quality (DPI)',format_label:'Format',page_size_label:'Page size',angle_label:'Rotation angle',wm_text_label:'Watermark text',wm_opacity_label:'Opacity (0.1\u20131.0)',sig_label:'Name for signature',pass_label:'Password',redact_label:'Text to redact (comma-separated)',ocr_lang_label:'Language',ocr_fmt_label:'Output format',translate_lang_label:'Target language',translate_layout_label:'Preserve layout',ranges_label:'Page ranges (e.g. 1-3,4-6)',yes:'Yes',no:'No'}
   },
-  he: {
+  he:{
     nav_tools:'\u05DB\u05DC\u05D9\u05DD',nav_features:'\u05D9\u05EA\u05E8\u05D5\u05E0\u05D5\u05EA',nav_pricing:'\u05DE\u05D7\u05D9\u05E8\u05D9\u05DD',nav_cta:'\u05D4\u05EA\u05D7\u05DC \u05E2\u05DB\u05E9\u05D9\u05D5',
     hero_badge:'\u05DE\u05E2\u05DC 2 \u05DE\u05D9\u05DC\u05D9\u05D5\u05DF \u05DE\u05E9\u05EA\u05DE\u05E9\u05D9\u05DD \u05E4\u05E2\u05D9\u05DC\u05D9\u05DD',
     hero_h1:'\u05DB\u05DC\u05D9 PDF<br/><em>\u05DE\u05E7\u05E6\u05D5\u05E2\u05D9\u05D9\u05DD</em><br/>\u05DC\u05DB\u05DC \u05E6\u05D5\u05E8\u05DA',
@@ -468,8 +406,8 @@ const T = {
     footer_desc:'\u05D4\u05E4\u05DC\u05D8\u05E4\u05D5\u05E8\u05DE\u05D4 \u05D4\u05DE\u05D5\u05D1\u05D9\u05DC\u05D4 \u05DC\u05E2\u05D9\u05D1\u05D5\u05D3 \u05DE\u05E1\u05DE\u05DB\u05D9 PDF.',
     footer_tools:'\u05DB\u05DC\u05D9\u05DD',footer_company:'\u05D7\u05D1\u05E8\u05D4',footer_support:'\u05EA\u05DE\u05D9\u05DB\u05D4',
     f_convert:'\u05D4\u05DE\u05E8\u05EA PDF',f_edit:'\u05E2\u05E8\u05D9\u05DB\u05EA PDF',f_merge:'\u05DE\u05D9\u05D6\u05D5\u05D2 PDF',
-    f_about:'\u05D0\u05D5\u05D3\u05D5\u05EA\u05D9\u05E0\u05D5',f_contact:'\u05E6\u05D5\u05E8 \u05E7\u05E9\u05E8',f_help:'\u05DE\u05E8\u05DB\u05D6 \u05E2\u05D6\u05E8\u05D4',
-    f_privacy:'\u05DE\u05D3\u05D9\u05E0\u05D9\u05D5\u05EA \u05E4\u05E8\u05D8\u05D9\u05D5\u05EA',f_terms:'\u05EA\u05E0\u05D0\u05D9 \u05E9\u05D9\u05DE\u05D5\u05E9',
+    f_about:'\u05D0\u05D5\u05D3\u05D5\u05EA\u05D9\u05E0\u05D5',f_blog:'\u05D1\u05DC\u05D5\u05D2',f_contact:'\u05E6\u05D5\u05E8 \u05E7\u05E9\u05E8',
+    f_help:'\u05DE\u05E8\u05DB\u05D6 \u05E2\u05D6\u05E8\u05D4',f_privacy:'\u05DE\u05D3\u05D9\u05E0\u05D9\u05D5\u05EA \u05E4\u05E8\u05D8\u05D9\u05D5\u05EA',f_terms:'\u05EA\u05E0\u05D0\u05D9 \u05E9\u05D9\u05DE\u05D5\u05E9',
     footer_copy:'\u00A9 2026 PDFPro. \u05DB\u05DC \u05D4\u05D6\u05DB\u05D5\u05D9\u05D5\u05EA \u05E9\u05DE\u05D5\u05E8\u05D5\u05EA.',
     modal_drop:'\u05DC\u05D7\u05E5 \u05D0\u05D5 \u05D2\u05E8\u05D5\u05E8 \u05E7\u05D5\u05D1\u05E5 \u05DC\u05DB\u05D0\u05DF',process_btn:'\u05E2\u05D1\u05D3 \u05E7\u05D5\u05D1\u05E5',
     api_online:'\u05E9\u05E8\u05EA \u05E4\u05E2\u05D9\u05DC',api_offline:'\u05E9\u05E8\u05EA \u05DC\u05D0 \u05DE\u05D7\u05D5\u05D1\u05E8',
@@ -482,69 +420,69 @@ const T = {
     tabs:['\u05D4\u05DB\u05DC','\u05D4\u05DE\u05E8\u05D4','\u05D0\u05E8\u05D2\u05D5\u05DF','\u05E2\u05E8\u05D9\u05DB\u05D4','\u05D0\u05D7\u05E8'],
     tools:[
       {k:'pdf-to-word',  t:'PDF \u05DC-Word',        d:'\u05D4\u05DE\u05E8 PDF \u05DC-Word',              cat:'convert'},
-      {k:'pdf-to-excel', t:'PDF \u05DC-Excel',        d:'\u05D7\u05DC\u05E5 \u05D8\u05D1\u05DC\u05D0\u05D5\u05EA \u05DC-Excel',        cat:'convert'},
-      {k:'pdf-to-pptx',  t:'PDF \u05DC-PowerPoint',   d:'\u05D4\u05DE\u05E8 \u05E2\u05DE\u05D5\u05D3\u05D9\u05DD \u05DC\u05E9\u05E7\u05D5\u05E4\u05D9\u05D5\u05EA',    cat:'convert'},
-      {k:'pdf-to-images',t:'PDF \u05DC-\u05EA\u05DE\u05D5\u05E0\u05D5\u05EA',  d:'\u05E9\u05DE\u05D5\u05E8 \u05E2\u05DE\u05D5\u05D3\u05D9\u05DD \u05DB-JPG',          cat:'convert'},
+      {k:'pdf-to-excel', t:'PDF \u05DC-Excel',        d:'\u05D7\u05DC\u05E5 \u05D8\u05D1\u05DC\u05D0\u05D5\u05EA \u05DC-Excel',    cat:'convert'},
+      {k:'pdf-to-pptx',  t:'PDF \u05DC-PowerPoint',   d:'\u05D4\u05DE\u05E8 \u05E2\u05DE\u05D5\u05D3\u05D9\u05DD \u05DC\u05E9\u05E7\u05D5\u05E4\u05D9\u05D5\u05EA', cat:'convert'},
+      {k:'pdf-to-images',t:'PDF \u05DC-\u05EA\u05DE\u05D5\u05E0\u05D5\u05EA',  d:'\u05E9\u05DE\u05D5\u05E8 \u05E2\u05DE\u05D5\u05D3\u05D9\u05DD \u05DB-JPG',     cat:'convert'},
       {k:'office-to-pdf',t:'Office \u05DC-PDF',       d:'\u05D4\u05DE\u05E8 Word/Excel/PPT \u05DC-PDF',   cat:'convert'},
-      {k:'images-to-pdf',t:'\u05EA\u05DE\u05D5\u05E0\u05D5\u05EA \u05DC-PDF',  d:'\u05D7\u05D1\u05E8 \u05EA\u05DE\u05D5\u05E0\u05D5\u05EA \u05DC-PDF \u05D0\u05D7\u05D3', cat:'convert'},
+      {k:'images-to-pdf',t:'\u05EA\u05DE\u05D5\u05E0\u05D5\u05EA \u05DC-PDF',  d:'\u05D7\u05D1\u05E8 \u05EA\u05DE\u05D5\u05E0\u05D5\u05EA \u05DC-PDF',          cat:'convert'},
       {k:'merge',        t:'\u05DE\u05D9\u05D6\u05D5\u05D2 PDF',  d:'\u05D7\u05D1\u05E8 \u05DE\u05E1\u05E4\u05E8 PDFs \u05DC\u05D0\u05D7\u05D3',  cat:'organize'},
-      {k:'split',        t:'\u05E4\u05D9\u05E6\u05D5\u05DC PDF',  d:'\u05D7\u05DC\u05E7 \u05DE\u05E1\u05DE\u05DA \u05DC\u05D7\u05DC\u05E7\u05D9\u05DD',  cat:'organize'},
-      {k:'compress',     t:'\u05D3\u05D7\u05D9\u05E1\u05EA PDF',  d:'\u05D4\u05E7\u05D8\u05DF \u05D2\u05D5\u05D3\u05DC \u05E7\u05D5\u05D1\u05E5',  cat:'organize'},
-      {k:'rotate',       t:'\u05E1\u05D9\u05D1\u05D5\u05D1 PDF',  d:'\u05E1\u05D5\u05D1\u05D1 \u05E2\u05DE\u05D5\u05D3\u05D9\u05DD',  cat:'organize'},
+      {k:'split',        t:'\u05E4\u05D9\u05E6\u05D5\u05DC PDF',  d:'\u05D7\u05DC\u05E7 \u05DE\u05E1\u05DE\u05DA \u05DC\u05D7\u05DC\u05E7\u05D9\u05DD',        cat:'organize'},
+      {k:'compress',     t:'\u05D3\u05D7\u05D9\u05E1\u05EA PDF',  d:'\u05D4\u05E7\u05D8\u05DF \u05D2\u05D5\u05D3\u05DC \u05E7\u05D5\u05D1\u05E5',              cat:'organize'},
+      {k:'rotate',       t:'\u05E1\u05D9\u05D1\u05D5\u05D1 PDF',  d:'\u05E1\u05D5\u05D1\u05D1 \u05E2\u05DE\u05D5\u05D3\u05D9\u05DD',                          cat:'organize'},
       {k:'watermark',    t:'\u05E1\u05D9\u05DE\u05DF \u05DE\u05D9\u05DD', d:'\u05D4\u05D5\u05E1\u05E3 \u05D8\u05E7\u05E1\u05D8 \u05DB\u05E1\u05D9\u05DE\u05DF \u05DE\u05D9\u05DD', cat:'edit'},
       {k:'sign',         t:'\u05D7\u05EA\u05D9\u05DE\u05D4 \u05D3\u05D9\u05D2\u05D9\u05D8\u05DC\u05D9\u05EA', d:'\u05D7\u05EA\u05D5\u05DD \u05D0\u05DC\u05E7\u05D8\u05E8\u05D5\u05E0\u05D9\u05EA', cat:'edit'},
-      {k:'protect',      t:'\u05D4\u05D2\u05E0\u05EA \u05E1\u05D9\u05E1\u05DE\u05D0', d:'\u05D4\u05E6\u05E4\u05DF PDF', cat:'edit'},
-      {k:'redact',       t:'\u05DE\u05D7\u05D9\u05E7\u05EA \u05D8\u05E7\u05E1\u05D8', d:'\u05D4\u05E1\u05EA\u05E8 \u05DE\u05D9\u05D3\u05E2 \u05E8\u05D2\u05D9\u05E9', cat:'edit'},
+      {k:'protect',      t:'\u05D4\u05D2\u05E0\u05EA \u05E1\u05D9\u05E1\u05DE\u05D0', d:'\u05D4\u05E6\u05E4\u05DF PDF \u05E2\u05DD \u05E1\u05D9\u05E1\u05DE\u05D0',             cat:'edit'},
+      {k:'redact',       t:'\u05DE\u05D7\u05D9\u05E7\u05EA \u05D8\u05E7\u05E1\u05D8', d:'\u05D4\u05E1\u05EA\u05E8 \u05DE\u05D9\u05D3\u05E2 \u05E8\u05D2\u05D9\u05E9',           cat:'edit'},
       {k:'ocr',          t:'OCR \u2014 \u05D6\u05D9\u05D4\u05D5\u05D9 \u05D8\u05E7\u05E1\u05D8', d:'\u05D7\u05DC\u05E5 \u05D8\u05E7\u05E1\u05D8 \u05DE\u05EA\u05DE\u05D5\u05E0\u05D5\u05EA', cat:'other'},
-      {k:'translate',    t:'\u05EA\u05E8\u05D2\u05D5\u05DD PDF', d:'\u05EA\u05E8\u05D2\u05DD \u05DC-40+ \u05E9\u05E4\u05D5\u05EA', cat:'other'},
+      {k:'translate',    t:'\u05EA\u05E8\u05D2\u05D5\u05DD PDF', d:'\u05EA\u05E8\u05D2\u05DD \u05DC-40+ \u05E9\u05E4\u05D5\u05EA',                             cat:'other'},
     ],
-    tool_opts:{
-      level_label:'\u05E8\u05DE\u05EA \u05D3\u05D7\u05D9\u05E1\u05D4',level_opts:['\u05E0\u05DE\u05D5\u05DB\u05D4','\u05D1\u05D9\u05E0\u05D5\u05E0\u05D9\u05EA','\u05D2\u05D1\u05D5\u05D4\u05D4','\u05DE\u05E7\u05E1\u05D9\u05DE\u05DC\u05D9\u05EA'],
-      dpi_label:'\u05D0\u05D9\u05DB\u05D5\u05EA (DPI)',format_label:'\u05E4\u05D5\u05E8\u05DE\u05D8',
-      page_size_label:'\u05D2\u05D5\u05D3\u05DC \u05E2\u05DE\u05D5\u05D3',angle_label:'\u05D6\u05D5\u05D5\u05D9\u05EA \u05E1\u05D9\u05D1\u05D5\u05D1',
-      wm_text_label:'\u05D8\u05E7\u05E1\u05D8 \u05E1\u05D9\u05DE\u05DF \u05D4\u05DE\u05D9\u05DD',wm_opacity_label:'\u05E9\u05E7\u05D9\u05E4\u05D5\u05EA',
-      sig_label:'\u05E9\u05DD \u05DC\u05D7\u05EA\u05D9\u05DE\u05D4',pass_label:'\u05E1\u05D9\u05E1\u05DE\u05D0',
-      redact_label:'\u05D8\u05E7\u05E1\u05D8\u05D9\u05DD \u05DC\u05DE\u05D7\u05D9\u05E7\u05D4',
-      ocr_lang_label:'\u05E9\u05E4\u05D4',ocr_fmt_label:'\u05E4\u05D5\u05E8\u05DE\u05D8 \u05E4\u05DC\u05D8',
-      translate_lang_label:'\u05E9\u05E4\u05EA \u05D9\u05E2\u05D3',translate_layout_label:'\u05E9\u05DE\u05D5\u05E8 \u05E4\u05E8\u05D9\u05E1\u05D4',
-      ranges_label:'\u05D8\u05D5\u05D5\u05D7\u05D9 \u05E2\u05DE\u05D5\u05D3\u05D9\u05DD',yes:'\u05DB\u05DF',no:'\u05DC\u05D0',
-    }
+    tool_opts:{level_label:'\u05E8\u05DE\u05EA \u05D3\u05D7\u05D9\u05E1\u05D4',level_opts:['\u05E0\u05DE\u05D5\u05DB\u05D4','\u05D1\u05D9\u05E0\u05D5\u05E0\u05D9\u05EA','\u05D2\u05D1\u05D5\u05D4\u05D4','\u05DE\u05E7\u05E1\u05D9\u05DE\u05DC\u05D9\u05EA'],dpi_label:'\u05D0\u05D9\u05DB\u05D5\u05EA (DPI)',format_label:'\u05E4\u05D5\u05E8\u05DE\u05D8',page_size_label:'\u05D2\u05D5\u05D3\u05DC \u05E2\u05DE\u05D5\u05D3',angle_label:'\u05D6\u05D5\u05D5\u05D9\u05EA \u05E1\u05D9\u05D1\u05D5\u05D1',wm_text_label:'\u05D8\u05E7\u05E1\u05D8 \u05E1\u05D9\u05DE\u05DF \u05D4\u05DE\u05D9\u05DD',wm_opacity_label:'\u05E9\u05E7\u05D9\u05E4\u05D5\u05EA',sig_label:'\u05E9\u05DD \u05DC\u05D7\u05EA\u05D9\u05DE\u05D4',pass_label:'\u05E1\u05D9\u05E1\u05DE\u05D0',redact_label:'\u05D8\u05E7\u05E1\u05D8\u05D9\u05DD \u05DC\u05DE\u05D7\u05D9\u05E7\u05D4',ocr_lang_label:'\u05E9\u05E4\u05D4',ocr_fmt_label:'\u05E4\u05D5\u05E8\u05DE\u05D8 \u05E4\u05DC\u05D8',translate_lang_label:'\u05E9\u05E4\u05EA \u05D9\u05E2\u05D3',translate_layout_label:'\u05E9\u05DE\u05D5\u05E8 \u05E4\u05E8\u05D9\u05E1\u05D4',ranges_label:'\u05D8\u05D5\u05D5\u05D7\u05D9 \u05E2\u05DE\u05D5\u05D3\u05D9\u05DD',yes:'\u05DB\u05DF',no:'\u05DC\u05D0'}
   }
 };
 
-const TOOL_CONFIG = {
-  'pdf-to-word':   {endpoint:'/api/convert/pdf-to-word',  field:'file',multi:false,accept:'.pdf'},
-  'pdf-to-excel':  {endpoint:'/api/convert/pdf-to-excel', field:'file',multi:false,accept:'.pdf'},
-  'pdf-to-pptx':   {endpoint:'/api/convert/pdf-to-pptx',  field:'file',multi:false,accept:'.pdf',
-    extra:(o)=>[{name:'dpi',label:o.dpi_label,type:'select',options:['72','100','150','200','300'],default:'150'}]},
-  'pdf-to-images': {endpoint:'/api/convert/pdf-to-images',field:'file',multi:false,accept:'.pdf',multiResult:true,
-    extra:(o)=>[{name:'format',label:o.format_label,type:'select',options:['jpg','png'],default:'jpg'},{name:'dpi',label:o.dpi_label,type:'select',options:['72','100','150','200','300'],default:'150'}]},
-  'office-to-pdf': {endpoint:'/api/convert/office-to-pdf',field:'file',multi:false,accept:'.doc,.docx,.xls,.xlsx,.ppt,.pptx'},
-  'images-to-pdf': {endpoint:'/api/convert/images-to-pdf',field:'files',multi:true,accept:'image/*',
-    extra:(o)=>[{name:'page_size',label:o.page_size_label,type:'select',options:['fit','A4','Letter'],default:'fit'}]},
-  'merge':         {endpoint:'/api/organize/merge',  field:'files',multi:true, accept:'.pdf'},
-  'split':         {endpoint:'/api/organize/split',  field:'file', multi:false,accept:'.pdf',multiResult:true,
-    extra:(o)=>[{name:'ranges',label:o.ranges_label,type:'text',default:'1-3'}]},
-  'compress':      {endpoint:'/api/organize/compress',field:'file',multi:false,accept:'.pdf',
-    extra:(o)=>[{name:'level',label:o.level_label,type:'select',options:['low','medium','high','extreme'],labels:o.level_opts,default:'medium'}]},
-  'rotate':        {endpoint:'/api/organize/rotate', field:'file',multi:false,accept:'.pdf',
-    extra:(o)=>[{name:'angle',label:o.angle_label,type:'select',options:['90','180','270'],default:'90'}]},
-  'watermark':     {endpoint:'/api/edit/watermark',  field:'file',multi:false,accept:'.pdf',
-    extra:(o)=>[{name:'text',label:o.wm_text_label,type:'text',default:'CONFIDENTIAL'},{name:'opacity',label:o.wm_opacity_label,type:'text',default:'0.3'}]},
-  'sign':          {endpoint:'/api/edit/sign',       field:'file',multi:false,accept:'.pdf',
-    extra:(o)=>[{name:'signature_text',label:o.sig_label,type:'text',default:''}]},
-  'protect':       {endpoint:'/api/edit/protect',    field:'file',multi:false,accept:'.pdf',
-    extra:(o)=>[{name:'password',label:o.pass_label,type:'text',default:''}]},
-  'redact':        {endpoint:'/api/edit/redact',     field:'file',multi:false,accept:'.pdf',
-    extra:(o)=>[{name:'texts',label:o.redact_label,type:'text',default:''}]},
-  'ocr':           {endpoint:'/api/ocr/extract',     field:'file',multi:false,accept:'.pdf,image/*',textResult:true,
-    extra:(o)=>[{name:'language',label:o.ocr_lang_label,type:'select',options:['heb+eng','eng','heb','ara'],default:'heb+eng'},{name:'output_format',label:o.ocr_fmt_label,type:'select',options:['txt','pdf','docx'],default:'txt'}]},
-  'translate':     {endpoint:'/api/translate/pdf',   field:'file',multi:false,accept:'.pdf',
-    extra:(o)=>[{name:'target_language',label:o.translate_lang_label,type:'select',options:['iw','en','ar','ru','fr','de','es'],labels:['\u05E2\u05D1\u05E8\u05D9\u05EA','English','\u0627\u0644\u0639\u0631\u0628\u064A\u0629','\u0420\u0443\u0441\u0441\u043A\u0438\u0439','Fran\u00E7ais','Deutsch','Espa\u00F1ol'],default:'iw'},{name:'preserve_layout',label:o.translate_layout_label,type:'select',options:['true','false'],labels:['\u05DB\u05DF','\u05DC\u05D0'],default:'true'}]},
+const TOOL_CONFIG={
+  'pdf-to-word':{endpoint:'/api/convert/pdf-to-word',field:'file',multi:false,accept:'.pdf'},
+  'pdf-to-excel':{endpoint:'/api/convert/pdf-to-excel',field:'file',multi:false,accept:'.pdf'},
+  'pdf-to-pptx':{endpoint:'/api/convert/pdf-to-pptx',field:'file',multi:false,accept:'.pdf',extra:(o)=>[{name:'dpi',label:o.dpi_label,type:'select',options:['72','100','150','200','300'],default:'150'}]},
+  'pdf-to-images':{endpoint:'/api/convert/pdf-to-images',field:'file',multi:false,accept:'.pdf',multiResult:true,extra:(o)=>[{name:'format',label:o.format_label,type:'select',options:['jpg','png'],default:'jpg'},{name:'dpi',label:o.dpi_label,type:'select',options:['72','100','150','200','300'],default:'150'}]},
+  'office-to-pdf':{endpoint:'/api/convert/office-to-pdf',field:'file',multi:false,accept:'.doc,.docx,.xls,.xlsx,.ppt,.pptx'},
+  'images-to-pdf':{endpoint:'/api/convert/images-to-pdf',field:'files',multi:true,accept:'image/*',extra:(o)=>[{name:'page_size',label:o.page_size_label,type:'select',options:['fit','A4','Letter'],default:'fit'}]},
+  'merge':{endpoint:'/api/organize/merge',field:'files',multi:true,accept:'.pdf'},
+  'split':{endpoint:'/api/organize/split',field:'file',multi:false,accept:'.pdf',multiResult:true,extra:(o)=>[{name:'ranges',label:o.ranges_label,type:'text',default:'1-3'}]},
+  'compress':{endpoint:'/api/organize/compress',field:'file',multi:false,accept:'.pdf',extra:(o)=>[{name:'level',label:o.level_label,type:'select',options:['low','medium','high','extreme'],labels:o.level_opts,default:'medium'}]},
+  'rotate':{endpoint:'/api/organize/rotate',field:'file',multi:false,accept:'.pdf',extra:(o)=>[{name:'angle',label:o.angle_label,type:'select',options:['90','180','270'],default:'90'}]},
+  'watermark':{endpoint:'/api/edit/watermark',field:'file',multi:false,accept:'.pdf',extra:(o)=>[{name:'text',label:o.wm_text_label,type:'text',default:'CONFIDENTIAL'},{name:'opacity',label:o.wm_opacity_label,type:'text',default:'0.3'}]},
+  'sign':{endpoint:'/api/edit/sign',field:'file',multi:false,accept:'.pdf',extra:(o)=>[{name:'signature_text',label:o.sig_label,type:'text',default:''}]},
+  'protect':{endpoint:'/api/edit/protect',field:'file',multi:false,accept:'.pdf',extra:(o)=>[{name:'password',label:o.pass_label,type:'text',default:''}]},
+  'redact':{endpoint:'/api/edit/redact',field:'file',multi:false,accept:'.pdf',extra:(o)=>[{name:'texts',label:o.redact_label,type:'text',default:''}]},
+  'ocr':{endpoint:'/api/ocr/extract',field:'file',multi:false,accept:'.pdf,image/*',textResult:true,extra:(o)=>[{name:'language',label:o.ocr_lang_label,type:'select',options:['heb+eng','eng','heb','ara'],default:'heb+eng'},{name:'output_format',label:o.ocr_fmt_label,type:'select',options:['txt','pdf','docx'],default:'txt'}]},
+  'translate':{endpoint:'/api/translate/pdf',field:'file',multi:false,accept:'.pdf',extra:(o)=>[{name:'target_language',label:o.translate_lang_label,type:'select',options:['iw','en','ar','ru','fr','de','es'],labels:['\u05E2\u05D1\u05E8\u05D9\u05EA','English','\u0627\u0644\u0639\u0631\u0628\u064A\u0629','\u0420\u0443\u0441\u0441\u043A\u0438\u0439','Fran\u00E7ais','Deutsch','Espa\u00F1ol'],default:'iw'},{name:'preserve_layout',label:o.translate_layout_label,type:'select',options:['true','false'],labels:['\u05DB\u05DF','\u05DC\u05D0'],default:'true'}]},
 };
 
-const TOOL_ICONS={'pdf-to-word':'ic-blue','pdf-to-excel':'ic-green','pdf-to-pptx':'ic-amber','pdf-to-images':'ic-red','office-to-pdf':'ic-blue','images-to-pdf':'ic-purple','merge':'ic-teal','split':'ic-red','compress':'ic-amber','rotate':'ic-green','watermark':'ic-blue','sign':'ic-purple','protect':'ic-red','redact':'ic-teal','ocr':'ic-amber','translate':'ic-green'};
-const TOOL_SVGS={'pdf-to-word':'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>','pdf-to-excel':'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>','pdf-to-pptx':'<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>','pdf-to-images':'<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>','office-to-pdf':'<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>','images-to-pdf':'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/>','merge':'<path d="M8 6H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-3"/><rect x="8" y="2" width="8" height="8" rx="2"/>','split':'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/>','compress':'<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>','rotate':'<polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>','watermark':'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>','sign':'<path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>','protect':'<rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>','redact':'<path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>','ocr':'<circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>','translate':'<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>'};
+const TOOL_ICONS={
+  'pdf-to-word':'ic-blue','pdf-to-excel':'ic-green','pdf-to-pptx':'ic-amber','pdf-to-images':'ic-red',
+  'office-to-pdf':'ic-blue','images-to-pdf':'ic-purple','merge':'ic-teal','split':'ic-red',
+  'compress':'ic-amber','rotate':'ic-green','watermark':'ic-blue','sign':'ic-purple',
+  'protect':'ic-red','redact':'ic-teal','ocr':'ic-amber','translate':'ic-green'
+};
+const TOOL_SVGS={
+  'pdf-to-word':'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>',
+  'pdf-to-excel':'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>',
+  'pdf-to-pptx':'<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>',
+  'pdf-to-images':'<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>',
+  'office-to-pdf':'<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>',
+  'images-to-pdf':'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/>',
+  'merge':'<path d="M8 6H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-3"/><rect x="8" y="2" width="8" height="8" rx="2"/>',
+  'split':'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/>',
+  'compress':'<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',
+  'rotate':'<polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>',
+  'watermark':'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+  'sign':'<path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>',
+  'protect':'<rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',
+  'redact':'<path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>',
+  'ocr':'<circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>',
+  'translate':'<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>'
+};
 
 let lang='en',currentTool=null,selectedFiles=[];
 function t(key){return T[lang][key]||T.en[key]||key;}
@@ -582,6 +520,7 @@ function applyLang(nl){
   buildHeroSelect();
   const s=document.getElementById('api-status');
   document.getElementById('api-status-text').textContent=s.classList.contains('online')?t('api_online'):t('api_offline');
+  hookFooterLinks();
 }
 
 const TAB_CATS=['all','convert','organize','edit','other'];
@@ -592,11 +531,13 @@ function buildToolsUI(){
     const btn=document.createElement('button');btn.className='tab-btn'+(i===0?' active':'');btn.dataset.filter=cat;btn.textContent=tabs[i];
     btn.addEventListener('click',function(){
       document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));this.classList.add('active');
-      document.querySelectorAll('.tool-card').forEach(card=>{card.style.display=(cat==='all'||card.dataset.cat===this.dataset.filter)?'block':'none';});
+      const f=this.dataset.filter;
+      document.querySelectorAll('.tool-card').forEach(card=>{card.style.display=(f==='all'||card.dataset.cat===f)?'block':'none';});
     });tabsEl.appendChild(btn);
   });
   const grid=document.getElementById('tools-grid');grid.innerHTML='';
   const isMobile=window.innerWidth<=768;
+  const isRTL=lang==='he';
   tools.forEach(tool=>{
     const btn=document.createElement('button');btn.className='tool-card';btn.dataset.cat=tool.cat;btn.onclick=()=>openModal(tool.k);
     if(isMobile){
@@ -607,18 +548,13 @@ function buildToolsUI(){
           <h3>${tool.t}</h3>
           <p>${tool.d}</p>
         </div>
-        <span class="tool-card-arrow">${lang==='he'?'\u2039':'\u203A'}</span>
-      `;
-    } else {
-      btn.innerHTML=`
-        <div class="tool-icon ${TOOL_ICONS[tool.k]}"><svg viewBox="0 0 24 24">${TOOL_SVGS[tool.k]}</svg></div>
-        <h3>${tool.t}</h3><p>${tool.d}</p>
-      `;
+        <span class="tool-card-arrow">${isRTL?'\u2039':'\u203A'}</span>`;
+    }else{
+      btn.innerHTML=`<div class="tool-icon ${TOOL_ICONS[tool.k]}"><svg viewBox="0 0 24 24">${TOOL_SVGS[tool.k]}</svg></div><h3>${tool.t}</h3><p>${tool.d}</p>`;
     }
     grid.appendChild(btn);
   });
 }
-
 window.addEventListener('resize',()=>buildToolsUI());
 
 function buildHeroSelect(){
@@ -636,6 +572,15 @@ async function checkAPI(){
 }
 function setOffline(){document.getElementById('api-status').className='api-status offline';document.getElementById('api-status-text').textContent=t('api_offline');}
 checkAPI();setInterval(checkAPI,15000);
+
+function hookFooterLinks(){
+  const base=lang==='he'?'/he':'';
+  const map={'f_convert':'pdf-to-word','f_edit':'watermark','f_merge':'merge'};
+  document.querySelectorAll('[data-t]').forEach(el=>{
+    const k=el.dataset.t;
+    if(map[k]){el.style.cursor='pointer';el.onclick=(e)=>{e.preventDefault();openModal(map[k]);};}
+  });
+}
 
 function openModal(toolKey){
   const cfg=TOOL_CONFIG[toolKey],toolData=T[lang].tools.find(x=>x.k===toolKey);
