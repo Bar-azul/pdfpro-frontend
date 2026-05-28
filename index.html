@@ -30,7 +30,7 @@ nav{background:var(--navy);padding:0 3rem;height:68px;display:flex;align-items:c
 .lang-switcher{display:flex;gap:0.3rem}
 .lang-btn{padding:0.3rem 0.65rem;border-radius:5px;border:1px solid rgba(255,255,255,0.2);background:transparent;color:rgba(255,255,255,0.6);font-size:0.78rem;font-weight:600;cursor:pointer;transition:all 0.2s}
 .lang-btn.active,.lang-btn:hover{background:rgba(255,255,255,0.1);color:var(--white);border-color:rgba(255,255,255,0.4)}
-.nav-cta{background:var(--red);color:var(--white);padding:0.55rem 1.4rem;border-radius:6px;text-decoration:none;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;transition:background 0.2s}
+.nav-cta{background:var(--red);color:var(--white);padding:0.55rem 1.4rem;border-radius:6px;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;transition:background 0.2s}
 .nav-cta:hover{background:var(--red-dark)}
 .hero{background:var(--navy);min-height:560px;display:flex;align-items:center;position:relative;overflow:hidden;padding:4rem 3rem}
 .hero::before{content:'';position:absolute;left:-200px;top:-200px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(224,32,32,0.15) 0%,transparent 70%);pointer-events:none}
@@ -98,10 +98,10 @@ nav{background:var(--navy);padding:0 3rem;height:68px;display:flex;align-items:c
 .tab-btn{padding:0.55rem 1.3rem;border-radius:20px;border:1px solid var(--border);background:var(--white);color:var(--text-muted);font-size:0.9rem;font-weight:600;cursor:pointer;transition:all 0.2s}
 .tab-btn.active,.tab-btn:hover{background:var(--navy);color:var(--white);border-color:var(--navy)}
 .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
-.tool-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.4rem;cursor:pointer;display:block;transition:all 0.25s;width:100%}
-.ltr .tool-card{text-align:left}.rtl .tool-card{text-align:right}
+.tool-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.4rem;cursor:pointer;display:block;transition:all 0.25s;width:100%;text-align:left}
+.rtl .tool-card{text-align:right}
 .tool-card:hover{border-color:var(--red);transform:translateY(-3px);box-shadow:0 8px 24px rgba(13,27,42,0.1)}
-.tool-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
+.tool-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;flex-shrink:0}
 .tool-icon svg{width:22px;height:22px}
 .ic-red{background:#FFF0F0}.ic-red svg{fill:var(--red)}
 .ic-blue{background:#EEF4FF}.ic-blue svg{fill:#3B6FE0}
@@ -111,6 +111,7 @@ nav{background:var(--navy);padding:0 3rem;height:68px;display:flex;align-items:c
 .ic-teal{background:#EEF9F6}.ic-teal svg{fill:#1A8A72}
 .tool-card h3{font-size:0.95rem;font-weight:700;margin-bottom:0.3rem}
 .tool-card p{font-size:0.8rem;color:var(--text-muted);line-height:1.5}
+.tool-badges{display:flex;gap:0.3rem;align-items:center;margin-bottom:0.5rem;flex-wrap:wrap}
 .features-section{background:var(--navy);padding:5rem 3rem}
 .features-inner{max-width:1100px;margin:0 auto}
 .features-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:3rem}
@@ -135,33 +136,77 @@ footer{background:var(--navy);padding:3rem;border-top:2px solid rgba(255,255,255
 @keyframes spin{to{transform:rotate(360deg)}}
 .spinner{width:20px;height:20px;border:2px solid rgba(255,255,255,0.3);border-top-color:white;border-radius:50%;animation:spin 0.8s linear infinite;display:inline-block;vertical-align:middle;margin-left:0.5rem}
 
-/* ══ MOBILE ══════════════════════════════════════════════════════ */
+/* ══ MOBILE ═══════════════════════════════════════════════════════════ */
 @media(max-width:768px){
+  /* Nav */
   nav{padding:0 1rem;height:56px}
   .nav-links{display:none}
   .logo{font-size:1.3rem}
   .lang-btn{padding:0.25rem 0.5rem;font-size:0.72rem}
   .nav-cta{padding:0.45rem 1rem;font-size:0.82rem}
   #api-status{display:none}
+
+  /* Hero */
   .hero{padding:2rem 1rem;min-height:auto}
-  .hero-inner{grid-template-columns:1fr;gap:2rem}
+  .hero-inner{grid-template-columns:1fr;gap:1.5rem}
   .hero h1{font-size:2rem}
   .hero-stats{gap:1.2rem}
   .stat-num{font-size:1.4rem}
   .upload-card{padding:1.2rem}
   .upload-zone{padding:1.5rem 1rem}
-  .section{padding:2.5rem 1rem}
+
+  /* Tools section */
+  .section{padding:2rem 1rem}
   .section-title{font-size:1.6rem}
-  .tools-grid{grid-template-columns:repeat(2,1fr);gap:0.75rem}
-  .tool-card{padding:1rem}
-  .tool-icon{width:36px;height:36px;margin-bottom:0.7rem}
-  .tool-icon svg{width:18px;height:18px}
-  .tool-card h3{font-size:0.85rem}
-  .tool-card p{display:none}
-  .tools-tabs{gap:0.4rem}
-  .tab-btn{padding:0.4rem 0.9rem;font-size:0.82rem}
+  .section-header{margin-bottom:1.5rem}
+
+  /* Tabs - horizontal scroll */
+  .tools-tabs{
+    flex-wrap:nowrap;overflow-x:auto;
+    justify-content:flex-start;
+    padding-bottom:0.5rem;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .tools-tabs::-webkit-scrollbar{display:none}
+  .tab-btn{flex-shrink:0;padding:0.4rem 0.9rem;font-size:0.82rem}
+
+  /* Tool cards — single column like PDFLeader */
+  .tools-grid{
+    grid-template-columns:1fr;
+    gap:0.6rem;
+    background:var(--white);
+    border-radius:16px;
+    border:1px solid var(--border);
+    overflow:hidden;
+    padding:0;
+  }
+  .tool-card{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    padding:1rem 1.2rem;
+    border:none;
+    border-bottom:1px solid var(--border);
+    border-radius:0;
+    transform:none !important;
+    box-shadow:none !important;
+  }
+  .tool-card:last-child{border-bottom:none}
+  .tool-card:hover{background:#fafafa;border-color:var(--border)}
+  .tool-icon{width:40px;height:40px;margin-bottom:0;flex-shrink:0}
+  .tool-icon svg{width:20px;height:20px}
+  .tool-card-body{flex:1;min-width:0}
+  .tool-badges{margin-bottom:0.25rem}
+  .tool-card h3{font-size:0.9rem;margin-bottom:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .tool-card p{display:block;font-size:0.75rem;margin-top:0.1rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .tool-card-arrow{color:var(--text-muted);font-size:1rem;flex-shrink:0}
+
+  /* Features */
   .features-section{padding:3rem 1rem}
   .features-grid{grid-template-columns:1fr;gap:1rem}
+
+  /* Footer */
   footer{padding:2rem 1rem}
   .footer-inner{grid-template-columns:1fr;gap:1.5rem}
   .footer-bottom{flex-direction:column;align-items:center;text-align:center}
@@ -177,8 +222,7 @@ footer{background:var(--navy);padding:3rem;border-top:2px solid rgba(255,255,255
   }
   .modal-overlay.open .modal{transform:translateY(0)}
   .modal::before{
-    content:'';display:block;
-    width:40px;height:4px;
+    content:'';display:block;width:40px;height:4px;
     background:var(--border);border-radius:2px;
     margin:0.8rem auto 1.2rem;
   }
@@ -197,7 +241,6 @@ footer{background:var(--navy);padding:3rem;border-top:2px solid rgba(255,255,255
   .modal-options select,.modal-options input{padding:0.75rem 1rem;font-size:0.95rem;border-radius:10px}
 }
 @media(max-width:380px){
-  .tools-grid{grid-template-columns:repeat(2,1fr)}
   .hero h1{font-size:1.7rem}
 }
 </style>
@@ -310,9 +353,36 @@ footer{background:var(--navy);padding:3rem;border-top:2px solid rgba(255,255,255
     </div>
   </div>
 </div>
-
 <script>
 const API = 'https://pdfproweb.onrender.com';
+
+const FORMAT_BADGES = {
+  'pdf-to-word':   [['PDF','#E02020'],['WORD','#2B5797']],
+  'pdf-to-excel':  [['PDF','#E02020'],['XLS','#217346']],
+  'pdf-to-pptx':   [['PDF','#E02020'],['PPT','#D24726']],
+  'pdf-to-images': [['PDF','#E02020'],['JPG','#D47E10']],
+  'office-to-pdf': [['DOC','#2B5797'],['PDF','#E02020']],
+  'images-to-pdf': [['IMG','#7B4FD4'],['PDF','#E02020']],
+  'merge':         [['PDF','#E02020'],['+PDF','#1A8A72']],
+  'split':         [['PDF','#E02020'],['2\u00D7','#D47E10']],
+  'compress':      [['PDF','#E02020'],['ZIP','#1A8A72']],
+  'rotate':        [['PDF','#E02020'],['\u21BB','#3B6FE0']],
+  'watermark':     [['PDF','#E02020'],['\uD83D\uDD0F','#5A6A7A']],
+  'sign':          [['PDF','#E02020'],['\u270D','#5A6A7A']],
+  'protect':       [['PDF','#E02020'],['\uD83D\uDD12','#5A6A7A']],
+  'redact':        [['PDF','#E02020'],['\u2B1B','#5A6A7A']],
+  'ocr':           [['IMG','#7B4FD4'],['TXT','#0D1B2A']],
+  'translate':     [['PDF','#E02020'],['\uD83C\uDF0D','#5A6A7A']],
+};
+
+function makeBadges(key) {
+  const badges = FORMAT_BADGES[key] || [];
+  return badges.map((b,i) => {
+    const [label, color] = b;
+    const arrow = i === 0 && badges.length > 1 ? '<span style="color:#9ca3af;font-size:0.7rem;margin:0 1px">\u2192</span>' : '';
+    return `<span style="background:${color};color:white;font-size:0.62rem;font-weight:700;padding:0.18rem 0.45rem;border-radius:4px;letter-spacing:0.3px">${label}</span>${arrow}`;
+  }).join('');
+}
 
 const T = {
   en: {
@@ -339,8 +409,8 @@ const T = {
     f_privacy:'Privacy Policy',f_terms:'Terms of Use',
     footer_copy:'\u00A9 2026 PDFPro. All rights reserved.',
     modal_drop:'Click or drag a file here',process_btn:'Process File',
-    api_online:'Server online',api_offline:'Server offline',api_checking:'Connecting...',
-    processing:'Processing...',uploading:'Uploading file...',done:'Done!',
+    api_online:'Server online',api_offline:'Server offline',
+    processing:'Processing...',uploading:'Uploading...',done:'Done!',
     error_no_file:'Please select a file first',error_select_tool:'Please select an action',
     result_ready:'\u2705 File ready to download!',result_ocr:'\u2705 Text extracted successfully',
     result_multi:'\u2705 {n} files ready!',result_error:'\u274C Error: {msg}',
@@ -348,22 +418,22 @@ const T = {
     retry_hint:'Please try again or check the file',
     tabs:['All','Convert','Organize','Edit','Other'],
     tools:[
-      {k:'pdf-to-word',  t:'PDF to Word',       d:'Convert PDF to editable Word document',    cat:'convert'},
-      {k:'pdf-to-excel', t:'PDF to Excel',       d:'Extract tables into a spreadsheet',        cat:'convert'},
-      {k:'pdf-to-pptx',  t:'PDF to PowerPoint',  d:'Convert each page to a slide',             cat:'convert'},
-      {k:'pdf-to-images',t:'PDF to Images',      d:'Save each page as a high-quality JPG',     cat:'convert'},
-      {k:'office-to-pdf',t:'Office to PDF',      d:'Convert Word, Excel, PPT to PDF',          cat:'convert'},
-      {k:'images-to-pdf',t:'Images to PDF',      d:'Combine images into a single PDF',         cat:'convert'},
-      {k:'merge',        t:'Merge PDF',           d:'Combine multiple PDFs into one',           cat:'organize'},
-      {k:'split',        t:'Split PDF',           d:'Split a document into smaller parts',      cat:'organize'},
-      {k:'compress',     t:'Compress PDF',        d:'Reduce file size without quality loss',    cat:'organize'},
-      {k:'rotate',       t:'Rotate PDF',          d:'Rotate pages by 90, 180 or 270 degrees',  cat:'organize'},
-      {k:'watermark',    t:'Watermark',           d:'Add text or logo as watermark',            cat:'edit'},
-      {k:'sign',         t:'Digital Signature',   d:'Sign documents electronically',            cat:'edit'},
-      {k:'protect',      t:'Password Protect',    d:'Encrypt PDF with a strong password',       cat:'edit'},
-      {k:'redact',       t:'Redact Text',         d:'Permanently hide sensitive information',   cat:'edit'},
-      {k:'ocr',          t:'OCR \u2014 Extract Text', d:'Extract text from images and scans',  cat:'other'},
-      {k:'translate',    t:'Translate PDF',       d:'Translate documents into 40+ languages',   cat:'other'},
+      {k:'pdf-to-word',  t:'PDF to Word',        d:'Convert PDF to editable Word',          cat:'convert'},
+      {k:'pdf-to-excel', t:'PDF to Excel',        d:'Extract tables to spreadsheet',         cat:'convert'},
+      {k:'pdf-to-pptx',  t:'PDF to PowerPoint',   d:'Convert each page to a slide',          cat:'convert'},
+      {k:'pdf-to-images',t:'PDF to Images',       d:'Save each page as JPG',                 cat:'convert'},
+      {k:'office-to-pdf',t:'Office to PDF',       d:'Convert Word, Excel, PPT to PDF',       cat:'convert'},
+      {k:'images-to-pdf',t:'Images to PDF',       d:'Combine images into one PDF',           cat:'convert'},
+      {k:'merge',        t:'Merge PDF',            d:'Combine multiple PDFs into one',        cat:'organize'},
+      {k:'split',        t:'Split PDF',            d:'Split document into smaller parts',     cat:'organize'},
+      {k:'compress',     t:'Compress PDF',         d:'Reduce file size without quality loss', cat:'organize'},
+      {k:'rotate',       t:'Rotate PDF',           d:'Rotate pages 90, 180 or 270 degrees',  cat:'organize'},
+      {k:'watermark',    t:'Watermark',            d:'Add text or logo as watermark',         cat:'edit'},
+      {k:'sign',         t:'Digital Signature',    d:'Sign documents electronically',         cat:'edit'},
+      {k:'protect',      t:'Password Protect',     d:'Encrypt PDF with a password',           cat:'edit'},
+      {k:'redact',       t:'Redact Text',          d:'Permanently hide sensitive info',       cat:'edit'},
+      {k:'ocr',          t:'OCR \u2014 Extract Text', d:'Extract text from images and scans',cat:'other'},
+      {k:'translate',    t:'Translate PDF',        d:'Translate documents into 40+ languages',cat:'other'},
     ],
     tool_opts:{
       level_label:'Compression level',level_opts:['Low','Medium','High','Extreme'],
@@ -374,27 +444,27 @@ const T = {
       redact_label:'Text to redact (comma-separated)',
       ocr_lang_label:'Language',ocr_fmt_label:'Output format',
       translate_lang_label:'Target language',translate_layout_label:'Preserve layout',
-      ranges_label:'Page ranges (e.g. 1-3,4-6)',
-      yes:'Yes',no:'No',
+      ranges_label:'Page ranges (e.g. 1-3,4-6)',yes:'Yes',no:'No',
     }
   },
   he: {
     nav_tools:'\u05DB\u05DC\u05D9\u05DD',nav_features:'\u05D9\u05EA\u05E8\u05D5\u05E0\u05D5\u05EA',nav_pricing:'\u05DE\u05D7\u05D9\u05E8\u05D9\u05DD',nav_cta:'\u05D4\u05EA\u05D7\u05DC \u05E2\u05DB\u05E9\u05D9\u05D5',
     hero_badge:'\u05DE\u05E2\u05DC 2 \u05DE\u05D9\u05DC\u05D9\u05D5\u05DF \u05DE\u05E9\u05EA\u05DE\u05E9\u05D9\u05DD \u05E4\u05E2\u05D9\u05DC\u05D9\u05DD',
     hero_h1:'\u05DB\u05DC\u05D9 PDF<br/><em>\u05DE\u05E7\u05E6\u05D5\u05E2\u05D9\u05D9\u05DD</em><br/>\u05DC\u05DB\u05DC \u05E6\u05D5\u05E8\u05DA',
-    hero_p:'\u05E2\u05E8\u05D5\u05DA, \u05D4\u05DE\u05E8, \u05DE\u05D6\u05D2, \u05E4\u05E6\u05DC \u05D5\u05D7\u05EA\u05D5\u05DD \u05E2\u05DC \u05DE\u05E1\u05DE\u05DB\u05D9 PDF \u2014 \u05D4\u05DB\u05DC \u05D1\u05D3\u05E4\u05D3\u05E4\u05DF, \u05DC\u05DC\u05D0 \u05D4\u05EA\u05E7\u05E0\u05D5\u05EA, \u05D1\u05D7\u05D9\u05E0\u05DD \u05DC\u05D7\u05DC\u05D5\u05D8\u05D9\u05DF.',
+    hero_p:'\u05E2\u05E8\u05D5\u05DA, \u05D4\u05DE\u05E8, \u05DE\u05D6\u05D2, \u05E4\u05E6\u05DC \u05D5\u05D7\u05EA\u05D5\u05DD \u05E2\u05DC \u05DE\u05E1\u05DE\u05DB\u05D9 PDF \u2014 \u05D4\u05DB\u05DC \u05D1\u05D3\u05E4\u05D3\u05E4\u05DF, \u05DC\u05DC\u05D0 \u05D4\u05EA\u05E7\u05E0\u05D5\u05EA, \u05D1\u05D7\u05D9\u05E0\u05DD.',
     stat_tools:'\u05DB\u05DC\u05D9\u05DD',stat_secure:'\u05D0\u05D1\u05D8\u05D7\u05D4',stat_langs:'\u05E9\u05E4\u05D5\u05EA',
     upload_drag:'\u05D2\u05E8\u05D5\u05E8 \u05E7\u05D5\u05D1\u05E5 \u05DC\u05DB\u05D0\u05DF \u05D0\u05D5 \u05DC\u05D7\u05E5 \u05DC\u05D4\u05E2\u05DC\u05D0\u05D4',
     upload_formats:'PDF, Word, Excel, JPG, PNG \u05D5\u05E2\u05D5\u05D3',
     upload_btn:'\u05D1\u05D7\u05E8 \u05E7\u05D5\u05D1\u05E5 \u05D5\u05E4\u05E2\u05D5\u05DC\u05D4 \u279C',
     select_action:'\u2014 \u05D1\u05D7\u05E8 \u05E4\u05E2\u05D5\u05DC\u05D4 \u2014',
-    tools_label:'\u05DB\u05DC \u05D4\u05DB\u05DC\u05D9\u05DD \u05D1\u05DE\u05E7\u05D5\u05DD \u05D0\u05D7\u05D3',tools_title:'\u05DE\u05D4 \u05EA\u05E8\u05E6\u05D4 \u05DC\u05E2\u05E9\u05D5\u05EA \u05D4\u05D9\u05D5\u05DD?',
-    tools_sub:'\u05D1\u05D7\u05E8 \u05DE\u05E2\u05E9\u05E8\u05D5\u05EA \u05DB\u05DC\u05D9\u05DD \u05DE\u05E7\u05E6\u05D5\u05E2\u05D9\u05D9\u05DD \u2014 \u05DC\u05DC\u05D0 \u05D4\u05E8\u05E9\u05DE\u05D4, \u05DC\u05DC\u05D0 \u05D4\u05EA\u05E7\u05E0\u05D4',
+    tools_label:'\u05DB\u05DC \u05D4\u05DB\u05DC\u05D9\u05DD \u05D1\u05DE\u05E7\u05D5\u05DD \u05D0\u05D7\u05D3',
+    tools_title:'\u05DE\u05D4 \u05EA\u05E8\u05E6\u05D4 \u05DC\u05E2\u05E9\u05D5\u05EA \u05D4\u05D9\u05D5\u05DD?',
+    tools_sub:'\u05D1\u05D7\u05E8 \u05DE\u05E2\u05E9\u05E8\u05D5\u05EA \u05DB\u05DC\u05D9\u05DD \u05DE\u05E7\u05E6\u05D5\u05E2\u05D9\u05D9\u05DD',
     feat_label:'\u05DC\u05DE\u05D4 \u05DC\u05D1\u05D7\u05D5\u05E8 \u05D1\u05E0\u05D5',feat_title:'\u05DE\u05E7\u05E6\u05D5\u05E2\u05D9, \u05DE\u05D4\u05D9\u05E8 \u05D5\u05DE\u05D0\u05D5\u05D1\u05D8\u05D7',
-    feat1_h:'\u05D9\u05E9\u05D9\u05E8\u05D5\u05EA \u05D1\u05D3\u05E4\u05D3\u05E4\u05DF',feat1_p:'\u05D0\u05D9\u05DF \u05E6\u05D5\u05E8\u05DA \u05D1\u05D4\u05EA\u05E7\u05E0\u05EA \u05EA\u05D5\u05DB\u05E0\u05D4. \u05E2\u05D1\u05D5\u05D3 \u05DE\u05DB\u05DC \u05DE\u05DB\u05E9\u05D9\u05E8 \u05D5\u05DE\u05DB\u05DC \u05DE\u05E7\u05D5\u05DD.',
-    feat2_h:'\u05E4\u05E8\u05D8\u05D9\u05D5\u05EA \u05DE\u05D5\u05D7\u05DC\u05D8\u05EA',feat2_p:'\u05D4\u05E7\u05D1\u05E6\u05D9\u05DD \u05E0\u05DE\u05D7\u05E7\u05D9\u05DD \u05D0\u05D5\u05D8\u05D5\u05DE\u05D8\u05D9\u05EA \u05DE\u05D4\u05E9\u05E8\u05EA\u05D9\u05DD \u05EA\u05D5\u05DA \u05E9\u05E2\u05D4 \u05D0\u05D7\u05EA.',
-    feat3_h:'\u05D0\u05D9\u05DB\u05D5\u05EA \u05DE\u05E7\u05E1\u05D9\u05DE\u05DC\u05D9\u05EA',feat3_p:'\u05DE\u05E0\u05D5\u05E2\u05D9 \u05D4\u05D4\u05DE\u05E8\u05D4 \u05E9\u05D5\u05DE\u05E8\u05D9\u05DD \u05E2\u05DC \u05E2\u05D9\u05E6\u05D5\u05D1 \u05D5\u05D2\u05D5\u05E4\u05E0\u05D9\u05DD \u05D1\u05D3\u05D9\u05D5\u05E7 \u05DB\u05E4\u05D9 \u05E9\u05D4\u05DD.',
-    feat4_h:'\u05EA\u05DE\u05D9\u05DB\u05D4 \u05DE\u05DC\u05D0\u05D4 \u05D1\u05E2\u05D1\u05E8\u05D9\u05EA',feat4_p:'\u05DE\u05E1\u05DE\u05DB\u05D9\u05DD \u05D1\u05E2\u05D1\u05E8\u05D9\u05EA \u05D5\u05E2\u05E8\u05D1\u05D9\u05EA \u05DE\u05D8\u05D5\u05E4\u05DC\u05D9\u05DD \u05D1\u05D3\u05D9\u05D5\u05E7 \u05DE\u05E8\u05D1\u05D9 \u05E2\u05DD \u05D6\u05D9\u05D4\u05D5\u05D9 RTL.',
+    feat1_h:'\u05D9\u05E9\u05D9\u05E8\u05D5\u05EA \u05D1\u05D3\u05E4\u05D3\u05E4\u05DF',feat1_p:'\u05D0\u05D9\u05DF \u05E6\u05D5\u05E8\u05DA \u05D1\u05D4\u05EA\u05E7\u05E0\u05EA \u05EA\u05D5\u05DB\u05E0\u05D4.',
+    feat2_h:'\u05E4\u05E8\u05D8\u05D9\u05D5\u05EA \u05DE\u05D5\u05D7\u05DC\u05D8\u05EA',feat2_p:'\u05D4\u05E7\u05D1\u05E6\u05D9\u05DD \u05E0\u05DE\u05D7\u05E7\u05D9\u05DD \u05D0\u05D5\u05D8\u05D5\u05DE\u05D8\u05D9\u05EA \u05EA\u05D5\u05DA \u05E9\u05E2\u05D4.',
+    feat3_h:'\u05D0\u05D9\u05DB\u05D5\u05EA \u05DE\u05E7\u05E1\u05D9\u05DE\u05DC\u05D9\u05EA',feat3_p:'\u05E9\u05DE\u05D9\u05E8\u05D4 \u05E2\u05DC \u05E2\u05D9\u05E6\u05D5\u05D1 \u05D5\u05D2\u05D5\u05E4\u05E0\u05D9\u05DD.',
+    feat4_h:'\u05EA\u05DE\u05D9\u05DB\u05D4 \u05DE\u05DC\u05D0\u05D4 \u05D1\u05E2\u05D1\u05E8\u05D9\u05EA',feat4_p:'\u05DE\u05E1\u05DE\u05DB\u05D9\u05DD \u05D1\u05E2\u05D1\u05E8\u05D9\u05EA \u05D5\u05E2\u05E8\u05D1\u05D9\u05EA \u05E2\u05DD \u05D6\u05D9\u05D4\u05D5\u05D9 RTL.',
     footer_desc:'\u05D4\u05E4\u05DC\u05D8\u05E4\u05D5\u05E8\u05DE\u05D4 \u05D4\u05DE\u05D5\u05D1\u05D9\u05DC\u05D4 \u05DC\u05E2\u05D9\u05D1\u05D5\u05D3 \u05DE\u05E1\u05DE\u05DB\u05D9 PDF.',
     footer_tools:'\u05DB\u05DC\u05D9\u05DD',footer_company:'\u05D7\u05D1\u05E8\u05D4',footer_support:'\u05EA\u05DE\u05D9\u05DB\u05D4',
     f_convert:'\u05D4\u05DE\u05E8\u05EA PDF',f_edit:'\u05E2\u05E8\u05D9\u05DB\u05EA PDF',f_merge:'\u05DE\u05D9\u05D6\u05D5\u05D2 PDF',
@@ -402,43 +472,42 @@ const T = {
     f_privacy:'\u05DE\u05D3\u05D9\u05E0\u05D9\u05D5\u05EA \u05E4\u05E8\u05D8\u05D9\u05D5\u05EA',f_terms:'\u05EA\u05E0\u05D0\u05D9 \u05E9\u05D9\u05DE\u05D5\u05E9',
     footer_copy:'\u00A9 2026 PDFPro. \u05DB\u05DC \u05D4\u05D6\u05DB\u05D5\u05D9\u05D5\u05EA \u05E9\u05DE\u05D5\u05E8\u05D5\u05EA.',
     modal_drop:'\u05DC\u05D7\u05E5 \u05D0\u05D5 \u05D2\u05E8\u05D5\u05E8 \u05E7\u05D5\u05D1\u05E5 \u05DC\u05DB\u05D0\u05DF',process_btn:'\u05E2\u05D1\u05D3 \u05E7\u05D5\u05D1\u05E5',
-    api_online:'\u05E9\u05E8\u05EA \u05E4\u05E2\u05D9\u05DC',api_offline:'\u05E9\u05E8\u05EA \u05DC\u05D0 \u05DE\u05D7\u05D5\u05D1\u05E8',api_checking:'\u05D1\u05D5\u05D3\u05E7 \u05D7\u05D9\u05D1\u05D5\u05E8...',
-    processing:'\u05DE\u05E2\u05D1\u05D3...',uploading:'\u05DE\u05E2\u05DC\u05D4 \u05E7\u05D5\u05D1\u05E5...',done:'\u05D4\u05D5\u05E9\u05DC\u05DD!',
-    error_no_file:'\u05D0\u05E0\u05D0 \u05D1\u05D7\u05E8 \u05E7\u05D5\u05D1\u05E5 \u05EA\u05D7\u05D9\u05DC\u05D4',error_select_tool:'\u05D0\u05E0\u05D0 \u05D1\u05D7\u05E8 \u05E4\u05E2\u05D5\u05DC\u05D4',
-    result_ready:'\u2705 \u05D4\u05E7\u05D5\u05D1\u05E5 \u05DE\u05D5\u05DB\u05DF \u05DC\u05D4\u05D5\u05E8\u05D3\u05D4!',result_ocr:'\u2705 \u05D4\u05D8\u05E7\u05E1\u05D8 \u05D7\u05D5\u05DC\u05E5 \u05D1\u05D4\u05E6\u05DC\u05D7\u05D4',
-    result_multi:'\u2705 {n} \u05E7\u05D1\u05E6\u05D9\u05DD \u05DE\u05D5\u05DB\u05E0\u05D9\u05DD!',result_error:'\u274C \u05E9\u05D2\u05D9\u05D0\u05D4: {msg}',
+    api_online:'\u05E9\u05E8\u05EA \u05E4\u05E2\u05D9\u05DC',api_offline:'\u05E9\u05E8\u05EA \u05DC\u05D0 \u05DE\u05D7\u05D5\u05D1\u05E8',
+    processing:'\u05DE\u05E2\u05D1\u05D3...',uploading:'\u05DE\u05E2\u05DC\u05D4...',done:'\u05D4\u05D5\u05E9\u05DC\u05DD!',
+    error_no_file:'\u05D0\u05E0\u05D0 \u05D1\u05D7\u05E8 \u05E7\u05D5\u05D1\u05E5',error_select_tool:'\u05D0\u05E0\u05D0 \u05D1\u05D7\u05E8 \u05E4\u05E2\u05D5\u05DC\u05D4',
+    result_ready:'\u2705 \u05D4\u05E7\u05D5\u05D1\u05E5 \u05DE\u05D5\u05DB\u05DF!',result_ocr:'\u2705 \u05D4\u05D8\u05E7\u05E1\u05D8 \u05D7\u05D5\u05DC\u05E5!',
+    result_multi:'\u2705 {n} \u05E7\u05D1\u05E6\u05D9\u05DD!',result_error:'\u274C \u05E9\u05D2\u05D9\u05D0\u05D4: {msg}',
     download_txt:'\u2B07 \u05D4\u05D5\u05E8\u05D3 TXT',download_files:'\u2B07 \u05D4\u05D5\u05E8\u05D3 {n} \u05E7\u05D1\u05E6\u05D9\u05DD',
-    retry_hint:'\u05E0\u05E1\u05D4 \u05E9\u05D5\u05D1 \u05D0\u05D5 \u05D1\u05D3\u05D5\u05E7 \u05E9\u05D4\u05E7\u05D5\u05D1\u05E5 \u05EA\u05E7\u05D9\u05DF',
+    retry_hint:'\u05E0\u05E1\u05D4 \u05E9\u05D5\u05D1',
     tabs:['\u05D4\u05DB\u05DC','\u05D4\u05DE\u05E8\u05D4','\u05D0\u05E8\u05D2\u05D5\u05DF','\u05E2\u05E8\u05D9\u05DB\u05D4','\u05D0\u05D7\u05E8'],
     tools:[
-      {k:'pdf-to-word',  t:'PDF \u05DC-Word',        d:'\u05D4\u05DE\u05E8 PDF \u05DC\u05E7\u05D5\u05D1\u05E5 Word \u05D4\u05E0\u05D9\u05EA\u05DF \u05DC\u05E2\u05E8\u05D9\u05DB\u05D4',    cat:'convert'},
-      {k:'pdf-to-excel', t:'PDF \u05DC-Excel',        d:'\u05D7\u05DC\u05E5 \u05D8\u05D1\u05DC\u05D0\u05D5\u05EA \u05DC\u05D2\u05D9\u05DC\u05D9\u05D5\u05DF \u05D0\u05DC\u05E7\u05D8\u05E8\u05D5\u05E0\u05D9',         cat:'convert'},
-      {k:'pdf-to-pptx',  t:'PDF \u05DC-PowerPoint',   d:'\u05D4\u05DE\u05E8 \u05DB\u05DC \u05E2\u05DE\u05D5\u05D3 \u05DC\u05E9\u05E7\u05D5\u05E4\u05D9\u05EA',                 cat:'convert'},
-      {k:'pdf-to-images',t:'PDF \u05DC-\u05EA\u05DE\u05D5\u05E0\u05D5\u05EA',       d:'\u05E9\u05DE\u05D5\u05E8 \u05DB\u05DC \u05E2\u05DE\u05D5\u05D3 \u05DB-JPG \u05D1\u05D0\u05D9\u05DB\u05D5\u05EA \u05D2\u05D1\u05D5\u05D4\u05D4',    cat:'convert'},
-      {k:'office-to-pdf',t:'Office \u05DC-PDF',       d:'\u05D4\u05DE\u05E8 Word, Excel \u05D5-PPT \u05DC-PDF',         cat:'convert'},
-      {k:'images-to-pdf',t:'\u05EA\u05DE\u05D5\u05E0\u05D5\u05EA \u05DC-PDF',       d:'\u05D7\u05D1\u05E8 \u05EA\u05DE\u05D5\u05E0\u05D5\u05EA \u05DC\u05E7\u05D5\u05D1\u05E5 PDF \u05D0\u05D7\u05D3',            cat:'convert'},
-      {k:'merge',        t:'\u05DE\u05D9\u05D6\u05D5\u05D2 PDF',           d:'\u05D7\u05D1\u05E8 \u05DE\u05E1\u05E4\u05E8 \u05E7\u05D1\u05E6\u05D9 PDF \u05DC\u05E7\u05D5\u05D1\u05E5 \u05D0\u05D7\u05D3',         cat:'organize'},
-      {k:'split',        t:'\u05E4\u05D9\u05E6\u05D5\u05DC PDF',           d:'\u05D7\u05DC\u05E7 \u05DE\u05E1\u05DE\u05DA \u05D2\u05D3\u05D5\u05DC \u05DC\u05D7\u05DC\u05E7\u05D9\u05DD \u05E7\u05D8\u05E0\u05D9\u05DD',          cat:'organize'},
-      {k:'compress',     t:'\u05D3\u05D7\u05D9\u05E1\u05EA PDF',           d:'\u05D4\u05E7\u05D8\u05DF \u05D0\u05EA \u05D2\u05D5\u05D3\u05DC \u05D4\u05E7\u05D5\u05D1\u05E5 \u05DC\u05DC\u05D0 \u05D0\u05D5\u05D1\u05D3\u05DF \u05D0\u05D9\u05DB\u05D5\u05EA', cat:'organize'},
-      {k:'rotate',       t:'\u05E1\u05D9\u05D1\u05D5\u05D1 PDF',           d:'\u05E1\u05D5\u05D1\u05D1 \u05E2\u05DE\u05D5\u05D3\u05D9\u05DD \u05D1-90, 180 \u05D0\u05D5 270 \u05DE\u05E2\u05DC\u05D5\u05EA', cat:'organize'},
-      {k:'watermark',    t:'\u05E1\u05D9\u05DE\u05DF \u05DE\u05D9\u05DD',            d:'\u05D4\u05D5\u05E1\u05E3 \u05D8\u05E7\u05E1\u05D8 \u05D0\u05D5 \u05DC\u05D5\u05D2\u05D5 \u05DB\u05E1\u05D9\u05DE\u05DF \u05DE\u05D9\u05DD',         cat:'edit'},
-      {k:'sign',         t:'\u05D7\u05EA\u05D9\u05DE\u05D4 \u05D3\u05D9\u05D2\u05D9\u05D8\u05DC\u05D9\u05EA',      d:'\u05D7\u05EA\u05D5\u05DD \u05E2\u05DC \u05DE\u05E1\u05DE\u05DB\u05D9\u05DD \u05D0\u05DC\u05E7\u05D8\u05E8\u05D5\u05E0\u05D9\u05EA',            cat:'edit'},
-      {k:'protect',      t:'\u05D4\u05D2\u05E0\u05EA \u05E1\u05D9\u05E1\u05DE\u05D0',          d:'\u05D4\u05E6\u05E4\u05DF PDF \u05E2\u05DD \u05E1\u05D9\u05E1\u05DE\u05D0 \u05D7\u05D6\u05E7\u05D4',              cat:'edit'},
-      {k:'redact',       t:'\u05DE\u05D7\u05D9\u05E7\u05EA \u05D8\u05E7\u05E1\u05D8',         d:'\u05D4\u05E1\u05EA\u05E8 \u05DE\u05D9\u05D3\u05E2 \u05E8\u05D2\u05D9\u05E9 \u05DC\u05E6\u05DE\u05D9\u05EA\u05D5\u05EA',              cat:'edit'},
-      {k:'ocr',          t:'OCR \u2014 \u05D6\u05D9\u05D4\u05D5\u05D9 \u05D8\u05E7\u05E1\u05D8',   d:'\u05D7\u05DC\u05E5 \u05D8\u05E7\u05E1\u05D8 \u05DE\u05EA\u05DE\u05D5\u05E0\u05D5\u05EA \u05D5\u05E1\u05E8\u05D9\u05E7\u05D5\u05EA',           cat:'other'},
-      {k:'translate',    t:'\u05EA\u05E8\u05D2\u05D5\u05DD PDF',           d:'\u05EA\u05E8\u05D2\u05DD \u05DE\u05E1\u05DE\u05DB\u05D9\u05DD \u05DC\u05D9\u05D5\u05EA\u05E8 \u05DE-40 \u05E9\u05E4\u05D5\u05EA',        cat:'other'},
+      {k:'pdf-to-word',  t:'PDF \u05DC-Word',        d:'\u05D4\u05DE\u05E8 PDF \u05DC-Word',              cat:'convert'},
+      {k:'pdf-to-excel', t:'PDF \u05DC-Excel',        d:'\u05D7\u05DC\u05E5 \u05D8\u05D1\u05DC\u05D0\u05D5\u05EA \u05DC-Excel',        cat:'convert'},
+      {k:'pdf-to-pptx',  t:'PDF \u05DC-PowerPoint',   d:'\u05D4\u05DE\u05E8 \u05E2\u05DE\u05D5\u05D3\u05D9\u05DD \u05DC\u05E9\u05E7\u05D5\u05E4\u05D9\u05D5\u05EA',    cat:'convert'},
+      {k:'pdf-to-images',t:'PDF \u05DC-\u05EA\u05DE\u05D5\u05E0\u05D5\u05EA',  d:'\u05E9\u05DE\u05D5\u05E8 \u05E2\u05DE\u05D5\u05D3\u05D9\u05DD \u05DB-JPG',          cat:'convert'},
+      {k:'office-to-pdf',t:'Office \u05DC-PDF',       d:'\u05D4\u05DE\u05E8 Word/Excel/PPT \u05DC-PDF',   cat:'convert'},
+      {k:'images-to-pdf',t:'\u05EA\u05DE\u05D5\u05E0\u05D5\u05EA \u05DC-PDF',  d:'\u05D7\u05D1\u05E8 \u05EA\u05DE\u05D5\u05E0\u05D5\u05EA \u05DC-PDF \u05D0\u05D7\u05D3', cat:'convert'},
+      {k:'merge',        t:'\u05DE\u05D9\u05D6\u05D5\u05D2 PDF',  d:'\u05D7\u05D1\u05E8 \u05DE\u05E1\u05E4\u05E8 PDFs \u05DC\u05D0\u05D7\u05D3',  cat:'organize'},
+      {k:'split',        t:'\u05E4\u05D9\u05E6\u05D5\u05DC PDF',  d:'\u05D7\u05DC\u05E7 \u05DE\u05E1\u05DE\u05DA \u05DC\u05D7\u05DC\u05E7\u05D9\u05DD',  cat:'organize'},
+      {k:'compress',     t:'\u05D3\u05D7\u05D9\u05E1\u05EA PDF',  d:'\u05D4\u05E7\u05D8\u05DF \u05D2\u05D5\u05D3\u05DC \u05E7\u05D5\u05D1\u05E5',  cat:'organize'},
+      {k:'rotate',       t:'\u05E1\u05D9\u05D1\u05D5\u05D1 PDF',  d:'\u05E1\u05D5\u05D1\u05D1 \u05E2\u05DE\u05D5\u05D3\u05D9\u05DD',  cat:'organize'},
+      {k:'watermark',    t:'\u05E1\u05D9\u05DE\u05DF \u05DE\u05D9\u05DD', d:'\u05D4\u05D5\u05E1\u05E3 \u05D8\u05E7\u05E1\u05D8 \u05DB\u05E1\u05D9\u05DE\u05DF \u05DE\u05D9\u05DD', cat:'edit'},
+      {k:'sign',         t:'\u05D7\u05EA\u05D9\u05DE\u05D4 \u05D3\u05D9\u05D2\u05D9\u05D8\u05DC\u05D9\u05EA', d:'\u05D7\u05EA\u05D5\u05DD \u05D0\u05DC\u05E7\u05D8\u05E8\u05D5\u05E0\u05D9\u05EA', cat:'edit'},
+      {k:'protect',      t:'\u05D4\u05D2\u05E0\u05EA \u05E1\u05D9\u05E1\u05DE\u05D0', d:'\u05D4\u05E6\u05E4\u05DF PDF', cat:'edit'},
+      {k:'redact',       t:'\u05DE\u05D7\u05D9\u05E7\u05EA \u05D8\u05E7\u05E1\u05D8', d:'\u05D4\u05E1\u05EA\u05E8 \u05DE\u05D9\u05D3\u05E2 \u05E8\u05D2\u05D9\u05E9', cat:'edit'},
+      {k:'ocr',          t:'OCR \u2014 \u05D6\u05D9\u05D4\u05D5\u05D9 \u05D8\u05E7\u05E1\u05D8', d:'\u05D7\u05DC\u05E5 \u05D8\u05E7\u05E1\u05D8 \u05DE\u05EA\u05DE\u05D5\u05E0\u05D5\u05EA', cat:'other'},
+      {k:'translate',    t:'\u05EA\u05E8\u05D2\u05D5\u05DD PDF', d:'\u05EA\u05E8\u05D2\u05DD \u05DC-40+ \u05E9\u05E4\u05D5\u05EA', cat:'other'},
     ],
     tool_opts:{
       level_label:'\u05E8\u05DE\u05EA \u05D3\u05D7\u05D9\u05E1\u05D4',level_opts:['\u05E0\u05DE\u05D5\u05DB\u05D4','\u05D1\u05D9\u05E0\u05D5\u05E0\u05D9\u05EA','\u05D2\u05D1\u05D5\u05D4\u05D4','\u05DE\u05E7\u05E1\u05D9\u05DE\u05DC\u05D9\u05EA'],
       dpi_label:'\u05D0\u05D9\u05DB\u05D5\u05EA (DPI)',format_label:'\u05E4\u05D5\u05E8\u05DE\u05D8',
       page_size_label:'\u05D2\u05D5\u05D3\u05DC \u05E2\u05DE\u05D5\u05D3',angle_label:'\u05D6\u05D5\u05D5\u05D9\u05EA \u05E1\u05D9\u05D1\u05D5\u05D1',
-      wm_text_label:'\u05D8\u05E7\u05E1\u05D8 \u05E1\u05D9\u05DE\u05DF \u05D4\u05DE\u05D9\u05DD',wm_opacity_label:'\u05E9\u05E7\u05D9\u05E4\u05D5\u05EA (0.1\u20131.0)',
+      wm_text_label:'\u05D8\u05E7\u05E1\u05D8 \u05E1\u05D9\u05DE\u05DF \u05D4\u05DE\u05D9\u05DD',wm_opacity_label:'\u05E9\u05E7\u05D9\u05E4\u05D5\u05EA',
       sig_label:'\u05E9\u05DD \u05DC\u05D7\u05EA\u05D9\u05DE\u05D4',pass_label:'\u05E1\u05D9\u05E1\u05DE\u05D0',
-      redact_label:'\u05D8\u05E7\u05E1\u05D8\u05D9\u05DD \u05DC\u05DE\u05D7\u05D9\u05E7\u05D4 (\u05DE\u05D5\u05E4\u05E8\u05D3\u05D9\u05DD \u05D1\u05E4\u05E1\u05D9\u05E7)',
+      redact_label:'\u05D8\u05E7\u05E1\u05D8\u05D9\u05DD \u05DC\u05DE\u05D7\u05D9\u05E7\u05D4',
       ocr_lang_label:'\u05E9\u05E4\u05D4',ocr_fmt_label:'\u05E4\u05D5\u05E8\u05DE\u05D8 \u05E4\u05DC\u05D8',
       translate_lang_label:'\u05E9\u05E4\u05EA \u05D9\u05E2\u05D3',translate_layout_label:'\u05E9\u05DE\u05D5\u05E8 \u05E4\u05E8\u05D9\u05E1\u05D4',
-      ranges_label:'\u05D8\u05D5\u05D5\u05D7\u05D9 \u05E2\u05DE\u05D5\u05D3\u05D9\u05DD (\u05DC\u05D3\u05D5\u05D2\u05DE\u05D4: 1-3,4-6)',
-      yes:'\u05DB\u05DF',no:'\u05DC\u05D0',
+      ranges_label:'\u05D8\u05D5\u05D5\u05D7\u05D9 \u05E2\u05DE\u05D5\u05D3\u05D9\u05DD',yes:'\u05DB\u05DF',no:'\u05DC\u05D0',
     }
   }
 };
@@ -474,32 +543,10 @@ const TOOL_CONFIG = {
     extra:(o)=>[{name:'target_language',label:o.translate_lang_label,type:'select',options:['iw','en','ar','ru','fr','de','es'],labels:['\u05E2\u05D1\u05E8\u05D9\u05EA','English','\u0627\u0644\u0639\u0631\u0628\u064A\u0629','\u0420\u0443\u0441\u0441\u043A\u0438\u0439','Fran\u00E7ais','Deutsch','Espa\u00F1ol'],default:'iw'},{name:'preserve_layout',label:o.translate_layout_label,type:'select',options:['true','false'],labels:['\u05DB\u05DF','\u05DC\u05D0'],default:'true'}]},
 };
 
-const TOOL_ICONS = {
-  'pdf-to-word':'ic-blue','pdf-to-excel':'ic-green','pdf-to-pptx':'ic-amber','pdf-to-images':'ic-red',
-  'office-to-pdf':'ic-blue','images-to-pdf':'ic-purple','merge':'ic-teal','split':'ic-red',
-  'compress':'ic-amber','rotate':'ic-green','watermark':'ic-blue','sign':'ic-purple',
-  'protect':'ic-red','redact':'ic-teal','ocr':'ic-amber','translate':'ic-green',
-};
-const TOOL_SVGS = {
-  'pdf-to-word':'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>',
-  'pdf-to-excel':'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>',
-  'pdf-to-pptx':'<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>',
-  'pdf-to-images':'<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>',
-  'office-to-pdf':'<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>',
-  'images-to-pdf':'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/>',
-  'merge':'<path d="M8 6H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-3"/><rect x="8" y="2" width="8" height="8" rx="2"/>',
-  'split':'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/>',
-  'compress':'<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',
-  'rotate':'<polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>',
-  'watermark':'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
-  'sign':'<path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>',
-  'protect':'<rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',
-  'redact':'<path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>',
-  'ocr':'<circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>',
-  'translate':'<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>',
-};
+const TOOL_ICONS={'pdf-to-word':'ic-blue','pdf-to-excel':'ic-green','pdf-to-pptx':'ic-amber','pdf-to-images':'ic-red','office-to-pdf':'ic-blue','images-to-pdf':'ic-purple','merge':'ic-teal','split':'ic-red','compress':'ic-amber','rotate':'ic-green','watermark':'ic-blue','sign':'ic-purple','protect':'ic-red','redact':'ic-teal','ocr':'ic-amber','translate':'ic-green'};
+const TOOL_SVGS={'pdf-to-word':'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>','pdf-to-excel':'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>','pdf-to-pptx':'<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>','pdf-to-images':'<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>','office-to-pdf':'<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>','images-to-pdf':'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/>','merge':'<path d="M8 6H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-3"/><rect x="8" y="2" width="8" height="8" rx="2"/>','split':'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/>','compress':'<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>','rotate':'<polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>','watermark':'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>','sign':'<path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>','protect':'<rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>','redact':'<path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>','ocr':'<circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>','translate':'<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>'};
 
-let lang='en', currentTool=null, selectedFiles=[];
+let lang='en',currentTool=null,selectedFiles=[];
 function t(key){return T[lang][key]||T.en[key]||key;}
 
 async function detectAndRedirect(){
@@ -535,7 +582,6 @@ function applyLang(nl){
   buildHeroSelect();
   const s=document.getElementById('api-status');
   document.getElementById('api-status-text').textContent=s.classList.contains('online')?t('api_online'):t('api_offline');
-  setTimeout(hookFooterLinks,100);
 }
 
 const TAB_CATS=['all','convert','organize','edit','other'];
@@ -550,12 +596,30 @@ function buildToolsUI(){
     });tabsEl.appendChild(btn);
   });
   const grid=document.getElementById('tools-grid');grid.innerHTML='';
+  const isMobile=window.innerWidth<=768;
   tools.forEach(tool=>{
     const btn=document.createElement('button');btn.className='tool-card';btn.dataset.cat=tool.cat;btn.onclick=()=>openModal(tool.k);
-    btn.innerHTML=`<div class="tool-icon ${TOOL_ICONS[tool.k]}"><svg viewBox="0 0 24 24">${TOOL_SVGS[tool.k]}</svg></div><h3>${tool.t}</h3><p>${tool.d}</p>`;
+    if(isMobile){
+      btn.innerHTML=`
+        <div class="tool-icon ${TOOL_ICONS[tool.k]}"><svg viewBox="0 0 24 24">${TOOL_SVGS[tool.k]}</svg></div>
+        <div class="tool-card-body">
+          <div class="tool-badges">${makeBadges(tool.k)}</div>
+          <h3>${tool.t}</h3>
+          <p>${tool.d}</p>
+        </div>
+        <span class="tool-card-arrow">${lang==='he'?'\u2039':'\u203A'}</span>
+      `;
+    } else {
+      btn.innerHTML=`
+        <div class="tool-icon ${TOOL_ICONS[tool.k]}"><svg viewBox="0 0 24 24">${TOOL_SVGS[tool.k]}</svg></div>
+        <h3>${tool.t}</h3><p>${tool.d}</p>
+      `;
+    }
     grid.appendChild(btn);
   });
 }
+
+window.addEventListener('resize',()=>buildToolsUI());
 
 function buildHeroSelect(){
   const sel=document.getElementById('hero-tool-select'),tools=T[lang].tools;
@@ -620,18 +684,18 @@ async function processFile(){
   if(selectedFiles.length===0){alert(t('error_no_file'));return;}
   const btn=document.getElementById('modal-process-btn');
   btn.disabled=true;btn.innerHTML=`${t('processing')} <span class="spinner"></span>`;
-  const progressWrap=document.getElementById('progress-wrap'),progressBar=document.getElementById('progress-bar'),progressLabel=document.getElementById('progress-label'),resultBox=document.getElementById('result-box');
-  progressWrap.classList.add('show');resultBox.classList.remove('show','error');progressBar.style.width='20%';progressLabel.textContent=t('uploading');
+  const pw=document.getElementById('progress-wrap'),pb=document.getElementById('progress-bar'),pl=document.getElementById('progress-label'),rb=document.getElementById('result-box');
+  pw.classList.add('show');rb.classList.remove('show','error');pb.style.width='20%';pl.textContent=t('uploading');
   try{
-    const formData=new FormData();
-    if(cfg.multi)selectedFiles.forEach(f=>formData.append(cfg.field,f));else formData.append(cfg.field,selectedFiles[0]);
+    const fd=new FormData();
+    if(cfg.multi)selectedFiles.forEach(f=>fd.append(cfg.field,f));else fd.append(cfg.field,selectedFiles[0]);
     const extraList=cfg.extra?cfg.extra(T[lang].tool_opts):[];
-    extraList.forEach(opt=>{const el=document.getElementById(`opt_${opt.name}`);if(el)formData.append(opt.name,el.value);});
-    progressBar.style.width='50%';progressLabel.textContent=t('processing');
-    const resp=await fetch(`${API}${cfg.endpoint}`,{method:'POST',body:formData});
-    progressBar.style.width='90%';
+    extraList.forEach(opt=>{const el=document.getElementById(`opt_${opt.name}`);if(el)fd.append(opt.name,el.value);});
+    pb.style.width='50%';pl.textContent=t('processing');
+    const resp=await fetch(`${API}${cfg.endpoint}`,{method:'POST',body:fd});
+    pb.style.width='90%';
     if(!resp.ok){const err=await resp.json().catch(()=>({detail:'Unknown error'}));throw new Error(err.detail||`Error ${resp.status}`);}
-    const data=await resp.json();progressBar.style.width='100%';progressLabel.textContent=t('done');resultBox.classList.add('show');
+    const data=await resp.json();pb.style.width='100%';pl.textContent=t('done');rb.classList.add('show');
     const dlBtn=document.getElementById('download-btn'),preview=document.getElementById('ocr-preview'),meta=document.getElementById('result-meta');
     if(cfg.textResult&&data.text!==undefined){
       document.getElementById('result-title').textContent=t('result_ocr');const txt=data.text||'';
@@ -662,8 +726,7 @@ async function processFile(){
     const sz=data.size_bytes?` | ${(data.size_bytes/1024).toFixed(0)}KB`:'';
     meta.textContent=`${data.processing_time_ms}ms${sz}${sp}`;
   }catch(err){
-    progressBar.style.width='100%';progressBar.style.background='#ef4444';
-    resultBox.classList.add('show','error');
+    pb.style.width='100%';pb.style.background='#ef4444';rb.classList.add('show','error');
     document.getElementById('result-title').textContent=t('result_error').replace('{msg}',err.message);
     document.getElementById('result-meta').textContent=t('retry_hint');
     document.getElementById('download-btn').style.display='none';
@@ -683,17 +746,7 @@ function startHeroProcess(){
 }
 
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
-window.addEventListener('popstate',()=>{applyLang(window.location.pathname.startsWith('/he')?'he':'en');});
-
-function hookFooterLinks(){
-  const toolMap={'f_convert':'pdf-to-word','f_edit':'watermark','f_merge':'merge'};
-  const pages=['about','help','privacy','terms','contact','blog','pricing'];
-  document.querySelectorAll('footer a,nav a').forEach(a=>{
-    const txt=a.textContent.trim().toLowerCase();
-    const pm={'about':['about','\u05D0\u05D5\u05D3\u05D5\u05EA\u05D9\u05E0\u05D5'],'contact':['contact','\u05E6\u05D5\u05E8 \u05E7\u05E9\u05E8'],'help':['help center','\u05DE\u05E8\u05DB\u05D6 \u05E2\u05D6\u05E8\u05D4'],'privacy':['privacy policy','\u05DE\u05D3\u05D9\u05E0\u05D9\u05D5\u05EA \u05E4\u05E8\u05D8\u05D9\u05D5\u05EA'],'terms':['terms of use','\u05EA\u05E0\u05D0\u05D9 \u05E9\u05D9\u05DE\u05D5\u05E9'],'blog':['blog','\u05D1\u05DC\u05D5\u05D2'],'pricing':['pricing','\u05DE\u05D7\u05D9\u05E8\u05D9\u05DD']};
-    for(const[page,labels]of Object.entries(pm)){if(labels.some(l=>txt.includes(l))){a.onclick=(e)=>{e.preventDefault();};break;}}
-  });
-}
+window.addEventListener('popstate',()=>applyLang(window.location.pathname.startsWith('/he')?'he':'en'));
 
 detectAndRedirect();
 </script>
