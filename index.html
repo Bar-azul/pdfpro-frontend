@@ -20,8 +20,6 @@ html{scroll-behavior:smooth}
 body{background:var(--cream);color:var(--text);overflow-x:hidden}
 body.rtl{direction:rtl;font-family:'Heebo',sans-serif}
 body.ltr{direction:ltr;font-family:'Plus Jakarta Sans',sans-serif}
-
-/* NAV */
 nav{background:var(--navy);padding:0 3rem;height:68px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;border-bottom:2px solid var(--red)}
 .logo{font-size:1.6rem;font-weight:900;color:var(--white);letter-spacing:-0.5px;text-decoration:none}
 .logo span{color:var(--red-light)}
@@ -34,8 +32,6 @@ nav{background:var(--navy);padding:0 3rem;height:68px;display:flex;align-items:c
 .lang-btn.active,.lang-btn:hover{background:rgba(255,255,255,0.1);color:var(--white);border-color:rgba(255,255,255,0.4)}
 .nav-cta{background:var(--red);color:var(--white);padding:0.55rem 1.4rem;border-radius:6px;text-decoration:none;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;transition:background 0.2s}
 .nav-cta:hover{background:var(--red-dark)}
-
-/* HERO */
 .hero{background:var(--navy);min-height:560px;display:flex;align-items:center;position:relative;overflow:hidden;padding:4rem 3rem}
 .hero::before{content:'';position:absolute;left:-200px;top:-200px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(224,32,32,0.15) 0%,transparent 70%);pointer-events:none}
 .hero-inner{max-width:1100px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:1}
@@ -46,8 +42,6 @@ nav{background:var(--navy);padding:0 3rem;height:68px;display:flex;align-items:c
 .hero-stats{display:flex;gap:2rem;margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.1)}
 .stat-num{font-size:1.8rem;font-weight:900;color:var(--white);letter-spacing:-1px}
 .stat-label{font-size:0.8rem;color:rgba(255,255,255,0.5)}
-
-/* UPLOAD CARD */
 .upload-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:2rem}
 .upload-zone{border:2px dashed rgba(255,255,255,0.2);border-radius:12px;padding:2rem;text-align:center;cursor:pointer;transition:all 0.2s;background:rgba(255,255,255,0.03)}
 .upload-zone:hover,.upload-zone.drag-over{border-color:var(--red-light);background:rgba(224,32,32,0.08)}
@@ -62,14 +56,12 @@ nav{background:var(--navy);padding:0 3rem;height:68px;display:flex;align-items:c
 .upload-select select option{background:var(--navy);color:var(--white)}
 .upload-btn{margin-top:1rem;width:100%;background:var(--red);color:var(--white);border:none;border-radius:8px;padding:0.8rem;font-size:0.95rem;font-weight:700;cursor:pointer;transition:background 0.2s}
 .upload-btn:hover{background:var(--red-dark)}
-
-/* MODAL */
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:1000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.25s}
 .modal-overlay.open{opacity:1;pointer-events:all}
 .modal{background:var(--white);border-radius:16px;padding:2.5rem;width:90%;max-width:520px;position:relative;transform:translateY(20px);transition:transform 0.25s;max-height:90vh;overflow-y:auto}
 .modal-overlay.open .modal{transform:translateY(0)}
 .modal-close{position:absolute;top:1rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text-muted)}
-.ltr .modal-close{right:1rem} .rtl .modal-close{left:1rem}
+.ltr .modal-close{right:1rem}.rtl .modal-close{left:1rem}
 .modal h2{font-size:1.3rem;font-weight:800;margin-bottom:0.5rem;color:var(--navy)}
 .modal p.modal-desc{font-size:0.9rem;color:var(--text-muted);margin-bottom:1.5rem}
 .modal-dropzone{border:2px dashed var(--border);border-radius:10px;padding:2rem;text-align:center;cursor:pointer;transition:all 0.2s;margin-bottom:1rem}
@@ -97,8 +89,6 @@ nav{background:var(--navy);padding:0 3rem;height:68px;display:flex;align-items:c
 .ocr-preview{margin-top:0.8rem;background:var(--cream);border:1px solid var(--border);border-radius:8px;padding:0.8rem;font-size:0.82rem;color:var(--text);max-height:120px;overflow-y:auto;line-height:1.6;white-space:pre-wrap;word-break:break-word}
 .result-meta{font-size:0.78rem;color:#166534;margin-top:0.6rem;text-align:center}
 .result-box.error .result-meta{color:#991b1b}
-
-/* TOOLS */
 .section{padding:5rem 3rem;max-width:1200px;margin:0 auto}
 .section-header{text-align:center;margin-bottom:3.5rem}
 .section-label{font-size:0.8rem;font-weight:700;letter-spacing:2px;color:var(--red);text-transform:uppercase;margin-bottom:0.8rem}
@@ -109,7 +99,7 @@ nav{background:var(--navy);padding:0 3rem;height:68px;display:flex;align-items:c
 .tab-btn.active,.tab-btn:hover{background:var(--navy);color:var(--white);border-color:var(--navy)}
 .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
 .tool-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.4rem;cursor:pointer;display:block;transition:all 0.25s;width:100%}
-.ltr .tool-card{text-align:left} .rtl .tool-card{text-align:right}
+.ltr .tool-card{text-align:left}.rtl .tool-card{text-align:right}
 .tool-card:hover{border-color:var(--red);transform:translateY(-3px);box-shadow:0 8px 24px rgba(13,27,42,0.1)}
 .tool-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
 .tool-icon svg{width:22px;height:22px}
@@ -121,8 +111,6 @@ nav{background:var(--navy);padding:0 3rem;height:68px;display:flex;align-items:c
 .ic-teal{background:#EEF9F6}.ic-teal svg{fill:#1A8A72}
 .tool-card h3{font-size:0.95rem;font-weight:700;margin-bottom:0.3rem}
 .tool-card p{font-size:0.8rem;color:var(--text-muted);line-height:1.5}
-
-/* FEATURES */
 .features-section{background:var(--navy);padding:5rem 3rem}
 .features-inner{max-width:1100px;margin:0 auto}
 .features-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:3rem}
@@ -131,8 +119,6 @@ nav{background:var(--navy);padding:0 3rem;height:68px;display:flex;align-items:c
 .feature-num{font-size:2rem;font-weight:900;color:rgba(224,32,32,0.25);letter-spacing:-1px;margin-bottom:1rem}
 .feature-card h3{font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:0.6rem}
 .feature-card p{font-size:0.9rem;color:rgba(255,255,255,0.55);line-height:1.7}
-
-/* FOOTER */
 footer{background:var(--navy);padding:3rem;border-top:2px solid rgba(255,255,255,0.06)}
 .footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem}
 .footer-brand p{font-size:0.85rem;color:rgba(255,255,255,0.4);line-height:1.6;margin-top:0.8rem}
@@ -148,11 +134,75 @@ footer{background:var(--navy);padding:3rem;border-top:2px solid rgba(255,255,255
 .api-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
 @keyframes spin{to{transform:rotate(360deg)}}
 .spinner{width:20px;height:20px;border:2px solid rgba(255,255,255,0.3);border-top-color:white;border-radius:50%;animation:spin 0.8s linear infinite;display:inline-block;vertical-align:middle;margin-left:0.5rem}
-@media(max-width:900px){.hero-inner,.features-grid,.footer-inner{grid-template-columns:1fr}nav{padding:0 1.5rem}.hero{padding:3rem 1.5rem}.hero h1{font-size:2.2rem}}
+
+/* ══ MOBILE ══════════════════════════════════════════════════════ */
+@media(max-width:768px){
+  nav{padding:0 1rem;height:56px}
+  .nav-links{display:none}
+  .logo{font-size:1.3rem}
+  .lang-btn{padding:0.25rem 0.5rem;font-size:0.72rem}
+  .nav-cta{padding:0.45rem 1rem;font-size:0.82rem}
+  #api-status{display:none}
+  .hero{padding:2rem 1rem;min-height:auto}
+  .hero-inner{grid-template-columns:1fr;gap:2rem}
+  .hero h1{font-size:2rem}
+  .hero-stats{gap:1.2rem}
+  .stat-num{font-size:1.4rem}
+  .upload-card{padding:1.2rem}
+  .upload-zone{padding:1.5rem 1rem}
+  .section{padding:2.5rem 1rem}
+  .section-title{font-size:1.6rem}
+  .tools-grid{grid-template-columns:repeat(2,1fr);gap:0.75rem}
+  .tool-card{padding:1rem}
+  .tool-icon{width:36px;height:36px;margin-bottom:0.7rem}
+  .tool-icon svg{width:18px;height:18px}
+  .tool-card h3{font-size:0.85rem}
+  .tool-card p{display:none}
+  .tools-tabs{gap:0.4rem}
+  .tab-btn{padding:0.4rem 0.9rem;font-size:0.82rem}
+  .features-section{padding:3rem 1rem}
+  .features-grid{grid-template-columns:1fr;gap:1rem}
+  footer{padding:2rem 1rem}
+  .footer-inner{grid-template-columns:1fr;gap:1.5rem}
+  .footer-bottom{flex-direction:column;align-items:center;text-align:center}
+
+  /* Modal — bottom sheet */
+  .modal-overlay{align-items:flex-end}
+  .modal{
+    width:100%;max-width:100%;max-height:92vh;
+    border-radius:20px 20px 0 0;
+    padding:0.5rem 1.2rem 2rem;
+    transform:translateY(100%);
+    transition:transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  }
+  .modal-overlay.open .modal{transform:translateY(0)}
+  .modal::before{
+    content:'';display:block;
+    width:40px;height:4px;
+    background:var(--border);border-radius:2px;
+    margin:0.8rem auto 1.2rem;
+  }
+  .ltr .modal-close{right:1.2rem}.rtl .modal-close{left:1.2rem}
+  .modal h2{font-size:1.2rem;padding-right:2rem}
+  .rtl .modal h2{padding-right:0;padding-left:2rem}
+  .modal-dropzone{
+    padding:2.5rem 1rem;border-radius:14px;
+    background:#f8f9ff;border:2px dashed #c7d2fe;
+  }
+  .modal-dropzone svg{width:48px;height:48px;display:block;margin:0 auto 0.8rem}
+  .modal-dropzone p{font-size:1rem;font-weight:600;color:var(--text)}
+  .process-btn{padding:1rem;font-size:1.05rem;border-radius:12px;margin-top:0.5rem}
+  .download-btn{padding:0.9rem;font-size:1rem;border-radius:12px}
+  .modal-options label{font-size:0.9rem}
+  .modal-options select,.modal-options input{padding:0.75rem 1rem;font-size:0.95rem;border-radius:10px}
+}
+@media(max-width:380px){
+  .tools-grid{grid-template-columns:repeat(2,1fr)}
+  .hero h1{font-size:1.7rem}
+}
 </style>
 </head>
 <body class="ltr">
-
 <nav>
   <a href="/" class="logo">PDF<span>Pro</span></a>
   <ul class="nav-links">
@@ -174,7 +224,7 @@ footer{background:var(--navy);padding:3rem;border-top:2px solid rgba(255,255,255
   <div class="hero-inner">
     <div>
       <div class="hero-badge"><svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><circle cx="6" cy="6" r="6"/></svg><span data-t="hero_badge">Over 2 million active users</span></div>
-      <h1 data-t="hero_h1">Professional<br/>PDF Tools<br/>for <em data-t="hero_h1_em">Everyone</em></h1>
+      <h1 data-t="hero_h1">Professional<br/>PDF Tools<br/>for <em>Everyone</em></h1>
       <p data-t="hero_p">Edit, convert, merge, split and sign PDF documents — all in your browser, no installation needed, completely free.</p>
       <div class="hero-stats">
         <div><div class="stat-num">50+</div><div class="stat-label" data-t="stat_tools">Tools</div></div>
@@ -190,11 +240,9 @@ footer{background:var(--navy);padding:3rem;border-top:2px solid rgba(255,255,255
         <input type="file" id="hero-file-input" style="display:none"/>
       </div>
       <div class="upload-select" style="margin-top:1rem">
-        <select id="hero-tool-select">
-          <option value="" data-t="select_action">— Select an action —</option>
-        </select>
+        <select id="hero-tool-select"><option value="" data-t="select_action">— Select an action —</option></select>
       </div>
-      <button class="upload-btn" onclick="startHeroProcess()" data-t="upload_btn">Select file & action ➜</button>
+      <button class="upload-btn" onclick="startHeroProcess()" data-t="upload_btn">Select file &amp; action ➜</button>
       <div class="upload-formats">
         <span class="fmt-badge">PDF</span><span class="fmt-badge">WORD</span><span class="fmt-badge">EXCEL</span><span class="fmt-badge">PPT</span><span class="fmt-badge">JPG</span>
       </div>
@@ -216,13 +264,13 @@ footer{background:var(--navy);padding:3rem;border-top:2px solid rgba(255,255,255
   <div class="features-inner">
     <div class="section-header">
       <div class="section-label" style="color:var(--red-light)" data-t="feat_label">Why choose us</div>
-      <h2 class="section-title" style="color:var(--white)" data-t="feat_title">Professional, Fast & Secure</h2>
+      <h2 class="section-title" style="color:var(--white)" data-t="feat_title">Professional, Fast &amp; Secure</h2>
     </div>
     <div class="features-grid">
       <div class="feature-card"><div class="feature-num">01</div><h3 data-t="feat1_h">Works in your browser</h3><p data-t="feat1_p">No software to install. Work from any device, anywhere.</p></div>
       <div class="feature-card"><div class="feature-num">02</div><h3 data-t="feat2_h">Complete privacy</h3><p data-t="feat2_p">Files are automatically deleted from our servers after one hour.</p></div>
       <div class="feature-card"><div class="feature-num">03</div><h3 data-t="feat3_h">Maximum quality</h3><p data-t="feat3_p">Our conversion engines preserve formatting and fonts exactly as they are.</p></div>
-      <div class="feature-card"><div class="feature-num">04</div><h3 data-t="feat4_h">Hebrew & RTL support</h3><p data-t="feat4_p">Hebrew and Arabic documents handled with maximum precision and automatic RTL detection.</p></div>
+      <div class="feature-card"><div class="feature-num">04</div><h3 data-t="feat4_h">Hebrew &amp; RTL support</h3><p data-t="feat4_p">Hebrew and Arabic documents handled with maximum precision and automatic RTL detection.</p></div>
     </div>
   </div>
 </section>
@@ -237,7 +285,6 @@ footer{background:var(--navy);padding:3rem;border-top:2px solid rgba(255,255,255
   <div class="footer-bottom"><span data-t="footer_copy">© 2026 PDFPro. All rights reserved.</span><span>🌍 Made with ❤️</span></div>
 </footer>
 
-<!-- MODAL -->
 <div class="modal-overlay" id="modal-overlay" onclick="closeModalOnBg(event)">
   <div class="modal">
     <button class="modal-close" onclick="closeModal()">✕</button>
@@ -267,166 +314,164 @@ footer{background:var(--navy);padding:3rem;border-top:2px solid rgba(255,255,255
 <script>
 const API = 'https://pdfproweb.onrender.com';
 
-// ── i18n ──────────────────────────────────────────────────────────────────────
 const T = {
   en: {
-    nav_tools:'Tools', nav_features:'Features', nav_pricing:'Pricing', nav_cta:'Get Started',
+    nav_tools:'Tools',nav_features:'Features',nav_pricing:'Pricing',nav_cta:'Get Started',
     hero_badge:'Over 2 million active users',
     hero_h1:'Professional<br/>PDF Tools<br/>for <em>Everyone</em>',
-    hero_p:'Edit, convert, merge, split and sign PDF documents — all in your browser, no installation needed, completely free.',
-    stat_tools:'Tools', stat_secure:'Secure', stat_langs:'Languages',
+    hero_p:'Edit, convert, merge, split and sign PDF documents \u2014 all in your browser, no installation needed, completely free.',
+    stat_tools:'Tools',stat_secure:'Secure',stat_langs:'Languages',
     upload_drag:'Drop a file here or click to upload',
     upload_formats:'PDF, Word, Excel, JPG, PNG and more',
-    upload_btn:'Select file & action ➜',
-    select_action:'— Select an action —',
-    tools_label:'All tools in one place', tools_title:'What would you like to do?',
-    tools_sub:'Choose from dozens of professional tools — no signup, no installation',
-    feat_label:'Why choose us', feat_title:'Professional, Fast & Secure',
-    feat1_h:'Works in your browser', feat1_p:'No software to install. Work from any device, anywhere.',
-    feat2_h:'Complete privacy', feat2_p:'Files are automatically deleted from our servers after one hour.',
-    feat3_h:'Maximum quality', feat3_p:'Our conversion engines preserve formatting and fonts exactly as they are.',
-    feat4_h:'Hebrew & RTL support', feat4_p:'Hebrew and Arabic documents handled with maximum precision and automatic RTL detection.',
-    footer_desc:'The leading platform for PDF processing — fast, secure and professional.',
-    footer_tools:'Tools', footer_company:'Company', footer_support:'Support',
-    f_convert:'Convert PDF', f_edit:'Edit PDF', f_merge:'Merge PDF',
-    f_about:'About', f_contact:'Contact', f_help:'Help Center',
-    f_privacy:'Privacy Policy', f_terms:'Terms of Use',
-    footer_copy:'© 2026 PDFPro. All rights reserved.',
-    modal_drop:'Click or drag a file here', process_btn:'Process File',
-    api_online:'Server online', api_offline:'Server offline', api_checking:'Connecting...',
-    processing:'Processing...', uploading:'Uploading file...', done:'Done!',
-    error_no_file:'Please select a file first', error_select_tool:'Please select an action',
-    result_ready:'✅ File ready to download!', result_ocr:'✅ Text extracted successfully',
-    result_multi:'✅ {n} files ready!', result_error:'❌ Error: {msg}',
-    download_txt:'⬇ Download TXT', download_files:'⬇ Download {n} files',
+    upload_btn:'Select file & action \u279C',
+    select_action:'\u2014 Select an action \u2014',
+    tools_label:'All tools in one place',tools_title:'What would you like to do?',
+    tools_sub:'Choose from dozens of professional tools \u2014 no signup, no installation',
+    feat_label:'Why choose us',feat_title:'Professional, Fast & Secure',
+    feat1_h:'Works in your browser',feat1_p:'No software to install. Work from any device, anywhere.',
+    feat2_h:'Complete privacy',feat2_p:'Files are automatically deleted from our servers after one hour.',
+    feat3_h:'Maximum quality',feat3_p:'Our conversion engines preserve formatting and fonts exactly as they are.',
+    feat4_h:'Hebrew & RTL support',feat4_p:'Hebrew and Arabic documents handled with maximum precision and automatic RTL detection.',
+    footer_desc:'The leading platform for PDF processing \u2014 fast, secure and professional.',
+    footer_tools:'Tools',footer_company:'Company',footer_support:'Support',
+    f_convert:'Convert PDF',f_edit:'Edit PDF',f_merge:'Merge PDF',
+    f_about:'About',f_contact:'Contact',f_help:'Help Center',
+    f_privacy:'Privacy Policy',f_terms:'Terms of Use',
+    footer_copy:'\u00A9 2026 PDFPro. All rights reserved.',
+    modal_drop:'Click or drag a file here',process_btn:'Process File',
+    api_online:'Server online',api_offline:'Server offline',api_checking:'Connecting...',
+    processing:'Processing...',uploading:'Uploading file...',done:'Done!',
+    error_no_file:'Please select a file first',error_select_tool:'Please select an action',
+    result_ready:'\u2705 File ready to download!',result_ocr:'\u2705 Text extracted successfully',
+    result_multi:'\u2705 {n} files ready!',result_error:'\u274C Error: {msg}',
+    download_txt:'\u2B07 Download TXT',download_files:'\u2B07 Download {n} files',
     retry_hint:'Please try again or check the file',
-    tabs: ['All','Convert','Organize','Edit','Other'],
-    tools: [
-      {k:'pdf-to-word',  t:'PDF to Word',       d:'Convert PDF to editable Word document',     cat:'convert'},
-      {k:'pdf-to-excel', t:'PDF to Excel',       d:'Extract tables into a spreadsheet',         cat:'convert'},
-      {k:'pdf-to-pptx',  t:'PDF to PowerPoint',  d:'Convert each page to a slide',              cat:'convert'},
-      {k:'pdf-to-images',t:'PDF to Images',      d:'Save each page as a high-quality JPG',      cat:'convert'},
-      {k:'office-to-pdf',t:'Office to PDF',      d:'Convert Word, Excel, PPT to PDF',           cat:'convert'},
-      {k:'images-to-pdf',t:'Images to PDF',      d:'Combine images into a single PDF',          cat:'convert'},
-      {k:'merge',        t:'Merge PDF',           d:'Combine multiple PDFs into one',            cat:'organize'},
-      {k:'split',        t:'Split PDF',           d:'Split a document into smaller parts',       cat:'organize'},
-      {k:'compress',     t:'Compress PDF',        d:'Reduce file size without quality loss',     cat:'organize'},
-      {k:'rotate',       t:'Rotate PDF',          d:'Rotate pages by 90, 180 or 270 degrees',   cat:'organize'},
-      {k:'watermark',    t:'Watermark',           d:'Add text or logo as watermark',             cat:'edit'},
-      {k:'sign',         t:'Digital Signature',   d:'Sign documents electronically',             cat:'edit'},
-      {k:'protect',      t:'Password Protect',    d:'Encrypt PDF with a strong password',        cat:'edit'},
-      {k:'redact',       t:'Redact Text',         d:'Permanently hide sensitive information',    cat:'edit'},
-      {k:'ocr',          t:'OCR — Extract Text',  d:'Extract text from images and scans',        cat:'other'},
-      {k:'translate',    t:'Translate PDF',       d:'Translate documents into 40+ languages',    cat:'other'},
+    tabs:['All','Convert','Organize','Edit','Other'],
+    tools:[
+      {k:'pdf-to-word',  t:'PDF to Word',       d:'Convert PDF to editable Word document',    cat:'convert'},
+      {k:'pdf-to-excel', t:'PDF to Excel',       d:'Extract tables into a spreadsheet',        cat:'convert'},
+      {k:'pdf-to-pptx',  t:'PDF to PowerPoint',  d:'Convert each page to a slide',             cat:'convert'},
+      {k:'pdf-to-images',t:'PDF to Images',      d:'Save each page as a high-quality JPG',     cat:'convert'},
+      {k:'office-to-pdf',t:'Office to PDF',      d:'Convert Word, Excel, PPT to PDF',          cat:'convert'},
+      {k:'images-to-pdf',t:'Images to PDF',      d:'Combine images into a single PDF',         cat:'convert'},
+      {k:'merge',        t:'Merge PDF',           d:'Combine multiple PDFs into one',           cat:'organize'},
+      {k:'split',        t:'Split PDF',           d:'Split a document into smaller parts',      cat:'organize'},
+      {k:'compress',     t:'Compress PDF',        d:'Reduce file size without quality loss',    cat:'organize'},
+      {k:'rotate',       t:'Rotate PDF',          d:'Rotate pages by 90, 180 or 270 degrees',  cat:'organize'},
+      {k:'watermark',    t:'Watermark',           d:'Add text or logo as watermark',            cat:'edit'},
+      {k:'sign',         t:'Digital Signature',   d:'Sign documents electronically',            cat:'edit'},
+      {k:'protect',      t:'Password Protect',    d:'Encrypt PDF with a strong password',       cat:'edit'},
+      {k:'redact',       t:'Redact Text',         d:'Permanently hide sensitive information',   cat:'edit'},
+      {k:'ocr',          t:'OCR \u2014 Extract Text', d:'Extract text from images and scans',  cat:'other'},
+      {k:'translate',    t:'Translate PDF',       d:'Translate documents into 40+ languages',   cat:'other'},
     ],
-    tool_opts: {
-      level_label:'Compression level', level_opts:['Low','Medium','High','Extreme'],
-      dpi_label:'Quality (DPI)', format_label:'Format',
-      page_size_label:'Page size', angle_label:'Rotation angle',
-      wm_text_label:'Watermark text', wm_opacity_label:'Opacity (0.1–1.0)',
-      sig_label:'Name for signature', pass_label:'Password',
+    tool_opts:{
+      level_label:'Compression level',level_opts:['Low','Medium','High','Extreme'],
+      dpi_label:'Quality (DPI)',format_label:'Format',
+      page_size_label:'Page size',angle_label:'Rotation angle',
+      wm_text_label:'Watermark text',wm_opacity_label:'Opacity (0.1\u20131.0)',
+      sig_label:'Name for signature',pass_label:'Password',
       redact_label:'Text to redact (comma-separated)',
-      ocr_lang_label:'Language', ocr_fmt_label:'Output format',
-      translate_lang_label:'Target language', translate_layout_label:'Preserve layout',
+      ocr_lang_label:'Language',ocr_fmt_label:'Output format',
+      translate_lang_label:'Target language',translate_layout_label:'Preserve layout',
       ranges_label:'Page ranges (e.g. 1-3,4-6)',
-      yes:'Yes', no:'No',
+      yes:'Yes',no:'No',
     }
   },
   he: {
-    nav_tools:'כלים', nav_features:'יתרונות', nav_pricing:'מחירים', nav_cta:'התחל עכשיו',
-    hero_badge:'מעל 2 מיליון משתמשים פעילים',
-    hero_h1:'כלי PDF<br/><em>מקצועיים</em><br/>לכל צורך',
-    hero_p:'ערוך, המר, מזג, פצל וחתום על מסמכי PDF — הכל בדפדפן, ללא התקנות, בחינם לחלוטין.',
-    stat_tools:'כלים', stat_secure:'אבטחה', stat_langs:'שפות',
-    upload_drag:'גרור קובץ לכאן או לחץ להעלאה',
-    upload_formats:'PDF, Word, Excel, JPG, PNG ועוד',
-    upload_btn:'בחר קובץ ופעולה ➜',
-    select_action:'— בחר פעולה —',
-    tools_label:'כל הכלים במקום אחד', tools_title:'מה תרצה לעשות היום?',
-    tools_sub:'בחר מעשרות כלים מקצועיים — ללא הרשמה, ללא התקנה',
-    feat_label:'למה לבחור בנו', feat_title:'מקצועי, מהיר ומאובטח',
-    feat1_h:'ישירות בדפדפן', feat1_p:'אין צורך בהתקנת תוכנה. עבוד מכל מכשיר ומכל מקום.',
-    feat2_h:'פרטיות מוחלטת', feat2_p:'הקבצים נמחקים אוטומטית מהשרתים תוך שעה אחת.',
-    feat3_h:'איכות מקסימלית', feat3_p:'מנועי ההמרה שומרים על עיצוב וגופנים בדיוק כפי שהם.',
-    feat4_h:'תמיכה מלאה בעברית', feat4_p:'מסמכים בעברית וערבית מטופלים בדיוק מרבי עם זיהוי RTL.',
-    footer_desc:'הפלטפורמה המובילה לעיבוד מסמכי PDF — מהירה, מאובטחת ומקצועית.',
-    footer_tools:'כלים', footer_company:'חברה', footer_support:'תמיכה',
-    f_convert:'המרת PDF', f_edit:'עריכת PDF', f_merge:'מיזוג PDF',
-    f_about:'אודותינו', f_contact:'צור קשר', f_help:'מרכז עזרה',
-    f_privacy:'מדיניות פרטיות', f_terms:'תנאי שימוש',
-    footer_copy:'© 2026 PDFPro. כל הזכויות שמורות.',
-    modal_drop:'לחץ או גרור קובץ לכאן', process_btn:'עבד קובץ',
-    api_online:'שרת פעיל', api_offline:'שרת לא מחובר', api_checking:'בודק חיבור...',
-    processing:'מעבד...', uploading:'מעלה קובץ...', done:'הושלם!',
-    error_no_file:'אנא בחר קובץ תחילה', error_select_tool:'אנא בחר פעולה',
-    result_ready:'✅ הקובץ מוכן להורדה!', result_ocr:'✅ הטקסט חולץ בהצלחה',
-    result_multi:'✅ {n} קבצים מוכנים!', result_error:'❌ שגיאה: {msg}',
-    download_txt:'⬇ הורד TXT', download_files:'⬇ הורד {n} קבצים',
-    retry_hint:'נסה שוב או בדוק שהקובץ תקין',
-    tabs:['הכל','המרה','ארגון','עריכה','אחר'],
+    nav_tools:'\u05DB\u05DC\u05D9\u05DD',nav_features:'\u05D9\u05EA\u05E8\u05D5\u05E0\u05D5\u05EA',nav_pricing:'\u05DE\u05D7\u05D9\u05E8\u05D9\u05DD',nav_cta:'\u05D4\u05EA\u05D7\u05DC \u05E2\u05DB\u05E9\u05D9\u05D5',
+    hero_badge:'\u05DE\u05E2\u05DC 2 \u05DE\u05D9\u05DC\u05D9\u05D5\u05DF \u05DE\u05E9\u05EA\u05DE\u05E9\u05D9\u05DD \u05E4\u05E2\u05D9\u05DC\u05D9\u05DD',
+    hero_h1:'\u05DB\u05DC\u05D9 PDF<br/><em>\u05DE\u05E7\u05E6\u05D5\u05E2\u05D9\u05D9\u05DD</em><br/>\u05DC\u05DB\u05DC \u05E6\u05D5\u05E8\u05DA',
+    hero_p:'\u05E2\u05E8\u05D5\u05DA, \u05D4\u05DE\u05E8, \u05DE\u05D6\u05D2, \u05E4\u05E6\u05DC \u05D5\u05D7\u05EA\u05D5\u05DD \u05E2\u05DC \u05DE\u05E1\u05DE\u05DB\u05D9 PDF \u2014 \u05D4\u05DB\u05DC \u05D1\u05D3\u05E4\u05D3\u05E4\u05DF, \u05DC\u05DC\u05D0 \u05D4\u05EA\u05E7\u05E0\u05D5\u05EA, \u05D1\u05D7\u05D9\u05E0\u05DD \u05DC\u05D7\u05DC\u05D5\u05D8\u05D9\u05DF.',
+    stat_tools:'\u05DB\u05DC\u05D9\u05DD',stat_secure:'\u05D0\u05D1\u05D8\u05D7\u05D4',stat_langs:'\u05E9\u05E4\u05D5\u05EA',
+    upload_drag:'\u05D2\u05E8\u05D5\u05E8 \u05E7\u05D5\u05D1\u05E5 \u05DC\u05DB\u05D0\u05DF \u05D0\u05D5 \u05DC\u05D7\u05E5 \u05DC\u05D4\u05E2\u05DC\u05D0\u05D4',
+    upload_formats:'PDF, Word, Excel, JPG, PNG \u05D5\u05E2\u05D5\u05D3',
+    upload_btn:'\u05D1\u05D7\u05E8 \u05E7\u05D5\u05D1\u05E5 \u05D5\u05E4\u05E2\u05D5\u05DC\u05D4 \u279C',
+    select_action:'\u2014 \u05D1\u05D7\u05E8 \u05E4\u05E2\u05D5\u05DC\u05D4 \u2014',
+    tools_label:'\u05DB\u05DC \u05D4\u05DB\u05DC\u05D9\u05DD \u05D1\u05DE\u05E7\u05D5\u05DD \u05D0\u05D7\u05D3',tools_title:'\u05DE\u05D4 \u05EA\u05E8\u05E6\u05D4 \u05DC\u05E2\u05E9\u05D5\u05EA \u05D4\u05D9\u05D5\u05DD?',
+    tools_sub:'\u05D1\u05D7\u05E8 \u05DE\u05E2\u05E9\u05E8\u05D5\u05EA \u05DB\u05DC\u05D9\u05DD \u05DE\u05E7\u05E6\u05D5\u05E2\u05D9\u05D9\u05DD \u2014 \u05DC\u05DC\u05D0 \u05D4\u05E8\u05E9\u05DE\u05D4, \u05DC\u05DC\u05D0 \u05D4\u05EA\u05E7\u05E0\u05D4',
+    feat_label:'\u05DC\u05DE\u05D4 \u05DC\u05D1\u05D7\u05D5\u05E8 \u05D1\u05E0\u05D5',feat_title:'\u05DE\u05E7\u05E6\u05D5\u05E2\u05D9, \u05DE\u05D4\u05D9\u05E8 \u05D5\u05DE\u05D0\u05D5\u05D1\u05D8\u05D7',
+    feat1_h:'\u05D9\u05E9\u05D9\u05E8\u05D5\u05EA \u05D1\u05D3\u05E4\u05D3\u05E4\u05DF',feat1_p:'\u05D0\u05D9\u05DF \u05E6\u05D5\u05E8\u05DA \u05D1\u05D4\u05EA\u05E7\u05E0\u05EA \u05EA\u05D5\u05DB\u05E0\u05D4. \u05E2\u05D1\u05D5\u05D3 \u05DE\u05DB\u05DC \u05DE\u05DB\u05E9\u05D9\u05E8 \u05D5\u05DE\u05DB\u05DC \u05DE\u05E7\u05D5\u05DD.',
+    feat2_h:'\u05E4\u05E8\u05D8\u05D9\u05D5\u05EA \u05DE\u05D5\u05D7\u05DC\u05D8\u05EA',feat2_p:'\u05D4\u05E7\u05D1\u05E6\u05D9\u05DD \u05E0\u05DE\u05D7\u05E7\u05D9\u05DD \u05D0\u05D5\u05D8\u05D5\u05DE\u05D8\u05D9\u05EA \u05DE\u05D4\u05E9\u05E8\u05EA\u05D9\u05DD \u05EA\u05D5\u05DA \u05E9\u05E2\u05D4 \u05D0\u05D7\u05EA.',
+    feat3_h:'\u05D0\u05D9\u05DB\u05D5\u05EA \u05DE\u05E7\u05E1\u05D9\u05DE\u05DC\u05D9\u05EA',feat3_p:'\u05DE\u05E0\u05D5\u05E2\u05D9 \u05D4\u05D4\u05DE\u05E8\u05D4 \u05E9\u05D5\u05DE\u05E8\u05D9\u05DD \u05E2\u05DC \u05E2\u05D9\u05E6\u05D5\u05D1 \u05D5\u05D2\u05D5\u05E4\u05E0\u05D9\u05DD \u05D1\u05D3\u05D9\u05D5\u05E7 \u05DB\u05E4\u05D9 \u05E9\u05D4\u05DD.',
+    feat4_h:'\u05EA\u05DE\u05D9\u05DB\u05D4 \u05DE\u05DC\u05D0\u05D4 \u05D1\u05E2\u05D1\u05E8\u05D9\u05EA',feat4_p:'\u05DE\u05E1\u05DE\u05DB\u05D9\u05DD \u05D1\u05E2\u05D1\u05E8\u05D9\u05EA \u05D5\u05E2\u05E8\u05D1\u05D9\u05EA \u05DE\u05D8\u05D5\u05E4\u05DC\u05D9\u05DD \u05D1\u05D3\u05D9\u05D5\u05E7 \u05DE\u05E8\u05D1\u05D9 \u05E2\u05DD \u05D6\u05D9\u05D4\u05D5\u05D9 RTL.',
+    footer_desc:'\u05D4\u05E4\u05DC\u05D8\u05E4\u05D5\u05E8\u05DE\u05D4 \u05D4\u05DE\u05D5\u05D1\u05D9\u05DC\u05D4 \u05DC\u05E2\u05D9\u05D1\u05D5\u05D3 \u05DE\u05E1\u05DE\u05DB\u05D9 PDF.',
+    footer_tools:'\u05DB\u05DC\u05D9\u05DD',footer_company:'\u05D7\u05D1\u05E8\u05D4',footer_support:'\u05EA\u05DE\u05D9\u05DB\u05D4',
+    f_convert:'\u05D4\u05DE\u05E8\u05EA PDF',f_edit:'\u05E2\u05E8\u05D9\u05DB\u05EA PDF',f_merge:'\u05DE\u05D9\u05D6\u05D5\u05D2 PDF',
+    f_about:'\u05D0\u05D5\u05D3\u05D5\u05EA\u05D9\u05E0\u05D5',f_contact:'\u05E6\u05D5\u05E8 \u05E7\u05E9\u05E8',f_help:'\u05DE\u05E8\u05DB\u05D6 \u05E2\u05D6\u05E8\u05D4',
+    f_privacy:'\u05DE\u05D3\u05D9\u05E0\u05D9\u05D5\u05EA \u05E4\u05E8\u05D8\u05D9\u05D5\u05EA',f_terms:'\u05EA\u05E0\u05D0\u05D9 \u05E9\u05D9\u05DE\u05D5\u05E9',
+    footer_copy:'\u00A9 2026 PDFPro. \u05DB\u05DC \u05D4\u05D6\u05DB\u05D5\u05D9\u05D5\u05EA \u05E9\u05DE\u05D5\u05E8\u05D5\u05EA.',
+    modal_drop:'\u05DC\u05D7\u05E5 \u05D0\u05D5 \u05D2\u05E8\u05D5\u05E8 \u05E7\u05D5\u05D1\u05E5 \u05DC\u05DB\u05D0\u05DF',process_btn:'\u05E2\u05D1\u05D3 \u05E7\u05D5\u05D1\u05E5',
+    api_online:'\u05E9\u05E8\u05EA \u05E4\u05E2\u05D9\u05DC',api_offline:'\u05E9\u05E8\u05EA \u05DC\u05D0 \u05DE\u05D7\u05D5\u05D1\u05E8',api_checking:'\u05D1\u05D5\u05D3\u05E7 \u05D7\u05D9\u05D1\u05D5\u05E8...',
+    processing:'\u05DE\u05E2\u05D1\u05D3...',uploading:'\u05DE\u05E2\u05DC\u05D4 \u05E7\u05D5\u05D1\u05E5...',done:'\u05D4\u05D5\u05E9\u05DC\u05DD!',
+    error_no_file:'\u05D0\u05E0\u05D0 \u05D1\u05D7\u05E8 \u05E7\u05D5\u05D1\u05E5 \u05EA\u05D7\u05D9\u05DC\u05D4',error_select_tool:'\u05D0\u05E0\u05D0 \u05D1\u05D7\u05E8 \u05E4\u05E2\u05D5\u05DC\u05D4',
+    result_ready:'\u2705 \u05D4\u05E7\u05D5\u05D1\u05E5 \u05DE\u05D5\u05DB\u05DF \u05DC\u05D4\u05D5\u05E8\u05D3\u05D4!',result_ocr:'\u2705 \u05D4\u05D8\u05E7\u05E1\u05D8 \u05D7\u05D5\u05DC\u05E5 \u05D1\u05D4\u05E6\u05DC\u05D7\u05D4',
+    result_multi:'\u2705 {n} \u05E7\u05D1\u05E6\u05D9\u05DD \u05DE\u05D5\u05DB\u05E0\u05D9\u05DD!',result_error:'\u274C \u05E9\u05D2\u05D9\u05D0\u05D4: {msg}',
+    download_txt:'\u2B07 \u05D4\u05D5\u05E8\u05D3 TXT',download_files:'\u2B07 \u05D4\u05D5\u05E8\u05D3 {n} \u05E7\u05D1\u05E6\u05D9\u05DD',
+    retry_hint:'\u05E0\u05E1\u05D4 \u05E9\u05D5\u05D1 \u05D0\u05D5 \u05D1\u05D3\u05D5\u05E7 \u05E9\u05D4\u05E7\u05D5\u05D1\u05E5 \u05EA\u05E7\u05D9\u05DF',
+    tabs:['\u05D4\u05DB\u05DC','\u05D4\u05DE\u05E8\u05D4','\u05D0\u05E8\u05D2\u05D5\u05DF','\u05E2\u05E8\u05D9\u05DB\u05D4','\u05D0\u05D7\u05E8'],
     tools:[
-      {k:'pdf-to-word',  t:'PDF ל-Word',        d:'המר PDF לקובץ Word הניתן לעריכה',     cat:'convert'},
-      {k:'pdf-to-excel', t:'PDF ל-Excel',        d:'חלץ טבלאות לגיליון אלקטרוני',         cat:'convert'},
-      {k:'pdf-to-pptx',  t:'PDF ל-PowerPoint',   d:'המר כל עמוד לשקופית',                 cat:'convert'},
-      {k:'pdf-to-images',t:'PDF ל-תמונות',       d:'שמור כל עמוד כ-JPG באיכות גבוהה',    cat:'convert'},
-      {k:'office-to-pdf',t:'Office ל-PDF',       d:'המר Word, Excel ו-PPT ל-PDF',         cat:'convert'},
-      {k:'images-to-pdf',t:'תמונות ל-PDF',       d:'חבר תמונות לקובץ PDF אחד',            cat:'convert'},
-      {k:'merge',        t:'מיזוג PDF',           d:'חבר מספר קבצי PDF לקובץ אחד',         cat:'organize'},
-      {k:'split',        t:'פיצול PDF',           d:'חלק מסמך גדול לחלקים קטנים',          cat:'organize'},
-      {k:'compress',     t:'דחיסת PDF',           d:'הקטן את גודל הקובץ ללא אובדן איכות', cat:'organize'},
-      {k:'rotate',       t:'סיבוב PDF',           d:'סובב עמודים ב-90, 180 או 270 מעלות', cat:'organize'},
-      {k:'watermark',    t:'סימן מים',            d:'הוסף טקסט או לוגו כסימן מים',         cat:'edit'},
-      {k:'sign',         t:'חתימה דיגיטלית',      d:'חתום על מסמכים אלקטרונית',            cat:'edit'},
-      {k:'protect',      t:'הגנת סיסמה',          d:'הצפן PDF עם סיסמה חזקה',              cat:'edit'},
-      {k:'redact',       t:'מחיקת טקסט',         d:'הסתר מידע רגיש לצמיתות',              cat:'edit'},
-      {k:'ocr',          t:'OCR — זיהוי טקסט',   d:'חלץ טקסט מתמונות וסריקות',           cat:'other'},
-      {k:'translate',    t:'תרגום PDF',           d:'תרגם מסמכים ליותר מ-40 שפות',        cat:'other'},
+      {k:'pdf-to-word',  t:'PDF \u05DC-Word',        d:'\u05D4\u05DE\u05E8 PDF \u05DC\u05E7\u05D5\u05D1\u05E5 Word \u05D4\u05E0\u05D9\u05EA\u05DF \u05DC\u05E2\u05E8\u05D9\u05DB\u05D4',    cat:'convert'},
+      {k:'pdf-to-excel', t:'PDF \u05DC-Excel',        d:'\u05D7\u05DC\u05E5 \u05D8\u05D1\u05DC\u05D0\u05D5\u05EA \u05DC\u05D2\u05D9\u05DC\u05D9\u05D5\u05DF \u05D0\u05DC\u05E7\u05D8\u05E8\u05D5\u05E0\u05D9',         cat:'convert'},
+      {k:'pdf-to-pptx',  t:'PDF \u05DC-PowerPoint',   d:'\u05D4\u05DE\u05E8 \u05DB\u05DC \u05E2\u05DE\u05D5\u05D3 \u05DC\u05E9\u05E7\u05D5\u05E4\u05D9\u05EA',                 cat:'convert'},
+      {k:'pdf-to-images',t:'PDF \u05DC-\u05EA\u05DE\u05D5\u05E0\u05D5\u05EA',       d:'\u05E9\u05DE\u05D5\u05E8 \u05DB\u05DC \u05E2\u05DE\u05D5\u05D3 \u05DB-JPG \u05D1\u05D0\u05D9\u05DB\u05D5\u05EA \u05D2\u05D1\u05D5\u05D4\u05D4',    cat:'convert'},
+      {k:'office-to-pdf',t:'Office \u05DC-PDF',       d:'\u05D4\u05DE\u05E8 Word, Excel \u05D5-PPT \u05DC-PDF',         cat:'convert'},
+      {k:'images-to-pdf',t:'\u05EA\u05DE\u05D5\u05E0\u05D5\u05EA \u05DC-PDF',       d:'\u05D7\u05D1\u05E8 \u05EA\u05DE\u05D5\u05E0\u05D5\u05EA \u05DC\u05E7\u05D5\u05D1\u05E5 PDF \u05D0\u05D7\u05D3',            cat:'convert'},
+      {k:'merge',        t:'\u05DE\u05D9\u05D6\u05D5\u05D2 PDF',           d:'\u05D7\u05D1\u05E8 \u05DE\u05E1\u05E4\u05E8 \u05E7\u05D1\u05E6\u05D9 PDF \u05DC\u05E7\u05D5\u05D1\u05E5 \u05D0\u05D7\u05D3',         cat:'organize'},
+      {k:'split',        t:'\u05E4\u05D9\u05E6\u05D5\u05DC PDF',           d:'\u05D7\u05DC\u05E7 \u05DE\u05E1\u05DE\u05DA \u05D2\u05D3\u05D5\u05DC \u05DC\u05D7\u05DC\u05E7\u05D9\u05DD \u05E7\u05D8\u05E0\u05D9\u05DD',          cat:'organize'},
+      {k:'compress',     t:'\u05D3\u05D7\u05D9\u05E1\u05EA PDF',           d:'\u05D4\u05E7\u05D8\u05DF \u05D0\u05EA \u05D2\u05D5\u05D3\u05DC \u05D4\u05E7\u05D5\u05D1\u05E5 \u05DC\u05DC\u05D0 \u05D0\u05D5\u05D1\u05D3\u05DF \u05D0\u05D9\u05DB\u05D5\u05EA', cat:'organize'},
+      {k:'rotate',       t:'\u05E1\u05D9\u05D1\u05D5\u05D1 PDF',           d:'\u05E1\u05D5\u05D1\u05D1 \u05E2\u05DE\u05D5\u05D3\u05D9\u05DD \u05D1-90, 180 \u05D0\u05D5 270 \u05DE\u05E2\u05DC\u05D5\u05EA', cat:'organize'},
+      {k:'watermark',    t:'\u05E1\u05D9\u05DE\u05DF \u05DE\u05D9\u05DD',            d:'\u05D4\u05D5\u05E1\u05E3 \u05D8\u05E7\u05E1\u05D8 \u05D0\u05D5 \u05DC\u05D5\u05D2\u05D5 \u05DB\u05E1\u05D9\u05DE\u05DF \u05DE\u05D9\u05DD',         cat:'edit'},
+      {k:'sign',         t:'\u05D7\u05EA\u05D9\u05DE\u05D4 \u05D3\u05D9\u05D2\u05D9\u05D8\u05DC\u05D9\u05EA',      d:'\u05D7\u05EA\u05D5\u05DD \u05E2\u05DC \u05DE\u05E1\u05DE\u05DB\u05D9\u05DD \u05D0\u05DC\u05E7\u05D8\u05E8\u05D5\u05E0\u05D9\u05EA',            cat:'edit'},
+      {k:'protect',      t:'\u05D4\u05D2\u05E0\u05EA \u05E1\u05D9\u05E1\u05DE\u05D0',          d:'\u05D4\u05E6\u05E4\u05DF PDF \u05E2\u05DD \u05E1\u05D9\u05E1\u05DE\u05D0 \u05D7\u05D6\u05E7\u05D4',              cat:'edit'},
+      {k:'redact',       t:'\u05DE\u05D7\u05D9\u05E7\u05EA \u05D8\u05E7\u05E1\u05D8',         d:'\u05D4\u05E1\u05EA\u05E8 \u05DE\u05D9\u05D3\u05E2 \u05E8\u05D2\u05D9\u05E9 \u05DC\u05E6\u05DE\u05D9\u05EA\u05D5\u05EA',              cat:'edit'},
+      {k:'ocr',          t:'OCR \u2014 \u05D6\u05D9\u05D4\u05D5\u05D9 \u05D8\u05E7\u05E1\u05D8',   d:'\u05D7\u05DC\u05E5 \u05D8\u05E7\u05E1\u05D8 \u05DE\u05EA\u05DE\u05D5\u05E0\u05D5\u05EA \u05D5\u05E1\u05E8\u05D9\u05E7\u05D5\u05EA',           cat:'other'},
+      {k:'translate',    t:'\u05EA\u05E8\u05D2\u05D5\u05DD PDF',           d:'\u05EA\u05E8\u05D2\u05DD \u05DE\u05E1\u05DE\u05DB\u05D9\u05DD \u05DC\u05D9\u05D5\u05EA\u05E8 \u05DE-40 \u05E9\u05E4\u05D5\u05EA',        cat:'other'},
     ],
     tool_opts:{
-      level_label:'רמת דחיסה', level_opts:['נמוכה','בינונית','גבוהה','מקסימלית'],
-      dpi_label:'איכות (DPI)', format_label:'פורמט',
-      page_size_label:'גודל עמוד', angle_label:'זווית סיבוב',
-      wm_text_label:'טקסט סימן המים', wm_opacity_label:'שקיפות (0.1–1.0)',
-      sig_label:'שם לחתימה', pass_label:'סיסמה',
-      redact_label:'טקסטים למחיקה (מופרדים בפסיק)',
-      ocr_lang_label:'שפה', ocr_fmt_label:'פורמט פלט',
-      translate_lang_label:'שפת יעד', translate_layout_label:'שמור פריסה',
-      ranges_label:'טווחי עמודים (לדוגמה: 1-3,4-6)',
-      yes:'כן', no:'לא',
+      level_label:'\u05E8\u05DE\u05EA \u05D3\u05D7\u05D9\u05E1\u05D4',level_opts:['\u05E0\u05DE\u05D5\u05DB\u05D4','\u05D1\u05D9\u05E0\u05D5\u05E0\u05D9\u05EA','\u05D2\u05D1\u05D5\u05D4\u05D4','\u05DE\u05E7\u05E1\u05D9\u05DE\u05DC\u05D9\u05EA'],
+      dpi_label:'\u05D0\u05D9\u05DB\u05D5\u05EA (DPI)',format_label:'\u05E4\u05D5\u05E8\u05DE\u05D8',
+      page_size_label:'\u05D2\u05D5\u05D3\u05DC \u05E2\u05DE\u05D5\u05D3',angle_label:'\u05D6\u05D5\u05D5\u05D9\u05EA \u05E1\u05D9\u05D1\u05D5\u05D1',
+      wm_text_label:'\u05D8\u05E7\u05E1\u05D8 \u05E1\u05D9\u05DE\u05DF \u05D4\u05DE\u05D9\u05DD',wm_opacity_label:'\u05E9\u05E7\u05D9\u05E4\u05D5\u05EA (0.1\u20131.0)',
+      sig_label:'\u05E9\u05DD \u05DC\u05D7\u05EA\u05D9\u05DE\u05D4',pass_label:'\u05E1\u05D9\u05E1\u05DE\u05D0',
+      redact_label:'\u05D8\u05E7\u05E1\u05D8\u05D9\u05DD \u05DC\u05DE\u05D7\u05D9\u05E7\u05D4 (\u05DE\u05D5\u05E4\u05E8\u05D3\u05D9\u05DD \u05D1\u05E4\u05E1\u05D9\u05E7)',
+      ocr_lang_label:'\u05E9\u05E4\u05D4',ocr_fmt_label:'\u05E4\u05D5\u05E8\u05DE\u05D8 \u05E4\u05DC\u05D8',
+      translate_lang_label:'\u05E9\u05E4\u05EA \u05D9\u05E2\u05D3',translate_layout_label:'\u05E9\u05DE\u05D5\u05E8 \u05E4\u05E8\u05D9\u05E1\u05D4',
+      ranges_label:'\u05D8\u05D5\u05D5\u05D7\u05D9 \u05E2\u05DE\u05D5\u05D3\u05D9\u05DD (\u05DC\u05D3\u05D5\u05D2\u05DE\u05D4: 1-3,4-6)',
+      yes:'\u05DB\u05DF',no:'\u05DC\u05D0',
     }
   }
 };
 
-// ── Tool config (language-independent) ───────────────────────────────────────
 const TOOL_CONFIG = {
-  'pdf-to-word':   {endpoint:'/api/convert/pdf-to-word',  field:'file', multi:false, accept:'.pdf'},
-  'pdf-to-excel':  {endpoint:'/api/convert/pdf-to-excel', field:'file', multi:false, accept:'.pdf'},
-  'pdf-to-pptx':   {endpoint:'/api/convert/pdf-to-pptx',  field:'file', multi:false, accept:'.pdf',
+  'pdf-to-word':   {endpoint:'/api/convert/pdf-to-word',  field:'file',multi:false,accept:'.pdf'},
+  'pdf-to-excel':  {endpoint:'/api/convert/pdf-to-excel', field:'file',multi:false,accept:'.pdf'},
+  'pdf-to-pptx':   {endpoint:'/api/convert/pdf-to-pptx',  field:'file',multi:false,accept:'.pdf',
     extra:(o)=>[{name:'dpi',label:o.dpi_label,type:'select',options:['72','100','150','200','300'],default:'150'}]},
-  'pdf-to-images': {endpoint:'/api/convert/pdf-to-images',field:'file', multi:false, accept:'.pdf', multiResult:true,
+  'pdf-to-images': {endpoint:'/api/convert/pdf-to-images',field:'file',multi:false,accept:'.pdf',multiResult:true,
     extra:(o)=>[{name:'format',label:o.format_label,type:'select',options:['jpg','png'],default:'jpg'},{name:'dpi',label:o.dpi_label,type:'select',options:['72','100','150','200','300'],default:'150'}]},
-  'office-to-pdf': {endpoint:'/api/convert/office-to-pdf',field:'file', multi:false, accept:'.doc,.docx,.xls,.xlsx,.ppt,.pptx'},
-  'images-to-pdf': {endpoint:'/api/convert/images-to-pdf',field:'files',multi:true,  accept:'image/*',
+  'office-to-pdf': {endpoint:'/api/convert/office-to-pdf',field:'file',multi:false,accept:'.doc,.docx,.xls,.xlsx,.ppt,.pptx'},
+  'images-to-pdf': {endpoint:'/api/convert/images-to-pdf',field:'files',multi:true,accept:'image/*',
     extra:(o)=>[{name:'page_size',label:o.page_size_label,type:'select',options:['fit','A4','Letter'],default:'fit'}]},
-  'merge':         {endpoint:'/api/organize/merge',  field:'files',multi:true,  accept:'.pdf'},
-  'split':         {endpoint:'/api/organize/split',  field:'file', multi:false, accept:'.pdf', multiResult:true,
+  'merge':         {endpoint:'/api/organize/merge',  field:'files',multi:true, accept:'.pdf'},
+  'split':         {endpoint:'/api/organize/split',  field:'file', multi:false,accept:'.pdf',multiResult:true,
     extra:(o)=>[{name:'ranges',label:o.ranges_label,type:'text',default:'1-3'}]},
   'compress':      {endpoint:'/api/organize/compress',field:'file',multi:false,accept:'.pdf',
     extra:(o)=>[{name:'level',label:o.level_label,type:'select',options:['low','medium','high','extreme'],labels:o.level_opts,default:'medium'}]},
-  'rotate':        {endpoint:'/api/organize/rotate',  field:'file',multi:false, accept:'.pdf',
+  'rotate':        {endpoint:'/api/organize/rotate', field:'file',multi:false,accept:'.pdf',
     extra:(o)=>[{name:'angle',label:o.angle_label,type:'select',options:['90','180','270'],default:'90'}]},
-  'watermark':     {endpoint:'/api/edit/watermark',   field:'file',multi:false, accept:'.pdf',
+  'watermark':     {endpoint:'/api/edit/watermark',  field:'file',multi:false,accept:'.pdf',
     extra:(o)=>[{name:'text',label:o.wm_text_label,type:'text',default:'CONFIDENTIAL'},{name:'opacity',label:o.wm_opacity_label,type:'text',default:'0.3'}]},
-  'sign':          {endpoint:'/api/edit/sign',        field:'file',multi:false, accept:'.pdf',
+  'sign':          {endpoint:'/api/edit/sign',       field:'file',multi:false,accept:'.pdf',
     extra:(o)=>[{name:'signature_text',label:o.sig_label,type:'text',default:''}]},
-  'protect':       {endpoint:'/api/edit/protect',     field:'file',multi:false, accept:'.pdf',
+  'protect':       {endpoint:'/api/edit/protect',    field:'file',multi:false,accept:'.pdf',
     extra:(o)=>[{name:'password',label:o.pass_label,type:'text',default:''}]},
-  'redact':        {endpoint:'/api/edit/redact',      field:'file',multi:false, accept:'.pdf',
+  'redact':        {endpoint:'/api/edit/redact',     field:'file',multi:false,accept:'.pdf',
     extra:(o)=>[{name:'texts',label:o.redact_label,type:'text',default:''}]},
-  'ocr':           {endpoint:'/api/ocr/extract',      field:'file',multi:false, accept:'.pdf,image/*', textResult:true,
+  'ocr':           {endpoint:'/api/ocr/extract',     field:'file',multi:false,accept:'.pdf,image/*',textResult:true,
     extra:(o)=>[{name:'language',label:o.ocr_lang_label,type:'select',options:['heb+eng','eng','heb','ara'],default:'heb+eng'},{name:'output_format',label:o.ocr_fmt_label,type:'select',options:['txt','pdf','docx'],default:'txt'}]},
-  'translate':     {endpoint:'/api/translate/pdf',    field:'file',multi:false, accept:'.pdf',
-    extra:(o)=>[{name:'target_language',label:o.translate_lang_label,type:'select',options:['iw','en','ar','ru','fr','de','es'],labels:['עברית','English','العربية','Русский','Français','Deutsch','Español'],default:'iw'},{name:'preserve_layout',label:o.translate_layout_label,type:'select',options:['true','false'],labels:(l=>([l.yes,l.no]))({}),default:'true'}]},
+  'translate':     {endpoint:'/api/translate/pdf',   field:'file',multi:false,accept:'.pdf',
+    extra:(o)=>[{name:'target_language',label:o.translate_lang_label,type:'select',options:['iw','en','ar','ru','fr','de','es'],labels:['\u05E2\u05D1\u05E8\u05D9\u05EA','English','\u0627\u0644\u0639\u0631\u0628\u064A\u0629','\u0420\u0443\u0441\u0441\u043A\u0438\u0439','Fran\u00E7ais','Deutsch','Espa\u00F1ol'],default:'iw'},{name:'preserve_layout',label:o.translate_layout_label,type:'select',options:['true','false'],labels:['\u05DB\u05DF','\u05DC\u05D0'],default:'true'}]},
 };
 
 const TOOL_ICONS = {
@@ -435,7 +480,6 @@ const TOOL_ICONS = {
   'compress':'ic-amber','rotate':'ic-green','watermark':'ic-blue','sign':'ic-purple',
   'protect':'ic-red','redact':'ic-teal','ocr':'ic-amber','translate':'ic-green',
 };
-
 const TOOL_SVGS = {
   'pdf-to-word':'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>',
   'pdf-to-excel':'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>',
@@ -455,224 +499,105 @@ const TOOL_SVGS = {
   'translate':'<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>',
 };
 
-// ── Language state ────────────────────────────────────────────────────────────
-let lang = 'en';
-let currentTool = null;
-let selectedFiles = [];
+let lang='en', currentTool=null, selectedFiles=[];
+function t(key){return T[lang][key]||T.en[key]||key;}
 
-function t(key){ return T[lang][key] || T.en[key] || key; }
-
-// ── Auto-detect location ──────────────────────────────────────────────────────
 async function detectAndRedirect(){
-  // Check URL path first
-  const path = window.location.pathname;
-  if(path === '/he' || path === '/he/'){
-    applyLang('he'); return;
-  }
-  if(path === '/' || path === ''){
-    // Check if user has a saved preference
-    const saved = localStorage.getItem('pdfpro_lang');
-    if(saved){ applyLang(saved); return; }
-    // Auto-detect by IP
-    try{
-      const r = await fetch('https://ipapi.co/json/',{signal:AbortSignal.timeout(3000)});
-      const data = await r.json();
-      if(data.country_code === 'IL'){
-        // Redirect to Hebrew version
-        window.history.replaceState({},'','/he');
-        applyLang('he');
-      } else {
-        applyLang('en');
-      }
-    } catch {
-      // Fallback: check browser language
-      const browserLang = navigator.language || '';
-      if(browserLang.startsWith('he') || browserLang.startsWith('iw')){
-        window.history.replaceState({},'','/he');
-        applyLang('he');
-      } else {
-        applyLang('en');
-      }
-    }
+  const path=window.location.pathname;
+  if(path==='/he'||path==='/he/'){applyLang('he');return;}
+  const saved=localStorage.getItem('pdfpro_lang');
+  if(saved){applyLang(saved);return;}
+  try{
+    const r=await fetch('https://ipapi.co/json/',{signal:AbortSignal.timeout(3000)});
+    const d=await r.json();
+    if(d.country_code==='IL'){window.history.replaceState({},'','/he');applyLang('he');}
+    else applyLang('en');
+  }catch{
+    const bl=navigator.language||'';
+    if(bl.startsWith('he')||bl.startsWith('iw')){window.history.replaceState({},'','/he');applyLang('he');}
+    else applyLang('en');
   }
 }
 
-function switchLang(newLang){
-  localStorage.setItem('pdfpro_lang', newLang);
-  const newPath = newLang === 'he' ? '/he' : '/';
-  window.history.pushState({}, '', newPath);
-  applyLang(newLang);
-}
+function switchLang(nl){localStorage.setItem('pdfpro_lang',nl);window.history.pushState({},'',nl==='he'?'/he':'/');applyLang(nl);}
 
-function applyLang(newLang){
-  lang = newLang;
-  const isRTL = lang === 'he';
-
-  // Update html/body
-  document.getElementById('html-root').lang = lang === 'he' ? 'he' : 'en';
-  document.getElementById('html-root').dir  = isRTL ? 'rtl' : 'ltr';
-  document.body.className = isRTL ? 'rtl' : 'ltr';
-
-  // Update font family on inputs/selects/buttons
-  document.querySelectorAll('select, input, button').forEach(el => {
-    el.style.fontFamily = isRTL ? "'Heebo', sans-serif" : "'Plus Jakarta Sans', sans-serif";
-  });
-
-  // Active lang button
-  document.getElementById('btn-en').classList.toggle('active', lang==='en');
-  document.getElementById('btn-he').classList.toggle('active', lang==='he');
-
-  // Translate all data-t elements
-  document.querySelectorAll('[data-t]').forEach(el => {
-    const key = el.dataset.t;
-    const val = T[lang][key];
-    if(val !== undefined) el.innerHTML = val;
-  });
-
-  // Rebuild tools grid and tabs
+function applyLang(nl){
+  lang=nl;const isRTL=nl==='he';
+  document.getElementById('html-root').lang=nl==='he'?'he':'en';
+  document.getElementById('html-root').dir=isRTL?'rtl':'ltr';
+  document.body.className=isRTL?'rtl':'ltr';
+  document.querySelectorAll('select,input,button').forEach(el=>{el.style.fontFamily=isRTL?"'Heebo',sans-serif":"'Plus Jakarta Sans',sans-serif";});
+  document.getElementById('btn-en').classList.toggle('active',nl==='en');
+  document.getElementById('btn-he').classList.toggle('active',nl==='he');
+  document.querySelectorAll('[data-t]').forEach(el=>{const v=T[lang][el.dataset.t];if(v!==undefined)el.innerHTML=v;});
   buildToolsUI();
-
-  // Update page title
-  document.title = lang==='he' ? 'PDFPro | כלי PDF מקצועיים' : 'PDFPro | Professional PDF Tools';
-
-  // Update hero select
+  document.title=nl==='he'?'PDFPro | \u05DB\u05DC\u05D9 PDF \u05DE\u05E7\u05E6\u05D5\u05E2\u05D9\u05D9\u05DD':'PDFPro | Professional PDF Tools';
   buildHeroSelect();
-
-  // Update API status text
-  const statusEl = document.getElementById('api-status');
-  if(statusEl.classList.contains('online'))
-    document.getElementById('api-status-text').textContent = t('api_online');
-  else
-    document.getElementById('api-status-text').textContent = t('api_offline');
+  const s=document.getElementById('api-status');
+  document.getElementById('api-status-text').textContent=s.classList.contains('online')?t('api_online'):t('api_offline');
+  setTimeout(hookFooterLinks,100);
 }
 
-// ── Build tools UI ────────────────────────────────────────────────────────────
-const TAB_CATS = ['all','convert','organize','edit','other'];
-
+const TAB_CATS=['all','convert','organize','edit','other'];
 function buildToolsUI(){
-  const tools = T[lang].tools;
-  const tabs = T[lang].tabs;
-
-  // Tabs
-  const tabsEl = document.getElementById('tools-tabs');
-  tabsEl.innerHTML = '';
-  TAB_CATS.forEach((cat, i) => {
-    const btn = document.createElement('button');
-    btn.className = 'tab-btn' + (i===0?' active':'');
-    btn.dataset.filter = cat;
-    btn.textContent = tabs[i];
-    btn.addEventListener('click', function(){
-      document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-      this.classList.add('active');
-      document.querySelectorAll('.tool-card').forEach(card=>{
-        card.style.display=(cat==='all'||card.dataset.cat===this.dataset.filter)?'block':'none';
-      });
-    });
-    tabsEl.appendChild(btn);
+  const tools=T[lang].tools,tabs=T[lang].tabs;
+  const tabsEl=document.getElementById('tools-tabs');tabsEl.innerHTML='';
+  TAB_CATS.forEach((cat,i)=>{
+    const btn=document.createElement('button');btn.className='tab-btn'+(i===0?' active':'');btn.dataset.filter=cat;btn.textContent=tabs[i];
+    btn.addEventListener('click',function(){
+      document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));this.classList.add('active');
+      document.querySelectorAll('.tool-card').forEach(card=>{card.style.display=(cat==='all'||card.dataset.cat===this.dataset.filter)?'block':'none';});
+    });tabsEl.appendChild(btn);
   });
-
-  // Grid
-  const grid = document.getElementById('tools-grid');
-  grid.innerHTML = '';
-  tools.forEach(tool => {
-    const btn = document.createElement('button');
-    btn.className = 'tool-card';
-    btn.dataset.cat = tool.cat;
-    btn.onclick = () => openModal(tool.k);
-    btn.innerHTML = `
-      <div class="tool-icon ${TOOL_ICONS[tool.k]}">
-        <svg viewBox="0 0 24 24">${TOOL_SVGS[tool.k]}</svg>
-      </div>
-      <h3>${tool.t}</h3>
-      <p>${tool.d}</p>
-    `;
+  const grid=document.getElementById('tools-grid');grid.innerHTML='';
+  tools.forEach(tool=>{
+    const btn=document.createElement('button');btn.className='tool-card';btn.dataset.cat=tool.cat;btn.onclick=()=>openModal(tool.k);
+    btn.innerHTML=`<div class="tool-icon ${TOOL_ICONS[tool.k]}"><svg viewBox="0 0 24 24">${TOOL_SVGS[tool.k]}</svg></div><h3>${tool.t}</h3><p>${tool.d}</p>`;
     grid.appendChild(btn);
   });
 }
 
 function buildHeroSelect(){
-  const sel = document.getElementById('hero-tool-select');
-  const tools = T[lang].tools;
-  const cats = {convert:[], organize:[], edit:[], other:[]};
-  tools.forEach(t => cats[t.cat]?.push(t));
-  const catLabels = lang==='he'
-    ? {convert:'המרה',organize:'ארגון',edit:'עריכה',other:'אחר'}
-    : {convert:'Convert',organize:'Organize',edit:'Edit',other:'Other'};
-
-  sel.innerHTML = `<option value="">${t('select_action')}</option>`;
-  Object.entries(cats).forEach(([cat, items])=>{
-    if(!items.length) return;
-    const og = document.createElement('optgroup');
-    og.label = catLabels[cat];
-    items.forEach(item=>{
-      const o = document.createElement('option');
-      o.value = item.k; o.textContent = item.t;
-      og.appendChild(o);
-    });
-    sel.appendChild(og);
-  });
+  const sel=document.getElementById('hero-tool-select'),tools=T[lang].tools;
+  const cats={convert:[],organize:[],edit:[],other:[]};
+  tools.forEach(t=>cats[t.cat]?.push(t));
+  const labels=lang==='he'?{convert:'\u05D4\u05DE\u05E8\u05D4',organize:'\u05D0\u05E8\u05D2\u05D5\u05DF',edit:'\u05E2\u05E8\u05D9\u05DB\u05D4',other:'\u05D0\u05D7\u05E8'}:{convert:'Convert',organize:'Organize',edit:'Edit',other:'Other'};
+  sel.innerHTML=`<option value="">${t('select_action')}</option>`;
+  Object.entries(cats).forEach(([cat,items])=>{if(!items.length)return;const og=document.createElement('optgroup');og.label=labels[cat];items.forEach(item=>{const o=document.createElement('option');o.value=item.k;o.textContent=item.t;og.appendChild(o);});sel.appendChild(og);});
 }
 
-// ── API health ────────────────────────────────────────────────────────────────
 async function checkAPI(){
-  try{
-    const r = await fetch(`${API}/api/health`,{signal:AbortSignal.timeout(3000)});
-    if(r.ok){
-      document.getElementById('api-status').className='api-status online';
-      document.getElementById('api-status-text').textContent=t('api_online');
-    } else setOffline();
-  } catch{ setOffline(); }
+  try{const r=await fetch(`${API}/api/health`,{signal:AbortSignal.timeout(3000)});if(r.ok){document.getElementById('api-status').className='api-status online';document.getElementById('api-status-text').textContent=t('api_online');}else setOffline();}
+  catch{setOffline();}
 }
-function setOffline(){
-  document.getElementById('api-status').className='api-status offline';
-  document.getElementById('api-status-text').textContent=t('api_offline');
-}
-checkAPI(); setInterval(checkAPI, 15000);
+function setOffline(){document.getElementById('api-status').className='api-status offline';document.getElementById('api-status-text').textContent=t('api_offline');}
+checkAPI();setInterval(checkAPI,15000);
 
-// ── Modal ─────────────────────────────────────────────────────────────────────
 function openModal(toolKey){
-  const cfg = TOOL_CONFIG[toolKey];
-  const toolData = T[lang].tools.find(x=>x.k===toolKey);
-  if(!cfg || !toolData) return;
-
-  currentTool = toolKey; selectedFiles = [];
-  document.getElementById('modal-title').textContent = toolData.t;
-  document.getElementById('modal-desc').textContent  = toolData.d;
-  document.getElementById('modal-file-name').textContent = '';
-  document.getElementById('modal-file-input').accept = cfg.accept||'';
-  document.getElementById('modal-file-input').multiple = cfg.multi||false;
-  document.getElementById('modal-file-input').value = '';
-  document.getElementById('modal-process-btn').textContent = t('process_btn');
-  document.getElementById('modal-process-btn').disabled = false;
-  document.getElementById('ocr-preview').style.display = 'none';
-  document.getElementById('download-btn').style.display = 'flex';
-
-  // Extra options
-  const opts = document.getElementById('modal-extra-options');
-  opts.innerHTML = '';
-  const extraFn = cfg.extra;
-  const extraList = extraFn ? extraFn(T[lang].tool_opts) : [];
+  const cfg=TOOL_CONFIG[toolKey],toolData=T[lang].tools.find(x=>x.k===toolKey);
+  if(!cfg||!toolData)return;
+  currentTool=toolKey;selectedFiles=[];
+  document.getElementById('modal-title').textContent=toolData.t;
+  document.getElementById('modal-desc').textContent=toolData.d;
+  document.getElementById('modal-file-name').textContent='';
+  document.getElementById('modal-file-input').accept=cfg.accept||'';
+  document.getElementById('modal-file-input').multiple=cfg.multi||false;
+  document.getElementById('modal-file-input').value='';
+  document.getElementById('modal-process-btn').textContent=t('process_btn');
+  document.getElementById('modal-process-btn').disabled=false;
+  document.getElementById('ocr-preview').style.display='none';
+  document.getElementById('download-btn').style.display='flex';
+  const opts=document.getElementById('modal-extra-options');opts.innerHTML='';
+  const extraList=cfg.extra?cfg.extra(T[lang].tool_opts):[];
   extraList.forEach(opt=>{
-    const wrap=document.createElement('div'); wrap.style.marginBottom='0.8rem';
-    const label=document.createElement('label'); label.textContent=opt.label; wrap.appendChild(label);
+    const wrap=document.createElement('div');wrap.style.marginBottom='0.8rem';
+    const label=document.createElement('label');label.textContent=opt.label;wrap.appendChild(label);
     let el;
-    if(opt.type==='select'){
-      el=document.createElement('select'); el.id=`opt_${opt.name}`;
-      opt.options.forEach((v,j)=>{
-        const o=document.createElement('option'); o.value=v;
-        o.textContent=opt.labels?opt.labels[j]:v;
-        if(v===opt.default) o.selected=true;
-        el.appendChild(o);
-      });
-    } else {
-      el=document.createElement('input'); el.type='text';
-      el.id=`opt_${opt.name}`; el.value=opt.default||''; el.placeholder=opt.default||'';
-    }
-    el.style.marginTop='0.4rem';
-    el.style.fontFamily = lang==='he' ? "'Heebo',sans-serif" : "'Plus Jakarta Sans',sans-serif";
-    wrap.appendChild(el); opts.appendChild(wrap);
+    if(opt.type==='select'){el=document.createElement('select');el.id=`opt_${opt.name}`;opt.options.forEach((v,j)=>{const o=document.createElement('option');o.value=v;o.textContent=opt.labels?opt.labels[j]:v;if(v===opt.default)o.selected=true;el.appendChild(o);});}
+    else{el=document.createElement('input');el.type='text';el.id=`opt_${opt.name}`;el.value=opt.default||'';el.placeholder=opt.default||'';}
+    el.style.marginTop='0.4rem';el.style.fontFamily=lang==='he'?"'Heebo',sans-serif":"'Plus Jakarta Sans',sans-serif";
+    wrap.appendChild(el);opts.appendChild(wrap);
   });
-
   document.getElementById('progress-wrap').classList.remove('show');
   document.getElementById('result-box').classList.remove('show','error');
   document.getElementById('progress-bar').style.width='0%';
@@ -680,644 +605,97 @@ function openModal(toolKey){
   document.getElementById('modal-overlay').classList.add('open');
 }
 
-function closeModal(){ document.getElementById('modal-overlay').classList.remove('open'); }
-function closeModalOnBg(e){ if(e.target===document.getElementById('modal-overlay')) closeModal(); }
-function onModalFileSelect(input){ selectedFiles=Array.from(input.files); document.getElementById('modal-file-name').textContent=selectedFiles.map(f=>f.name).join(', '); }
+function closeModal(){document.getElementById('modal-overlay').classList.remove('open');}
+function closeModalOnBg(e){if(e.target===document.getElementById('modal-overlay'))closeModal();}
+function onModalFileSelect(input){selectedFiles=Array.from(input.files);document.getElementById('modal-file-name').textContent=selectedFiles.map(f=>f.name).join(', ');}
 
 document.getElementById('modal-dropzone').addEventListener('dragover',e=>{e.preventDefault();e.currentTarget.classList.add('drag-over');});
 document.getElementById('modal-dropzone').addEventListener('dragleave',e=>e.currentTarget.classList.remove('drag-over'));
-document.getElementById('modal-dropzone').addEventListener('drop',e=>{
-  e.preventDefault(); e.currentTarget.classList.remove('drag-over');
-  selectedFiles=Array.from(e.dataTransfer.files);
-  document.getElementById('modal-file-name').textContent=selectedFiles.map(f=>f.name).join(', ');
-});
+document.getElementById('modal-dropzone').addEventListener('drop',e=>{e.preventDefault();e.currentTarget.classList.remove('drag-over');selectedFiles=Array.from(e.dataTransfer.files);document.getElementById('modal-file-name').textContent=selectedFiles.map(f=>f.name).join(', ');});
 
-// ── Process ───────────────────────────────────────────────────────────────────
-async function downloadFile(url, filename){
-  try{const r=await fetch(url);const blob=await r.blob();const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=filename;a.click();}
-  catch{alert('Download error');}
-}
+async function downloadFile(url,filename){try{const r=await fetch(url);const blob=await r.blob();const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=filename;a.click();}catch{alert('Download error');}}
 
 async function processFile(){
-  const cfg = TOOL_CONFIG[currentTool];
-  if(!cfg) return;
-  if(selectedFiles.length===0){ alert(t('error_no_file')); return; }
-
+  const cfg=TOOL_CONFIG[currentTool];if(!cfg)return;
+  if(selectedFiles.length===0){alert(t('error_no_file'));return;}
   const btn=document.getElementById('modal-process-btn');
-  btn.disabled=true; btn.innerHTML=`${t('processing')} <span class="spinner"></span>`;
-
-  const progressWrap=document.getElementById('progress-wrap');
-  const progressBar=document.getElementById('progress-bar');
-  const progressLabel=document.getElementById('progress-label');
-  const resultBox=document.getElementById('result-box');
-
-  progressWrap.classList.add('show');
-  resultBox.classList.remove('show','error');
-  progressBar.style.width='20%'; progressLabel.textContent=t('uploading');
-
+  btn.disabled=true;btn.innerHTML=`${t('processing')} <span class="spinner"></span>`;
+  const progressWrap=document.getElementById('progress-wrap'),progressBar=document.getElementById('progress-bar'),progressLabel=document.getElementById('progress-label'),resultBox=document.getElementById('result-box');
+  progressWrap.classList.add('show');resultBox.classList.remove('show','error');progressBar.style.width='20%';progressLabel.textContent=t('uploading');
   try{
     const formData=new FormData();
-    if(cfg.multi) selectedFiles.forEach(f=>formData.append(cfg.field,f));
-    else formData.append(cfg.field,selectedFiles[0]);
-
-    const extraFn = cfg.extra;
-    const extraList = extraFn ? extraFn(T[lang].tool_opts) : [];
+    if(cfg.multi)selectedFiles.forEach(f=>formData.append(cfg.field,f));else formData.append(cfg.field,selectedFiles[0]);
+    const extraList=cfg.extra?cfg.extra(T[lang].tool_opts):[];
     extraList.forEach(opt=>{const el=document.getElementById(`opt_${opt.name}`);if(el)formData.append(opt.name,el.value);});
-
-    progressBar.style.width='50%'; progressLabel.textContent=t('processing');
+    progressBar.style.width='50%';progressLabel.textContent=t('processing');
     const resp=await fetch(`${API}${cfg.endpoint}`,{method:'POST',body:formData});
     progressBar.style.width='90%';
-
     if(!resp.ok){const err=await resp.json().catch(()=>({detail:'Unknown error'}));throw new Error(err.detail||`Error ${resp.status}`);}
-
-    const data=await resp.json();
-    progressBar.style.width='100%'; progressLabel.textContent=t('done');
-    resultBox.classList.add('show');
-
-    const dlBtn=document.getElementById('download-btn');
-    const preview=document.getElementById('ocr-preview');
-    const meta=document.getElementById('result-meta');
-
-    // OCR text
-    if(cfg.textResult && data.text!==undefined){
-      document.getElementById('result-title').textContent=t('result_ocr');
-      const txt=data.text||'';
-      dlBtn.style.display='flex'; dlBtn.textContent=t('download_txt');
+    const data=await resp.json();progressBar.style.width='100%';progressLabel.textContent=t('done');resultBox.classList.add('show');
+    const dlBtn=document.getElementById('download-btn'),preview=document.getElementById('ocr-preview'),meta=document.getElementById('result-meta');
+    if(cfg.textResult&&data.text!==undefined){
+      document.getElementById('result-title').textContent=t('result_ocr');const txt=data.text||'';
+      dlBtn.style.display='flex';dlBtn.textContent=t('download_txt');
       dlBtn.onclick=()=>{const blob=new Blob([txt],{type:'text/plain;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='ocr_result.txt';a.click();};
-      if(txt.trim()){preview.style.display='block';preview.textContent=txt.substring(0,400)+(txt.length>400?'…':'');}
+      if(txt.trim()){preview.style.display='block';preview.textContent=txt.substring(0,400)+(txt.length>400?'\u2026':'');}
       meta.textContent=`${txt.length} chars | Confidence: ${data.avg_confidence?Math.round(data.avg_confidence*100)+'%':'N/A'}`;
-      btn.textContent=t('process_btn'); btn.disabled=false; return;
+      btn.textContent=t('process_btn');btn.disabled=false;return;
     }
-    // OCR file
-    if(cfg.textResult && data.download_url){
+    if(cfg.textResult&&data.download_url){
       document.getElementById('result-title').textContent=t('result_ready');
-      dlBtn.style.display='flex'; dlBtn.textContent=`⬇ ${data.filename}`;
+      dlBtn.style.display='flex';dlBtn.textContent=`\u2B07 ${data.filename}`;
       dlBtn.onclick=()=>downloadFile(`${API}${data.download_url}`,data.filename);
       meta.textContent=`${data.processing_time_ms}ms | ${(data.size_bytes/1024).toFixed(0)}KB`;
-      btn.textContent=t('process_btn'); btn.disabled=false; return;
+      btn.textContent=t('process_btn');btn.disabled=false;return;
     }
-    // Multi files
     if(cfg.multiResult&&(data.files||data.parts)){
       const items=data.files||data.parts;
       document.getElementById('result-title').textContent=t('result_multi').replace('{n}',items.length);
-      dlBtn.style.display='flex'; dlBtn.textContent=t('download_files').replace('{n}',items.length);
+      dlBtn.style.display='flex';dlBtn.textContent=t('download_files').replace('{n}',items.length);
       dlBtn.onclick=()=>items.forEach((item,i)=>setTimeout(()=>downloadFile(`${API}${item.download_url}`,item.filename),i*500));
-      meta.textContent=`${items[0]?.processing_time_ms||0}ms`;
-      btn.textContent=t('process_btn'); btn.disabled=false; return;
+      meta.textContent=`${items[0]?.processing_time_ms||0}ms`;btn.textContent=t('process_btn');btn.disabled=false;return;
     }
-    // Standard
     document.getElementById('result-title').textContent=t('result_ready');
-    dlBtn.style.display='flex'; dlBtn.textContent=`⬇ ${data.filename||'file'}`;
+    dlBtn.style.display='flex';dlBtn.textContent=`\u2B07 ${data.filename||'file'}`;
     dlBtn.onclick=()=>downloadFile(`${API}${data.download_url}`,data.filename);
     const sp=data.saved_percentage?` | Saved: ${data.saved_percentage}%`:'';
     const sz=data.size_bytes?` | ${(data.size_bytes/1024).toFixed(0)}KB`:'';
     meta.textContent=`${data.processing_time_ms}ms${sz}${sp}`;
-
-  } catch(err){
-    progressBar.style.width='100%'; progressBar.style.background='#ef4444';
+  }catch(err){
+    progressBar.style.width='100%';progressBar.style.background='#ef4444';
     resultBox.classList.add('show','error');
     document.getElementById('result-title').textContent=t('result_error').replace('{msg}',err.message);
     document.getElementById('result-meta').textContent=t('retry_hint');
     document.getElementById('download-btn').style.display='none';
   }
-  btn.textContent=t('process_btn'); btn.disabled=false;
+  btn.textContent=t('process_btn');btn.disabled=false;
 }
 
-// ── Hero ──────────────────────────────────────────────────────────────────────
 document.getElementById('hero-dropzone').addEventListener('click',()=>document.getElementById('hero-file-input').click());
 document.getElementById('hero-dropzone').addEventListener('dragover',e=>{e.preventDefault();e.currentTarget.classList.add('drag-over');});
 document.getElementById('hero-dropzone').addEventListener('dragleave',e=>e.currentTarget.classList.remove('drag-over'));
 document.getElementById('hero-dropzone').addEventListener('drop',e=>{e.preventDefault();e.currentTarget.classList.remove('drag-over');if(e.dataTransfer.files.length)document.getElementById('hero-file-input').files=e.dataTransfer.files;});
 
 function startHeroProcess(){
-  const toolKey=document.getElementById('hero-tool-select').value;
-  const file=document.getElementById('hero-file-input').files[0];
+  const toolKey=document.getElementById('hero-tool-select').value,file=document.getElementById('hero-file-input').files[0];
   if(!toolKey){alert(t('error_select_tool'));return;}
-  openModal(toolKey);
-  if(file){selectedFiles=[file];document.getElementById('modal-file-name').textContent=file.name;}
+  openModal(toolKey);if(file){selectedFiles=[file];document.getElementById('modal-file-name').textContent=file.name;}
 }
 
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+window.addEventListener('popstate',()=>{applyLang(window.location.pathname.startsWith('/he')?'he':'en');});
 
-// ── Handle browser back/forward ───────────────────────────────────────────────
-window.addEventListener('popstate', ()=>{
-  const path = window.location.pathname;
-  applyLang(path.startsWith('/he') ? 'he' : 'en');
-});
+function hookFooterLinks(){
+  const toolMap={'f_convert':'pdf-to-word','f_edit':'watermark','f_merge':'merge'};
+  const pages=['about','help','privacy','terms','contact','blog','pricing'];
+  document.querySelectorAll('footer a,nav a').forEach(a=>{
+    const txt=a.textContent.trim().toLowerCase();
+    const pm={'about':['about','\u05D0\u05D5\u05D3\u05D5\u05EA\u05D9\u05E0\u05D5'],'contact':['contact','\u05E6\u05D5\u05E8 \u05E7\u05E9\u05E8'],'help':['help center','\u05DE\u05E8\u05DB\u05D6 \u05E2\u05D6\u05E8\u05D4'],'privacy':['privacy policy','\u05DE\u05D3\u05D9\u05E0\u05D9\u05D5\u05EA \u05E4\u05E8\u05D8\u05D9\u05D5\u05EA'],'terms':['terms of use','\u05EA\u05E0\u05D0\u05D9 \u05E9\u05D9\u05DE\u05D5\u05E9'],'blog':['blog','\u05D1\u05DC\u05D5\u05D2'],'pricing':['pricing','\u05DE\u05D7\u05D9\u05E8\u05D9\u05DD']};
+    for(const[page,labels]of Object.entries(pm)){if(labels.some(l=>txt.includes(l))){a.onclick=(e)=>{e.preventDefault();};break;}}
+  });
+}
 
-// ── Init ──────────────────────────────────────────────────────────────────────
 detectAndRedirect();
 </script>
 </body>
 </html>
-<!-- PAGE ROUTING SYSTEM — appended to frontend.html -->
-<div id="page-overlay" style="display:none;position:fixed;inset:0;background:var(--cream);z-index:500;overflow-y:auto;padding-bottom:4rem">
-  <div style="max-width:800px;margin:0 auto;padding:3rem 2rem" id="page-content"></div>
-</div>
-
-<script>
-// ── Page content definitions ──────────────────────────────────────────────────
-const PAGES = {
-  pricing: () => renderPricing(),
-  about:   () => renderStatic('about'),
-  help:    () => renderStatic('help'),
-  privacy: () => renderStatic('privacy'),
-  terms:   () => renderStatic('terms'),
-  contact: () => renderStatic('contact'),
-  blog:    () => renderStatic('blog'),
-};
-
-const PAGE_CONTENT = {
-  en: {
-    about: {
-      title: 'About PDFPro',
-      body: `
-        <p style="font-size:1.1rem;line-height:1.8;color:var(--text-muted);margin-bottom:1.5rem">
-          PDFPro was founded with a simple mission: make professional PDF tools accessible to everyone,
-          without expensive software or complicated workflows.
-        </p>
-        <h2 style="font-size:1.4rem;font-weight:800;margin:2rem 0 1rem">Our Story</h2>
-        <p style="line-height:1.8;color:var(--text-muted);margin-bottom:1rem">
-          We started in 2024 as a small team of developers frustrated with bloated, expensive PDF software.
-          We believed that converting a PDF should take seconds, not require a subscription to a $500/year app.
-        </p>
-        <p style="line-height:1.8;color:var(--text-muted);margin-bottom:1rem">
-          Today, over 2 million professionals use PDFPro every month to edit, convert, and manage their documents.
-        </p>
-        <h2 style="font-size:1.4rem;font-weight:800;margin:2rem 0 1rem">Our Values</h2>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1rem">
-          ${['Privacy First — Your files are never stored longer than 1 hour',
-             'No Ads — We will never show you ads or sell your data',
-             'Open Source — Our core tools are MIT licensed',
-             'Accessibility — Professional tools at fair prices'].map(v=>`
-            <div style="padding:1.2rem;background:white;border-radius:10px;border:1px solid var(--border)">
-              <p style="font-weight:600;color:var(--navy)">${v}</p>
-            </div>`).join('')}
-        </div>
-      `
-    },
-    help: {
-      title: 'Help Center',
-      body: `
-        <p style="color:var(--text-muted);margin-bottom:2rem">Find answers to the most common questions about PDFPro.</p>
-        ${[
-          ['How do I convert a PDF to Word?', 'Click on "PDF to Word", upload your file, and click "Process File". Your converted document will be ready in seconds.'],
-          ['Is my data safe?', 'Yes. All files are encrypted during transfer and automatically deleted from our servers after 1 hour. We never read your documents.'],
-          ['What is the file size limit?', 'Free plan: 100MB per file. Pro plan: 500MB per file.'],
-          ['How many conversions can I do?', 'Free plan: 5 per day. Pro plan: unlimited.'],
-          ['Does OCR support Hebrew?', 'Yes! Our OCR engine supports Hebrew, Arabic, English and 40+ languages simultaneously.'],
-          ['Can I cancel my subscription?', 'Yes, at any time from your account settings. No questions asked.'],
-        ].map(([q,a])=>`
-          <div style="border:1px solid var(--border);border-radius:10px;padding:1.2rem;margin-bottom:1rem;background:white">
-            <h3 style="font-weight:700;color:var(--navy);margin-bottom:0.5rem">${q}</h3>
-            <p style="color:var(--text-muted);line-height:1.6">${a}</p>
-          </div>`).join('')}
-      `
-    },
-    privacy: {
-      title: 'Privacy Policy',
-      body: `
-        <p style="color:var(--text-muted);margin-bottom:1.5rem"><em>Last updated: May 2026</em></p>
-        ${[
-          ['1. Data We Collect', 'We collect only what is necessary: your email address (for registered users), usage statistics (anonymous), and temporarily your uploaded files for processing.'],
-          ['2. File Handling', 'Files uploaded to PDFPro are processed in memory or stored temporarily on our servers. All files are automatically and permanently deleted after 1 hour. We do not read, analyze, or share the contents of your files.'],
-          ['3. Cookies', 'We use cookies only for authentication (keeping you logged in) and language preferences. We do not use tracking or advertising cookies.'],
-          ['4. Third Parties', 'We use Stripe for payment processing. Stripe handles all payment data according to PCI-DSS standards. We never see or store your credit card information.'],
-          ['5. Your Rights', 'You may request deletion of your account and all associated data at any time by contacting support@pdfpro.com.'],
-          ['6. Contact', 'For privacy inquiries: privacy@pdfpro.com'],
-        ].map(([h,p])=>`
-          <h2 style="font-size:1.2rem;font-weight:700;color:var(--navy);margin:1.5rem 0 0.6rem">${h}</h2>
-          <p style="color:var(--text-muted);line-height:1.8">${p}</p>`).join('')}
-      `
-    },
-    terms: {
-      title: 'Terms of Use',
-      body: `
-        <p style="color:var(--text-muted);margin-bottom:1.5rem"><em>Last updated: May 2026</em></p>
-        ${[
-          ['1. Acceptance', 'By using PDFPro, you agree to these terms. If you do not agree, please do not use the service.'],
-          ['2. Permitted Use', 'PDFPro is for lawful use only. You may not use the service to process illegal content, infringe copyrights, or harm others.'],
-          ['3. Free Plan Limits', 'The free plan allows 5 operations per day and files up to 100MB. We reserve the right to adjust these limits.'],
-          ['4. Subscriptions', 'Pro subscriptions are billed monthly. You may cancel at any time. Refunds are not provided for partial months.'],
-          ['5. Liability', 'PDFPro is provided "as is". We are not liable for data loss or damages arising from use of the service.'],
-          ['6. Changes', 'We may update these terms at any time. Continued use of the service constitutes acceptance of updated terms.'],
-        ].map(([h,p])=>`
-          <h2 style="font-size:1.2rem;font-weight:700;color:var(--navy);margin:1.5rem 0 0.6rem">${h}</h2>
-          <p style="color:var(--text-muted);line-height:1.8">${p}</p>`).join('')}
-      `
-    },
-    contact: {
-      title: 'Contact Us',
-      body: `
-        <p style="color:var(--text-muted);margin-bottom:2rem">We usually respond within 24 hours on business days.</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2rem">
-          ${[['📧 General','support@pdfpro.com'],['💼 Business','business@pdfpro.com'],['🔒 Privacy','privacy@pdfpro.com'],['🐛 Bug Report','GitHub Issues']].map(([l,v])=>`
-            <div style="padding:1.2rem;background:white;border-radius:10px;border:1px solid var(--border)">
-              <p style="font-weight:700;color:var(--navy);margin-bottom:0.3rem">${l}</p>
-              <p style="color:var(--text-muted)">${v}</p>
-            </div>`).join('')}
-        </div>
-        <div style="background:white;border-radius:12px;border:1px solid var(--border);padding:1.5rem">
-          <h3 style="font-weight:700;margin-bottom:1rem;color:var(--navy)">Send a Message</h3>
-          <div style="display:flex;flex-direction:column;gap:0.8rem">
-            <input id="c-name" placeholder="Your name" style="padding:0.7rem 1rem;border-radius:7px;border:1px solid var(--border);font-size:0.9rem;width:100%"/>
-            <input id="c-email" placeholder="Email address" type="email" style="padding:0.7rem 1rem;border-radius:7px;border:1px solid var(--border);font-size:0.9rem;width:100%"/>
-            <textarea id="c-msg" placeholder="Your message..." rows="4" style="padding:0.7rem 1rem;border-radius:7px;border:1px solid var(--border);font-size:0.9rem;width:100%;resize:vertical"></textarea>
-            <button onclick="sendContactForm()" style="background:var(--red);color:white;border:none;border-radius:8px;padding:0.8rem;font-size:0.95rem;font-weight:700;cursor:pointer">Send Message</button>
-            <p id="c-status" style="color:green;font-size:0.85rem;display:none">✅ Message sent! We'll get back to you soon.</p>
-          </div>
-        </div>
-      `
-    },
-    blog: {
-      title: 'Blog',
-      body: `
-        <p style="color:var(--text-muted);margin-bottom:2rem">Tips, tutorials and updates from the PDFPro team.</p>
-        ${[
-          ['How to reduce PDF file size without losing quality','May 20, 2026','Learn the best strategies for compressing PDFs while maintaining readability.','compress'],
-          ['OCR for Hebrew documents: a complete guide','May 15, 2026','Everything you need to know about extracting Hebrew text from scanned documents.','ocr'],
-          ['PDF to Word: when it works and when it doesn\'t','May 8, 2026','Understanding the limitations of PDF conversion and how to get the best results.','pdf-to-word'],
-        ].map(([title,date,excerpt,tool])=>`
-          <div style="background:white;border-radius:12px;border:1px solid var(--border);padding:1.5rem;margin-bottom:1.2rem;cursor:pointer" onclick="openModal('${tool}')">
-            <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.5rem">${date}</p>
-            <h2 style="font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:0.5rem">${title}</h2>
-            <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.6">${excerpt}</p>
-            <p style="color:var(--red);font-size:0.85rem;font-weight:600;margin-top:0.8rem">Try the tool →</p>
-          </div>`).join('')}
-      `
-    },
-  },
-  he: {
-    about: {
-      title: 'אודות PDFPro',
-      body: `
-        <p style="font-size:1.1rem;line-height:1.8;color:var(--text-muted);margin-bottom:1.5rem">
-          PDFPro נוסדה עם משימה פשוטה: להנגיש כלי PDF מקצועיים לכולם,
-          ללא תוכנות יקרות ותהליכים מסובכים.
-        </p>
-        <h2 style="font-size:1.4rem;font-weight:800;margin:2rem 0 1rem">הסיפור שלנו</h2>
-        <p style="line-height:1.8;color:var(--text-muted);margin-bottom:1rem">
-          התחלנו ב-2024 כצוות קטן של מפתחים שנמאס להם מתוכנות PDF מנופחות ויקרות.
-          האמנו שהמרת PDF צריכה לקחת שניות, לא לדרוש מנוי של 1,800 ₪ לשנה.
-        </p>
-        <p style="line-height:1.8;color:var(--text-muted);margin-bottom:1rem">
-          כיום, מעל 2 מיליון אנשי מקצוע משתמשים ב-PDFPro מדי חודש לעריכה, המרה וניהול מסמכים.
-        </p>
-        <h2 style="font-size:1.4rem;font-weight:800;margin:2rem 0 1rem">הערכים שלנו</h2>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1rem">
-          ${['פרטיות קודמת — הקבצים שלך לא נשמרים יותר משעה',
-             'ללא פרסומות — לעולם לא נציג פרסומות ולא נמכור את המידע שלך',
-             'קוד פתוח — הכלים המרכזיים שלנו תחת רישיון MIT',
-             'נגישות — כלים מקצועיים במחיר הוגן'].map(v=>`
-            <div style="padding:1.2rem;background:white;border-radius:10px;border:1px solid var(--border)">
-              <p style="font-weight:600;color:var(--navy)">${v}</p>
-            </div>`).join('')}
-        </div>
-      `
-    },
-    help: {
-      title: 'מרכז עזרה',
-      body: `
-        <p style="color:var(--text-muted);margin-bottom:2rem">מצא תשובות לשאלות הנפוצות ביותר על PDFPro.</p>
-        ${[
-          ['איך ממירים PDF ל-Word?','לחץ על "PDF ל-Word", העלה את הקובץ שלך ולחץ "עבד קובץ". המסמך המומר יהיה מוכן תוך שניות.'],
-          ['האם המידע שלי בטוח?','כן. כל הקבצים מוצפנים בזמן העברה ונמחקים אוטומטית מהשרתים שלנו לאחר שעה. אנחנו לא קוראים את המסמכים שלך.'],
-          ['מה הגבול לגודל קובץ?','תכנית חינמית: 100MB לקובץ. תכנית Pro: 500MB לקובץ.'],
-          ['כמה המרות אפשר לעשות?','תכנית חינמית: 5 ביום. תכנית Pro: ללא הגבלה.'],
-          ['האם OCR תומך בעברית?','כן! מנוע ה-OCR שלנו תומך בעברית, ערבית, אנגלית ויותר מ-40 שפות בו-זמנית.'],
-          ['האם אפשר לבטל את המנוי?','כן, בכל עת דרך הגדרות החשבון. ללא שאלות.'],
-        ].map(([q,a])=>`
-          <div style="border:1px solid var(--border);border-radius:10px;padding:1.2rem;margin-bottom:1rem;background:white">
-            <h3 style="font-weight:700;color:var(--navy);margin-bottom:0.5rem">${q}</h3>
-            <p style="color:var(--text-muted);line-height:1.6">${a}</p>
-          </div>`).join('')}
-      `
-    },
-    privacy: {
-      title: 'מדיניות פרטיות',
-      body: `
-        <p style="color:var(--text-muted);margin-bottom:1.5rem"><em>עודכן לאחרונה: מאי 2026</em></p>
-        ${[
-          ['1. מידע שאנו אוספים','אנו אוספים רק את הנחוץ: כתובת האימייל שלך (למשתמשים רשומים), סטטיסטיקות שימוש (אנונימיות), ובאופן זמני את הקבצים שהעלת לצורך עיבוד.'],
-          ['2. טיפול בקבצים','קבצים שהועלו ל-PDFPro מעובדים בזיכרון או נשמרים באופן זמני בשרתים שלנו. כל הקבצים נמחקים אוטומטית ולצמיתות לאחר שעה. אנחנו לא קוראים, מנתחים או משתפים את תוכן הקבצים שלך.'],
-          ['3. עוגיות','אנו משתמשים בעוגיות רק לאימות (שמירה על חיבור) והעדפות שפה. אנחנו לא משתמשים בעוגיות מעקב או פרסום.'],
-          ['4. צדדים שלישיים','אנו משתמשים ב-Stripe לעיבוד תשלומים. Stripe מטפל בכל נתוני התשלום לפי תקן PCI-DSS. אנחנו לא רואים ולא שומרים את פרטי כרטיס האשראי שלך.'],
-          ['5. הזכויות שלך','ניתן לבקש מחיקת חשבונך וכל המידע הקשור בכל עת על ידי פנייה ל-support@pdfpro.com.'],
-          ['6. יצירת קשר','לפניות בנושא פרטיות: privacy@pdfpro.com'],
-        ].map(([h,p])=>`
-          <h2 style="font-size:1.2rem;font-weight:700;color:var(--navy);margin:1.5rem 0 0.6rem">${h}</h2>
-          <p style="color:var(--text-muted);line-height:1.8">${p}</p>`).join('')}
-      `
-    },
-    terms: {
-      title: 'תנאי שימוש',
-      body: `
-        <p style="color:var(--text-muted);margin-bottom:1.5rem"><em>עודכן לאחרונה: מאי 2026</em></p>
-        ${[
-          ['1. קבלת התנאים','בשימוש ב-PDFPro אתה מסכים לתנאים אלה. אם אינך מסכים, אנא הפסק להשתמש בשירות.'],
-          ['2. שימוש מותר','PDFPro מיועד לשימוש חוקי בלבד. אין להשתמש בשירות לעיבוד תוכן בלתי חוקי, הפרת זכויות יוצרים או פגיעה באחרים.'],
-          ['3. הגבלות תכנית חינמית','תכנית החינמית מאפשרת 5 פעולות ביום וקבצים עד 100MB. אנו שומרים לעצמנו את הזכות לשנות הגבלות אלה.'],
-          ['4. מנויים','מנויי Pro מחויבים חודשית. ניתן לבטל בכל עת. לא ניתן לקבל החזר עבור חודשים חלקיים.'],
-          ['5. אחריות','PDFPro מסופק "כמות שהוא". אנחנו לא אחראים לאובדן נתונים או נזקים הנובעים מהשימוש בשירות.'],
-          ['6. שינויים','אנו עשויים לעדכן תנאים אלה בכל עת. המשך השימוש בשירות מהווה הסכמה לתנאים המעודכנים.'],
-        ].map(([h,p])=>`
-          <h2 style="font-size:1.2rem;font-weight:700;color:var(--navy);margin:1.5rem 0 0.6rem">${h}</h2>
-          <p style="color:var(--text-muted);line-height:1.8">${p}</p>`).join('')}
-      `
-    },
-    contact: {
-      title: 'צור קשר',
-      body: `
-        <p style="color:var(--text-muted);margin-bottom:2rem">אנחנו מגיבים בדרך כלל תוך 24 שעות בימי עסקים.</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2rem">
-          ${[['📧 כללי','support@pdfpro.com'],['💼 עסקי','business@pdfpro.com'],['🔒 פרטיות','privacy@pdfpro.com'],['🐛 דיווח באג','GitHub Issues']].map(([l,v])=>`
-            <div style="padding:1.2rem;background:white;border-radius:10px;border:1px solid var(--border)">
-              <p style="font-weight:700;color:var(--navy);margin-bottom:0.3rem">${l}</p>
-              <p style="color:var(--text-muted)">${v}</p>
-            </div>`).join('')}
-        </div>
-        <div style="background:white;border-radius:12px;border:1px solid var(--border);padding:1.5rem">
-          <h3 style="font-weight:700;margin-bottom:1rem;color:var(--navy)">שלח הודעה</h3>
-          <div style="display:flex;flex-direction:column;gap:0.8rem">
-            <input id="c-name" placeholder="שמך" style="padding:0.7rem 1rem;border-radius:7px;border:1px solid var(--border);font-size:0.9rem;width:100%;text-align:right"/>
-            <input id="c-email" placeholder="כתובת אימייל" type="email" style="padding:0.7rem 1rem;border-radius:7px;border:1px solid var(--border);font-size:0.9rem;width:100%;text-align:right"/>
-            <textarea id="c-msg" placeholder="ההודעה שלך..." rows="4" style="padding:0.7rem 1rem;border-radius:7px;border:1px solid var(--border);font-size:0.9rem;width:100%;resize:vertical;text-align:right"></textarea>
-            <button onclick="sendContactForm()" style="background:var(--red);color:white;border:none;border-radius:8px;padding:0.8rem;font-size:0.95rem;font-weight:700;cursor:pointer">שלח הודעה</button>
-            <p id="c-status" style="color:green;font-size:0.85rem;display:none">✅ ההודעה נשלחה! ניצור קשר בקרוב.</p>
-          </div>
-        </div>
-      `
-    },
-    blog: {
-      title: 'בלוג',
-      body: `
-        <p style="color:var(--text-muted);margin-bottom:2rem">טיפים, מדריכים ועדכונים מצוות PDFPro.</p>
-        ${[
-          ['איך להקטין קובץ PDF בלי לאבד איכות','20 מאי 2026','למד את האסטרטגיות הטובות ביותר לדחיסת PDF תוך שמירה על קריאות.','compress'],
-          ['OCR למסמכים בעברית: מדריך מלא','15 מאי 2026','כל מה שצריך לדעת על חילוץ טקסט עברי מסריקות ותמונות.','ocr'],
-          ['PDF ל-Word: מתי זה עובד ומתי לא','8 מאי 2026','הבנת מגבלות המרת PDF וקבלת תוצאות מיטביות.','pdf-to-word'],
-        ].map(([title,date,excerpt,tool])=>`
-          <div style="background:white;border-radius:12px;border:1px solid var(--border);padding:1.5rem;margin-bottom:1.2rem;cursor:pointer" onclick="openModal('${tool}')">
-            <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.5rem">${date}</p>
-            <h2 style="font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:0.5rem">${title}</h2>
-            <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.6">${excerpt}</p>
-            <p style="color:var(--red);font-size:0.85rem;font-weight:600;margin-top:0.8rem">נסה את הכלי ←</p>
-          </div>`).join('')}
-      `
-    },
-  }
-};
-
-// ── Pricing page ──────────────────────────────────────────────────────────────
-function renderPricing(){
-  const isHe = lang === 'he';
-  const plans = [
-    {
-      id:'free', popular:false,
-      name: isHe ? 'חינמי' : 'Free',
-      price: '₪0',
-      period: isHe ? '/ חודש' : '/ month',
-      desc: isHe ? 'למשתמשים מזדמנים שצריכים כלים בסיסיים' : 'Perfect for occasional users who need basic tools',
-      features: isHe
-        ? ['5 המרות ביום','קבצים עד 25MB','כלים בסיסיים','הורדה מיידית']
-        : ['5 conversions/day','Files up to 25MB','Basic tools','Instant download'],
-      no: isHe
-        ? ['ללא OCR','ללא תרגום']
-        : ['No OCR','No translation'],
-      btn: isHe ? 'התחל בחינם' : 'Start Free',
-      action: () => { closePage(); document.getElementById('tools').scrollIntoView({behavior:'smooth'}); }
-    },
-    {
-      id:'pro', popular:true,
-      name: isHe ? 'מקצועי' : 'Pro',
-      price: '₪39',
-      period: isHe ? '/ חודש' : '/ month',
-      desc: isHe ? 'לאנשי מקצוע שעובדים עם מסמכים על בסיס יומי' : 'For professionals working with documents daily',
-      features: isHe
-        ? ['המרות ללא הגבלה','קבצים עד 500MB','כל הכלים','OCR ותרגום','עיבוד מקבילי','תמיכה מועדפת']
-        : ['Unlimited conversions','Files up to 500MB','All tools','OCR & Translation','Parallel processing','Priority support'],
-      no: [],
-      btn: isHe ? 'התחל ניסיון חינם' : 'Start Free Trial',
-      action: () => handleCheckout('pro')
-    },
-    {
-      id:'enterprise', popular:false,
-      name: isHe ? 'עסקי' : 'Enterprise',
-      price: '₪129',
-      period: isHe ? '/ חודש' : '/ month',
-      desc: isHe ? 'לצוותים וארגונים עם צרכי עיבוד גבוהים' : 'For teams and organizations with high processing needs',
-      features: isHe
-        ? ['הכל בתכנית המקצועית','עד 10 משתמשים','גישת API','לוח ניהול ארגוני','שרות לקוחות 24/7','SLA מובטח 99.9%']
-        : ['Everything in Pro','Up to 10 users','API access','Admin dashboard','24/7 support','SLA 99.9%'],
-      no: [],
-      btn: isHe ? 'צור קשר' : 'Contact Sales',
-      action: () => navigateTo('contact')
-    },
-  ];
-
-  return `
-    <div style="text-align:center;margin-bottom:3rem">
-      <div style="font-size:0.8rem;font-weight:700;letter-spacing:2px;color:var(--red);text-transform:uppercase;margin-bottom:0.8rem">
-        ${isHe ? 'תוכניות ומחירים' : 'Plans & Pricing'}
-      </div>
-      <h1 style="font-size:2.2rem;font-weight:900;color:var(--navy);letter-spacing:-0.5px;margin-bottom:0.8rem">
-        ${isHe ? 'מחיר הוגן לכל סוג משתמש' : 'Fair pricing for every user'}
-      </h1>
-      <p style="color:var(--text-muted)">${isHe ? 'התחל בחינם, שדרג כשתצטרך' : 'Start free, upgrade when you need to'}</p>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem">
-      ${plans.map(p => `
-        <div style="background:white;border-radius:16px;padding:2rem;border:${p.popular?'2px solid var(--red)':'1px solid var(--border)'};position:relative;${p.popular?'box-shadow:0 8px 32px rgba(224,32,32,0.15)':''}">
-          ${p.popular ? `<div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--red);color:white;font-size:0.75rem;font-weight:700;padding:0.3rem 1rem;border-radius:20px;white-space:nowrap">⚡ ${isHe?'הפופולרי ביותר':'Most Popular'}</div>` : ''}
-          <div style="font-size:0.85rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:0.8rem">${p.name}</div>
-          <div style="font-size:2.6rem;font-weight:900;color:var(--navy);letter-spacing:-2px;margin-bottom:0.3rem">${p.price} <span style="font-size:1rem;color:var(--text-muted);font-weight:400">${p.period}</span></div>
-          <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)">${p.desc}</p>
-          <ul style="list-style:none;margin-bottom:2rem">
-            ${p.features.map(f=>`<li style="padding:0.35rem 0;font-size:0.88rem;display:flex;align-items:center;gap:0.5rem"><span style="color:var(--red);font-weight:700">✓</span>${f}</li>`).join('')}
-            ${p.no.map(f=>`<li style="padding:0.35rem 0;font-size:0.88rem;color:var(--text-muted);display:flex;align-items:center;gap:0.5rem">✗ ${f}</li>`).join('')}
-          </ul>
-          <button onclick="(${p.action.toString()})()" style="width:100%;padding:0.85rem;border-radius:8px;font-size:0.95rem;font-weight:700;cursor:pointer;border:${p.popular?'none':'1.5px solid var(--border)'};background:${p.popular?'var(--red)':'transparent'};color:${p.popular?'white':'var(--navy)'};transition:all 0.2s" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
-            ${p.btn}
-          </button>
-        </div>`).join('')}
-    </div>
-    <div style="text-align:center;margin-top:2rem;color:var(--text-muted);font-size:0.85rem">
-      ${isHe ? '🔒 תשלום מאובטח דרך Stripe • ביטול בכל עת • ללא חיובים נסתרים' : '🔒 Secure payment via Stripe • Cancel anytime • No hidden fees'}
-    </div>
-    <div id="checkout-msg" style="margin-top:1rem;text-align:center;display:none"></div>
-  `;
-}
-
-async function handleCheckout(plan){
-  const msgEl = document.getElementById('checkout-msg');
-  if(!msgEl) return;
-  msgEl.style.display='block';
-  msgEl.innerHTML = `<span style="color:var(--text-muted)">${lang==='he'?'מתחבר ל-Stripe...':'Connecting to Stripe...'}</span>`;
-  try{
-    const resp = await fetch(`${API}/api/payments/create-checkout-session`,{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({
-        plan,
-        success_url: window.location.origin + '/pricing?success=true',
-        cancel_url:  window.location.origin + '/pricing?cancelled=true',
-      })
-    });
-    const data = await resp.json();
-    if(data.checkout_url){
-      window.location.href = data.checkout_url;
-    } else {
-      throw new Error(data.detail || 'Unknown error');
-    }
-  } catch(err){
-    msgEl.innerHTML = `<span style="color:var(--red)">❌ ${err.message}</span>`;
-  }
-}
-
-// ── Page routing engine ───────────────────────────────────────────────────────
-function navigateTo(page){
-  const overlay = document.getElementById('page-overlay');
-  const content = document.getElementById('page-content');
-
-  if(PAGES[page]){
-    // Push URL state
-    const slug = page === 'pricing' ? '/pricing' : `/${page}`;
-    window.history.pushState({page}, '', lang==='he' ? `/he${slug}` : slug);
-
-    // Render content
-    const isRTL = lang === 'he';
-    overlay.style.direction = isRTL ? 'rtl' : 'ltr';
-    overlay.style.fontFamily = isRTL ? "'Heebo',sans-serif" : "'Plus Jakarta Sans',sans-serif";
-
-    const pageData = PAGE_CONTENT[lang]?.[page];
-
-    let html = `
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid var(--border)">
-        <button onclick="closePage()" style="background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:0.9rem;display:flex;align-items:center;gap:0.4rem">
-          ${isRTL ? '→ חזרה' : '← Back'}
-        </button>
-        <a href="/" class="logo" style="font-size:1.3rem">PDF<span>Pro</span></a>
-      </div>
-    `;
-
-    if(page === 'pricing'){
-      html += renderPricing();
-    } else if(pageData){
-      html += `
-        <h1 style="font-size:2rem;font-weight:900;color:var(--navy);margin-bottom:1.5rem;letter-spacing:-0.5px">${pageData.title}</h1>
-        ${pageData.body}
-      `;
-    }
-
-    content.innerHTML = html;
-    overlay.style.display = 'block';
-    overlay.scrollTop = 0;
-
-    // Check for Stripe redirect params
-    const params = new URLSearchParams(window.location.search);
-    if(params.get('success')){
-      setTimeout(()=>{
-        const msg = document.getElementById('checkout-msg');
-        if(msg){ msg.style.display='block'; msg.innerHTML=`<div style="background:#f0fff4;border:1px solid #86efac;border-radius:10px;padding:1rem;color:#166534;font-weight:600">🎉 ${lang==='he'?'התשלום הצליח! החשבון שלך שודרג ל-Pro.':'Payment successful! Your account has been upgraded to Pro.'}</div>`;}
-      }, 100);
-    }
-    if(params.get('cancelled')){
-      setTimeout(()=>{
-        const msg = document.getElementById('checkout-msg');
-        if(msg){ msg.style.display='block'; msg.innerHTML=`<div style="color:var(--text-muted);font-size:0.9rem">${lang==='he'?'התשלום בוטל.':'Payment cancelled.'}</div>`;}
-      }, 100);
-    }
-  }
-}
-
-function closePage(){
-  document.getElementById('page-overlay').style.display = 'none';
-  const basePath = lang === 'he' ? '/he' : '/';
-  window.history.pushState({}, '', basePath);
-}
-
-function sendContactForm(){
-  const name  = document.getElementById('c-name')?.value;
-  const email = document.getElementById('c-email')?.value;
-  const msg   = document.getElementById('c-msg')?.value;
-  if(!name||!email||!msg){ return; }
-  // In production: POST to /api/contact
-  document.getElementById('c-status').style.display = 'block';
-  document.getElementById('c-name').value = '';
-  document.getElementById('c-email').value = '';
-  document.getElementById('c-msg').value = '';
-}
-
-// ── Hook footer links ─────────────────────────────────────────────────────────
-function hookFooterLinks(){
-  const map = {
-    'f_convert':'pdf-to-word', 'f_edit':'watermark', 'f_merge':'merge',
-  };
-  const pages = ['about','help','privacy','terms','contact','blog','pricing'];
-
-  document.querySelectorAll('[data-t]').forEach(el => {
-    const key = el.dataset.t;
-    if(map[key]){
-      el.style.cursor = 'pointer';
-      el.onclick = (e) => { e.preventDefault(); closePage(); openModal(map[key]); };
-    } else if(pages.includes(key.replace('f_',''))||key==='nav_pricing'){
-      const page = key==='nav_pricing' ? 'pricing' : key.replace('f_','');
-      if(pages.includes(page)){
-        el.style.cursor = 'pointer';
-        el.onclick = (e) => { e.preventDefault(); navigateTo(page); };
-      }
-    }
-  });
-
-  // Direct footer link hookup
-  document.querySelectorAll('footer a, nav a').forEach(a => {
-    const txt = a.textContent.trim().toLowerCase();
-    const pageMap = {
-      'about':['about','אודותינו'], 'contact':['contact','צור קשר'],
-      'help':['help center','מרכז עזרה'], 'privacy':['privacy policy','מדיניות פרטיות'],
-      'terms':['terms of use','תנאי שימוש'], 'blog':['blog','בלוג'],
-      'pricing':['pricing','מחירים'],
-    };
-    for(const [page, labels] of Object.entries(pageMap)){
-      if(labels.some(l => txt.includes(l))){
-        a.onclick = (e) => { e.preventDefault(); navigateTo(page); };
-        break;
-      }
-    }
-  });
-}
-
-// ── Handle browser back button ────────────────────────────────────────────────
-window.addEventListener('popstate', (e) => {
-  const path = window.location.pathname;
-  const pageMatch = path.match(/\/(pricing|about|help|privacy|terms|contact|blog)$/);
-  if(pageMatch){
-    navigateTo(pageMatch[1]);
-  } else if(path === '/' || path === '/he'){
-    closePage();
-    applyLang(path.startsWith('/he') ? 'he' : 'en');
-  }
-});
-
-// ── Re-hook after language switch ─────────────────────────────────────────────
-const _origApplyLang = applyLang;
-// Wrap applyLang to re-hook links after language change
-const _applyLangOrig = typeof applyLang === 'function' ? applyLang : null;
-function applyLangWithHook(newLang){
-  _applyLangOrig && _applyLangOrig(newLang);
-  setTimeout(hookFooterLinks, 100);
-}
-
-// ── Check URL on load for direct page access ──────────────────────────────────
-(function checkInitialPage(){
-  const path = window.location.pathname;
-  const pageMatch = path.match(/\/(pricing|about|help|privacy|terms|contact|blog)$/);
-  if(pageMatch){
-    // Wait for main app to init, then show page
-    setTimeout(() => navigateTo(pageMatch[1]), 300);
-  }
-})();
-
-// Hook after DOM ready
-setTimeout(hookFooterLinks, 500);
-</script>
