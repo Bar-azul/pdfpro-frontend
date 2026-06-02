@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>צור קשר | PDFPro</title>
+<link rel="canonical" href="https://www.pdfproapp.com/he/contact/"/>
+<link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/contact/"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--red:#E02020;--navy:#0D1B2A;--cream:#F8F5F0;--border:#D8D0C4;--text:#0D1B2A;--muted:#5A6A7A}
+body{font-family:'Heebo',sans-serif;background:var(--cream);color:var(--text);direction:rtl}
+
+nav{background:#0D1B2A;padding:0 2rem;height:60px;display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid #E02020;position:sticky;top:0;z-index:100}
+.logo{font-size:1.4rem;font-weight:900;color:white;text-decoration:none}.logo span{color:#FF4444}
+.back-btn{color:rgba(255,255,255,0.6);text-decoration:none;font-size:0.9rem;display:flex;align-items:center;gap:0.4rem}
+.back-btn:hover{color:white}
+
+.container{max-width:780px;margin:0 auto;padding:3rem 1.5rem}
+h1{font-size:2rem;font-weight:900;color:var(--navy);margin-bottom:1.5rem;letter-spacing:-0.5px}
+h2{font-size:1.2rem;font-weight:700;color:var(--navy);margin:1.8rem 0 0.6rem}
+p{color:var(--muted);line-height:1.8;margin-bottom:0.8rem}
+.card{background:white;border-radius:12px;border:1px solid var(--border);padding:1.2rem;margin-bottom:0.8rem}
+.card h3{font-weight:700;color:var(--navy);margin-bottom:0.4rem}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem}
+.cta{display:inline-block;background:var(--red);color:white;padding:0.8rem 2rem;border-radius:8px;text-decoration:none;font-weight:700;margin-top:1rem}
+details{border:1px solid var(--border);border-radius:10px;padding:1rem 1.2rem;margin-bottom:0.8rem;background:white}
+summary{font-weight:700;cursor:pointer;color:var(--navy);list-style:none;display:flex;justify-content:space-between}
+summary::-webkit-details-marker{display:none}
+details p{margin-top:0.8rem}
+input,textarea{width:100%;padding:0.75rem 1rem;border-radius:8px;border:1px solid var(--border);font-family:'Heebo',sans-serif;font-size:0.95rem;margin-bottom:0.8rem;background:white;direction:rtl}
+.send-btn{background:var(--red);color:white;border:none;border-radius:8px;padding:0.85rem 2rem;font-size:1rem;font-weight:700;cursor:pointer;width:100%}
+.blog-card{background:white;border-radius:12px;border:1px solid var(--border);padding:1.5rem;margin-bottom:1rem;cursor:pointer;transition:border-color 0.2s}
+.blog-card:hover{border-color:var(--red)}
+.blog-card h2{margin-top:0.4rem;font-size:1.05rem}
+.blog-card p{font-size:0.88rem}
+@media(max-width:600px){.grid-2{grid-template-columns:1fr}.container{padding:2rem 1rem}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/he" class="logo">PDF<span>Pro</span></a>
+  <a href="/he" class="back-btn">← חזרה לאתר</a>
+</nav>
+<div class="container">
+  <h1>צור קשר</h1>
+  
+<p style="margin-bottom:1.5rem">אנחנו מגיבים בדרך כלל תוך 24 שעות בימי עסקים.</p>
+<div class="grid-2">
+  <div class="card"><h3>&#x1F4E7; כללי</h3><p>support@pdfproapp.com</p></div>
+  <div class="card"><h3>&#x1F4BC; עסקי</h3><p>business@pdfproapp.com</p></div>
+  <div class="card"><h3>&#x1F512; פרטיות</h3><p>privacy@pdfproapp.com</p></div>
+  <div class="card"><h3>&#x1F41B; דיווח תקלה</h3><p>GitHub Issues</p></div>
+</div>
+<div class="card" style="margin-top:0.5rem">
+  <h3 style="margin-bottom:1rem">שלח הודעה</h3>
+  <input type="text" id="c-name" placeholder="שמך"/>
+  <input type="email" id="c-email" placeholder="כתובת אימייל"/>
+  <textarea id="c-msg" rows="4" placeholder="ההודעה שלך..."></textarea>
+  <button class="send-btn" onclick="sendForm()">שלח הודעה</button>
+  <p id="c-ok" style="color:green;margin-top:0.8rem;display:none">&#x2705; ההודעה נשלחה! נחזור בקרוב.</p>
+</div>
+<script>function sendForm(){var n=document.getElementById('c-name').value,e=document.getElementById('c-email').value,m=document.getElementById('c-msg').value;if(!n||!e||!m)return;document.getElementById('c-ok').style.display='block';document.getElementById('c-name').value='';document.getElementById('c-email').value='';document.getElementById('c-msg').value='';}</script>
+</div>
+</body>
+</html>
