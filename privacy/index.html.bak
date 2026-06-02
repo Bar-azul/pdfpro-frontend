@@ -1,20 +1,17 @@
 <!DOCTYPE html>
-<html id="html-root" lang="he" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="description" content="כלי PDF מקצועיים להמרה, מיזוג, פיצול, דחיסה, עריכה ותרגום קבצים אונליין.">
-<title>תנאי שימוש | PDFPro</title>
-<link rel="canonical" href="https://pdfproapp.com/he/terms/">
-<link rel="alternate" hreflang="en" href="https://pdfproapp.com/terms/">
-<link rel="alternate" hreflang="he" href="https://pdfproapp.com/he/terms/">
-<link rel="alternate" hreflang="x-default" href="https://pdfproapp.com/terms/">
+<title>Privacy Policy | PDFPro</title>
+<link rel="canonical" href="https://www.pdfproapp.com/privacy/"/>
+<link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/privacy/"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{--red:#E02020;--navy:#0D1B2A;--cream:#F8F5F0;--border:#D8D0C4;--text:#0D1B2A;--muted:#5A6A7A}
-body{font-family:'Heebo',sans-serif;background:var(--cream);color:var(--text);direction:rtl}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--cream);color:var(--text);direction:ltr}
 
 nav{background:#0D1B2A;padding:0 2rem;height:60px;display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid #E02020;position:sticky;top:0;z-index:100}
 .logo{font-size:1.4rem;font-weight:900;color:white;text-decoration:none}.logo span{color:#FF4444}
@@ -33,7 +30,7 @@ details{border:1px solid var(--border);border-radius:10px;padding:1rem 1.2rem;ma
 summary{font-weight:700;cursor:pointer;color:var(--navy);list-style:none;display:flex;justify-content:space-between}
 summary::-webkit-details-marker{display:none}
 details p{margin-top:0.8rem}
-input,textarea{width:100%;padding:0.75rem 1rem;border-radius:8px;border:1px solid var(--border);font-family:'Heebo',sans-serif;font-size:0.95rem;margin-bottom:0.8rem;background:white;direction:rtl}
+input,textarea{width:100%;padding:0.75rem 1rem;border-radius:8px;border:1px solid var(--border);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.95rem;margin-bottom:0.8rem;background:white;direction:ltr}
 .send-btn{background:var(--red);color:white;border:none;border-radius:8px;padding:0.85rem 2rem;font-size:1rem;font-weight:700;cursor:pointer;width:100%}
 .blog-card{background:white;border-radius:12px;border:1px solid var(--border);padding:1.5rem;margin-bottom:1rem;cursor:pointer;transition:border-color 0.2s}
 .blog-card:hover{border-color:var(--red)}
@@ -42,29 +39,20 @@ input,textarea{width:100%;padding:0.75rem 1rem;border-radius:8px;border:1px soli
 @media(max-width:600px){.grid-2{grid-template-columns:1fr}.container{padding:2rem 1rem}h1{font-size:1.5rem}}
 </style>
 </head>
-<body class="rtl">
+<body>
 <nav>
-  <a href="/he/" class="logo">PDF<span>Pro</span></a>
-  <ul class="nav-links">
-    <li><a href="/he/#tools">כלים</a></li>
-    <li><a href="/he/#features">יתרונות</a></li>
-    <li><a href="/he/pricing/">מחירים</a></li>
-  </ul>
-  <div class="nav-right">
-    <span class="api-status offline" id="api-status"><span class="api-dot"></span><span id="api-status-text">מתחבר...</span></span>
-    <button class="nav-cta" onclick="document.getElementById('tools')?.scrollIntoView({behavior:'smooth'})">התחל עכשיו</button>
-  </div>
+  <a href="/" class="logo">PDF<span>Pro</span></a>
+  <a href="/" class="back-btn">← Back to site</a>
 </nav>
 <div class="container">
-  <h1>תנאי שימוש</h1>
+  <h1>Privacy Policy</h1>
   
-<p style="color:var(--muted);margin-bottom:1.5rem"><em>עודכן לאחרונה: מאי 2026</em></p>
-<h2>1. קבלת התנאים</h2><p>בשימוש ב-PDFPro אתה מסכים לתנאים אלה.</p>
-<h2>2. שימוש מותר</h2><p>PDFPro מיועד לשימוש חוקי בלבד.</p>
-<h2>3. הגבלות תכנית חינמית</h2><p>5 פעולות ביום, קבצים עד 100MB.</p>
-<h2>4. מנויים</h2><p>מנויי Pro מחוייבים חודשית. ניתן לבטל בכל עת.</p>
-<h2>5. אחריות</h2><p>PDFPro מסופק "כמות שהוא". איננו אחראים לאובדן נתונים.</p>
-<h2>6. שינויים</h2><p>אנו עשויים לעדכן תנאים אלה בכל עת.</p>
+<p style="color:var(--muted);margin-bottom:1.5rem"><em>Last updated: May 2026</em></p>
+<h2>1. Data We Collect</h2><p>We collect only what is necessary: your email address (for registered users), anonymous usage statistics, and temporarily your uploaded files for processing.</p>
+<h2>2. File Handling</h2><p>Files uploaded to PDFPro are processed and automatically deleted after 1 hour. We do not read, analyze, or share the contents of your files.</p>
+<h2>3. Cookies</h2><p>We use cookies only for authentication and language preferences. We do not use tracking or advertising cookies.</p>
+<h2>4. Third Parties</h2><p>We use Stripe for payment processing. Stripe handles all payment data per PCI-DSS standards. We never store your credit card information.</p>
+<h2>5. Your Rights</h2><p>You may request deletion of your account and all associated data at any time by contacting privacy@pdfproapp.com.</p>
 </div>
 </body>
 </html>

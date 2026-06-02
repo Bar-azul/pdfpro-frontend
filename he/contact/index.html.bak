@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html id="html-root" lang="he" dir="rtl">
+<html lang="he" dir="rtl">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="description" content="כלי PDF מקצועיים להמרה, מיזוג, פיצול, דחיסה, עריכה ותרגום קבצים אונליין.">
-<title>בלוג PDFPro</title>
-<link rel="canonical" href="https://pdfproapp.com/he/blog/">
-<link rel="alternate" hreflang="en" href="https://pdfproapp.com/blog/">
-<link rel="alternate" hreflang="he" href="https://pdfproapp.com/he/blog/">
-<link rel="alternate" hreflang="x-default" href="https://pdfproapp.com/blog/">
+<title>צור קשר | PDFPro</title>
+<link rel="canonical" href="https://www.pdfproapp.com/he/contact/"/>
+<link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/contact/"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
 <style>
@@ -42,41 +39,30 @@ input,textarea{width:100%;padding:0.75rem 1rem;border-radius:8px;border:1px soli
 @media(max-width:600px){.grid-2{grid-template-columns:1fr}.container{padding:2rem 1rem}h1{font-size:1.5rem}}
 </style>
 </head>
-<body class="rtl">
+<body>
 <nav>
-  <a href="/he/" class="logo">PDF<span>Pro</span></a>
-  <ul class="nav-links">
-    <li><a href="/he/#tools">כלים</a></li>
-    <li><a href="/he/#features">יתרונות</a></li>
-    <li><a href="/he/pricing/">מחירים</a></li>
-  </ul>
-  <div class="nav-right">
-    <span class="api-status offline" id="api-status"><span class="api-dot"></span><span id="api-status-text">מתחבר...</span></span>
-    <button class="nav-cta" onclick="document.getElementById('tools')?.scrollIntoView({behavior:'smooth'})">התחל עכשיו</button>
-  </div>
+  <a href="/he" class="logo">PDF<span>Pro</span></a>
+  <a href="/he" class="back-btn">← חזרה לאתר</a>
 </nav>
 <div class="container">
-  <h1>בלוג</h1>
+  <h1>צור קשר</h1>
   
-<p style="margin-bottom:1.5rem">טיפים, מדריכים ועדכונים מצוות PDFPro.</p>
-<div class="blog-card" onclick="window.location.href='/he/compress-pdf/'">
-  <p style="font-size:0.78rem;color:var(--muted)">20 מאי 2026</p>
-  <h2>איך להקטן קובץ PDF בלי לאבד איכות</h2>
-  <p>למד את האסטרטגיות הטובות לדחיסת PDFs.</p>
-  <p style="color:var(--red);font-size:0.85rem;font-weight:600;margin-top:0.8rem">נסה את הכלי ←</p>
+<p style="margin-bottom:1.5rem">אנחנו מגיבים בדרך כלל תוך 24 שעות בימי עסקים.</p>
+<div class="grid-2">
+  <div class="card"><h3>&#x1F4E7; כללי</h3><p>support@pdfproapp.com</p></div>
+  <div class="card"><h3>&#x1F4BC; עסקי</h3><p>business@pdfproapp.com</p></div>
+  <div class="card"><h3>&#x1F512; פרטיות</h3><p>privacy@pdfproapp.com</p></div>
+  <div class="card"><h3>&#x1F41B; דיווח תקלה</h3><p>GitHub Issues</p></div>
 </div>
-<div class="blog-card" onclick="window.location.href='/he/ocr-pdf/'">
-  <p style="font-size:0.78rem;color:var(--muted)">15 מאי 2026</p>
-  <h2>OCR למסמכים בעברית: מדריך מלא</h2>
-  <p>כל מה שצריך לדעת על חילוץ טקסט עברי מסריקות.</p>
-  <p style="color:var(--red);font-size:0.85rem;font-weight:600;margin-top:0.8rem">נסה את הכלי ←</p>
+<div class="card" style="margin-top:0.5rem">
+  <h3 style="margin-bottom:1rem">שלח הודעה</h3>
+  <input type="text" id="c-name" placeholder="שמך"/>
+  <input type="email" id="c-email" placeholder="כתובת אימייל"/>
+  <textarea id="c-msg" rows="4" placeholder="ההודעה שלך..."></textarea>
+  <button class="send-btn" onclick="sendForm()">שלח הודעה</button>
+  <p id="c-ok" style="color:green;margin-top:0.8rem;display:none">&#x2705; ההודעה נשלחה! נחזור בקרוב.</p>
 </div>
-<div class="blog-card" onclick="window.location.href='/he/pdf-to-word/'">
-  <p style="font-size:0.78rem;color:var(--muted)">8 מאי 2026</p>
-  <h2>PDF ל-Word: מתי זה עובד ומתי לא</h2>
-  <p>הבנת מגבלות המרת PDF וקבלת תוצאות מיטביות.</p>
-  <p style="color:var(--red);font-size:0.85rem;font-weight:600;margin-top:0.8rem">נסה את הכלי ←</p>
-</div>
+<script>function sendForm(){var n=document.getElementById('c-name').value,e=document.getElementById('c-email').value,m=document.getElementById('c-msg').value;if(!n||!e||!m)return;document.getElementById('c-ok').style.display='block';document.getElementById('c-name').value='';document.getElementById('c-email').value='';document.getElementById('c-msg').value='';}</script>
 </div>
 </body>
 </html>

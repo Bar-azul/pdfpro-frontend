@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html id="html-root" lang="en" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>PDF to Word Online | PDFPro</title>
-<link rel="canonical" href="https://pdfproapp.com/pdf-to-word/">
-<link rel="alternate" hreflang="en" href="https://pdfproapp.com/pdf-to-word/">
-<link rel="alternate" hreflang="he" href="https://pdfproapp.com/he/pdf-to-word/">
-<link rel="alternate" hreflang="x-default" href="https://pdfproapp.com/pdf-to-word/">
-<meta name="description" content="Professional PDF tools to convert, merge, split, compress, edit and translate files online.">
+<title>PDF to Word Converter — Free Online | PDFPro</title>
+<meta name="description" content="Convert PDF to Word (DOCX) online for free. Preserve formatting, fonts and layout. No installation needed."/>
 <meta name="keywords" content="pdf to word, convert pdf to word, pdf to docx, pdf converter"/>
+<link rel="canonical" href="https://pdf-pro-azure.vercel.app/pdf-to-word"/>
+<link rel="alternate" hreflang="he" href="https://pdf-pro-azure.vercel.app/he/pdf-to-word"/>
+<link rel="alternate" hreflang="en" href="https://pdf-pro-azure.vercel.app/pdf-to-word"/>
+<link rel="alternate" hreflang="x-default" href="https://pdf-pro-azure.vercel.app/pdf-to-word"/>
 <meta property="og:title" content="PDF to Word Converter — Free Online | PDFPro"/>
 <meta property="og:description" content="Convert PDF to Word (DOCX) online for free. Preserve formatting, fonts and layout. No installation needed."/>
 <meta property="og:url" content="https://pdf-pro-azure.vercel.app/pdf-to-word"/>
@@ -120,17 +120,12 @@ details summary::-webkit-details-marker{display:none}
 @media(max-width:600px){.hero h1{font-size:1.8rem}.container{padding:1.5rem 1rem}}
 </style>
 </head>
-<body class="ltr">
+<body>
 <nav>
-  <a href="/" class="logo">PDF<span>Pro</span></a>
-  <ul class="nav-links">
-    <li><a href="/#tools">Tools</a></li>
-    <li><a href="/#features">Features</a></li>
-    <li><a href="/pricing/">Pricing</a></li>
-  </ul>
-  <div class="nav-right">
-    <span class="api-status offline" id="api-status"><span class="api-dot"></span><span id="api-status-text">Connecting...</span></span>
-    <button class="nav-cta" onclick="document.getElementById('tools')?.scrollIntoView({behavior:'smooth'})">Get Started</button>
+  <a href="https://pdf-pro-azure.vercel.app/" class="logo">PDF<span>Pro</span></a>
+  <div style="display:flex;gap:1.5rem;align-items:center">
+    <a href="https://pdf-pro-azure.vercel.app/he/pdf-to-word" class="nav-link">עב</a>
+    <a href="https://pdf-pro-azure.vercel.app/" class="nav-link">Tools</a>
   </div>
 </nav>
 
@@ -212,41 +207,8 @@ details summary::-webkit-details-marker{display:none}
 </div>
 
 <footer>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <a href="/" class="logo">PDF<span>Pro</span></a>
-      <p>The leading platform for PDF processing — fast, secure and professional.</p>
-
-      <div class="footer-language">
-        <label for="footer-lang">Language</label>
-        <select id="footer-lang" onchange="changeSiteLanguage(this.value)">
-          <option value="en" selected>English</option>
-          <option value="he">עברית</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="footer-col"><h4>Tools</h4><ul>
-      <li><a href="/pdf-to-word/">Convert PDF</a></li>
-      <li><a href="#" onclick="openModal('watermark');return false">Edit PDF</a></li>
-      <li><a href="/merge-pdf/">Merge PDF</a></li>
-      <li><a href="/ocr-pdf/">OCR</a></li>
-    </ul></div>
-
-    <div class="footer-col"><h4>Company</h4><ul>
-      <li><a href="/about/">About</a></li>
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="/contact/">Contact</a></li>
-    </ul></div>
-
-    <div class="footer-col"><h4>Support</h4><ul>
-      <li><a href="/help/">Help Center</a></li>
-      <li><a href="/privacy/">Privacy Policy</a></li>
-      <li><a href="/terms/">Terms of Use</a></li>
-    </ul></div>
-  </div>
-
-  <div class="footer-bottom"><span>© 2026 PDFPro. All rights reserved.</span><span>🌍 Made with ❤️</span></div>
+  <a href="https://pdf-pro-azure.vercel.app/" class="logo" style="font-size:1.2rem;display:block;margin-bottom:0.8rem">PDF<span>Pro</span></a>
+  <p>© 2026 PDFPro. All rights reserved.</p>
 </footer>
 </body>
 </html>

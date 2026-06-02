@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html id="html-root" lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>OCR PDF — Extract Text from Scanned PDF Free | PDFPro</title>
-<meta name="description" content="Extract text from scanned PDFs and images using OCR. Supports Hebrew, Arabic, English and 40+ languages. Free."/>
+<title>OCR PDF Online | PDFPro</title>
+<link rel="canonical" href="https://pdfproapp.com/ocr-pdf/">
+<link rel="alternate" hreflang="en" href="https://pdfproapp.com/ocr-pdf/">
+<link rel="alternate" hreflang="he" href="https://pdfproapp.com/he/ocr-pdf/">
+<link rel="alternate" hreflang="x-default" href="https://pdfproapp.com/ocr-pdf/">
+<meta name="description" content="Extract text from scanned PDFs and images using OCR online.">
 <meta name="keywords" content="ocr pdf, extract text from pdf, pdf ocr, scanned pdf to text, image to text, hebrew ocr"/>
-<link rel="canonical" href="https://pdf-pro-azure.vercel.app/ocr-pdf"/>
-<link rel="alternate" hreflang="he" href="https://pdf-pro-azure.vercel.app/he/ocr-pdf"/>
-<link rel="alternate" hreflang="en" href="https://pdf-pro-azure.vercel.app/ocr-pdf"/>
-<link rel="alternate" hreflang="x-default" href="https://pdf-pro-azure.vercel.app/ocr-pdf"/>
 <meta property="og:title" content="OCR PDF — Extract Text from Scanned PDF Free | PDFPro"/>
 <meta property="og:description" content="Extract text from scanned PDFs and images using OCR. Supports Hebrew, Arabic, English and 40+ languages. Free."/>
 <meta property="og:url" content="https://pdf-pro-azure.vercel.app/ocr-pdf"/>
@@ -120,12 +120,17 @@ details summary::-webkit-details-marker{display:none}
 @media(max-width:600px){.hero h1{font-size:1.8rem}.container{padding:1.5rem 1rem}}
 </style>
 </head>
-<body>
+<body class="ltr">
 <nav>
-  <a href="https://pdf-pro-azure.vercel.app/" class="logo">PDF<span>Pro</span></a>
-  <div style="display:flex;gap:1.5rem;align-items:center">
-    <a href="https://pdf-pro-azure.vercel.app/he/ocr-pdf" class="nav-link">עב</a>
-    <a href="https://pdf-pro-azure.vercel.app/" class="nav-link">Tools</a>
+  <a href="/" class="logo">PDF<span>Pro</span></a>
+  <ul class="nav-links">
+    <li><a href="/#tools">Tools</a></li>
+    <li><a href="/#features">Features</a></li>
+    <li><a href="/pricing/">Pricing</a></li>
+  </ul>
+  <div class="nav-right">
+    <span class="api-status offline" id="api-status"><span class="api-dot"></span><span id="api-status-text">Connecting...</span></span>
+    <button class="nav-cta" onclick="document.getElementById('tools')?.scrollIntoView({behavior:'smooth'})">Get Started</button>
   </div>
 </nav>
 
@@ -207,8 +212,41 @@ details summary::-webkit-details-marker{display:none}
 </div>
 
 <footer>
-  <a href="https://pdf-pro-azure.vercel.app/" class="logo" style="font-size:1.2rem;display:block;margin-bottom:0.8rem">PDF<span>Pro</span></a>
-  <p>© 2026 PDFPro. All rights reserved.</p>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="logo">PDF<span>Pro</span></a>
+      <p>The leading platform for PDF processing — fast, secure and professional.</p>
+
+      <div class="footer-language">
+        <label for="footer-lang">Language</label>
+        <select id="footer-lang" onchange="changeSiteLanguage(this.value)">
+          <option value="en" selected>English</option>
+          <option value="he">עברית</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="footer-col"><h4>Tools</h4><ul>
+      <li><a href="/pdf-to-word/">Convert PDF</a></li>
+      <li><a href="#" onclick="openModal('watermark');return false">Edit PDF</a></li>
+      <li><a href="/merge-pdf/">Merge PDF</a></li>
+      <li><a href="/ocr-pdf/">OCR</a></li>
+    </ul></div>
+
+    <div class="footer-col"><h4>Company</h4><ul>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul></div>
+
+    <div class="footer-col"><h4>Support</h4><ul>
+      <li><a href="/help/">Help Center</a></li>
+      <li><a href="/privacy/">Privacy Policy</a></li>
+      <li><a href="/terms/">Terms of Use</a></li>
+    </ul></div>
+  </div>
+
+  <div class="footer-bottom"><span>© 2026 PDFPro. All rights reserved.</span><span>🌍 Made with ❤️</span></div>
 </footer>
 </body>
 </html>

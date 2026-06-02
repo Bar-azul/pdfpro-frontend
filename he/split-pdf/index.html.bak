@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html id="html-root" lang="he" dir="rtl">
+<html lang="he" dir="rtl">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>פיצול PDF אונליין | PDFPro</title>
-<link rel="canonical" href="https://pdfproapp.com/he/split-pdf/">
-<link rel="alternate" hreflang="en" href="https://pdfproapp.com/split-pdf/">
-<link rel="alternate" hreflang="he" href="https://pdfproapp.com/he/split-pdf/">
-<link rel="alternate" hreflang="x-default" href="https://pdfproapp.com/split-pdf/">
-<meta name="description" content="פצלו קבצי PDF לעמודים נפרדים או לטווחי עמודים אונליין.">
+<title>פיצול PDF אונליין — חלץ עמודים בחינם | PDFPro</title>
+<meta name="description" content="פצל קבצי PDF לפי טווח עמודים אונליין. חלץ עמודים ספציפיים. חינם וקל."/>
 <meta name="keywords" content="פיצול pdf, חילוץ עמודים מ-pdf, לפצל pdf, פיצול קובץ pdf"/>
+<link rel="canonical" href="https://pdf-pro-azure.vercel.app/he/split-pdf"/>
+<link rel="alternate" hreflang="en" href="https://pdf-pro-azure.vercel.app/split-pdf"/>
+<link rel="alternate" hreflang="he" href="https://pdf-pro-azure.vercel.app/he/split-pdf"/>
+<link rel="alternate" hreflang="x-default" href="https://pdf-pro-azure.vercel.app/split-pdf"/>
 <meta property="og:title" content="פיצול PDF אונליין — חלץ עמודים בחינם | PDFPro"/>
 <meta property="og:description" content="פצל קבצי PDF לפי טווח עמודים אונליין. חלץ עמודים ספציפיים. חינם וקל."/>
 <meta property="og:url" content="https://pdf-pro-azure.vercel.app/he/split-pdf"/>
@@ -120,17 +120,12 @@ details summary::-webkit-details-marker{display:none}
 @media(max-width:600px){.hero h1{font-size:1.8rem}.container{padding:1.5rem 1rem}}
 </style>
 </head>
-<body class="rtl">
+<body>
 <nav>
-  <a href="/he/" class="logo">PDF<span>Pro</span></a>
-  <ul class="nav-links">
-    <li><a href="/he/#tools">כלים</a></li>
-    <li><a href="/he/#features">יתרונות</a></li>
-    <li><a href="/he/pricing/">מחירים</a></li>
-  </ul>
-  <div class="nav-right">
-    <span class="api-status offline" id="api-status"><span class="api-dot"></span><span id="api-status-text">מתחבר...</span></span>
-    <button class="nav-cta" onclick="document.getElementById('tools')?.scrollIntoView({behavior:'smooth'})">התחל עכשיו</button>
+  <a href="https://pdf-pro-azure.vercel.app/he" class="logo">PDF<span>Pro</span></a>
+  <div style="display:flex;gap:1.5rem;align-items:center">
+    <a href="https://pdf-pro-azure.vercel.app/split-pdf" class="nav-link">EN</a>
+    <a href="https://pdf-pro-azure.vercel.app/he" class="nav-link">כלים</a>
   </div>
 </nav>
 
@@ -212,41 +207,8 @@ details summary::-webkit-details-marker{display:none}
 </div>
 
 <footer>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <a href="/he/" class="logo">PDF<span>Pro</span></a>
-      <p>הפלטפורמה המובילה לעיבוד מסמכי PDF — מהירה, מאובטחת ומקצועית.</p>
-
-      <div class="footer-language">
-        <label for="footer-lang">שפה</label>
-        <select id="footer-lang" onchange="changeSiteLanguage(this.value)">
-          <option value="en">English</option>
-          <option value="he" selected>עברית</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="footer-col"><h4>כלים</h4><ul>
-      <li><a href="/he/pdf-to-word/">המרת PDF</a></li>
-      <li><a href="#" onclick="openModal('watermark');return false">עריכת PDF</a></li>
-      <li><a href="/he/merge-pdf/">מיזוג PDF</a></li>
-      <li><a href="/he/ocr-pdf/">OCR</a></li>
-    </ul></div>
-
-    <div class="footer-col"><h4>חברה</h4><ul>
-      <li><a href="/he/about/">אודות</a></li>
-      <li><a href="/he/blog/">בלוג</a></li>
-      <li><a href="/he/contact/">צור קשר</a></li>
-    </ul></div>
-
-    <div class="footer-col"><h4>תמיכה</h4><ul>
-      <li><a href="/he/help/">מרכז עזרה</a></li>
-      <li><a href="/he/privacy/">מדיניות פרטיות</a></li>
-      <li><a href="/he/terms/">תנאי שימוש</a></li>
-    </ul></div>
-  </div>
-
-  <div class="footer-bottom"><span>© 2026 PDFPro. כל הזכויות שמורות.</span><span>🌍 Made with ❤️</span></div>
+  <a href="https://pdf-pro-azure.vercel.app/he" class="logo" style="font-size:1.2rem;display:block;margin-bottom:0.8rem">PDF<span>Pro</span></a>
+  <p>© 2026 PDFPro. כל הזכויות שמורות.</p>
 </footer>
 </body>
 </html>

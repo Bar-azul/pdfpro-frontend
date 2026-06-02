@@ -1,15 +1,10 @@
 <!DOCTYPE html>
-<html id="html-root" lang="en" dir="ltr">
+<html id="html-root">
 <head>
 <meta charset="UTF-8"/>
 <meta name="google-site-verification" content="k8S3mn2vvZS9HIfyJ6pAamCOArNZoVwovXcb573A2Kk"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="description" content="Professional PDF tools to convert, merge, split, compress, edit and translate files online.">
 <title>PDFPro | Professional PDF Tools</title>
-<link rel="canonical" href="https://pdfproapp.com/">
-<link rel="alternate" hreflang="en" href="https://pdfproapp.com/">
-<link rel="alternate" hreflang="he" href="https://pdfproapp.com/he/">
-<link rel="alternate" hreflang="x-default" href="https://pdfproapp.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
@@ -26,6 +21,9 @@ nav{background:var(--navy);padding:0 3rem;height:68px;display:flex;align-items:c
 .nav-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.95rem;font-weight:500;transition:color 0.2s}
 .nav-links a:hover{color:var(--white)}
 .nav-right{display:flex;align-items:center;gap:0.8rem}
+.lang-switcher{display:flex;gap:0.3rem}
+.lang-btn{padding:0.3rem 0.65rem;border-radius:5px;border:1px solid rgba(255,255,255,0.2);background:transparent;color:rgba(255,255,255,0.6);font-size:0.78rem;font-weight:600;cursor:pointer;transition:all 0.2s}
+.lang-btn.active,.lang-btn:hover{background:rgba(255,255,255,0.1);color:var(--white);border-color:rgba(255,255,255,0.4)}
 .nav-cta{background:var(--red);color:var(--white);padding:0.55rem 1.4rem;border-radius:6px;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;transition:background 0.2s}
 .nav-cta:hover{background:var(--red-dark)}
 .hero{background:var(--navy);min-height:560px;display:flex;align-items:center;position:relative;overflow:hidden;padding:4rem 3rem}
@@ -133,17 +131,11 @@ footer{background:var(--navy);padding:3rem;border-top:2px solid rgba(255,255,255
 .spinner{width:20px;height:20px;border:2px solid rgba(255,255,255,0.3);border-top-color:white;border-radius:50%;animation:spin 0.8s linear infinite;display:inline-block;vertical-align:middle;margin-left:0.5rem}
 
 /* ══ MOBILE ═══════════════════════════════════════════════════ */
-
-.footer-language{margin-top:1.2rem}
-.footer-language label{display:block;color:rgba(255,255,255,0.5);font-size:0.85rem;margin-bottom:0.45rem}
-.footer-language select{width:190px;max-width:100%;padding:0.55rem 0.8rem;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:var(--navy-light);color:var(--white);font-size:0.9rem;cursor:pointer}
-.footer-language select:focus{outline:2px solid rgba(255,68,68,0.45);outline-offset:2px}
-
 @media(max-width:768px){
   nav{padding:0 1rem;height:56px}
   .nav-links{display:none}
   .logo{font-size:1.3rem}
-  
+  .lang-btn{padding:0.25rem 0.5rem;font-size:0.72rem}
   .nav-cta{padding:0.45rem 1rem;font-size:0.82rem}
   #api-status{display:none}
   .hero{padding:2rem 1rem;min-height:auto}
@@ -199,13 +191,17 @@ footer{background:var(--navy);padding:3rem;border-top:2px solid rgba(255,255,255
 <nav>
   <a href="/" class="logo">PDF<span>Pro</span></a>
   <ul class="nav-links">
-    <li><a href="/#tools">Tools</a></li>
-    <li><a href="/#features">Features</a></li>
-    <li><a href="/pricing/">Pricing</a></li>
+    <li><a href="#tools" data-t="nav_tools">Tools</a></li>
+    <li><a href="#features" data-t="nav_features">Features</a></li>
+    <li><a href="/pricing/" data-t="nav_pricing" onclick="event.preventDefault();window.location.href=(lang==='he'?'/he/pricing/':'/pricing/')">Pricing</a></li>
   </ul>
   <div class="nav-right">
     <span class="api-status offline" id="api-status"><span class="api-dot"></span><span id="api-status-text">Connecting...</span></span>
-    <button class="nav-cta" onclick="document.getElementById('tools')?.scrollIntoView({behavior:'smooth'})">Get Started</button>
+    <div class="lang-switcher">
+      <button class="lang-btn active" id="btn-en" onclick="switchLang('en')">EN</button>
+      <button class="lang-btn" id="btn-he" onclick="switchLang('he')">עב</button>
+    </div>
+    <button class="nav-cta" onclick="document.getElementById('tools').scrollIntoView({behavior:'smooth'})" data-t="nav_cta">Get Started</button>
   </div>
 </nav>
 <section class="hero">
@@ -260,40 +256,25 @@ footer{background:var(--navy);padding:3rem;border-top:2px solid rgba(255,255,255
 </section>
 <footer>
   <div class="footer-inner">
-    <div class="footer-brand">
-      <a href="/" class="logo">PDF<span>Pro</span></a>
-      <p>The leading platform for PDF processing — fast, secure and professional.</p>
-
-      <div class="footer-language">
-        <label for="footer-lang">Language</label>
-        <select id="footer-lang" onchange="changeSiteLanguage(this.value)">
-          <option value="en" selected>English</option>
-          <option value="he">עברית</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="footer-col"><h4>Tools</h4><ul>
-      <li><a href="/pdf-to-word/">Convert PDF</a></li>
-      <li><a href="#" onclick="openModal('watermark');return false">Edit PDF</a></li>
-      <li><a href="/merge-pdf/">Merge PDF</a></li>
-      <li><a href="/ocr-pdf/">OCR</a></li>
+    <div class="footer-brand"><a href="/" class="logo">PDF<span>Pro</span></a><p data-t="footer_desc">The leading platform for PDF processing — fast, secure and professional.</p></div>
+    <div class="footer-col"><h4 data-t="footer_tools">Tools</h4><ul>
+      <li><a href="#" data-t="f_convert">Convert PDF</a></li>
+      <li><a href="#" data-t="f_edit">Edit PDF</a></li>
+      <li><a href="#" data-t="f_merge">Merge PDF</a></li>
+      <li><a href="#" onclick="openModal('ocr');return false">OCR</a></li>
     </ul></div>
-
-    <div class="footer-col"><h4>Company</h4><ul>
-      <li><a href="/about/">About</a></li>
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="/contact/">Contact</a></li>
+    <div class="footer-col"><h4 data-t="footer_company">Company</h4><ul>
+      <li><a href="/about/" data-t="f_about" onclick="event.preventDefault();window.location.href=(lang==='he'?'/he/about/':'/about/')">About</a></li>
+      <li><a href="/blog/" data-t="f_blog" onclick="event.preventDefault();window.location.href=(lang==='he'?'/he/blog/':'/blog/')">Blog</a></li>
+      <li><a href="/contact/" data-t="f_contact" onclick="event.preventDefault();window.location.href=(lang==='he'?'/he/contact/':'/contact/')">Contact</a></li>
     </ul></div>
-
-    <div class="footer-col"><h4>Support</h4><ul>
-      <li><a href="/help/">Help Center</a></li>
-      <li><a href="/privacy/">Privacy Policy</a></li>
-      <li><a href="/terms/">Terms of Use</a></li>
+    <div class="footer-col"><h4 data-t="footer_support">Support</h4><ul>
+      <li><a href="/help/" data-t="f_help" onclick="event.preventDefault();window.location.href=(lang==='he'?'/he/help/':'/help/')">Help Center</a></li>
+      <li><a href="/privacy/" data-t="f_privacy" onclick="event.preventDefault();window.location.href=(lang==='he'?'/he/privacy/':'/privacy/')">Privacy Policy</a></li>
+      <li><a href="/terms/" data-t="f_terms" onclick="event.preventDefault();window.location.href=(lang==='he'?'/he/terms/':'/terms/')">Terms of Use</a></li>
     </ul></div>
   </div>
-
-  <div class="footer-bottom"><span>© 2026 PDFPro. All rights reserved.</span><span>🌍 Made with ❤️</span></div>
+  <div class="footer-bottom"><span data-t="footer_copy">© 2026 PDFPro. All rights reserved.</span><span>🌍 Made with ❤️</span></div>
 </footer>
 <div class="modal-overlay" id="modal-overlay" onclick="closeModalOnBg(event)">
   <div class="modal">
@@ -321,46 +302,6 @@ footer{background:var(--navy);padding:3rem;border-top:2px solid rgba(255,255,255
   </div>
 </div>
 <script>
-
-// =========================================================
-// SEO language routing
-// English pages: /
-// Hebrew pages: /he/
-// =========================================================
-const LANGUAGE_PREFIXES = ['he'];
-
-function getCurrentLanguageFromPath() {
-  const path = window.location.pathname;
-  if (path === '/he' || path === '/he/' || path.startsWith('/he/')) return 'he';
-  return 'en';
-}
-
-function getPathWithoutLanguagePrefix(pathname) {
-  for (const prefix of LANGUAGE_PREFIXES) {
-    if (pathname === `/${prefix}` || pathname === `/${prefix}/`) return '/';
-    if (pathname.startsWith(`/${prefix}/`)) return pathname.replace(`/${prefix}`, '') || '/';
-  }
-  return pathname || '/';
-}
-
-function buildLocalizedPath(targetLang) {
-  const cleanPath = getPathWithoutLanguagePrefix(window.location.pathname);
-  if (targetLang === 'en') return cleanPath;
-  if (cleanPath === '/') return `/${targetLang}/`;
-  return `/${targetLang}${cleanPath}`;
-}
-
-function changeSiteLanguage(targetLang) {
-  localStorage.setItem('pdfpro_lang', targetLang);
-  window.location.href = buildLocalizedPath(targetLang);
-}
-
-function setCurrentFooterLanguage() {
-  const select = document.getElementById('footer-lang');
-  if (!select) return;
-  select.value = getCurrentLanguageFromPath();
-}
-
 const API='https://pdfproweb.onrender.com';
 
 const FORMAT_BADGES={
@@ -543,36 +484,49 @@ const TOOL_SVGS={
   'translate':'<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>'
 };
 
-let lang=getCurrentLanguageFromPath(),currentTool=null,selectedFiles=[];
+let lang='en',currentTool=null,selectedFiles=[];
 function t(key){return T[lang][key]||T.en[key]||key;}
 
+async function detectAndRedirect(){
+  const path=window.location.pathname;
+  // If URL is /he - always Hebrew (SEO direct access)
+  if(path==='/he'||path==='/he/'||path.startsWith('/he/')){
+    applyLang('he');return;
+  }
+  // Check saved preference
+  const saved=localStorage.getItem('pdfpro_lang');
+  if(saved){applyLang(saved);return;}
+  // Auto-detect by IP (no URL change)
+  try{
+    const r=await fetch('https://ipapi.co/json/',{signal:AbortSignal.timeout(3000)});
+    const d=await r.json();
+    applyLang(d.country_code==='IL'?'he':'en');
+  }catch{
+    const bl=navigator.language||'';
+    applyLang((bl.startsWith('he')||bl.startsWith('iw'))?'he':'en');
+  }
+}
+
+function switchLang(nl){
+  localStorage.setItem('pdfpro_lang',nl);
+  applyLang(nl);
+}
+
 function applyLang(nl){
-  lang=nl;
-  const isRTL=nl==='he';
+  lang=nl;const isRTL=nl==='he';
   document.getElementById('html-root').lang=nl==='he'?'he':'en';
   document.getElementById('html-root').dir=isRTL?'rtl':'ltr';
   document.body.className=isRTL?'rtl':'ltr';
-  document.querySelectorAll('select,input,button').forEach(el=>{
-    el.style.fontFamily=isRTL?"'Heebo',sans-serif":"'Plus Jakarta Sans',sans-serif";
-  });
-
-  // Keep this because your existing homepage still uses data-t attributes.
-  // The important SEO change is that every language also has a real URL: / and /he/.
-  document.querySelectorAll('[data-t]').forEach(el=>{
-    const v=T[lang][el.dataset.t];
-    if(v!==undefined) el.innerHTML=v;
-  });
-
+  document.querySelectorAll('select,input,button').forEach(el=>{el.style.fontFamily=isRTL?"'Heebo',sans-serif":"'Plus Jakarta Sans',sans-serif";});
+  document.getElementById('btn-en').classList.toggle('active',nl==='en');
+  document.getElementById('btn-he').classList.toggle('active',nl==='he');
+  document.querySelectorAll('[data-t]').forEach(el=>{const v=T[lang][el.dataset.t];if(v!==undefined)el.innerHTML=v;});
   buildToolsUI();
+  document.title=nl==='he'?'PDFPro | \u05DB\u05DC\u05D9 PDF \u05DE\u05E7\u05E6\u05D5\u05E2\u05D9\u05D9\u05DD':'PDFPro | Professional PDF Tools';
   buildHeroSelect();
-
-  const status=document.getElementById('api-status');
-  const statusText=document.getElementById('api-status-text');
-  if(status&&statusText){
-    statusText.textContent=status.classList.contains('online')?t('api_online'):t('api_offline');
-  }
-
-  setCurrentFooterLanguage();
+  const s=document.getElementById('api-status');
+  document.getElementById('api-status-text').textContent=s.classList.contains('online')?t('api_online'):t('api_offline');
+  hookFooterLinks();
 }
 
 const TAB_CATS=['all','convert','organize','edit','other'];
@@ -745,8 +699,7 @@ function startHeroProcess(){
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
 // popstate: only change lang if URL explicitly has /he
 
-applyLang(getCurrentLanguageFromPath());
-setCurrentFooterLanguage();
+detectAndRedirect();
 </script>
 </body>
 </html>

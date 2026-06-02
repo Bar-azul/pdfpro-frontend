@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html id="html-root" lang="en" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>PDF to Excel Online | PDFPro</title>
-<link rel="canonical" href="https://pdfproapp.com/pdf-to-excel/">
-<link rel="alternate" hreflang="en" href="https://pdfproapp.com/pdf-to-excel/">
-<link rel="alternate" hreflang="he" href="https://pdfproapp.com/he/pdf-to-excel/">
-<link rel="alternate" hreflang="x-default" href="https://pdfproapp.com/pdf-to-excel/">
-<meta name="description" content="Professional PDF tools to convert, merge, split, compress, edit and translate files online.">
-<meta name="keywords" content="pdf to excel, convert pdf to excel, pdf to xlsx, extract tables from pdf"/>
-<meta property="og:title" content="PDF to Excel Converter — Free Online | PDFPro"/>
-<meta property="og:description" content="Convert PDF tables to Excel spreadsheets online. Extract data accurately. Free, no signup required."/>
-<meta property="og:url" content="https://pdf-pro-azure.vercel.app/pdf-to-excel"/>
+<title>OCR PDF — Extract Text from Scanned PDF Free | PDFPro</title>
+<meta name="description" content="Extract text from scanned PDFs and images using OCR. Supports Hebrew, Arabic, English and 40+ languages. Free."/>
+<meta name="keywords" content="ocr pdf, extract text from pdf, pdf ocr, scanned pdf to text, image to text, hebrew ocr"/>
+<link rel="canonical" href="https://pdf-pro-azure.vercel.app/ocr-pdf"/>
+<link rel="alternate" hreflang="he" href="https://pdf-pro-azure.vercel.app/he/ocr-pdf"/>
+<link rel="alternate" hreflang="en" href="https://pdf-pro-azure.vercel.app/ocr-pdf"/>
+<link rel="alternate" hreflang="x-default" href="https://pdf-pro-azure.vercel.app/ocr-pdf"/>
+<meta property="og:title" content="OCR PDF — Extract Text from Scanned PDF Free | PDFPro"/>
+<meta property="og:description" content="Extract text from scanned PDFs and images using OCR. Supports Hebrew, Arabic, English and 40+ languages. Free."/>
+<meta property="og:url" content="https://pdf-pro-azure.vercel.app/ocr-pdf"/>
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="PDFPro"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="PDF to Excel Converter — Free Online | PDFPro"/>
-<meta name="twitter:description" content="Convert PDF tables to Excel spreadsheets online. Extract data accurately. Free, no signup required."/>
+<meta name="twitter:title" content="OCR PDF — Extract Text from Scanned PDF Free | PDFPro"/>
+<meta name="twitter:description" content="Extract text from scanned PDFs and images using OCR. Supports Hebrew, Arabic, English and 40+ languages. Free."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
 <script type="application/ld+json">{
@@ -25,9 +25,9 @@
   "@graph": [
     {
       "@type": "WebPage",
-      "name": "PDF to Excel Converter — Free Online | PDFPro",
-      "description": "Convert PDF tables to Excel spreadsheets online. Extract data accurately. Free, no signup required.",
-      "url": "https://pdf-pro-azure.vercel.app/pdf-to-excel",
+      "name": "OCR PDF — Extract Text from Scanned PDF Free | PDFPro",
+      "description": "Extract text from scanned PDFs and images using OCR. Supports Hebrew, Arabic, English and 40+ languages. Free.",
+      "url": "https://pdf-pro-azure.vercel.app/ocr-pdf",
       "inLanguage": "en",
       "isPartOf": {
         "@type": "WebSite",
@@ -37,25 +37,25 @@
     },
     {
       "@type": "HowTo",
-      "name": "PDF to Excel Converter",
-      "description": "Extract tables and data from PDF files directly into Excel spreadsheets. Fast and accurate.",
+      "name": "OCR — Extract Text from PDF",
+      "description": "Convert scanned documents and images to searchable, editable text using our powerful OCR engine.",
       "step": [
         {
           "@type": "HowToStep",
-          "name": "Upload your PDF",
-          "text": "Select a PDF file containing tables or data.",
+          "name": "Upload scanned PDF or image",
+          "text": "Upload your scanned document, image, or photo of text.",
           "position": 1
         },
         {
           "@type": "HowToStep",
-          "name": "Extract tables",
-          "text": "Our engine automatically detects and extracts all tables.",
+          "name": "Select language",
+          "text": "Choose the language(s) in your document (Hebrew, English, Arabic, etc.).",
           "position": 2
         },
         {
           "@type": "HowToStep",
-          "name": "Download Excel file",
-          "text": "Get your .xlsx file with all data perfectly organized.",
+          "name": "Extract and download text",
+          "text": "Get your extracted text as TXT, searchable PDF, or Word document.",
           "position": 3
         }
       ]
@@ -65,34 +65,34 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Can it extract tables from PDF?",
+          "name": "Does OCR support Hebrew?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, PDFPro automatically detects and extracts tables from PDFs into Excel sheets."
+            "text": "Yes! Our OCR engine supports Hebrew, Arabic, English and 40+ languages simultaneously."
           }
         },
         {
           "@type": "Question",
-          "name": "What if my PDF has multiple tables?",
+          "name": "What image formats are supported?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Each table is placed on a separate Excel sheet, clearly labeled by page number."
+            "text": "We support PDF, JPG, PNG, TIFF, BMP and other common image formats."
           }
         },
         {
           "@type": "Question",
-          "name": "Does it work with scanned PDFs?",
+          "name": "How accurate is the OCR?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "For scanned PDFs, use our OCR tool first to make them searchable, then convert to Excel."
+            "text": "Accuracy depends on document quality. Clear, high-resolution scans typically achieve 95%+ accuracy."
           }
         },
         {
           "@type": "Question",
-          "name": "Is the Excel conversion free?",
+          "name": "Can it handle mixed Hebrew-English documents?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, free users get 5 conversions per day. Upgrade to Pro for unlimited conversions."
+            "text": "Yes, select 'heb+eng' language mode to handle documents with both languages."
           }
         }
       ]
@@ -120,25 +120,20 @@ details summary::-webkit-details-marker{display:none}
 @media(max-width:600px){.hero h1{font-size:1.8rem}.container{padding:1.5rem 1rem}}
 </style>
 </head>
-<body class="ltr">
+<body>
 <nav>
-  <a href="/" class="logo">PDF<span>Pro</span></a>
-  <ul class="nav-links">
-    <li><a href="/#tools">Tools</a></li>
-    <li><a href="/#features">Features</a></li>
-    <li><a href="/pricing/">Pricing</a></li>
-  </ul>
-  <div class="nav-right">
-    <span class="api-status offline" id="api-status"><span class="api-dot"></span><span id="api-status-text">Connecting...</span></span>
-    <button class="nav-cta" onclick="document.getElementById('tools')?.scrollIntoView({behavior:'smooth'})">Get Started</button>
+  <a href="https://pdf-pro-azure.vercel.app/" class="logo">PDF<span>Pro</span></a>
+  <div style="display:flex;gap:1.5rem;align-items:center">
+    <a href="https://pdf-pro-azure.vercel.app/he/ocr-pdf" class="nav-link">עב</a>
+    <a href="https://pdf-pro-azure.vercel.app/" class="nav-link">Tools</a>
   </div>
 </nav>
 
 <div class="hero">
   <a href="https://pdf-pro-azure.vercel.app/" style="display:inline-block;color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.85rem;margin-bottom:1.5rem">← All Tools</a>
-  <h1>PDF to Excel Converter</h1>
-  <p>Extract tables and data from PDF files directly into Excel spreadsheets. Fast and accurate.</p>
-  <a href="https://pdf-pro-azure.vercel.app/#pdf-to-excel" class="cta-btn">Convert Now — Free</a>
+  <h1>OCR — Extract Text from PDF</h1>
+  <p>Convert scanned documents and images to searchable, editable text using our powerful OCR engine.</p>
+  <a href="https://pdf-pro-azure.vercel.app/#ocr-pdf" class="cta-btn">Convert Now — Free</a>
 </div>
 
 <div class="container">
@@ -148,26 +143,26 @@ details summary::-webkit-details-marker{display:none}
         <div style="display:flex;gap:1.5rem;align-items:flex-start;margin-bottom:1.5rem">
           <div style="width:40px;height:40px;border-radius:50%;background:#E02020;color:white;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.1rem;flex-shrink:0">1</div>
           <div>
-            <h3 style="font-size:1rem;font-weight:700;margin-bottom:0.3rem;color:#0D1B2A">Upload your PDF</h3>
-            <p style="color:#5A6A7A;line-height:1.6">Select a PDF file containing tables or data.</p>
+            <h3 style="font-size:1rem;font-weight:700;margin-bottom:0.3rem;color:#0D1B2A">Upload scanned PDF or image</h3>
+            <p style="color:#5A6A7A;line-height:1.6">Upload your scanned document, image, or photo of text.</p>
           </div>
         </div>
         <div style="display:flex;gap:1.5rem;align-items:flex-start;margin-bottom:1.5rem">
           <div style="width:40px;height:40px;border-radius:50%;background:#E02020;color:white;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.1rem;flex-shrink:0">2</div>
           <div>
-            <h3 style="font-size:1rem;font-weight:700;margin-bottom:0.3rem;color:#0D1B2A">Extract tables</h3>
-            <p style="color:#5A6A7A;line-height:1.6">Our engine automatically detects and extracts all tables.</p>
+            <h3 style="font-size:1rem;font-weight:700;margin-bottom:0.3rem;color:#0D1B2A">Select language</h3>
+            <p style="color:#5A6A7A;line-height:1.6">Choose the language(s) in your document (Hebrew, English, Arabic, etc.).</p>
           </div>
         </div>
         <div style="display:flex;gap:1.5rem;align-items:flex-start;margin-bottom:1.5rem">
           <div style="width:40px;height:40px;border-radius:50%;background:#E02020;color:white;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.1rem;flex-shrink:0">3</div>
           <div>
-            <h3 style="font-size:1rem;font-weight:700;margin-bottom:0.3rem;color:#0D1B2A">Download Excel file</h3>
-            <p style="color:#5A6A7A;line-height:1.6">Get your .xlsx file with all data perfectly organized.</p>
+            <h3 style="font-size:1rem;font-weight:700;margin-bottom:0.3rem;color:#0D1B2A">Extract and download text</h3>
+            <p style="color:#5A6A7A;line-height:1.6">Get your extracted text as TXT, searchable PDF, or Word document.</p>
           </div>
         </div>
     <div style="text-align:center;margin-top:1.5rem">
-      <a href="https://pdf-pro-azure.vercel.app/#pdf-to-excel" class="cta-btn">Convert Now — Free</a>
+      <a href="https://pdf-pro-azure.vercel.app/#ocr-pdf" class="cta-btn">Convert Now — Free</a>
     </div>
   </div>
 
@@ -176,27 +171,27 @@ details summary::-webkit-details-marker{display:none}
     
         <details style="border:1px solid #D8D0C4;border-radius:10px;padding:1rem 1.2rem;margin-bottom:0.8rem;background:white">
           <summary style="font-weight:700;cursor:pointer;color:#0D1B2A;list-style:none;display:flex;justify-content:space-between;align-items:center">
-            Can it extract tables from PDF? <span style="color:#E02020;font-size:1.2rem">+</span>
+            Does OCR support Hebrew? <span style="color:#E02020;font-size:1.2rem">+</span>
           </summary>
-          <p style="margin-top:0.8rem;color:#5A6A7A;line-height:1.7">Yes, PDFPro automatically detects and extracts tables from PDFs into Excel sheets.</p>
+          <p style="margin-top:0.8rem;color:#5A6A7A;line-height:1.7">Yes! Our OCR engine supports Hebrew, Arabic, English and 40+ languages simultaneously.</p>
         </details>
         <details style="border:1px solid #D8D0C4;border-radius:10px;padding:1rem 1.2rem;margin-bottom:0.8rem;background:white">
           <summary style="font-weight:700;cursor:pointer;color:#0D1B2A;list-style:none;display:flex;justify-content:space-between;align-items:center">
-            What if my PDF has multiple tables? <span style="color:#E02020;font-size:1.2rem">+</span>
+            What image formats are supported? <span style="color:#E02020;font-size:1.2rem">+</span>
           </summary>
-          <p style="margin-top:0.8rem;color:#5A6A7A;line-height:1.7">Each table is placed on a separate Excel sheet, clearly labeled by page number.</p>
+          <p style="margin-top:0.8rem;color:#5A6A7A;line-height:1.7">We support PDF, JPG, PNG, TIFF, BMP and other common image formats.</p>
         </details>
         <details style="border:1px solid #D8D0C4;border-radius:10px;padding:1rem 1.2rem;margin-bottom:0.8rem;background:white">
           <summary style="font-weight:700;cursor:pointer;color:#0D1B2A;list-style:none;display:flex;justify-content:space-between;align-items:center">
-            Does it work with scanned PDFs? <span style="color:#E02020;font-size:1.2rem">+</span>
+            How accurate is the OCR? <span style="color:#E02020;font-size:1.2rem">+</span>
           </summary>
-          <p style="margin-top:0.8rem;color:#5A6A7A;line-height:1.7">For scanned PDFs, use our OCR tool first to make them searchable, then convert to Excel.</p>
+          <p style="margin-top:0.8rem;color:#5A6A7A;line-height:1.7">Accuracy depends on document quality. Clear, high-resolution scans typically achieve 95%+ accuracy.</p>
         </details>
         <details style="border:1px solid #D8D0C4;border-radius:10px;padding:1rem 1.2rem;margin-bottom:0.8rem;background:white">
           <summary style="font-weight:700;cursor:pointer;color:#0D1B2A;list-style:none;display:flex;justify-content:space-between;align-items:center">
-            Is the Excel conversion free? <span style="color:#E02020;font-size:1.2rem">+</span>
+            Can it handle mixed Hebrew-English documents? <span style="color:#E02020;font-size:1.2rem">+</span>
           </summary>
-          <p style="margin-top:0.8rem;color:#5A6A7A;line-height:1.7">Yes, free users get 5 conversions per day. Upgrade to Pro for unlimited conversions.</p>
+          <p style="margin-top:0.8rem;color:#5A6A7A;line-height:1.7">Yes, select 'heb+eng' language mode to handle documents with both languages.</p>
         </details>
   </div>
 
@@ -204,7 +199,7 @@ details summary::-webkit-details-marker{display:none}
     <h2 class="section-title">Related Tools</h2>
     <div style="display:flex;gap:0.8rem;flex-wrap:wrap">
       <a href="https://pdf-pro-azure.vercel.app/pdf-to-word" style="display:inline-block;padding:0.5rem 1rem;background:#f0f4ff;border-radius:6px;text-decoration:none;color:#0D1B2A;font-size:0.88rem;font-weight:600">Pdf To Word</a>
-<a href="https://pdf-pro-azure.vercel.app/pdf-to-pptx" style="display:inline-block;padding:0.5rem 1rem;background:#f0f4ff;border-radius:6px;text-decoration:none;color:#0D1B2A;font-size:0.88rem;font-weight:600">Pdf To Pptx</a>
+<a href="https://pdf-pro-azure.vercel.app/translate-pdf" style="display:inline-block;padding:0.5rem 1rem;background:#f0f4ff;border-radius:6px;text-decoration:none;color:#0D1B2A;font-size:0.88rem;font-weight:600">Translate Pdf</a>
 <a href="https://pdf-pro-azure.vercel.app/compress-pdf" style="display:inline-block;padding:0.5rem 1rem;background:#f0f4ff;border-radius:6px;text-decoration:none;color:#0D1B2A;font-size:0.88rem;font-weight:600">Compress Pdf</a>
 
     </div>
@@ -212,41 +207,8 @@ details summary::-webkit-details-marker{display:none}
 </div>
 
 <footer>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <a href="/" class="logo">PDF<span>Pro</span></a>
-      <p>The leading platform for PDF processing — fast, secure and professional.</p>
-
-      <div class="footer-language">
-        <label for="footer-lang">Language</label>
-        <select id="footer-lang" onchange="changeSiteLanguage(this.value)">
-          <option value="en" selected>English</option>
-          <option value="he">עברית</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="footer-col"><h4>Tools</h4><ul>
-      <li><a href="/pdf-to-word/">Convert PDF</a></li>
-      <li><a href="#" onclick="openModal('watermark');return false">Edit PDF</a></li>
-      <li><a href="/merge-pdf/">Merge PDF</a></li>
-      <li><a href="/ocr-pdf/">OCR</a></li>
-    </ul></div>
-
-    <div class="footer-col"><h4>Company</h4><ul>
-      <li><a href="/about/">About</a></li>
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="/contact/">Contact</a></li>
-    </ul></div>
-
-    <div class="footer-col"><h4>Support</h4><ul>
-      <li><a href="/help/">Help Center</a></li>
-      <li><a href="/privacy/">Privacy Policy</a></li>
-      <li><a href="/terms/">Terms of Use</a></li>
-    </ul></div>
-  </div>
-
-  <div class="footer-bottom"><span>© 2026 PDFPro. All rights reserved.</span><span>🌍 Made with ❤️</span></div>
+  <a href="https://pdf-pro-azure.vercel.app/" class="logo" style="font-size:1.2rem;display:block;margin-bottom:0.8rem">PDF<span>Pro</span></a>
+  <p>© 2026 PDFPro. All rights reserved.</p>
 </footer>
 </body>
 </html>

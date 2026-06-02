@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html id="html-root" lang="en" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="description" content="Professional PDF tools to convert, merge, split, compress, edit and translate files online.">
 <title>Pricing | PDFPro</title>
-<link rel="canonical" href="https://pdfproapp.com/pricing/">
-<link rel="alternate" hreflang="en" href="https://pdfproapp.com/pricing/">
-<link rel="alternate" hreflang="he" href="https://pdfproapp.com/he/pricing/">
-<link rel="alternate" hreflang="x-default" href="https://pdfproapp.com/pricing/">
+<link rel="canonical" href="https://www.pdfproapp.com/pricing/"/>
+<link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/pricing/"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
 <style>
@@ -42,18 +39,10 @@ input,textarea{width:100%;padding:0.75rem 1rem;border-radius:8px;border:1px soli
 @media(max-width:600px){.grid-2{grid-template-columns:1fr}.container{padding:2rem 1rem}h1{font-size:1.5rem}}
 </style>
 </head>
-<body class="ltr">
+<body>
 <nav>
   <a href="/" class="logo">PDF<span>Pro</span></a>
-  <ul class="nav-links">
-    <li><a href="/#tools">Tools</a></li>
-    <li><a href="/#features">Features</a></li>
-    <li><a href="/pricing/">Pricing</a></li>
-  </ul>
-  <div class="nav-right">
-    <span class="api-status offline" id="api-status"><span class="api-dot"></span><span id="api-status-text">Connecting...</span></span>
-    <button class="nav-cta" onclick="document.getElementById('tools')?.scrollIntoView({behavior:'smooth'})">Get Started</button>
-  </div>
+  <a href="/" class="back-btn">← Back to site</a>
 </nav>
 <div class="container">
   <h1>Pricing</h1>

@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html id="html-root" lang="en" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Merge PDF Online | PDFPro</title>
-<link rel="canonical" href="https://pdfproapp.com/merge-pdf/">
-<link rel="alternate" hreflang="en" href="https://pdfproapp.com/merge-pdf/">
-<link rel="alternate" hreflang="he" href="https://pdfproapp.com/he/merge-pdf/">
-<link rel="alternate" hreflang="x-default" href="https://pdfproapp.com/merge-pdf/">
-<meta name="description" content="Merge multiple PDF files into one PDF document online.">
-<meta name="keywords" content="merge pdf, combine pdf, join pdf files, pdf merger, merge pdf online"/>
-<meta property="og:title" content="Merge PDF Files Online — Combine PDFs Free | PDFPro"/>
-<meta property="og:description" content="Merge multiple PDF files into one online. Combine PDFs in any order. Free, fast, secure."/>
-<meta property="og:url" content="https://pdf-pro-azure.vercel.app/merge-pdf"/>
+<title>Split PDF Online — Extract Pages Free | PDFPro</title>
+<meta name="description" content="Split PDF files by page range online. Extract specific pages or split into equal parts. Free and easy."/>
+<meta name="keywords" content="split pdf, pdf splitter, extract pages from pdf, divide pdf, pdf page extractor"/>
+<link rel="canonical" href="https://pdf-pro-azure.vercel.app/split-pdf"/>
+<link rel="alternate" hreflang="he" href="https://pdf-pro-azure.vercel.app/he/split-pdf"/>
+<link rel="alternate" hreflang="en" href="https://pdf-pro-azure.vercel.app/split-pdf"/>
+<link rel="alternate" hreflang="x-default" href="https://pdf-pro-azure.vercel.app/split-pdf"/>
+<meta property="og:title" content="Split PDF Online — Extract Pages Free | PDFPro"/>
+<meta property="og:description" content="Split PDF files by page range online. Extract specific pages or split into equal parts. Free and easy."/>
+<meta property="og:url" content="https://pdf-pro-azure.vercel.app/split-pdf"/>
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="PDFPro"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Merge PDF Files Online — Combine PDFs Free | PDFPro"/>
-<meta name="twitter:description" content="Merge multiple PDF files into one online. Combine PDFs in any order. Free, fast, secure."/>
+<meta name="twitter:title" content="Split PDF Online — Extract Pages Free | PDFPro"/>
+<meta name="twitter:description" content="Split PDF files by page range online. Extract specific pages or split into equal parts. Free and easy."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
 <script type="application/ld+json">{
@@ -25,9 +25,9 @@
   "@graph": [
     {
       "@type": "WebPage",
-      "name": "Merge PDF Files Online — Combine PDFs Free | PDFPro",
-      "description": "Merge multiple PDF files into one online. Combine PDFs in any order. Free, fast, secure.",
-      "url": "https://pdf-pro-azure.vercel.app/merge-pdf",
+      "name": "Split PDF Online — Extract Pages Free | PDFPro",
+      "description": "Split PDF files by page range online. Extract specific pages or split into equal parts. Free and easy.",
+      "url": "https://pdf-pro-azure.vercel.app/split-pdf",
       "inLanguage": "en",
       "isPartOf": {
         "@type": "WebSite",
@@ -37,25 +37,25 @@
     },
     {
       "@type": "HowTo",
-      "name": "Merge PDF Files",
-      "description": "Combine multiple PDF documents into a single file. Drag, drop, and merge in seconds.",
+      "name": "Split PDF Online",
+      "description": "Divide large PDF documents into smaller files. Split by page range, every N pages, or extract specific pages.",
       "step": [
         {
           "@type": "HowToStep",
-          "name": "Upload your PDFs",
-          "text": "Select 2 or more PDF files to merge. Up to 20 files at once.",
+          "name": "Upload your PDF",
+          "text": "Select the large PDF file you want to split.",
           "position": 1
         },
         {
           "@type": "HowToStep",
-          "name": "Arrange the order",
-          "text": "Files are merged in the order you upload them.",
+          "name": "Set split options",
+          "text": "Choose page ranges (e.g. 1-3, 4-6) or split every N pages.",
           "position": 2
         },
         {
           "@type": "HowToStep",
-          "name": "Download merged PDF",
-          "text": "Get your combined PDF file instantly.",
+          "name": "Download split files",
+          "text": "Download all parts as separate PDF files.",
           "position": 3
         }
       ]
@@ -65,34 +65,34 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How many PDFs can I merge at once?",
+          "name": "How do I split a PDF by page range?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "You can merge up to 20 PDF files in a single operation."
+            "text": "Enter page ranges like '1-3,4-6' and we'll create separate PDFs for each range."
           }
         },
         {
           "@type": "Question",
-          "name": "Will the quality be affected?",
+          "name": "Can I extract a single page?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, merging PDFs does not affect the quality of any content."
+            "text": "Yes, enter a single page number (e.g. '5') to extract just that page."
           }
         },
         {
           "@type": "Question",
-          "name": "Can I merge password-protected PDFs?",
+          "name": "Is there a limit on PDF size?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "You'll need to unlock them first using our PDF Unlock tool."
+            "text": "Free users can split PDFs up to 100MB. Pro users up to 500MB."
           }
         },
         {
           "@type": "Question",
-          "name": "Is merging PDFs free?",
+          "name": "Is splitting PDFs free?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, merging PDFs is free for up to 5 operations per day."
+            "text": "Yes, free for up to 5 operations per day."
           }
         }
       ]
@@ -120,25 +120,20 @@ details summary::-webkit-details-marker{display:none}
 @media(max-width:600px){.hero h1{font-size:1.8rem}.container{padding:1.5rem 1rem}}
 </style>
 </head>
-<body class="ltr">
+<body>
 <nav>
-  <a href="/" class="logo">PDF<span>Pro</span></a>
-  <ul class="nav-links">
-    <li><a href="/#tools">Tools</a></li>
-    <li><a href="/#features">Features</a></li>
-    <li><a href="/pricing/">Pricing</a></li>
-  </ul>
-  <div class="nav-right">
-    <span class="api-status offline" id="api-status"><span class="api-dot"></span><span id="api-status-text">Connecting...</span></span>
-    <button class="nav-cta" onclick="document.getElementById('tools')?.scrollIntoView({behavior:'smooth'})">Get Started</button>
+  <a href="https://pdf-pro-azure.vercel.app/" class="logo">PDF<span>Pro</span></a>
+  <div style="display:flex;gap:1.5rem;align-items:center">
+    <a href="https://pdf-pro-azure.vercel.app/he/split-pdf" class="nav-link">עב</a>
+    <a href="https://pdf-pro-azure.vercel.app/" class="nav-link">Tools</a>
   </div>
 </nav>
 
 <div class="hero">
   <a href="https://pdf-pro-azure.vercel.app/" style="display:inline-block;color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.85rem;margin-bottom:1.5rem">← All Tools</a>
-  <h1>Merge PDF Files</h1>
-  <p>Combine multiple PDF documents into a single file. Drag, drop, and merge in seconds.</p>
-  <a href="https://pdf-pro-azure.vercel.app/#merge-pdf" class="cta-btn">Convert Now — Free</a>
+  <h1>Split PDF Online</h1>
+  <p>Divide large PDF documents into smaller files. Split by page range, every N pages, or extract specific pages.</p>
+  <a href="https://pdf-pro-azure.vercel.app/#split-pdf" class="cta-btn">Convert Now — Free</a>
 </div>
 
 <div class="container">
@@ -148,26 +143,26 @@ details summary::-webkit-details-marker{display:none}
         <div style="display:flex;gap:1.5rem;align-items:flex-start;margin-bottom:1.5rem">
           <div style="width:40px;height:40px;border-radius:50%;background:#E02020;color:white;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.1rem;flex-shrink:0">1</div>
           <div>
-            <h3 style="font-size:1rem;font-weight:700;margin-bottom:0.3rem;color:#0D1B2A">Upload your PDFs</h3>
-            <p style="color:#5A6A7A;line-height:1.6">Select 2 or more PDF files to merge. Up to 20 files at once.</p>
+            <h3 style="font-size:1rem;font-weight:700;margin-bottom:0.3rem;color:#0D1B2A">Upload your PDF</h3>
+            <p style="color:#5A6A7A;line-height:1.6">Select the large PDF file you want to split.</p>
           </div>
         </div>
         <div style="display:flex;gap:1.5rem;align-items:flex-start;margin-bottom:1.5rem">
           <div style="width:40px;height:40px;border-radius:50%;background:#E02020;color:white;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.1rem;flex-shrink:0">2</div>
           <div>
-            <h3 style="font-size:1rem;font-weight:700;margin-bottom:0.3rem;color:#0D1B2A">Arrange the order</h3>
-            <p style="color:#5A6A7A;line-height:1.6">Files are merged in the order you upload them.</p>
+            <h3 style="font-size:1rem;font-weight:700;margin-bottom:0.3rem;color:#0D1B2A">Set split options</h3>
+            <p style="color:#5A6A7A;line-height:1.6">Choose page ranges (e.g. 1-3, 4-6) or split every N pages.</p>
           </div>
         </div>
         <div style="display:flex;gap:1.5rem;align-items:flex-start;margin-bottom:1.5rem">
           <div style="width:40px;height:40px;border-radius:50%;background:#E02020;color:white;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.1rem;flex-shrink:0">3</div>
           <div>
-            <h3 style="font-size:1rem;font-weight:700;margin-bottom:0.3rem;color:#0D1B2A">Download merged PDF</h3>
-            <p style="color:#5A6A7A;line-height:1.6">Get your combined PDF file instantly.</p>
+            <h3 style="font-size:1rem;font-weight:700;margin-bottom:0.3rem;color:#0D1B2A">Download split files</h3>
+            <p style="color:#5A6A7A;line-height:1.6">Download all parts as separate PDF files.</p>
           </div>
         </div>
     <div style="text-align:center;margin-top:1.5rem">
-      <a href="https://pdf-pro-azure.vercel.app/#merge-pdf" class="cta-btn">Convert Now — Free</a>
+      <a href="https://pdf-pro-azure.vercel.app/#split-pdf" class="cta-btn">Convert Now — Free</a>
     </div>
   </div>
 
@@ -176,34 +171,34 @@ details summary::-webkit-details-marker{display:none}
     
         <details style="border:1px solid #D8D0C4;border-radius:10px;padding:1rem 1.2rem;margin-bottom:0.8rem;background:white">
           <summary style="font-weight:700;cursor:pointer;color:#0D1B2A;list-style:none;display:flex;justify-content:space-between;align-items:center">
-            How many PDFs can I merge at once? <span style="color:#E02020;font-size:1.2rem">+</span>
+            How do I split a PDF by page range? <span style="color:#E02020;font-size:1.2rem">+</span>
           </summary>
-          <p style="margin-top:0.8rem;color:#5A6A7A;line-height:1.7">You can merge up to 20 PDF files in a single operation.</p>
+          <p style="margin-top:0.8rem;color:#5A6A7A;line-height:1.7">Enter page ranges like '1-3,4-6' and we'll create separate PDFs for each range.</p>
         </details>
         <details style="border:1px solid #D8D0C4;border-radius:10px;padding:1rem 1.2rem;margin-bottom:0.8rem;background:white">
           <summary style="font-weight:700;cursor:pointer;color:#0D1B2A;list-style:none;display:flex;justify-content:space-between;align-items:center">
-            Will the quality be affected? <span style="color:#E02020;font-size:1.2rem">+</span>
+            Can I extract a single page? <span style="color:#E02020;font-size:1.2rem">+</span>
           </summary>
-          <p style="margin-top:0.8rem;color:#5A6A7A;line-height:1.7">No, merging PDFs does not affect the quality of any content.</p>
+          <p style="margin-top:0.8rem;color:#5A6A7A;line-height:1.7">Yes, enter a single page number (e.g. '5') to extract just that page.</p>
         </details>
         <details style="border:1px solid #D8D0C4;border-radius:10px;padding:1rem 1.2rem;margin-bottom:0.8rem;background:white">
           <summary style="font-weight:700;cursor:pointer;color:#0D1B2A;list-style:none;display:flex;justify-content:space-between;align-items:center">
-            Can I merge password-protected PDFs? <span style="color:#E02020;font-size:1.2rem">+</span>
+            Is there a limit on PDF size? <span style="color:#E02020;font-size:1.2rem">+</span>
           </summary>
-          <p style="margin-top:0.8rem;color:#5A6A7A;line-height:1.7">You'll need to unlock them first using our PDF Unlock tool.</p>
+          <p style="margin-top:0.8rem;color:#5A6A7A;line-height:1.7">Free users can split PDFs up to 100MB. Pro users up to 500MB.</p>
         </details>
         <details style="border:1px solid #D8D0C4;border-radius:10px;padding:1rem 1.2rem;margin-bottom:0.8rem;background:white">
           <summary style="font-weight:700;cursor:pointer;color:#0D1B2A;list-style:none;display:flex;justify-content:space-between;align-items:center">
-            Is merging PDFs free? <span style="color:#E02020;font-size:1.2rem">+</span>
+            Is splitting PDFs free? <span style="color:#E02020;font-size:1.2rem">+</span>
           </summary>
-          <p style="margin-top:0.8rem;color:#5A6A7A;line-height:1.7">Yes, merging PDFs is free for up to 5 operations per day.</p>
+          <p style="margin-top:0.8rem;color:#5A6A7A;line-height:1.7">Yes, free for up to 5 operations per day.</p>
         </details>
   </div>
 
   <div class="card">
     <h2 class="section-title">Related Tools</h2>
     <div style="display:flex;gap:0.8rem;flex-wrap:wrap">
-      <a href="https://pdf-pro-azure.vercel.app/split-pdf" style="display:inline-block;padding:0.5rem 1rem;background:#f0f4ff;border-radius:6px;text-decoration:none;color:#0D1B2A;font-size:0.88rem;font-weight:600">Split Pdf</a>
+      <a href="https://pdf-pro-azure.vercel.app/merge-pdf" style="display:inline-block;padding:0.5rem 1rem;background:#f0f4ff;border-radius:6px;text-decoration:none;color:#0D1B2A;font-size:0.88rem;font-weight:600">Merge Pdf</a>
 <a href="https://pdf-pro-azure.vercel.app/compress-pdf" style="display:inline-block;padding:0.5rem 1rem;background:#f0f4ff;border-radius:6px;text-decoration:none;color:#0D1B2A;font-size:0.88rem;font-weight:600">Compress Pdf</a>
 <a href="https://pdf-pro-azure.vercel.app/pdf-to-word" style="display:inline-block;padding:0.5rem 1rem;background:#f0f4ff;border-radius:6px;text-decoration:none;color:#0D1B2A;font-size:0.88rem;font-weight:600">Pdf To Word</a>
 
@@ -212,41 +207,8 @@ details summary::-webkit-details-marker{display:none}
 </div>
 
 <footer>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <a href="/" class="logo">PDF<span>Pro</span></a>
-      <p>The leading platform for PDF processing — fast, secure and professional.</p>
-
-      <div class="footer-language">
-        <label for="footer-lang">Language</label>
-        <select id="footer-lang" onchange="changeSiteLanguage(this.value)">
-          <option value="en" selected>English</option>
-          <option value="he">עברית</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="footer-col"><h4>Tools</h4><ul>
-      <li><a href="/pdf-to-word/">Convert PDF</a></li>
-      <li><a href="#" onclick="openModal('watermark');return false">Edit PDF</a></li>
-      <li><a href="/merge-pdf/">Merge PDF</a></li>
-      <li><a href="/ocr-pdf/">OCR</a></li>
-    </ul></div>
-
-    <div class="footer-col"><h4>Company</h4><ul>
-      <li><a href="/about/">About</a></li>
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="/contact/">Contact</a></li>
-    </ul></div>
-
-    <div class="footer-col"><h4>Support</h4><ul>
-      <li><a href="/help/">Help Center</a></li>
-      <li><a href="/privacy/">Privacy Policy</a></li>
-      <li><a href="/terms/">Terms of Use</a></li>
-    </ul></div>
-  </div>
-
-  <div class="footer-bottom"><span>© 2026 PDFPro. All rights reserved.</span><span>🌍 Made with ❤️</span></div>
+  <a href="https://pdf-pro-azure.vercel.app/" class="logo" style="font-size:1.2rem;display:block;margin-bottom:0.8rem">PDF<span>Pro</span></a>
+  <p>© 2026 PDFPro. All rights reserved.</p>
 </footer>
 </body>
 </html>
