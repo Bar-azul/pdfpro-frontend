@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="description" content="כלי PDF מקצועיים להמרה, מיזוג, פיצול, דחיסה, עריכה ותרגום קבצים אונליין.">
+<meta name="description" content="צור קשר עם צוות PDFPro.">
 <title>צור קשר | PDFPro</title>
 <link rel="canonical" href="https://pdfproapp.com/he/contact/">
 <link rel="alternate" hreflang="en" href="https://pdfproapp.com/contact/">
@@ -13,36 +13,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--red:#E02020;--navy:#0D1B2A;--cream:#F8F5F0;--border:#D8D0C4;--text:#0D1B2A;--muted:#5A6A7A}
-body{font-family:'Heebo',sans-serif;background:var(--cream);color:var(--text);direction:rtl}
+:root{
+  --red:#E02020;
+  --red-dark:#C41A1A;
+  --red-light:#FF4444;
+  --navy:#0D1B2A;
+  --navy-light:#162333;
+  --cream:#F8F5F0;
+  --border:#D8D0C4;
+  --text:#0D1B2A;
+  --muted:#5A6A7A;
+  --white:#FFFFFF;
+}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--cream);color:var(--text);direction:ltr}
+body.rtl{direction:rtl;font-family:'Heebo',sans-serif}
 
-nav{background:#0D1B2A;padding:0 2rem;height:60px;display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid #E02020;position:sticky;top:0;z-index:100}
-.logo{font-size:1.4rem;font-weight:900;color:white;text-decoration:none}.logo span{color:#FF4444}
-.back-btn{color:rgba(255,255,255,0.6);text-decoration:none;font-size:0.9rem;display:flex;align-items:center;gap:0.4rem}
-.back-btn:hover{color:white}
-
-.container{max-width:780px;margin:0 auto;padding:3rem 1.5rem}
-h1{font-size:2rem;font-weight:900;color:var(--navy);margin-bottom:1.5rem;letter-spacing:-0.5px}
-h2{font-size:1.2rem;font-weight:700;color:var(--navy);margin:1.8rem 0 0.6rem}
-p{color:var(--muted);line-height:1.8;margin-bottom:0.8rem}
-.card{background:white;border-radius:12px;border:1px solid var(--border);padding:1.2rem;margin-bottom:0.8rem}
-.card h3{font-weight:700;color:var(--navy);margin-bottom:0.4rem}
-.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem}
-.cta{display:inline-block;background:var(--red);color:white;padding:0.8rem 2rem;border-radius:8px;text-decoration:none;font-weight:700;margin-top:1rem}
-details{border:1px solid var(--border);border-radius:10px;padding:1rem 1.2rem;margin-bottom:0.8rem;background:white}
-summary{font-weight:700;cursor:pointer;color:var(--navy);list-style:none;display:flex;justify-content:space-between}
-summary::-webkit-details-marker{display:none}
-details p{margin-top:0.8rem}
-input,textarea{width:100%;padding:0.75rem 1rem;border-radius:8px;border:1px solid var(--border);font-family:'Heebo',sans-serif;font-size:0.95rem;margin-bottom:0.8rem;background:white;direction:rtl}
-.send-btn{background:var(--red);color:white;border:none;border-radius:8px;padding:0.85rem 2rem;font-size:1rem;font-weight:700;cursor:pointer;width:100%}
-.blog-card{background:white;border-radius:12px;border:1px solid var(--border);padding:1.5rem;margin-bottom:1rem;cursor:pointer;transition:border-color 0.2s}
-.blog-card:hover{border-color:var(--red)}
-.blog-card h2{margin-top:0.4rem;font-size:1.05rem}
-.blog-card p{font-size:0.88rem}
-@media(max-width:600px){.grid-2{grid-template-columns:1fr}.container{padding:2rem 1rem}h1{font-size:1.5rem}}
-
-
-/* ===== PDFPro shared header/footer - same as homepage ===== */
+/* ── NAV ── */
 nav{
   background:var(--navy);
   padding:0 3rem;
@@ -57,312 +43,202 @@ nav{
   width:100%;
   box-sizing:border-box;
 }
-
 .logo{
-  font-size:1.6rem;
-  font-weight:900;
-  color:var(--white);
-  letter-spacing:-0.5px;
-  text-decoration:none;
-  white-space:nowrap;
+  font-size:1.6rem;font-weight:900;color:var(--white);
+  letter-spacing:-0.5px;text-decoration:none;white-space:nowrap;
 }
-
-.logo span{
-  color:var(--red-light);
-}
-
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap:2rem;
-  list-style:none;
-  margin:0;
-  padding:0;
-}
-
-.nav-links li{
-  list-style:none;
-  margin:0;
-  padding:0;
-}
-
+.logo span{color:var(--red-light)}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none;margin:0;padding:0}
+.nav-links li{list-style:none;margin:0;padding:0}
 .nav-links a{
-  color:rgba(255,255,255,0.75);
-  text-decoration:none;
-  font-size:0.95rem;
-  font-weight:500;
-  transition:color 0.2s;
-  white-space:nowrap;
+  color:rgba(255,255,255,0.75);text-decoration:none;
+  font-size:0.95rem;font-weight:500;transition:color 0.2s;white-space:nowrap;
 }
-
-.nav-links a:hover{
-  color:var(--white);
-}
-
-.nav-right{
-  display:flex;
-  align-items:center;
-  gap:0.8rem;
-}
-
+.nav-links a:hover,.nav-links a.active{color:var(--white)}
+.nav-right{display:flex;align-items:center;gap:0.8rem}
 .nav-cta{
-  background:var(--red);
-  color:var(--white);
-  padding:0.55rem 1.4rem;
-  border-radius:6px;
-  font-weight:700;
-  font-size:0.9rem;
-  border:none;
-  cursor:pointer;
-  transition:background 0.2s;
-  text-decoration:none;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  white-space:nowrap;
+  background:var(--red);color:var(--white);
+  padding:0.55rem 1.4rem;border-radius:6px;
+  font-weight:700;font-size:0.9rem;border:none;cursor:pointer;
+  transition:background 0.2s;text-decoration:none;
+  display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;
 }
-
-.nav-cta:hover{
-  background:var(--red-dark);
-}
-
+.nav-cta:hover{background:var(--red-dark)}
 .api-status{
-  display:inline-flex;
-  align-items:center;
-  gap:0.4rem;
-  font-size:0.78rem;
-  font-weight:600;
-  padding:0.25rem 0.7rem;
-  border-radius:20px;
-  white-space:nowrap;
+  display:inline-flex;align-items:center;gap:0.4rem;
+  font-size:0.78rem;font-weight:600;
+  padding:0.25rem 0.7rem;border-radius:20px;white-space:nowrap;
 }
+.api-status.online{background:rgba(34,197,94,0.15);color:#22c55e}
+.api-status.offline{background:rgba(239,68,68,0.15);color:#ef4444}
+.api-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
 
-.api-status.online{
-  background:rgba(34,197,94,0.15);
-  color:#22c55e;
-}
-
-.api-status.offline{
-  background:rgba(239,68,68,0.15);
-  color:#ef4444;
-}
-
-.api-dot{
-  width:6px;
-  height:6px;
-  border-radius:50%;
-  background:currentColor;
-}
-
+/* ── FOOTER ── */
 footer{
-  background:var(--navy);
-  padding:3rem;
+  background:var(--navy);padding:3rem;
   border-top:2px solid rgba(255,255,255,0.06);
-  width:100%;
-  box-sizing:border-box;
+  width:100%;box-sizing:border-box;margin-top:4rem;
 }
-
 .footer-inner{
-  max-width:1100px;
-  margin:0 auto;
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr 1fr;
-  gap:3rem;
-  align-items:start;
+  max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:3rem;align-items:start;
 }
-
-.footer-brand p{
-  font-size:0.85rem;
-  color:rgba(255,255,255,0.4);
-  line-height:1.6;
-  margin-top:0.8rem;
-}
-
+.footer-brand p{font-size:0.85rem;color:rgba(255,255,255,0.4);line-height:1.6;margin-top:0.8rem}
 .footer-col h4{
-  font-size:0.85rem;
-  font-weight:700;
-  color:rgba(255,255,255,0.5);
-  text-transform:uppercase;
-  letter-spacing:1px;
-  margin-bottom:1rem;
+  font-size:0.85rem;font-weight:700;color:rgba(255,255,255,0.5);
+  text-transform:uppercase;letter-spacing:1px;margin-bottom:1rem;
 }
-
-body.rtl .footer-col h4{
-  letter-spacing:0;
-}
-
-.footer-col ul{
-  list-style:none;
-  margin:0;
-  padding:0;
-}
-
-.footer-col ul li{
-  margin-bottom:0.6rem;
-}
-
-.footer-col ul li a{
-  color:rgba(255,255,255,0.6);
-  text-decoration:none;
-  font-size:0.88rem;
-  transition:color 0.2s;
-}
-
-.footer-col ul li a:hover{
-  color:var(--white);
-}
-
-.footer-language{
-  margin-top:1rem;
-}
-
-.footer-language label{
-  display:block;
-  color:rgba(255,255,255,0.5);
-  font-size:0.85rem;
-  margin-bottom:0.4rem;
-}
-
+body.rtl .footer-col h4{letter-spacing:0}
+.footer-col ul{list-style:none;margin:0;padding:0}
+.footer-col ul li{margin-bottom:0.6rem}
+.footer-col ul li a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:0.88rem;transition:color 0.2s}
+.footer-col ul li a:hover{color:var(--white)}
+.footer-language{margin-top:1rem}
+.footer-language label{display:block;color:rgba(255,255,255,0.5);font-size:0.85rem;margin-bottom:0.4rem}
 .footer-language select{
-  width:190px;
-  max-width:100%;
-  padding:0.55rem 0.8rem;
-  border-radius:8px;
-  border:1px solid rgba(255,255,255,0.2);
-  background:var(--navy-light);
-  color:var(--white);
-  font-size:0.9rem;
-  cursor:pointer;
+  width:190px;max-width:100%;padding:0.55rem 0.8rem;
+  border-radius:8px;border:1px solid rgba(255,255,255,0.2);
+  background:var(--navy-light);color:var(--white);font-size:0.9rem;cursor:pointer;
+}
+.footer-bottom{
+  max-width:1100px;margin:2rem auto 0;padding-top:1.5rem;
+  border-top:1px solid rgba(255,255,255,0.08);
+  display:flex;justify-content:space-between;
+  color:rgba(255,255,255,0.3);font-size:0.82rem;flex-wrap:wrap;gap:1rem;
 }
 
-.footer-bottom{
-  max-width:1100px;
-  margin:2rem auto 0;
-  padding-top:1.5rem;
-  border-top:1px solid rgba(255,255,255,0.08);
-  display:flex;
-  justify-content:space-between;
-  color:rgba(255,255,255,0.3);
-  font-size:0.82rem;
-  flex-wrap:wrap;
-  gap:1rem;
+/* ── PAGE CONTENT ── */
+.container{max-width:860px;margin:0 auto;padding:3rem 1.5rem}
+h1{font-size:2rem;font-weight:900;color:var(--navy);margin-bottom:1rem;letter-spacing:-0.5px}
+h2{font-size:1.2rem;font-weight:700;color:var(--navy);margin:1.8rem 0 0.6rem}
+h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:0.4rem}
+p{color:var(--muted);line-height:1.8;margin-bottom:0.8rem}
+.lead{font-size:1.05rem;line-height:1.8;margin-bottom:1.5rem}
+.card{background:white;border-radius:12px;border:1px solid var(--border);padding:1.4rem;margin-bottom:0.8rem}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.5rem}
+.cta{display:inline-block;background:var(--red);color:white;padding:0.8rem 2rem;border-radius:8px;text-decoration:none;font-weight:700;margin-top:1rem;transition:background 0.2s}
+.cta:hover{background:var(--red-dark)}
+details{border:1px solid var(--border);border-radius:10px;padding:1rem 1.2rem;margin-bottom:0.8rem;background:white}
+summary{font-weight:700;cursor:pointer;color:var(--navy);list-style:none;display:flex;justify-content:space-between}
+summary::-webkit-details-marker{display:none}
+details p{margin-top:0.8rem}
+input,textarea,select{
+  width:100%;padding:0.75rem 1rem;border-radius:8px;
+  border:1px solid var(--border);font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:0.95rem;margin-bottom:0.8rem;background:white;direction:ltr;
+  color:var(--text);
 }
+.send-btn{
+  background:var(--red);color:white;border:none;border-radius:8px;
+  padding:0.85rem 2rem;font-size:1rem;font-weight:700;cursor:pointer;width:100%;
+  transition:background 0.2s;
+}
+.send-btn:hover{background:var(--red-dark)}
+.blog-card{background:white;border-radius:12px;border:1px solid var(--border);padding:1.5rem;margin-bottom:1rem;cursor:pointer;transition:border-color 0.2s,box-shadow 0.2s}
+.blog-card:hover{border-color:var(--red);box-shadow:0 4px 16px rgba(224,32,32,0.08)}
+.blog-card .blog-date{font-size:0.78rem;color:var(--muted)}
+.blog-card h2{margin-top:0.4rem;font-size:1.05rem;margin-bottom:0}
+.blog-card p{font-size:0.88rem}
+.tag{display:inline-block;background:rgba(224,32,32,0.08);color:var(--red);font-size:0.75rem;font-weight:700;padding:0.2rem 0.6rem;border-radius:4px;margin-bottom:0.6rem}
+.upload-zone{
+  border:2px dashed var(--border);border-radius:12px;padding:3rem;
+  text-align:center;background:white;transition:border-color 0.2s;cursor:pointer;
+}
+.upload-zone:hover{border-color:var(--red)}
+.upload-zone p{margin:0}
+.upload-icon{font-size:2.5rem;margin-bottom:1rem;display:block}
+.price-card{background:white;border-radius:16px;border:1px solid var(--border);padding:2rem;text-align:center}
+.price-card.featured{border-color:var(--red);box-shadow:0 8px 32px rgba(224,32,32,0.12)}
+.price-card .price{font-size:2.5rem;font-weight:900;color:var(--navy)}
+.price-card .period{font-size:0.9rem;color:var(--muted);font-weight:400}
+.price-card ul{list-style:none;margin:1.5rem 0;padding:0;text-align:left}
+.price-card ul li{padding:0.4rem 0;color:var(--muted);font-size:0.9rem;display:flex;gap:0.5rem;align-items:flex-start}
+.price-card ul li::before{content:"✓";color:#22c55e;font-weight:700;flex-shrink:0}
+.breadcrumb{font-size:0.85rem;color:var(--muted);margin-bottom:1.5rem}
+.breadcrumb a{color:var(--muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--red)}
+.breadcrumb span{color:var(--navy);font-weight:600}
 
 @media(max-width:768px){
-  nav{
-    padding:0 1rem;
-    height:56px;
-  }
-
-  .nav-links{
-    display:none;
-  }
-
-  .logo{
-    font-size:1.3rem;
-  }
-
-  .nav-cta{
-    padding:0.45rem 1rem;
-    font-size:0.82rem;
-  }
-
-  #api-status{
-    display:none;
-  }
-
-  footer{
-    padding:2rem 1rem;
-  }
-
-  .footer-inner{
-    grid-template-columns:1fr;
-    gap:1.5rem;
-  }
-
-  .footer-bottom{
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
-  }
+  nav{padding:0 1rem;height:56px}
+  .nav-links{display:none}
+  .logo{font-size:1.3rem}
+  .nav-cta{padding:0.45rem 1rem;font-size:0.82rem}
+  #api-status{display:none}
+  footer{padding:2rem 1rem}
+  .footer-inner{grid-template-columns:1fr;gap:1.5rem}
+  .footer-bottom{flex-direction:column;align-items:center;text-align:center}
+  .grid-2,.grid-3{grid-template-columns:1fr}
+  .container{padding:2rem 1rem}
+  h1{font-size:1.5rem}
+  .price-card{margin-bottom:1rem}
 }
-/* ===== End PDFPro shared header/footer ===== */
-
 </style>
 </head>
 <body class="rtl">
 <nav>
   <a href="/he/" class="logo">PDF<span>Pro</span></a>
-
   <ul class="nav-links">
-    <li><a href="/he/#tools">כלים</a></li>
-    <li><a href="/he/#features">יתרונות</a></li>
-    <li><a href="/he/pricing/">מחירים</a></li>
+    <li><a href="/he/#tools" class="">כלים</a></li>
+    <li><a href="/he/#features" class="">תכונות</a></li>
+    <li><a href="/he/pricing/" class="">תמחור</a></li>
   </ul>
-
   <div class="nav-right">
     <span class="api-status offline" id="api-status">
       <span class="api-dot"></span>
       <span id="api-status-text">מתחבר...</span>
     </span>
-
     <a class="nav-cta" href="/he/#tools">התחל עכשיו</a>
   </div>
 </nav>
 <div class="container">
+  <div class="breadcrumb"><a href="/he/">בית</a> › <span>צור קשר</span></div>
   <h1>צור קשר</h1>
-  
-<p style="margin-bottom:1.5rem">אנחנו מגיבים בדרך כלל תוך 24 שעות בימי עסקים.</p>
-<div class="grid-2">
-  <div class="card"><h3>&#x1F4E7; כללי</h3><p>support@pdfproapp.com</p></div>
-  <div class="card"><h3>&#x1F4BC; עסקי</h3><p>business@pdfproapp.com</p></div>
-  <div class="card"><h3>&#x1F512; פרטיות</h3><p>privacy@pdfproapp.com</p></div>
-  <div class="card"><h3>&#x1F41B; דיווח תקלה</h3><p>GitHub Issues</p></div>
-</div>
-<div class="card" style="margin-top:0.5rem">
-  <h3 style="margin-bottom:1rem">שלח הודעה</h3>
-  <input type="text" id="c-name" placeholder="שמך"/>
-  <input type="email" id="c-email" placeholder="כתובת אימייל"/>
-  <textarea id="c-msg" rows="4" placeholder="ההודעה שלך..."></textarea>
-  <button class="send-btn" onclick="sendForm()">שלח הודעה</button>
-  <p id="c-ok" style="color:green;margin-top:0.8rem;display:none">&#x2705; ההודעה נשלחה! נחזור בקרוב.</p>
-</div>
-<script>function sendForm(){var n=document.getElementById('c-name').value,e=document.getElementById('c-email').value,m=document.getElementById('c-msg').value;if(!n||!e||!m)return;document.getElementById('c-ok').style.display='block';document.getElementById('c-name').value='';document.getElementById('c-email').value='';document.getElementById('c-msg').value='';}</script>
+  <p class="lead">יש לך שאלה או משוב? נשמח לשמוע ממך.</p>
+  <div class="card">
+    <h2 style="margin-top:0">שלח הודעה</h2>
+    <input type="text" placeholder="שמך" style="direction:rtl">
+    <input type="email" placeholder="כתובת דוא&quot;ל" style="direction:ltr">
+    <textarea rows="5" placeholder="ההודעה שלך..." style="direction:rtl"></textarea>
+    <button class="send-btn" onclick="alert('ההודעה נשלחה! נחזור אליך בקרוב.')">שלח הודעה</button>
+  </div>
 </div>
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
       <a href="/he/" class="logo">PDF<span>Pro</span></a>
-      <p>הפלטפורמה המובילה לעיבוד מסמכי PDF — מהירה, מאובטחת ומקצועית.</p>
-
+      <p>הפלטפורמה המובילה לעיבוד PDF — מהיר, מאובטח ומקצועי.</p>
       <div class="footer-language">
         <label for="footer-lang">שפה</label>
         <select id="footer-lang" onchange="changeSiteLanguage(this.value)">
           <option value="en">English</option>
-          <option value="he" selected>עברית</option>
+          <option value="he">עברית</option>
         </select>
       </div>
     </div>
-
     <div class="footer-col">
       <h4>כלים</h4>
       <ul>
-        <li><a href="/he/pdf-to-word/">המרת PDF</a></li>
+        <li><a href="/he/pdf-to-word/">PDF ל-Word</a></li>
+        <li><a href="/he/pdf-to-excel/">PDF ל-Excel</a></li>
         <li><a href="/he/compress-pdf/">דחיסת PDF</a></li>
         <li><a href="/he/merge-pdf/">מיזוג PDF</a></li>
-        <li><a href="/he/ocr-pdf/">OCR</a></li>
+        <li><a href="/he/split-pdf/">פיצול PDF</a></li>
+        <li><a href="/he/ocr-pdf/">OCR PDF</a></li>
+        <li><a href="/he/translate-pdf/">תרגום PDF</a></li>
       </ul>
     </div>
-
     <div class="footer-col">
       <h4>חברה</h4>
       <ul>
         <li><a href="/he/about/">אודות</a></li>
         <li><a href="/he/blog/">בלוג</a></li>
         <li><a href="/he/contact/">צור קשר</a></li>
+        <li><a href="/he/pricing/">תמחור</a></li>
       </ul>
     </div>
-
     <div class="footer-col">
       <h4>תמיכה</h4>
       <ul>
@@ -372,53 +248,38 @@ body.rtl .footer-col h4{
       </ul>
     </div>
   </div>
-
   <div class="footer-bottom">
     <span>© 2026 PDFPro. כל הזכויות שמורות.</span>
-    <span>🌍 Made with ❤️</span>
+    <span>🌍 נעשה עם ❤️</span>
   </div>
 </footer>
-
 <script>
 function getCurrentSiteLanguage(){
-  const path = window.location.pathname;
-  if(path === '/he' || path === '/he/' || path.startsWith('/he/')) return 'he';
+  const path=window.location.pathname;
+  if(path==='/he'||path==='/he/'||path.startsWith('/he/')) return 'he';
   return 'en';
 }
-
 function removeLanguagePrefix(pathname){
-  if(pathname === '/he' || pathname === '/he/') return '/';
-  if(pathname.startsWith('/he/')) return pathname.replace('/he', '') || '/';
-  return pathname || '/';
+  if(pathname==='/he'||pathname==='/he/') return '/';
+  if(pathname.startsWith('/he/')) return pathname.replace('/he','')||'/';
+  return pathname||'/';
 }
-
 function buildLanguageUrl(targetLang){
-  const cleanPath = removeLanguagePrefix(window.location.pathname);
-
-  if(targetLang === 'en'){
-    return cleanPath;
-  }
-
-  if(cleanPath === '/'){
-    return '/he/';
-  }
-
-  return '/he' + cleanPath;
+  const cleanPath=removeLanguagePrefix(window.location.pathname);
+  if(targetLang==='en') return cleanPath;
+  if(cleanPath==='/') return '/he/';
+  return '/he'+cleanPath;
 }
-
 function changeSiteLanguage(targetLang){
-  localStorage.setItem('pdfpro_lang', targetLang);
-  window.location.href = buildLanguageUrl(targetLang);
+  localStorage.setItem('pdfpro_lang',targetLang);
+  window.location.href=buildLanguageUrl(targetLang);
 }
-
 function setFooterLanguageValue(){
-  const select = document.getElementById('footer-lang');
+  const select=document.getElementById('footer-lang');
   if(!select) return;
-  select.value = getCurrentSiteLanguage();
+  select.value=getCurrentSiteLanguage();
 }
-
-document.addEventListener('DOMContentLoaded', setFooterLanguageValue);
+document.addEventListener('DOMContentLoaded',setFooterLanguageValue);
 </script>
-
 </body>
 </html>
