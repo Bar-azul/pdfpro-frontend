@@ -289,7 +289,7 @@ FOOTER = """<footer>
 # PAGE BUILDER
 # ─────────────────────────────────────────────────────────
 def build_page(title, description, canonical_path, active_page, body_content, lang="en"):
-    base_url = "https://pdfproapp.com"
+    base_url = "https://www.pdfproapp.com"
     rtl_class = "rtl" if lang == "he" else "ltr"
     direction = "rtl" if lang == "he" else "ltr"
     he_path = f"/he{canonical_path}" if not canonical_path.startswith("/he") else canonical_path
@@ -1282,9 +1282,9 @@ def main():
         direction = "rtl"
         lang = "he"
         en_path = cfg["path"].replace("/he","") or "/"
-        canonical_full = f"https://pdfproapp.com{cfg['path']}"
-        en_full = f"https://pdfproapp.com{en_path}"
-        he_full = f"https://pdfproapp.com{cfg['path']}"
+        canonical_full = f"https://www.pdfproapp.com{cfg['path']}"
+        en_full = f"https://www.pdfproapp.com{en_path}"
+        he_full = f"https://www.pdfproapp.com{cfg['path']}"
 
         html = f"""<!DOCTYPE html>
 <html id="html-root" lang="he" dir="rtl">

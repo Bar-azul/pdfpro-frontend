@@ -10,7 +10,7 @@ generate_seo_pages.py
 import os
 import json
 
-BASE_URL = "https://pdf-pro-azure.vercel.app"
+BASE_URL = "https://www.pdfproapp.com"
 
 # ── Tool definitions ───────────────────────────────────────────────────────────
 TOOLS = [

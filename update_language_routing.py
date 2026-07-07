@@ -17,7 +17,7 @@ from pathlib import Path
 # 6. Keeps your existing tool logic, modal logic and API calls.
 # =========================================================
 
-SITE_URL = "https://pdfproapp.com"
+SITE_URL = "https://www.pdfproapp.com"
 DEFAULT_LANG = "en"
 SUPPORTED_LANGS = ["en", "he"]
 LANG_PREFIXES = {"en": "", "he": "he"}
