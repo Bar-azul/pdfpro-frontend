@@ -6,10 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="description" content="כלי PDF מקצועיים להמרה, מיזוג, פיצול, דחיסה, עריכה ותרגום קבצים אונליין.">
 <title>PDFPro | כלי PDF מקצועיים</title>
-<link rel="canonical" href="https://pdfproapp.com/he/">
-<link rel="alternate" hreflang="en" href="https://pdfproapp.com/">
-<link rel="alternate" hreflang="he" href="https://pdfproapp.com/he/">
-<link rel="alternate" hreflang="x-default" href="https://pdfproapp.com/">
+<link rel="canonical" href="https://www.pdfproapp.com/he/">
+<link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/">
+<link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/">
+<link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
@@ -446,20 +446,14 @@ body.rtl .footer-col h4{
 <body class="rtl">
 <nav>
   <a href="/he/" class="logo">PDF<span>Pro</span></a>
-
   <ul class="nav-links">
     <li><a href="/he/#tools">כלים</a></li>
     <li><a href="/he/#features">יתרונות</a></li>
     <li><a href="/he/pricing/">מחירים</a></li>
   </ul>
-
   <div class="nav-right">
-    <span class="api-status offline" id="api-status">
-      <span class="api-dot"></span>
-      <span id="api-status-text">מתחבר...</span>
-    </span>
-
-    <a class="nav-cta" href="/he/#tools">התחל עכשיו</a>
+    <span class="api-status offline" id="api-status"><span class="api-dot"></span><span id="api-status-text">מתחבר...</span></span>
+    <button class="nav-cta" onclick="document.getElementById('tools')?.scrollIntoView({behavior:'smooth'})">התחל עכשיו</button>
   </div>
 </nav>
 <section class="hero">
@@ -527,39 +521,27 @@ body.rtl .footer-col h4{
       </div>
     </div>
 
-    <div class="footer-col">
-      <h4>כלים</h4>
-      <ul>
-        <li><a href="/he/pdf-to-word/">המרת PDF</a></li>
-        <li><a href="/he/compress-pdf/">דחיסת PDF</a></li>
-        <li><a href="/he/merge-pdf/">מיזוג PDF</a></li>
-        <li><a href="/he/ocr-pdf/">OCR</a></li>
-      </ul>
-    </div>
+    <div class="footer-col"><h4>כלים</h4><ul>
+      <li><a href="/he/pdf-to-word/">המרת PDF</a></li>
+      <li><a href="#" onclick="openModal('watermark');return false">עריכת PDF</a></li>
+      <li><a href="/he/merge-pdf/">מיזוג PDF</a></li>
+      <li><a href="/he/ocr-pdf/">OCR</a></li>
+    </ul></div>
 
-    <div class="footer-col">
-      <h4>חברה</h4>
-      <ul>
-        <li><a href="/he/about/">אודות</a></li>
-        <li><a href="/he/blog/">בלוג</a></li>
-        <li><a href="/he/contact/">צור קשר</a></li>
-      </ul>
-    </div>
+    <div class="footer-col"><h4>חברה</h4><ul>
+      <li><a href="/he/about/">אודות</a></li>
+      <li><a href="/he/blog/">בלוג</a></li>
+      <li><a href="/he/contact/">צור קשר</a></li>
+    </ul></div>
 
-    <div class="footer-col">
-      <h4>תמיכה</h4>
-      <ul>
-        <li><a href="/he/help/">מרכז עזרה</a></li>
-        <li><a href="/he/privacy/">מדיניות פרטיות</a></li>
-        <li><a href="/he/terms/">תנאי שימוש</a></li>
-      </ul>
-    </div>
+    <div class="footer-col"><h4>תמיכה</h4><ul>
+      <li><a href="/he/help/">מרכז עזרה</a></li>
+      <li><a href="/he/privacy/">מדיניות פרטיות</a></li>
+      <li><a href="/he/terms/">תנאי שימוש</a></li>
+    </ul></div>
   </div>
 
-  <div class="footer-bottom">
-    <span>© 2026 PDFPro. כל הזכויות שמורות.</span>
-    <span>🌍 Made with ❤️</span>
-  </div>
+  <div class="footer-bottom"><span>© 2026 PDFPro. כל הזכויות שמורות.</span><span>🌍 Made with ❤️</span></div>
 </footer>
 <div class="modal-overlay" id="modal-overlay" onclick="closeModalOnBg(event)">
   <div class="modal">
