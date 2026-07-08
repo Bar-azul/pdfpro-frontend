@@ -23,6 +23,11 @@
   <url><loc>https://www.pdfproapp.com/he/about/</loc><priority>0.5</priority></url>
   <url><loc>https://www.pdfproapp.com/blog/</loc><priority>0.5</priority></url>
   <url><loc>https://www.pdfproapp.com/he/blog/</loc><priority>0.5</priority></url>
+  <url><loc>https://www.pdfproapp.com/he/blog/pdf-hebrew-rtl/</loc><priority>0.6</priority></url>
+  <url><loc>https://www.pdfproapp.com/he/blog/electronic-signature-pdf/</loc><priority>0.6</priority></url>
+  <url><loc>https://www.pdfproapp.com/he/blog/pdf-password-protected/</loc><priority>0.6</priority></url>
+  <url><loc>https://www.pdfproapp.com/he/blog/pdf-broken-mobile/</loc><priority>0.6</priority></url>
+  <url><loc>https://www.pdfproapp.com/he/blog/compress-id-contract-pdf/</loc><priority>0.6</priority></url>
   <url><loc>https://www.pdfproapp.com/contact/</loc><priority>0.4</priority></url>
   <url><loc>https://www.pdfproapp.com/he/contact/</loc><priority>0.4</priority></url>
   <url><loc>https://www.pdfproapp.com/help/</loc><priority>0.4</priority></url>
