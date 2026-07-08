@@ -315,6 +315,7 @@ def build_page(title, description, canonical_path, active_page, body_content, la
 <link rel="alternate" hreflang="x-default" href="{en_full}">
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5792951933667466" crossorigin="anonymous"></script>
 <style>{SHARED_CSS}</style>
 </head>
 <body class="{rtl_class}">
@@ -1299,6 +1300,7 @@ def main():
 <link rel="alternate" hreflang="x-default" href="{en_full}">
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5792951933667466" crossorigin="anonymous"></script>
 <style>{css}</style>
 </head>
 <body class="rtl">
