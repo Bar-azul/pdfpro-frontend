@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html id="html-root" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="What to do when you've lost the password to your own PDF file — legitimate options only.">
+<title>Password-Protected PDF: What to Do When You've Lost the Password | PDFPro</title>
+<link rel="canonical" href="https://www.pdfproapp.com/blog/pdf-password-protected/">
+<link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/blog/pdf-password-protected/">
+<link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/blog/pdf-password-protected/">
+<link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/blog/pdf-password-protected/">
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --red:#E02020;--red-dark:#C41A1A;--red-light:#FF4444;
+  --navy:#0D1B2A;--navy-light:#162333;--cream:#F8F5F0;
+  --border:#D8D0C4;--text:#0D1B2A;--muted:#5A6A7A;--white:#FFFFFF;
+}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--cream);color:var(--text);direction:ltr}
+nav{background:var(--navy);padding:0 3rem;height:68px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;border-bottom:2px solid var(--red);width:100%;box-sizing:border-box}
+.logo{font-size:1.6rem;font-weight:900;color:var(--white);letter-spacing:-0.5px;text-decoration:none;white-space:nowrap}
+.logo span{color:var(--red-light)}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none;margin:0;padding:0}
+.nav-links li{list-style:none;margin:0;padding:0}
+.nav-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.95rem;font-weight:500;transition:color 0.2s;white-space:nowrap}
+.nav-links a:hover{color:var(--white)}
+.nav-right{display:flex;align-items:center;gap:0.8rem}
+.nav-cta{background:var(--red);color:var(--white);padding:0.55rem 1.4rem;border-radius:6px;font-weight:700;font-size:0.9rem;border:none;cursor:pointer;transition:background 0.2s;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;white-space:nowrap}
+.nav-cta:hover{background:var(--red-dark)}
+.api-status{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.78rem;font-weight:600;padding:0.25rem 0.7rem;border-radius:20px;white-space:nowrap}
+.api-status.offline{background:rgba(239,68,68,0.15);color:#ef4444}
+.api-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+footer{background:var(--navy);padding:3rem;border-top:2px solid rgba(255,255,255,0.06);width:100%;box-sizing:border-box;margin-top:4rem}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;align-items:start}
+.footer-brand p{font-size:0.85rem;color:rgba(255,255,255,0.4);line-height:1.6;margin-top:0.8rem}
+.footer-col h4{font-size:0.85rem;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-bottom:1rem}
+.footer-col ul{list-style:none;margin:0;padding:0}
+.footer-col ul li{margin-bottom:0.6rem}
+.footer-col ul li a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:0.88rem;transition:color 0.2s}
+.footer-col ul li a:hover{color:var(--white)}
+.footer-language{margin-top:1rem}
+.footer-language label{display:block;color:rgba(255,255,255,0.5);font-size:0.85rem;margin-bottom:0.4rem}
+.footer-language select{width:190px;max-width:100%;padding:0.55rem 0.8rem;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:var(--navy-light);color:var(--white);font-size:0.9rem;cursor:pointer}
+.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;color:rgba(255,255,255,0.3);font-size:0.82rem;flex-wrap:wrap;gap:1rem}
+.container{max-width:760px;margin:0 auto;padding:3rem 1.5rem}
+h1{font-size:1.9rem;font-weight:900;color:var(--navy);margin-bottom:1rem;letter-spacing:-0.5px;line-height:1.3}
+h2{font-size:1.2rem;font-weight:700;color:var(--navy);margin:1.8rem 0 0.6rem}
+h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:0.4rem}
+p{color:var(--muted);line-height:1.85;margin-bottom:0.9rem}
+.lead{font-size:1.05rem;line-height:1.85;margin-bottom:1.5rem;color:var(--text)}
+ul.article-list{margin:0 0 1rem 1.3rem;padding:0;color:var(--muted);line-height:1.9}
+ul.article-list li{margin-bottom:0.4rem}
+.card{background:white;border-radius:12px;border:1px solid var(--border);padding:1.4rem;margin-bottom:1rem}
+.cta{display:inline-block;background:var(--red);color:white;padding:0.8rem 2rem;border-radius:8px;text-decoration:none;font-weight:700;margin-top:1rem;transition:background 0.2s}
+.cta:hover{background:var(--red-dark)}
+.breadcrumb{font-size:0.85rem;color:var(--muted);margin-bottom:1.5rem}
+.breadcrumb a{color:var(--muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--red)}
+.breadcrumb span{color:var(--navy);font-weight:600}
+.meta{font-size:0.82rem;color:var(--muted);margin-bottom:1.5rem}
+.tag{display:inline-block;background:rgba(224,32,32,0.08);color:var(--red);font-size:0.75rem;font-weight:700;padding:0.2rem 0.6rem;border-radius:4px;margin-bottom:0.8rem}
+@media(max-width:768px){
+  nav{padding:0 1rem;height:56px}
+  .nav-links{display:none}
+  .logo{font-size:1.3rem}
+  .nav-cta{padding:0.45rem 1rem;font-size:0.82rem}
+  #api-status{display:none}
+  footer{padding:2rem 1rem}
+  .footer-inner{grid-template-columns:1fr;gap:1.5rem}
+  .footer-bottom{flex-direction:column;align-items:center;text-align:center}
+  .container{padding:2rem 1rem}
+  h1{font-size:1.5rem}
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="logo">PDF<span>Pro</span></a>
+  <ul class="nav-links">
+    <li><a href="/#tools">Tools</a></li>
+    <li><a href="/#features">Features</a></li>
+    <li><a href="/pricing/">Pricing</a></li>
+  </ul>
+  <div class="nav-right">
+    <span class="api-status offline" id="api-status"><span class="api-dot"></span><span id="api-status-text">Connecting...</span></span>
+    <a class="nav-cta" href="/#tools">Get Started</a>
+  </div>
+</nav>
+<div class="container">
+  <div class="breadcrumb"><a href="/">Home</a> › <a href="/blog/">Blog</a> › <span>Password-Protected PDF: What to Do When You've Lost the Password</span></div>
+  <span class="tag">Security</span>
+  <h1>Password-Protected PDF: What to Do When You've Lost the Password</h1>
+  <p class="meta">July 5, 2026</p>
+
+<p class="lead">Losing the password to an important PDF — a contract, a payslip, an official document — is a frustrating and common situation. Important note up front: this article covers only situations where you are the legitimate owner of the document, not bypassing protection on files that aren't yours.</p>
+
+<h2>First — do you actually need to open it yourself?</h2>
+<p>Before trying any technical solution, check the simplest option first: <strong>contact whoever sent you the file</strong> and ask for the password again, or request a fresh copy without protection. In many cases this is the fastest and safest solution, with zero risk involved.</p>
+
+<h2>What if it's your own document and you lost your own password?</h2>
+<p>If it's a document you created or protected yourself (for example, a report you password-protected and then forgot the password):</p>
+<p><strong>1. Check your password manager</strong> — if the document is recent, the password may have been saved automatically in your browser or password manager.</p>
+<p><strong>2. Check for earlier versions</strong> — if the document was created from Word or another program, an unprotected copy may still exist in an earlier version in your backups or in Google Drive/OneDrive.</p>
+<p><strong>3. Contact support for the software that created the file</strong> — if the document was generated by an organizational system (like a payroll or banking system), that system can usually reissue the document unprotected if you contact them directly.</p>
+
+<h2>Why not just try to "crack" the password?</h2>
+<p>Tools that promise to "break" PDF passwords are often unreliable (and sometimes contain malware). Beyond that, if the document isn't yours, attempting to bypass its protection can be legally problematic. The safe and correct path always runs through contacting the document's legal owner.</p>
+
+<h2>After you've successfully opened the document</h2>
+<p>If you want to remove the protection so you can access your document more easily going forward, make sure you only do this with documents that actually belong to you, and store the new unprotected version somewhere secure (a password manager, encrypted storage).</p>
+
+  <div class="card" style="text-align:center;margin-top:2rem">
+    <p style="color:var(--navy);font-weight:700;margin-bottom:0.6rem">Want to try it yourself?</p>
+    <a href="/contact/" class="cta">Contact Us for Help</a>
+  </div>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="logo">PDF<span>Pro</span></a>
+      <p>The leading platform for PDF processing — fast, secure and professional.</p>
+      <div class="footer-language">
+        <label for="footer-lang">Language</label>
+        <select id="footer-lang" onchange="changeSiteLanguage(this.value)">
+          <option value="en" selected>English</option>
+          <option value="he">עברית</option>
+        </select>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Tools</h4><ul>
+      <li><a href="/pdf-to-word/">PDF to Word</a></li>
+      <li><a href="/merge-pdf/">Merge PDF</a></li>
+      <li><a href="/compress-pdf/">Compress PDF</a></li>
+      <li><a href="/ocr-pdf/">OCR</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Company</h4><ul>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Support</h4><ul>
+      <li><a href="/help/">Help Center</a></li>
+      <li><a href="/privacy/">Privacy Policy</a></li>
+      <li><a href="/terms/">Terms of Use</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 PDFPro. All rights reserved.</span><span>🌍 Made with ❤️</span></div>
+</footer>
+<script>
+const LANGUAGE_PREFIXES = ['he'];
+function getCurrentLanguageFromPath(){const p=window.location.pathname;if(p==='/he'||p==='/he/'||p.startsWith('/he/'))return 'he';return 'en';}
+function getPathWithoutLanguagePrefix(p){for(const pre of LANGUAGE_PREFIXES){if(p===`/${pre}`||p===`/${pre}/`)return '/';if(p.startsWith(`/${pre}/`))return p.replace(`/${pre}`,'')||'/';}return p||'/';}
+function buildLocalizedPath(t){const c=getPathWithoutLanguagePrefix(window.location.pathname);if(t==='en')return c;if(c==='/')return `/${t}/`;return `/${t}${c}`;}
+function changeSiteLanguage(t){localStorage.setItem('pdfpro_lang',t);window.location.href=buildLocalizedPath(t);}
+function setCurrentFooterLanguage(){const s=document.getElementById('footer-lang');if(!s)return;s.value=getCurrentLanguageFromPath();}
+document.addEventListener('DOMContentLoaded',setCurrentFooterLanguage);
+</script>
+</body>
+</html>
