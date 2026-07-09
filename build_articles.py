@@ -1,6 +1,16 @@
 # -*- coding: utf-8 -*-
 import os
 
+GTAG_SNIPPET = """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ3VYWT5RY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-WJ3VYWT5RY");
+</script>"""
+
+
 SHARED_CSS = """
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -138,6 +148,7 @@ def build_article(slug, title, description, date, tag, tool_link, tool_label, bo
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5792951933667466" crossorigin="anonymous"></script>
+{GTAG_SNIPPET}
 <style>{SHARED_CSS}</style>
 </head>
 <body>
@@ -354,6 +365,7 @@ BLOG_INDEX_TEMPLATE_HE = """<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5792951933667466" crossorigin="anonymous"></script>
+{GTAG_SNIPPET}
 <style>{css}</style>
 </head>
 <body class="rtl">
@@ -414,6 +426,7 @@ def build_blog_index_he(articles):
         cards=cards,
         footer=FOOTER,
         js=LANG_JS,
+        GTAG_SNIPPET=GTAG_SNIPPET,
     )
 
 
