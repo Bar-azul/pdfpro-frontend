@@ -147,7 +147,7 @@ def build_article(slug, title, description, date, tag, tool_link, tool_label, bo
 <link rel="alternate" hreflang="x-default" href="{en_canonical}">
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5792951933667466" crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5921716820042715" crossorigin="anonymous"></script>
 {GTAG_SNIPPET}
 <style>{SHARED_CSS}</style>
 </head>
@@ -364,7 +364,7 @@ BLOG_INDEX_TEMPLATE_HE = """<!DOCTYPE html>
 <link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/blog/">
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5792951933667466" crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5921716820042715" crossorigin="anonymous"></script>
 {GTAG_SNIPPET}
 <style>{css}</style>
 </head>
