@@ -1,162 +1,178 @@
 {
  "/": {
-  "hash": "2c1e5a307d693bbc7dc528087da8068e",
+  "hash": "348ccde9e63eb73e14403471738acad4",
   "lastmod": "2026-09-26"
  },
  "/about/": {
-  "hash": "e1de1406aec113d074029a204d26cee5",
+  "hash": "c83ec8aa7fc72afbf9e4bd59b625ec9d",
   "lastmod": "2026-09-26"
  },
  "/blog/": {
-  "hash": "3c44276d3c664a024ee823b09e69e87f",
+  "hash": "6a84c8dd3ef0e007a12fe4d2141f5305",
   "lastmod": "2026-09-26"
  },
  "/blog/compress-id-contract-pdf/": {
-  "hash": "bff518e8f8e6dbd117c20b8b6659b611",
+  "hash": "8a19c9847a759440501288e8d34ce0ce",
   "lastmod": "2026-09-26"
  },
  "/blog/electronic-signature-pdf/": {
-  "hash": "6d03f8db83daa03007510655ea26ce5e",
+  "hash": "00afaf0cbe05b643e894c0b73d0bc3b3",
   "lastmod": "2026-09-26"
  },
  "/blog/pdf-broken-mobile/": {
-  "hash": "2c17b656f7bd6e78b6b56496f4683c60",
+  "hash": "f617439bc1097242ab0f3e66a0a59215",
   "lastmod": "2026-09-26"
  },
  "/blog/pdf-hebrew-rtl/": {
-  "hash": "5a61f8f649921586e341706391ba140d",
+  "hash": "63dde59e16090a89456230ffbfb2a2f5",
   "lastmod": "2026-09-26"
  },
  "/blog/pdf-password-protected/": {
-  "hash": "8de178818dc4d6c7f1810377de2e5426",
+  "hash": "77d443b70a002167da4d0ee144dfa96d",
   "lastmod": "2026-09-26"
  },
  "/compress-pdf/": {
-  "hash": "cfe37d5fe34d56c6154fd295d1e2cf15",
+  "hash": "7ae1a6223ce27c3240d79f45cc149ef5",
   "lastmod": "2026-09-26"
  },
  "/contact/": {
-  "hash": "3352f4105bfea24b99cfcad799768c42",
+  "hash": "7e0a35073abac699210c3f497f0cdc1d",
   "lastmod": "2026-09-26"
  },
  "/he/": {
-  "hash": "f605cb971b28d39d9472ebe4b7aa93e2",
+  "hash": "c7a218ca520f6996b193d8a4824d786a",
   "lastmod": "2026-09-26"
  },
  "/he/about/": {
-  "hash": "0f9ef418521da4d59b19905abf24a799",
+  "hash": "75e2d231c556a440b773f82bc103ebd2",
   "lastmod": "2026-09-26"
  },
  "/he/blog/": {
-  "hash": "c901df25fa3f8e57ac3d5e2d2d3fc5d9",
+  "hash": "f0a624c5c90f24c7a06c32f52db84f19",
   "lastmod": "2026-09-26"
  },
  "/he/blog/compress-id-contract-pdf/": {
-  "hash": "1000baf50a298b791d279f63634af8bc",
+  "hash": "d2d81bf3a6d18a66b78811beec5af149",
   "lastmod": "2026-09-26"
  },
  "/he/blog/electronic-signature-pdf/": {
-  "hash": "f4218038ccbd294698bb3bb62b42c206",
+  "hash": "c0a1d1c70185790ba71e0c1ca68ea8bc",
   "lastmod": "2026-09-26"
  },
  "/he/blog/pdf-broken-mobile/": {
-  "hash": "7c1146b41e0f278273796ed9ac94bfd6",
+  "hash": "98d3fc6b5ae59dec8e3fe49d1f8b46cd",
   "lastmod": "2026-09-26"
  },
  "/he/blog/pdf-hebrew-rtl/": {
-  "hash": "4efbd0b02d7df4a9913072c35a53e0cd",
+  "hash": "42a1abe19035ceecfb3ea3b43c55a877",
   "lastmod": "2026-09-26"
  },
  "/he/blog/pdf-password-protected/": {
-  "hash": "b0725245e905fd0b166f45b1f5fb3626",
+  "hash": "5c90b95a34596a91774524cb1395c1f3",
   "lastmod": "2026-09-26"
  },
  "/he/compress-pdf/": {
-  "hash": "1a781a7873274cfcbbd03d3860c51edf",
+  "hash": "8ee28359a0af7023861093cb46d24cfe",
   "lastmod": "2026-09-26"
  },
  "/he/contact/": {
-  "hash": "173838c7beff9a97a528f647538d1df3",
+  "hash": "db5b149d9fd3bb39c9a35c01b0e0958a",
   "lastmod": "2026-09-26"
  },
  "/he/help/": {
-  "hash": "8398af52f481a6012f845a657d51d4b6",
+  "hash": "0340b1d6550e0551d5313f9c52d425a3",
   "lastmod": "2026-09-26"
  },
  "/he/merge-pdf/": {
-  "hash": "e451d8b1ff3b1d554dc27c7f598792d4",
+  "hash": "c529e9323f0c1fb39326de93e964c788",
   "lastmod": "2026-09-26"
  },
  "/he/ocr-pdf/": {
-  "hash": "642147c63cf8772fd016f90752510959",
+  "hash": "6822bb8a6b3a1b2dd625d5a6b3233908",
   "lastmod": "2026-09-26"
  },
  "/he/pdf-to-excel/": {
-  "hash": "7cff2a66902cbbb9ca82e16ea5f9fe9b",
+  "hash": "cfea7f1d93ddfd47e1a2c6d0563e5a08",
   "lastmod": "2026-09-26"
  },
  "/he/pdf-to-word/": {
-  "hash": "866bbb6f728e38851a8f5528f29164ae",
+  "hash": "d623e9e1136ffd348f0ec2de5a008b9e",
   "lastmod": "2026-09-26"
  },
  "/he/pricing/": {
-  "hash": "e6945e3a1c648ae02e3fbd6d1c78fcec",
+  "hash": "95e423aed13f967ba743fa35029229ef",
   "lastmod": "2026-09-26"
  },
  "/he/privacy/": {
-  "hash": "1fe849fe476e5d815fa0a36d34b6cb84",
+  "hash": "18996b295f95ad56b01fc95ef29ba850",
+  "lastmod": "2026-09-26"
+ },
+ "/he/protect-pdf/": {
+  "hash": "df83ffb54ebccbb42121ff4fc416a3ff",
   "lastmod": "2026-09-26"
  },
  "/he/split-pdf/": {
-  "hash": "82a47ce2e963db71f7dfc6296a7c4066",
+  "hash": "57c0c32396078b338bdcbaeca3b95f45",
   "lastmod": "2026-09-26"
  },
  "/he/terms/": {
-  "hash": "e7294837509caa4f094ef6289e134d9a",
+  "hash": "43917a36e0d99d2e4326377932edd891",
   "lastmod": "2026-09-26"
  },
  "/he/translate-pdf/": {
-  "hash": "029a4fd339e3d6eb2a70bcb24ccb95d6",
+  "hash": "9e711965f3d4043e8f95fdd1bb33fe10",
+  "lastmod": "2026-09-26"
+ },
+ "/he/unlock-pdf/": {
+  "hash": "eceb98f459b60482ef8db6e6a8c4fd0a",
   "lastmod": "2026-09-26"
  },
  "/help/": {
-  "hash": "b6e92d6efa18fe14e6a119e55362ad79",
+  "hash": "9c445ed22cc806a3b542d971f249ddde",
   "lastmod": "2026-09-26"
  },
  "/merge-pdf/": {
-  "hash": "39f63c3e2e4ce0c79c7a43973c142595",
+  "hash": "00efec4cbd34b53cadc43c1a20b4ed4a",
   "lastmod": "2026-09-26"
  },
  "/ocr-pdf/": {
-  "hash": "15f4037ec09f77678b250ae276764cf9",
+  "hash": "f6c7a4fbe01278baa1941668d62ceacf",
   "lastmod": "2026-09-26"
  },
  "/pdf-to-excel/": {
-  "hash": "166dd343f93200bd3cfcea1a78780db8",
+  "hash": "4c43c87f5bdbde067f34fb5dc5651e2c",
   "lastmod": "2026-09-26"
  },
  "/pdf-to-word/": {
-  "hash": "fd60ca4c6bbcc5d3b051987c7e45ff36",
+  "hash": "7f82099ee7ab3d01d376b62339035055",
   "lastmod": "2026-09-26"
  },
  "/pricing/": {
-  "hash": "924278d4572dad0579d2ff9270a334a4",
+  "hash": "27a5945131d44e51d7bfbbc4d3b9f1de",
   "lastmod": "2026-09-26"
  },
  "/privacy/": {
-  "hash": "39ad05bd05a0a57422ed615cdf3a2441",
+  "hash": "557629a377bfbba7441468d593212618",
+  "lastmod": "2026-09-26"
+ },
+ "/protect-pdf/": {
+  "hash": "b517460213a7962046d6ab3cc34b1b7e",
   "lastmod": "2026-09-26"
  },
  "/split-pdf/": {
-  "hash": "f2be726dec5c2daee6e8ccd0b368e263",
+  "hash": "38a958cb5bcea9501bf8cdccc57ecf22",
   "lastmod": "2026-09-26"
  },
  "/terms/": {
-  "hash": "b462d2878b4fe13e15a62e4e24834f6f",
+  "hash": "54c85bffae9c19e313e9fdd427278a63",
   "lastmod": "2026-09-26"
  },
  "/translate-pdf/": {
-  "hash": "279dc8120dcba827c467b166b38f5eee",
+  "hash": "e258c1e9093933b5f5dc8e300a8c52cd",
+  "lastmod": "2026-09-26"
+ },
+ "/unlock-pdf/": {
+  "hash": "9681b74ea43d30ece5ef29e9156c7650",
   "lastmod": "2026-09-26"
  }
 }

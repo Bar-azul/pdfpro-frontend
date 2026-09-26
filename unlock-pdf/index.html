@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Remove Password from PDF – Unlock PDF Free | PDFPro</title>
+<meta name="description" content="Remove the password from a PDF you can already open, so it stops asking every time. Free, no sign-up, files deleted after an hour.">
+<link rel="canonical" href="https://www.pdfproapp.com/unlock-pdf/">
+<link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/unlock-pdf/">
+<link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/unlock-pdf/">
+<link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/unlock-pdf/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PDFPro">
+<meta property="og:title" content="Remove Password from PDF – Unlock PDF Free | PDFPro">
+<meta property="og:description" content="Remove the password from a PDF you can already open, so it stops asking every time. Free, no sign-up, files deleted after an hour.">
+<meta property="og:url" content="https://www.pdfproapp.com/unlock-pdf/">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://pdfproweb.onrender.com">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css?v=feff84c2">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5921716820042715" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ3VYWT5RY"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-WJ3VYWT5RY');</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "PDFPro Unlock PDF", "url": "https://www.pdfproapp.com/unlock-pdf/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "inLanguage": "en", "description": "Remove the password from a PDF you can already open, so it stops asking every time. Free, no sign-up, files deleted after an hour.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can you unlock a PDF if I forgot the password?", "acceptedAnswer": {"@type": "Answer", "text": "No. The tool needs the correct password. It removes protection you can already open, it doesn't break it."}}, {"@type": "Question", "name": "Does removing the password change the document?", "acceptedAnswer": {"@type": "Answer", "text": "No. Pages, text, images and quality stay the same. Only the encryption is removed."}}, {"@type": "Question", "name": "It says the password is wrong, but I'm sure it's right.", "acceptedAnswer": {"@type": "Answer", "text": "Passwords are case-sensitive, and some keyboards switch language without you noticing. Try typing it in a text editor first and pasting it in."}}, {"@type": "Question", "name": "Why can't other tools open my file?", "acceptedAnswer": {"@type": "Answer", "text": "Encrypted PDFs can't be merged, compressed or converted until the password is removed. Unlock it here first, then use the other tool."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pdfproapp.com/"}, {"@type": "ListItem", "position": 2, "name": "Unlock PDF"}]}]}</script>
+</head>
+<body class="ltr">
+<header class="site-nav">
+  <a href="/" class="logo" aria-label="PDFPro">PDF<span>Pro</span></a>
+  <ul class="nav-links">
+    <li><a href="/#tools" class="active">Tools</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/pricing/">Pricing</a></li>
+  </ul>
+  <div class="nav-right">
+    <span class="api-status" id="api-status" role="status" data-online="Server online" data-waking="Starting server…" data-offline="Server offline">
+      <span class="api-dot"></span><span id="api-status-text">Starting server…</span>
+    </span>
+    <a class="nav-cta" href="/#tools">All tools</a>
+  </div>
+</header>
+<main>
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Unlock PDF</li></ol></nav>
+  <h1>Remove a password from a PDF</h1>
+  <p class="lead">Tired of typing the same password every time you open a file? Enter it once here and download a copy that opens without it.</p>
+
+  <section class="tool" aria-label="Unlock PDF">
+    <label class="dropzone" id="tool-dropzone" tabindex="0">
+      <strong>Drop your file here or click to choose</strong>
+      <small>Accepted: PDF. Up to 100 MB.</small>
+      <input type="file" id="tool-input" class="visually-hidden" accept=".pdf">
+    </label>
+    <ul class="file-list" id="tool-files"></ul>
+    <div class="tool-options" id="tool-options"><div><label for="opt-password">The file&#x27;s current password</label><input id="opt-password" name="password" type="password" autocomplete="current-password" dir="ltr" data-required="1" aria-describedby="opt-password-hint"><p class="hint" id="opt-password-hint">This is the password you type today to open the file.</p></div></div>
+    <div class="tool-actions">
+      <button type="button" class="cta" id="tool-run" disabled>Remove password</button>
+      <button type="button" class="link-btn" id="tool-reset" hidden>Process another file</button>
+    </div>
+    <div class="progress" id="tool-progress" aria-hidden="true"><div></div></div>
+    <p class="tool-status" id="tool-status" role="status" aria-live="polite"></p>
+    <div class="tool-result" id="tool-result" aria-live="polite">
+      <h2 id="tool-result-title"></h2>
+      <div class="downloads" id="tool-downloads"></div>
+      <pre id="tool-preview" hidden></pre>
+    </div>
+    <p class="tool-note">Files are processed on our server and deleted automatically after one hour.</p>
+  </section>
+
+  <section class="prose">
+    
+<h2>When this is useful</h2>
+<p>Banks, payroll systems, insurers and phone companies often email documents as password-protected PDFs. That's sensible for sending, but once the file is on your own computer, typing the password every time gets old fast. It also gets in the way when you need to upload the file somewhere: many upload forms reject encrypted PDFs, and tools like merge or compress can't open them.</p>
+<p>Removing the password gives you a normal PDF with the same pages, text and quality. Only the lock is gone.</p>
+<h2>You need to know the password</h2>
+<p>This tool removes a password you already have. It does not guess or crack passwords. If you've lost the password to your own document, the <a href="/blog/pdf-password-protected/">guide to lost PDF passwords</a> covers the legitimate options, like asking the sender for a new copy.</p>
+<h2>Is it safe?</h2>
+<p>The file is uploaded over an encrypted connection, the password is used once to open it, and both the original and the unlocked copy are deleted from the server after an hour. The password isn't stored. Keep in mind that the unlocked copy can be opened by anyone who gets it, so store it somewhere private.</p>
+<h2>Protecting a file instead?</h2>
+<p>To add a password to a PDF before sending it, use <a href="/protect-pdf/">Password protect PDF</a>.</p>
+    <h2>How it works</h2>
+    <ol class="steps"><li><h3>Choose the locked PDF</h3><p>Drop the file into the box above.</p></li><li><h3>Enter its password</h3><p>Type the password you normally use to open it.</p></li><li><h3>Download the unlocked copy</h3><p>The new file opens without asking for a password.</p></li></ol>
+    <h2>Frequently asked questions</h2>
+    <details><summary>Can you unlock a PDF if I forgot the password?</summary><p>No. The tool needs the correct password. It removes protection you can already open, it doesn&#x27;t break it.</p></details><details><summary>Does removing the password change the document?</summary><p>No. Pages, text, images and quality stay the same. Only the encryption is removed.</p></details><details><summary>It says the password is wrong, but I&#x27;m sure it&#x27;s right.</summary><p>Passwords are case-sensitive, and some keyboards switch language without you noticing. Try typing it in a text editor first and pasting it in.</p></details><details><summary>Why can&#x27;t other tools open my file?</summary><p>Encrypted PDFs can&#x27;t be merged, compressed or converted until the password is removed. Unlock it here first, then use the other tool.</p></details>
+    <h2>Guides</h2><a class="blog-card" href="/blog/pdf-password-protected/"><h3 style="margin:0 0 .3rem">Password-Protected PDF: What to Do When You&#x27;ve Lost the Password</h3><p>What to do when you&#x27;ve lost the password to your own PDF file — legitimate options only.</p></a>
+    <h2>Related tools</h2>
+    <ul class="chip-row"><li><a href="/protect-pdf/">Password protect PDF</a></li><li><a href="/merge-pdf/">Merge PDF</a></li><li><a href="/compress-pdf/">Compress PDF</a></li></ul>
+  </section>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="logo">PDF<span>Pro</span></a>
+      <p>Free online PDF tools with proper Hebrew and RTL support.</p>
+      <div class="footer-lang">
+        <a href="/unlock-pdf/" hreflang="en" lang="en" aria-current="true">English</a>
+        <a href="/he/unlock-pdf/" hreflang="he" lang="he">עברית</a>
+      </div>
+    </div>
+    <div class="footer-col"><h2>Tools</h2><ul><li><a href="/pdf-to-word/">PDF to Word</a></li><li><a href="/pdf-to-excel/">PDF to Excel</a></li><li><a href="/compress-pdf/">Compress PDF</a></li><li><a href="/merge-pdf/">Merge PDF</a></li><li><a href="/split-pdf/">Split PDF</a></li><li><a href="/ocr-pdf/">OCR PDF</a></li><li><a href="/translate-pdf/">Translate PDF</a></li><li><a href="/unlock-pdf/">Unlock PDF</a></li><li><a href="/protect-pdf/">Password protect PDF</a></li></ul></div>
+    <div class="footer-col"><h2>Company</h2><ul>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/contact/">Contact</a></li>
+      <li><a href="/pricing/">Pricing</a></li>
+    </ul></div>
+    <div class="footer-col"><h2>Support</h2><ul>
+      <li><a href="/help/">Help center</a></li>
+      <li><a href="/privacy/">Privacy policy</a></li>
+      <li><a href="/terms/">Terms of use</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">© 2026 PDFPro</div>
+</footer>
+<script src="/assets/site.js?v=7737bbd0"></script>
+<script>window.TOOL={"slug": "unlock-pdf", "endpoint": "/api/edit/unlock", "field": "file", "multi": false, "minFiles": 1, "accept": ".pdf", "result": "file", "maxMB": 100, "t": {"remove": "Remove", "move_up": "Move up", "need_more": "Add at least one more file.", "bad_type": "{name} isn't a supported file type.", "too_big": "{name} is larger than {max} MB.", "uploading": "Uploading and processing…", "waking": "The server is starting up. The first file can take up to a minute.", "done": "Your file is ready", "done_parts": "{n} files are ready", "download": "Download", "download_txt": "Download text (.txt)", "no_text": "No text was found. Try a clearer scan or a different language setting.", "saved": "File size reduced by {p}%.", "deleted_note": "Download now. The file is deleted from the server after one hour.", "expired": "This file has expired. Process it again to get a new copy.", "rate_limited": "Hourly limit reached for this tool. Try again in an hour.", "timeout": "The server took too long to respond. Try again, or try a smaller file.", "network": "Couldn't reach the server. Check your connection and try again.", "generic_error": "Something went wrong while processing the file", "pw_required": "Enter a password.", "pw_short": "The password must be at least {n} characters.", "pw_mismatch": "The two passwords don't match."}, "errors": {"403": "That password is incorrect. Check it and try again. Passwords are case-sensitive."}};</script>
+<script src="/assets/tool.js?v=67bc9afb"></script>
+<script>document.getElementById('tool-dropzone').addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();document.getElementById('tool-input').click();}});</script>
+</body>
+</html>

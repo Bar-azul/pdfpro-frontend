@@ -103,6 +103,7 @@ nav{background:var(--navy);padding:0 3rem;height:68px;display:flex;align-items:c
 .tab-btn{padding:0.55rem 1.3rem;border-radius:20px;border:1px solid var(--border);background:var(--white);color:var(--text-muted);font-size:0.9rem;font-weight:600;cursor:pointer;transition:all 0.2s}
 .tab-btn.active,.tab-btn:hover{background:var(--navy);color:var(--white);border-color:var(--navy)}
 .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+a.tool-card{text-decoration:none;color:inherit}
 .tool-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.4rem;cursor:pointer;display:block;transition:all 0.25s;width:100%;text-align:left}
 .rtl .tool-card{text-align:right}
 .tool-card:hover{border-color:var(--red);transform:translateY(-3px);box-shadow:0 8px 24px rgba(13,27,42,0.1)}
@@ -531,10 +532,15 @@ body.rtl .footer-col h4{
     </div>
 
     <div class="footer-col"><h4>Tools</h4><ul>
-      <li><a href="/pdf-to-word/">Convert PDF</a></li>
-      <li><a href="#" onclick="openModal('watermark');return false">Edit PDF</a></li>
+      <li><a href="/pdf-to-word/">PDF to Word</a></li>
+      <li><a href="/pdf-to-excel/">PDF to Excel</a></li>
+      <li><a href="/compress-pdf/">Compress PDF</a></li>
       <li><a href="/merge-pdf/">Merge PDF</a></li>
-      <li><a href="/ocr-pdf/">OCR</a></li>
+      <li><a href="/split-pdf/">Split PDF</a></li>
+      <li><a href="/ocr-pdf/">OCR PDF</a></li>
+      <li><a href="/translate-pdf/">Translate PDF</a></li>
+      <li><a href="/protect-pdf/">Password protect PDF</a></li>
+      <li><a href="/unlock-pdf/">Unlock PDF</a></li>
     </ul></div>
 
     <div class="footer-col"><h4>Company</h4><ul>
@@ -634,6 +640,7 @@ const FORMAT_BADGES={
   'watermark':     [['PDF','#E02020'],['\uD83D\uDD0F','#5A6A7A']],
   'sign':          [['PDF','#E02020'],['\u270D','#5A6A7A']],
   'protect':       [['PDF','#E02020'],['\uD83D\uDD12','#5A6A7A']],
+  'unlock':        [['PDF','#E02020'],['\uD83D\uDD13','#5A6A7A']],
   'redact':        [['PDF','#E02020'],['\u2B1B','#5A6A7A']],
   'ocr':           [['IMG','#7B4FD4'],['TXT','#0D1B2A']],
   'translate':     [['PDF','#E02020'],['\uD83C\uDF0D','#5A6A7A']],
@@ -695,6 +702,7 @@ const T={
       {k:'watermark',    t:'Watermark',            d:'Add text or logo as watermark',         cat:'edit'},
       {k:'sign',         t:'Digital Signature',    d:'Sign documents electronically',         cat:'edit'},
       {k:'protect',      t:'Password Protect',     d:'Encrypt PDF with a password',           cat:'edit'},
+      {k:'unlock',       t:'Unlock PDF',           d:'Remove a known password from a PDF',    cat:'edit'},
       {k:'redact',       t:'Redact Text',          d:'Permanently hide sensitive info',       cat:'edit'},
       {k:'ocr',          t:'OCR \u2014 Extract Text',d:'Extract text from images and scans', cat:'other'},
       {k:'translate',    t:'Translate PDF',        d:'Translate documents into 40+ languages',cat:'other'},
@@ -748,6 +756,7 @@ const T={
       {k:'watermark',    t:'\u05E1\u05D9\u05DE\u05DF \u05DE\u05D9\u05DD', d:'\u05D4\u05D5\u05E1\u05E3 \u05D8\u05E7\u05E1\u05D8 \u05DB\u05E1\u05D9\u05DE\u05DF \u05DE\u05D9\u05DD', cat:'edit'},
       {k:'sign',         t:'\u05D7\u05EA\u05D9\u05DE\u05D4 \u05D3\u05D9\u05D2\u05D9\u05D8\u05DC\u05D9\u05EA', d:'\u05D7\u05EA\u05D5\u05DD \u05D0\u05DC\u05E7\u05D8\u05E8\u05D5\u05E0\u05D9\u05EA', cat:'edit'},
       {k:'protect',      t:'\u05D4\u05D2\u05E0\u05EA \u05E1\u05D9\u05E1\u05DE\u05D0', d:'\u05D4\u05E6\u05E4\u05DF PDF \u05E2\u05DD \u05E1\u05D9\u05E1\u05DE\u05D0',             cat:'edit'},
+      {k:'unlock',       t:'הסרת סיסמה',           d:'הסרת סיסמה ידועה מקובץ PDF',            cat:'edit'},
       {k:'redact',       t:'\u05DE\u05D7\u05D9\u05E7\u05EA \u05D8\u05E7\u05E1\u05D8', d:'\u05D4\u05E1\u05EA\u05E8 \u05DE\u05D9\u05D3\u05E2 \u05E8\u05D2\u05D9\u05E9',           cat:'edit'},
       {k:'ocr',          t:'OCR \u2014 \u05D6\u05D9\u05D4\u05D5\u05D9 \u05D8\u05E7\u05E1\u05D8', d:'\u05D7\u05DC\u05E5 \u05D8\u05E7\u05E1\u05D8 \u05DE\u05EA\u05DE\u05D5\u05E0\u05D5\u05EA', cat:'other'},
       {k:'translate',    t:'\u05EA\u05E8\u05D2\u05D5\u05DD PDF', d:'\u05EA\u05E8\u05D2\u05DD \u05DC-40+ \u05E9\u05E4\u05D5\u05EA',                             cat:'other'},
@@ -770,6 +779,7 @@ const TOOL_CONFIG={
   'watermark':{endpoint:'/api/edit/watermark',field:'file',multi:false,accept:'.pdf',extra:(o)=>[{name:'text',label:o.wm_text_label,type:'text',default:'CONFIDENTIAL'},{name:'opacity',label:o.wm_opacity_label,type:'text',default:'0.3'}]},
   'sign':{endpoint:'/api/edit/sign',field:'file',multi:false,accept:'.pdf',extra:(o)=>[{name:'signature_text',label:o.sig_label,type:'text',default:''}]},
   'protect':{endpoint:'/api/edit/protect',field:'file',multi:false,accept:'.pdf',extra:(o)=>[{name:'password',label:o.pass_label,type:'text',default:''}]},
+  'unlock':{endpoint:'/api/edit/unlock',field:'file',multi:false,accept:'.pdf',extra:(o)=>[{name:'password',label:o.pass_label,type:'text',default:''}]},
   'redact':{endpoint:'/api/edit/redact',field:'file',multi:false,accept:'.pdf',extra:(o)=>[{name:'texts',label:o.redact_label,type:'text',default:''}]},
   'ocr':{endpoint:'/api/ocr/extract',field:'file',multi:false,accept:'.pdf,image/*',textResult:true,extra:(o)=>[{name:'language',label:o.ocr_lang_label,type:'select',options:['heb+eng','eng','heb','ara'],default:'heb+eng'},{name:'output_format',label:o.ocr_fmt_label,type:'select',options:['txt','pdf','docx'],default:'txt'}]},
   'translate':{endpoint:'/api/translate/pdf',field:'file',multi:false,accept:'.pdf',extra:(o)=>[{name:'target_language',label:o.translate_lang_label,type:'select',options:['iw','en','ar','ru','fr','de','es'],labels:['\u05E2\u05D1\u05E8\u05D9\u05EA','English','\u0627\u0644\u0639\u0631\u0628\u064A\u0629','\u0420\u0443\u0441\u0441\u043A\u0438\u0439','Fran\u00E7ais','Deutsch','Espa\u00F1ol'],default:'iw'},{name:'preserve_layout',label:o.translate_layout_label,type:'select',options:['true','false'],labels:['\u05DB\u05DF','\u05DC\u05D0'],default:'true'}]},
@@ -779,7 +789,7 @@ const TOOL_ICONS={
   'pdf-to-word':'ic-blue','pdf-to-excel':'ic-green','pdf-to-pptx':'ic-amber','pdf-to-images':'ic-red',
   'office-to-pdf':'ic-blue','images-to-pdf':'ic-purple','merge':'ic-teal','split':'ic-red',
   'compress':'ic-amber','rotate':'ic-green','watermark':'ic-blue','sign':'ic-purple',
-  'protect':'ic-red','redact':'ic-teal','ocr':'ic-amber','translate':'ic-green'
+  'protect':'ic-red','unlock':'ic-red','redact':'ic-teal','ocr':'ic-amber','translate':'ic-green'
 };
 const TOOL_SVGS={
   'pdf-to-word':'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>',
@@ -795,6 +805,7 @@ const TOOL_SVGS={
   'watermark':'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
   'sign':'<path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>',
   'protect':'<rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',
+  'unlock':'<rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/>',
   'redact':'<path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>',
   'ocr':'<circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>',
   'translate':'<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>'
@@ -833,6 +844,7 @@ function applyLang(nl){
 }
 
 const TAB_CATS=['all','convert','organize','edit','other'];
+const TOOL_PAGES={'pdf-to-word':'pdf-to-word','pdf-to-excel':'pdf-to-excel','compress':'compress-pdf','merge':'merge-pdf','split':'split-pdf','ocr':'ocr-pdf','translate':'translate-pdf','protect':'protect-pdf','unlock':'unlock-pdf'};
 function buildToolsUI(){
   const tools=T[lang].tools,tabs=T[lang].tabs;
   const tabsEl=document.getElementById('tools-tabs');tabsEl.innerHTML='';
@@ -848,7 +860,7 @@ function buildToolsUI(){
   const isMobile=window.innerWidth<=768;
   const isRTL=lang==='he';
   tools.forEach(tool=>{
-    const btn=document.createElement('button');btn.className='tool-card';btn.dataset.cat=tool.cat;btn.onclick=()=>openModal(tool.k);
+    const pg=TOOL_PAGES[tool.k];const btn=document.createElement(pg?'a':'button');btn.className='tool-card';btn.dataset.cat=tool.cat;if(pg){btn.href=(lang==='he'?'/he/':'/')+pg+'/';}else{btn.onclick=()=>openModal(tool.k);}
     if(isMobile){
       btn.innerHTML=`
         <div class="tool-icon ${TOOL_ICONS[tool.k]}"><svg viewBox="0 0 24 24">${TOOL_SVGS[tool.k]}</svg></div>

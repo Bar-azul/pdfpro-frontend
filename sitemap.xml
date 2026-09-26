@@ -113,6 +113,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/privacy/"/>
   </url>
   <url>
+    <loc>https://www.pdfproapp.com/protect-pdf/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/protect-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/protect-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/protect-pdf/"/>
+  </url>
+  <url>
     <loc>https://www.pdfproapp.com/split-pdf/</loc>
     <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/split-pdf/"/>
@@ -132,6 +139,13 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/translate-pdf/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/translate-pdf/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/translate-pdf/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/unlock-pdf/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/unlock-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/unlock-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/unlock-pdf/"/>
   </url>
   <url>
     <loc>https://www.pdfproapp.com/he/</loc>
@@ -253,6 +267,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/privacy/"/>
   </url>
   <url>
+    <loc>https://www.pdfproapp.com/he/protect-pdf/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/protect-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/protect-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/protect-pdf/"/>
+  </url>
+  <url>
     <loc>https://www.pdfproapp.com/he/split-pdf/</loc>
     <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/split-pdf/"/>
@@ -272,6 +293,13 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/translate-pdf/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/translate-pdf/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/translate-pdf/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/he/unlock-pdf/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/unlock-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/unlock-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/unlock-pdf/"/>
   </url>
   <url>
     <loc>https://www.pdfproapp.com/help/</loc>

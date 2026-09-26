@@ -69,6 +69,9 @@ UI = {
             "timeout": "The server took too long to respond. Try again, or try a smaller file.",
             "network": "Couldn't reach the server. Check your connection and try again.",
             "generic_error": "Something went wrong while processing the file",
+            "pw_required": "Enter a password.",
+            "pw_short": "The password must be at least {n} characters.",
+            "pw_mismatch": "The two passwords don't match.",
         },
         "run": "Convert", "again": "Process another file",
     },
@@ -101,6 +104,9 @@ UI = {
             "timeout": "השרת לא הגיב בזמן. נסו שוב או נסו קובץ קטן יותר.",
             "network": "אין חיבור לשרת. בדקו את החיבור ונסו שוב.",
             "generic_error": "משהו השתבש בעיבוד הקובץ",
+            "pw_required": "הקלידו סיסמה.",
+            "pw_short": "הסיסמה צריכה להכיל לפחות {n} תווים.",
+            "pw_mismatch": "שתי הסיסמאות לא תואמות.",
         },
         "run": "המר", "again": "עיבוד קובץ נוסף",
     },
@@ -271,10 +277,10 @@ TOOLS = [
             "faqs": [
                 ("How many files can I merge?", "Between 2 and 20 PDFs at once."),
                 ("Does merging reduce quality?", "No. Pages are copied as they are, nothing is re-compressed."),
-                ("Can I merge password-protected PDFs?", "Not directly. Open the file with its password and save an unprotected copy first."),
+                ("Can I merge password-protected PDFs?", "Not directly. Remove the password first with the Unlock PDF tool, then merge."),
                 ("The merged file is too big. What now?", "Run it through Compress PDF after merging."),
             ],
-            "related": ["split-pdf", "compress-pdf", "pdf-to-word"],
+            "related": ["split-pdf", "compress-pdf", "unlock-pdf"],
         },
         "he": {
             "name": "מיזוג PDF",
@@ -291,10 +297,10 @@ TOOLS = [
             "faqs": [
                 ("כמה קבצים אפשר למזג?", "בין 2 ל-20 קבצי PDF בפעם אחת."),
                 ("המיזוג פוגע באיכות?", "לא. העמודים מועתקים כמו שהם, בלי דחיסה מחדש."),
-                ("אפשר למזג PDF מוגן בסיסמה?", "לא ישירות. פתחו את הקובץ עם הסיסמה ושמרו עותק לא מוגן לפני המיזוג."),
+                ("אפשר למזג PDF מוגן בסיסמה?", "לא ישירות. מסירים קודם את הסיסמה בכלי הסרת סיסמה מ-PDF, ואז ממזגים."),
                 ("הקובץ המאוחד גדול מדי, מה עושים?", "מעבירים אותו אחרי המיזוג דרך דחיסת PDF."),
             ],
-            "related": ["split-pdf", "compress-pdf", "pdf-to-word"],
+            "related": ["split-pdf", "compress-pdf", "unlock-pdf"],
         },
     },
     {
@@ -455,6 +461,153 @@ TOOLS = [
             "related": ["ocr-pdf", "pdf-to-word", "compress-pdf"],
         },
     },
+    {
+        "slug": "unlock-pdf", "limit": 20,
+        "api": {"endpoint": "/api/edit/unlock", "field": "file", "multi": False, "accept": ".pdf", "result": "file"},
+        "options": [
+            {"name": "password", "type": "password", "autocomplete": "current-password",
+             "en": {"label": "The file's current password", "hint": "This is the password you type today to open the file."},
+             "he": {"label": "הסיסמה הנוכחית של הקובץ", "hint": "הסיסמה שאתם מקלידים היום כדי לפתוח את הקובץ."}},
+        ],
+        "en": {
+            "name": "Unlock PDF",
+            "title": "Remove Password from PDF – Unlock PDF Free | PDFPro",
+            "desc": "Remove the password from a PDF you can already open, so it stops asking every time. Free, no sign-up, files deleted after an hour.",
+            "h1": "Remove a password from a PDF",
+            "lead": "Tired of typing the same password every time you open a file? Enter it once here and download a copy that opens without it.",
+            "run": "Remove password",
+            "errors": {"403": "That password is incorrect. Check it and try again. Passwords are case-sensitive."},
+            "intro": """
+<h2>When this is useful</h2>
+<p>Banks, payroll systems, insurers and phone companies often email documents as password-protected PDFs. That's sensible for sending, but once the file is on your own computer, typing the password every time gets old fast. It also gets in the way when you need to upload the file somewhere: many upload forms reject encrypted PDFs, and tools like merge or compress can't open them.</p>
+<p>Removing the password gives you a normal PDF with the same pages, text and quality. Only the lock is gone.</p>
+<h2>You need to know the password</h2>
+<p>This tool removes a password you already have. It does not guess or crack passwords. If you've lost the password to your own document, the <a href="/blog/pdf-password-protected/">guide to lost PDF passwords</a> covers the legitimate options, like asking the sender for a new copy.</p>
+<h2>Is it safe?</h2>
+<p>The file is uploaded over an encrypted connection, the password is used once to open it, and both the original and the unlocked copy are deleted from the server after an hour. The password isn't stored. Keep in mind that the unlocked copy can be opened by anyone who gets it, so store it somewhere private.</p>
+<h2>Protecting a file instead?</h2>
+<p>To add a password to a PDF before sending it, use <a href="/protect-pdf/">Password protect PDF</a>.</p>""",
+            "steps": [
+                ("Choose the locked PDF", "Drop the file into the box above."),
+                ("Enter its password", "Type the password you normally use to open it."),
+                ("Download the unlocked copy", "The new file opens without asking for a password."),
+            ],
+            "faqs": [
+                ("Can you unlock a PDF if I forgot the password?", "No. The tool needs the correct password. It removes protection you can already open, it doesn't break it."),
+                ("Does removing the password change the document?", "No. Pages, text, images and quality stay the same. Only the encryption is removed."),
+                ("It says the password is wrong, but I'm sure it's right.", "Passwords are case-sensitive, and some keyboards switch language without you noticing. Try typing it in a text editor first and pasting it in."),
+                ("Why can't other tools open my file?", "Encrypted PDFs can't be merged, compressed or converted until the password is removed. Unlock it here first, then use the other tool."),
+            ],
+            "related": ["protect-pdf", "merge-pdf", "compress-pdf"],
+        },
+        "he": {
+            "name": "הסרת סיסמה מ-PDF",
+            "title": "הסרת סיסמה מקובץ PDF בחינם – ביטול הגנה | PDFPro",
+            "desc": "מסירים את הסיסמה מ-PDF שאתם כבר יודעים לפתוח, כמו תלוש שכר או דוח בנק, כדי שלא יבקש אותה כל פעם. בחינם ובלי הרשמה.",
+            "h1": "הסרת סיסמה מקובץ PDF",
+            "lead": "נמאס להקליד את אותה סיסמה בכל פעם שפותחים את הקובץ? מקלידים אותה כאן פעם אחת ומורידים עותק שנפתח בלי סיסמה.",
+            "run": "הסר סיסמה",
+            "errors": {"403": "הסיסמה שגויה. בדקו אותה ונסו שוב. יש הבדל בין אותיות גדולות לקטנות."},
+            "intro": """
+<h2>מתי זה שימושי</h2>
+<p>הרבה מסמכים בישראל מגיעים במייל כ-PDF מוגן בסיסמה: תלושי שכר, דוחות מהבנק, מסמכים מחברות ביטוח, קופות גמל וחברות סלולר. לרוב הסיסמה היא מספר תעודת הזהות. זה הגיוני כשהקובץ נשלח, אבל כשהוא כבר שמור אצלכם במחשב, להקליד את הסיסמה בכל פתיחה זה מעייף.</p>
+<p>זה גם מפריע כשצריך להעלות את הקובץ לאתר, למשל תלושי שכר לבקשת משכנתא, להחזר מס או לביטוח לאומי. הרבה טפסי העלאה דוחים קבצים מוצפנים בלי להסביר למה, וכלים כמו מיזוג או דחיסה לא מצליחים לפתוח אותם. אם יש לכם כמה תלושים שצריך לאחד לקובץ אחד, מסירים קודם את הסיסמה מכל אחד ואז <a href="/he/merge-pdf/">ממזגים</a>.</p>
+<p>הסרת הסיסמה נותנת PDF רגיל, עם אותם עמודים, אותו טקסט ואותה איכות. רק המנעול יורד.</p>
+<h2>צריך לדעת את הסיסמה</h2>
+<p>הכלי מסיר סיסמה שכבר יש לכם. הוא לא מנחש ולא פורץ סיסמאות. אם שכחתם את הסיסמה של מסמך שלכם, ב<a href="/he/blog/pdf-password-protected/">מדריך על סיסמה שאבדה</a> יש את האפשרויות הלגיטימיות, כמו לבקש עותק חדש מהשולח.</p>
+<h2>זה בטוח?</h2>
+<p>הקובץ עולה בחיבור מוצפן, הסיסמה משמשת פעם אחת כדי לפתוח אותו, וגם המקור וגם העותק הפתוח נמחקים מהשרת אחרי שעה. הסיסמה לא נשמרת. זכרו שאת העותק הפתוח יכול לפתוח כל מי שמקבל אותו, אז שמרו אותו במקום פרטי.</p>
+<h2>רוצים דווקא להוסיף סיסמה?</h2>
+<p>כדי לנעול PDF לפני ששולחים אותו, השתמשו ב<a href="/he/protect-pdf/">הוספת סיסמה ל-PDF</a>.</p>""",
+            "steps": [
+                ("בוחרים את ה-PDF הנעול", "גוררים את הקובץ לתיבה למעלה."),
+                ("מקלידים את הסיסמה", "את הסיסמה שבה אתם פותחים אותו בדרך כלל, למשל מספר תעודת הזהות."),
+                ("מורידים עותק פתוח", "הקובץ החדש נפתח בלי לבקש סיסמה."),
+            ],
+            "faqs": [
+                ("אפשר לפתוח PDF אם שכחתי את הסיסמה?", "לא. הכלי צריך את הסיסמה הנכונה. הוא מסיר הגנה שאתם כבר יכולים לפתוח, ולא פורץ אותה."),
+                ("הסרת הסיסמה משנה את המסמך?", "לא. העמודים, הטקסט, התמונות והאיכות נשארים אותו דבר. רק ההצפנה יורדת."),
+                ("כתוב שהסיסמה שגויה, אבל אני בטוח שהיא נכונה", "יש הבדל בין אותיות גדולות לקטנות, ולפעמים המקלדת עוברת לעברית בלי ששמים לב. נסו להקליד את הסיסמה בפנקס רשימות ולהדביק אותה."),
+                ("מה הסיסמה של תלוש השכר שלי?", "ברוב המקרים זה מספר תעודת הזהות, לפעמים בלי ספרת הביקורת. אם זה לא עובד, מחלקת השכר או מי ששלח את המסמך יכולים להגיד לכם."),
+                ("למה כלים אחרים לא מצליחים לפתוח את הקובץ?", "אי אפשר למזג, לדחוס או להמיר PDF מוצפן לפני שמסירים את הסיסמה. מסירים אותה כאן ואז משתמשים בכלי השני."),
+            ],
+            "related": ["protect-pdf", "merge-pdf", "compress-pdf"],
+        },
+    },
+    {
+        "slug": "protect-pdf", "limit": 20,
+        "api": {"endpoint": "/api/edit/protect", "field": "file", "multi": False, "accept": ".pdf", "result": "file"},
+        "options": [
+            {"name": "password", "type": "password", "autocomplete": "new-password", "minlength": 4, "confirm": True,
+             "en": {"label": "New password", "confirm_label": "Repeat the password", "hint": "At least 4 characters. Share it with the recipient separately, not in the same email."},
+             "he": {"label": "סיסמה חדשה", "confirm_label": "הקלידו שוב את הסיסמה", "hint": "לפחות 4 תווים. שלחו אותה לנמען בנפרד, לא באותו מייל."}},
+        ],
+        "en": {
+            "name": "Password protect PDF",
+            "title": "Password Protect PDF – Add a Password to a PDF Free | PDFPro",
+            "desc": "Lock a PDF with a password using AES-256 encryption before you email or share it. Free, no sign-up.",
+            "h1": "Add a password to a PDF",
+            "lead": "Lock a PDF so only people with the password can open it. Useful before emailing ID scans, contracts, pay slips or medical documents.",
+            "run": "Protect PDF",
+            "intro": """
+<h2>When to protect a PDF</h2>
+<p>Email isn't a private channel. Messages get forwarded, sit in shared inboxes and stay in sent folders for years. If a document contains an ID number, bank details, salary or health information, a password means that anyone who ends up with the file still can't read it.</p>
+<h2>How strong is the protection?</h2>
+<p>The file is encrypted with AES-256, the same standard PDF readers use for their strongest protection. In practice, the weak point is the password, not the encryption: a short password or an obvious one, like a phone number, is much easier to guess than a random phrase.</p>
+<h2>Tips for sharing a protected PDF</h2>
+<ul>
+<li>Send the password through a different channel than the file, for example the file by email and the password by text message.</li>
+<li>Don't reuse a password you use for an important account.</li>
+<li>Keep an unprotected copy for yourself, or keep the password somewhere safe. There's no way to recover a forgotten one.</li>
+</ul>
+<p>Received a protected file and want to remove the password? Use <a href="/unlock-pdf/">Unlock PDF</a>.</p>""",
+            "steps": [
+                ("Choose your PDF", "Drop the file into the box above."),
+                ("Set a password", "Type it twice to avoid typos."),
+                ("Download the protected file", "It will ask for the password every time it's opened."),
+            ],
+            "faqs": [
+                ("What encryption is used?", "AES-256, supported by every modern PDF reader, including Adobe Acrobat, browsers and phone apps."),
+                ("Can the recipient print the file?", "Yes. After opening it with the password, printing is allowed. Copying text and editing are restricted in readers that respect PDF permissions."),
+                ("What if I forget the password?", "It can't be recovered, by us or anyone else. Keep your original unprotected file."),
+                ("Is my password stored?", "No. It's used once to encrypt the file, and the files are deleted from the server after an hour."),
+            ],
+            "related": ["unlock-pdf", "compress-pdf", "merge-pdf"],
+        },
+        "he": {
+            "name": "הוספת סיסמה ל-PDF",
+            "title": "הוספת סיסמה ל-PDF – הצפנת קובץ PDF בחינם | PDFPro",
+            "desc": "נועלים קובץ PDF בסיסמה עם הצפנת AES-256 לפני ששולחים אותו במייל. בחינם ובלי הרשמה.",
+            "h1": "הוספת סיסמה לקובץ PDF",
+            "lead": "נועלים PDF כך שרק מי שיודע את הסיסמה יוכל לפתוח אותו. שימושי לפני ששולחים צילום תעודת זהות, חוזה, תלוש שכר או מסמך רפואי.",
+            "run": "נעל PDF",
+            "intro": """
+<h2>מתי כדאי לנעול PDF</h2>
+<p>מייל הוא לא ערוץ פרטי. הודעות מועברות הלאה, יושבות בתיבות משותפות ונשארות בתיקיית "נשלח" שנים. אם במסמך יש מספר תעודת זהות, פרטי חשבון בנק, שכר או מידע רפואי, סיסמה אומרת שגם מי שהקובץ יגיע אליו בטעות לא יוכל לקרוא אותו.</p>
+<p>מקרים נפוצים: שליחת צילום תעודת זהות לבעל דירה או למעסיק חדש, תלושי שכר ליועץ משכנתאות, חוזה חתום, או מסמכים רפואיים לחברת ביטוח.</p>
+<h2>כמה ההגנה חזקה?</h2>
+<p>הקובץ מוצפן ב-AES-256, התקן החזק ביותר שקוראי PDF תומכים בו. בפועל, נקודת התורפה היא הסיסמה ולא ההצפנה: סיסמה קצרה או צפויה, כמו מספר טלפון, קלה הרבה יותר לניחוש ממשפט אקראי.</p>
+<h2>טיפים לשליחת PDF מוגן</h2>
+<ul>
+<li>שלחו את הסיסמה בערוץ אחר מהקובץ, למשל את הקובץ במייל ואת הסיסמה ב-SMS או בוואטסאפ.</li>
+<li>אל תשתמשו בסיסמה שמשמשת אתכם לחשבון חשוב.</li>
+<li>שמרו לעצמכם עותק לא מוגן, או שמרו את הסיסמה במקום בטוח. אין דרך לשחזר סיסמה שנשכחה.</li>
+</ul>
+<p>קיבלתם קובץ מוגן ורוצים להסיר ממנו את הסיסמה? השתמשו ב<a href="/he/unlock-pdf/">הסרת סיסמה מ-PDF</a>.</p>""",
+            "steps": [
+                ("בוחרים את ה-PDF", "גוררים את הקובץ לתיבה למעלה."),
+                ("קובעים סיסמה", "מקלידים אותה פעמיים כדי למנוע טעות הקלדה."),
+                ("מורידים את הקובץ המוגן", "הוא יבקש את הסיסמה בכל פתיחה."),
+            ],
+            "faqs": [
+                ("באיזו הצפנה משתמשים?", "AES-256, שנתמכת בכל קורא PDF מודרני, כולל Adobe Acrobat, דפדפנים ואפליקציות בטלפון."),
+                ("הנמען יוכל להדפיס את הקובץ?", "כן. אחרי פתיחה עם הסיסמה מותר להדפיס. העתקת טקסט ועריכה מוגבלות בקוראים שמכבדים הרשאות PDF."),
+                ("מה אם אשכח את הסיסמה?", "אי אפשר לשחזר אותה, לא אנחנו ולא אף אחד אחר. שמרו את הקובץ המקורי הלא מוגן."),
+                ("הסיסמה שלי נשמרת?", "לא. היא משמשת פעם אחת להצפנת הקובץ, והקבצים נמחקים מהשרת אחרי שעה."),
+            ],
+            "related": ["unlock-pdf", "compress-pdf", "merge-pdf"],
+        },
+    },
 ]
 TOOL_BY_SLUG = {t["slug"]: t for t in TOOLS}
 
@@ -476,13 +629,13 @@ ARTICLES = [
      "he": {"title": "5 טעויות שגורמות ל-PDF להיראות שבור בפתיחה בנייד",
             "desc": "הסיבות הנפוצות ביותר לכך שקבצי PDF נראים שבורים, חתוכים או לא קריאים בטלפון הנייד.",
             "tag": "תאימות", "cta": "דחיסת PDF"}},
-    {"slug": "pdf-password-protected", "published": "2026-07-05", "tool": None,
+    {"slug": "pdf-password-protected", "published": "2026-07-05", "tool": "unlock-pdf",
      "en": {"title": "Password-Protected PDF: What to Do When You've Lost the Password",
             "desc": "What to do when you've lost the password to your own PDF file — legitimate options only.",
-            "tag": "Security", "cta": None},
+            "tag": "Security", "cta": "Know the password? Remove it"},
      "he": {"title": "PDF מוגן סיסמה: מה עושים כשאיבדתם את הסיסמה",
             "desc": "מה לעשות כשאיבדתם את הסיסמה לקובץ PDF שלכם - אפשרויות לגיטימיות בלבד.",
-            "tag": "אבטחה", "cta": None}},
+            "tag": "אבטחה", "cta": "יודעים את הסיסמה? הסירו אותה"}},
     {"slug": "electronic-signature-pdf", "published": "2026-07-03", "tool": None,
      "en": {"title": "How to Sign a PDF Document Without Printing It",
             "desc": "A complete guide to electronically signing PDF documents — no printer, scanner, or wasted time required.",
@@ -870,13 +1023,25 @@ def page(*, lang: str, slug: str, title: str, desc: str, body: str, active: str 
 # ════════════════════════════════════════════════════════════════════════════
 def option_html(opt: dict, lang: str) -> str:
     name = opt["name"]
-    default = opt["default"][lang] if isinstance(opt["default"], dict) else opt["default"]
+    default = opt.get("default", "")
+    if isinstance(default, dict):
+        default = default[lang]
     if opt["type"] == "hidden":
         return f'<input type="hidden" name="{name}" value="{esc(default)}">'
     o = opt[lang]
     fid = f"opt-{name}"
     hint = f'<p class="hint" id="{fid}-hint">{esc(o["hint"])}</p>' if o.get("hint") else ""
     described = f' aria-describedby="{fid}-hint"' if o.get("hint") else ""
+    if opt["type"] == "password":
+        mn = f' data-minlength="{opt["minlength"]}"' if opt.get("minlength") else ""
+        ac = opt.get("autocomplete", "off")
+        field = (f'<input id="{fid}" name="{name}" type="password" autocomplete="{ac}" dir="ltr" '
+                 f'data-required="1"{mn}{described}>')
+        out = f'<div><label for="{fid}">{esc(o["label"])}</label>{field}{hint}</div>'
+        if opt.get("confirm"):
+            out += (f'<div><label for="{fid}-confirm">{esc(o["confirm_label"])}</label>'
+                    f'<input id="{fid}-confirm" type="password" autocomplete="{ac}" dir="ltr" data-confirm="{fid}"></div>')
+        return out
     if opt["type"] == "select":
         opts = "".join(
             f'<option value="{esc(v)}"{" selected" if v == default else ""}>{esc(lbl)}</option>'
@@ -914,7 +1079,7 @@ def build_tool(tool: dict, lang: str) -> str:
 
     js_cfg = {"slug": slug, "endpoint": api["endpoint"], "field": api["field"], "multi": api["multi"],
               "minFiles": api.get("minFiles", 1), "accept": api["accept"], "result": api["result"],
-              "maxMB": MAX_MB, "t": u["js"]}
+              "maxMB": MAX_MB, "t": u["js"], "errors": d.get("errors", {})}
 
     body = f"""<div class="container">
   {crumbs_html}
@@ -944,6 +1109,7 @@ def build_tool(tool: dict, lang: str) -> str:
   </section>
 
   <section class="prose">
+    {d.get('intro', '')}
     <h2>{u['how']}</h2>
     <ol class="steps">{steps}</ol>
     <h2>{u['faq']}</h2>

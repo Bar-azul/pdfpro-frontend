@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Password Protect PDF – Add a Password to a PDF Free | PDFPro</title>
+<meta name="description" content="Lock a PDF with a password using AES-256 encryption before you email or share it. Free, no sign-up.">
+<link rel="canonical" href="https://www.pdfproapp.com/protect-pdf/">
+<link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/protect-pdf/">
+<link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/protect-pdf/">
+<link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/protect-pdf/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PDFPro">
+<meta property="og:title" content="Password Protect PDF – Add a Password to a PDF Free | PDFPro">
+<meta property="og:description" content="Lock a PDF with a password using AES-256 encryption before you email or share it. Free, no sign-up.">
+<meta property="og:url" content="https://www.pdfproapp.com/protect-pdf/">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://pdfproweb.onrender.com">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css?v=feff84c2">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5921716820042715" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ3VYWT5RY"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-WJ3VYWT5RY');</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "PDFPro Password protect PDF", "url": "https://www.pdfproapp.com/protect-pdf/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "inLanguage": "en", "description": "Lock a PDF with a password using AES-256 encryption before you email or share it. Free, no sign-up.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What encryption is used?", "acceptedAnswer": {"@type": "Answer", "text": "AES-256, supported by every modern PDF reader, including Adobe Acrobat, browsers and phone apps."}}, {"@type": "Question", "name": "Can the recipient print the file?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. After opening it with the password, printing is allowed. Copying text and editing are restricted in readers that respect PDF permissions."}}, {"@type": "Question", "name": "What if I forget the password?", "acceptedAnswer": {"@type": "Answer", "text": "It can't be recovered, by us or anyone else. Keep your original unprotected file."}}, {"@type": "Question", "name": "Is my password stored?", "acceptedAnswer": {"@type": "Answer", "text": "No. It's used once to encrypt the file, and the files are deleted from the server after an hour."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pdfproapp.com/"}, {"@type": "ListItem", "position": 2, "name": "Password protect PDF"}]}]}</script>
+</head>
+<body class="ltr">
+<header class="site-nav">
+  <a href="/" class="logo" aria-label="PDFPro">PDF<span>Pro</span></a>
+  <ul class="nav-links">
+    <li><a href="/#tools" class="active">Tools</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/pricing/">Pricing</a></li>
+  </ul>
+  <div class="nav-right">
+    <span class="api-status" id="api-status" role="status" data-online="Server online" data-waking="Starting server…" data-offline="Server offline">
+      <span class="api-dot"></span><span id="api-status-text">Starting server…</span>
+    </span>
+    <a class="nav-cta" href="/#tools">All tools</a>
+  </div>
+</header>
+<main>
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Password protect PDF</li></ol></nav>
+  <h1>Add a password to a PDF</h1>
+  <p class="lead">Lock a PDF so only people with the password can open it. Useful before emailing ID scans, contracts, pay slips or medical documents.</p>
+
+  <section class="tool" aria-label="Password protect PDF">
+    <label class="dropzone" id="tool-dropzone" tabindex="0">
+      <strong>Drop your file here or click to choose</strong>
+      <small>Accepted: PDF. Up to 100 MB.</small>
+      <input type="file" id="tool-input" class="visually-hidden" accept=".pdf">
+    </label>
+    <ul class="file-list" id="tool-files"></ul>
+    <div class="tool-options" id="tool-options"><div><label for="opt-password">New password</label><input id="opt-password" name="password" type="password" autocomplete="new-password" dir="ltr" data-required="1" data-minlength="4" aria-describedby="opt-password-hint"><p class="hint" id="opt-password-hint">At least 4 characters. Share it with the recipient separately, not in the same email.</p></div><div><label for="opt-password-confirm">Repeat the password</label><input id="opt-password-confirm" type="password" autocomplete="new-password" dir="ltr" data-confirm="opt-password"></div></div>
+    <div class="tool-actions">
+      <button type="button" class="cta" id="tool-run" disabled>Protect PDF</button>
+      <button type="button" class="link-btn" id="tool-reset" hidden>Process another file</button>
+    </div>
+    <div class="progress" id="tool-progress" aria-hidden="true"><div></div></div>
+    <p class="tool-status" id="tool-status" role="status" aria-live="polite"></p>
+    <div class="tool-result" id="tool-result" aria-live="polite">
+      <h2 id="tool-result-title"></h2>
+      <div class="downloads" id="tool-downloads"></div>
+      <pre id="tool-preview" hidden></pre>
+    </div>
+    <p class="tool-note">Files are processed on our server and deleted automatically after one hour.</p>
+  </section>
+
+  <section class="prose">
+    
+<h2>When to protect a PDF</h2>
+<p>Email isn't a private channel. Messages get forwarded, sit in shared inboxes and stay in sent folders for years. If a document contains an ID number, bank details, salary or health information, a password means that anyone who ends up with the file still can't read it.</p>
+<h2>How strong is the protection?</h2>
+<p>The file is encrypted with AES-256, the same standard PDF readers use for their strongest protection. In practice, the weak point is the password, not the encryption: a short password or an obvious one, like a phone number, is much easier to guess than a random phrase.</p>
+<h2>Tips for sharing a protected PDF</h2>
+<ul>
+<li>Send the password through a different channel than the file, for example the file by email and the password by text message.</li>
+<li>Don't reuse a password you use for an important account.</li>
+<li>Keep an unprotected copy for yourself, or keep the password somewhere safe. There's no way to recover a forgotten one.</li>
+</ul>
+<p>Received a protected file and want to remove the password? Use <a href="/unlock-pdf/">Unlock PDF</a>.</p>
+    <h2>How it works</h2>
+    <ol class="steps"><li><h3>Choose your PDF</h3><p>Drop the file into the box above.</p></li><li><h3>Set a password</h3><p>Type it twice to avoid typos.</p></li><li><h3>Download the protected file</h3><p>It will ask for the password every time it&#x27;s opened.</p></li></ol>
+    <h2>Frequently asked questions</h2>
+    <details><summary>What encryption is used?</summary><p>AES-256, supported by every modern PDF reader, including Adobe Acrobat, browsers and phone apps.</p></details><details><summary>Can the recipient print the file?</summary><p>Yes. After opening it with the password, printing is allowed. Copying text and editing are restricted in readers that respect PDF permissions.</p></details><details><summary>What if I forget the password?</summary><p>It can&#x27;t be recovered, by us or anyone else. Keep your original unprotected file.</p></details><details><summary>Is my password stored?</summary><p>No. It&#x27;s used once to encrypt the file, and the files are deleted from the server after an hour.</p></details>
+    
+    <h2>Related tools</h2>
+    <ul class="chip-row"><li><a href="/unlock-pdf/">Unlock PDF</a></li><li><a href="/compress-pdf/">Compress PDF</a></li><li><a href="/merge-pdf/">Merge PDF</a></li></ul>
+  </section>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="logo">PDF<span>Pro</span></a>
+      <p>Free online PDF tools with proper Hebrew and RTL support.</p>
+      <div class="footer-lang">
+        <a href="/protect-pdf/" hreflang="en" lang="en" aria-current="true">English</a>
+        <a href="/he/protect-pdf/" hreflang="he" lang="he">עברית</a>
+      </div>
+    </div>
+    <div class="footer-col"><h2>Tools</h2><ul><li><a href="/pdf-to-word/">PDF to Word</a></li><li><a href="/pdf-to-excel/">PDF to Excel</a></li><li><a href="/compress-pdf/">Compress PDF</a></li><li><a href="/merge-pdf/">Merge PDF</a></li><li><a href="/split-pdf/">Split PDF</a></li><li><a href="/ocr-pdf/">OCR PDF</a></li><li><a href="/translate-pdf/">Translate PDF</a></li><li><a href="/unlock-pdf/">Unlock PDF</a></li><li><a href="/protect-pdf/">Password protect PDF</a></li></ul></div>
+    <div class="footer-col"><h2>Company</h2><ul>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/contact/">Contact</a></li>
+      <li><a href="/pricing/">Pricing</a></li>
+    </ul></div>
+    <div class="footer-col"><h2>Support</h2><ul>
+      <li><a href="/help/">Help center</a></li>
+      <li><a href="/privacy/">Privacy policy</a></li>
+      <li><a href="/terms/">Terms of use</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">© 2026 PDFPro</div>
+</footer>
+<script src="/assets/site.js?v=7737bbd0"></script>
+<script>window.TOOL={"slug": "protect-pdf", "endpoint": "/api/edit/protect", "field": "file", "multi": false, "minFiles": 1, "accept": ".pdf", "result": "file", "maxMB": 100, "t": {"remove": "Remove", "move_up": "Move up", "need_more": "Add at least one more file.", "bad_type": "{name} isn't a supported file type.", "too_big": "{name} is larger than {max} MB.", "uploading": "Uploading and processing…", "waking": "The server is starting up. The first file can take up to a minute.", "done": "Your file is ready", "done_parts": "{n} files are ready", "download": "Download", "download_txt": "Download text (.txt)", "no_text": "No text was found. Try a clearer scan or a different language setting.", "saved": "File size reduced by {p}%.", "deleted_note": "Download now. The file is deleted from the server after one hour.", "expired": "This file has expired. Process it again to get a new copy.", "rate_limited": "Hourly limit reached for this tool. Try again in an hour.", "timeout": "The server took too long to respond. Try again, or try a smaller file.", "network": "Couldn't reach the server. Check your connection and try again.", "generic_error": "Something went wrong while processing the file", "pw_required": "Enter a password.", "pw_short": "The password must be at least {n} characters.", "pw_mismatch": "The two passwords don't match."}, "errors": {}};</script>
+<script src="/assets/tool.js?v=67bc9afb"></script>
+<script>document.getElementById('tool-dropzone').addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();document.getElementById('tool-input').click();}});</script>
+</body>
+</html>

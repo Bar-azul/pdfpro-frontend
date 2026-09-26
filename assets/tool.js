@@ -139,6 +139,7 @@
   }
 
   function errorFrom(resp) {
+    if (cfg.errors && cfg.errors[resp.status]) return Promise.resolve(cfg.errors[resp.status]);
     if (resp.status === 429) return Promise.resolve(t.rate_limited);
     return resp.json().then(function (j) {
       var d = j && j.detail;
@@ -147,8 +148,21 @@
     }).catch(function () { return t.generic_error + ' (' + resp.status + ')'; });
   }
 
+  function validateOptions() {
+    var fields = document.querySelectorAll('#tool-options input');
+    for (var i = 0; i < fields.length; i++) {
+      var el = fields[i];
+      if (el.dataset.required && !el.value) { el.focus(); return t.pw_required; }
+      if (el.dataset.minlength && el.value.length < +el.dataset.minlength) { el.focus(); return t.pw_short.replace('{n}', el.dataset.minlength); }
+      if (el.dataset.confirm && el.value !== $(el.dataset.confirm).value) { el.focus(); return t.pw_mismatch; }
+    }
+    return '';
+  }
+
   runBtn.addEventListener('click', function () {
     if (busy || !files.length) return;
+    var invalid = validateOptions();
+    if (invalid) { setStatus(invalid, 'error'); return; }
     busy = true; render();
     result.classList.remove('show');
     bar.classList.add('show');
@@ -186,6 +200,7 @@
 
   resetBtn.addEventListener('click', function () {
     files = []; result.classList.remove('show'); resetBtn.hidden = true; setStatus(''); render();
+    document.querySelectorAll('#tool-options input[type=password]').forEach(function (el) { el.value = ''; });
     zone.focus();
   });
 
