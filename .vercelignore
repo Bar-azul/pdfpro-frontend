@@ -1,0 +1,7 @@
+# Source files for the generator — not part of the public website
+build.py
+content/
+.build-manifest.json
+README.md
+*.py
+*.bak

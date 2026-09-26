@@ -1,0 +1,21 @@
+<p class="lead">If you've ever converted a PDF containing Hebrew or Arabic text and gotten back scrambled, reversed, or nonsensically ordered text — you're not alone. This is one of the most common issues in document conversion, and it almost always comes down to one technical cause.</p>
+
+<h2>What causes the problem?</h2>
+<p>Hebrew and Arabic are <strong>RTL</strong> (right-to-left) languages, while most conversion engines were originally built around English, an <strong>LTR</strong> (left-to-right) language. When a conversion engine isn't properly built to handle mixed directionality, a few typical things happen:</p>
+<ul class="article-list">
+  <li>Character order gets reversed — whole words appear "scrambled" backwards</li>
+  <li>Numbers and dates inside RTL sentences get flipped incorrectly</li>
+  <li>Mixed Hebrew/Arabic-English paragraphs lose their correct order</li>
+  <li>Text alignment ends up reversed — stuck to the left instead of the right</li>
+</ul>
+
+<h2>Why does this happen mainly with PDF conversion?</h2>
+<p>Unlike Word, PDF doesn't store text as "logical text" with defined directionality — it mainly stores the <strong>visual position</strong> of each character on the page. When converting back to an editable format, the engine has to reconstruct the correct directionality purely from visual position. If it isn't specifically built to detect and correct RTL, it simply copies character order as it appears on the page, and you get a mess.</p>
+
+<h2>How to actually fix this</h2>
+<p><strong>1. Check that the engine officially supports RTL</strong>, not just "supports Hebrew fonts." There's a big difference between a tool that can display Hebrew characters and one that truly understands text directionality — real RTL support includes automatic paragraph direction detection, correct handling of numbers inside RTL sentences, and proper handling of mixed paragraphs.</p>
+<p><strong>2. If the document is scanned</strong> (not digital text), run it through OCR that explicitly supports Hebrew or Arabic first (look for "heb" or "ara" language options, not just "eng").</p>
+<p><strong>3. After conversion, always check a paragraph containing numbers or English terms.</strong> This is the most reliable test — if a sentence like "The payment is 250 shekels per month via PayPal" comes out correctly, the engine likely handled RTL properly.</p>
+
+<h2>What if the conversion already came out reversed?</h2>
+<p>In most cases, manually fixing reversed text isn't worth it — it's slow and error-prone for long documents. It's almost always faster to reconvert using a tool built with proper RTL support from the start.</p>

@@ -1,0 +1,162 @@
+{
+ "/": {
+  "hash": "2c1e5a307d693bbc7dc528087da8068e",
+  "lastmod": "2026-09-26"
+ },
+ "/about/": {
+  "hash": "e1de1406aec113d074029a204d26cee5",
+  "lastmod": "2026-09-26"
+ },
+ "/blog/": {
+  "hash": "3c44276d3c664a024ee823b09e69e87f",
+  "lastmod": "2026-09-26"
+ },
+ "/blog/compress-id-contract-pdf/": {
+  "hash": "bff518e8f8e6dbd117c20b8b6659b611",
+  "lastmod": "2026-09-26"
+ },
+ "/blog/electronic-signature-pdf/": {
+  "hash": "6d03f8db83daa03007510655ea26ce5e",
+  "lastmod": "2026-09-26"
+ },
+ "/blog/pdf-broken-mobile/": {
+  "hash": "2c17b656f7bd6e78b6b56496f4683c60",
+  "lastmod": "2026-09-26"
+ },
+ "/blog/pdf-hebrew-rtl/": {
+  "hash": "5a61f8f649921586e341706391ba140d",
+  "lastmod": "2026-09-26"
+ },
+ "/blog/pdf-password-protected/": {
+  "hash": "8de178818dc4d6c7f1810377de2e5426",
+  "lastmod": "2026-09-26"
+ },
+ "/compress-pdf/": {
+  "hash": "cfe37d5fe34d56c6154fd295d1e2cf15",
+  "lastmod": "2026-09-26"
+ },
+ "/contact/": {
+  "hash": "3352f4105bfea24b99cfcad799768c42",
+  "lastmod": "2026-09-26"
+ },
+ "/he/": {
+  "hash": "f605cb971b28d39d9472ebe4b7aa93e2",
+  "lastmod": "2026-09-26"
+ },
+ "/he/about/": {
+  "hash": "0f9ef418521da4d59b19905abf24a799",
+  "lastmod": "2026-09-26"
+ },
+ "/he/blog/": {
+  "hash": "c901df25fa3f8e57ac3d5e2d2d3fc5d9",
+  "lastmod": "2026-09-26"
+ },
+ "/he/blog/compress-id-contract-pdf/": {
+  "hash": "1000baf50a298b791d279f63634af8bc",
+  "lastmod": "2026-09-26"
+ },
+ "/he/blog/electronic-signature-pdf/": {
+  "hash": "f4218038ccbd294698bb3bb62b42c206",
+  "lastmod": "2026-09-26"
+ },
+ "/he/blog/pdf-broken-mobile/": {
+  "hash": "7c1146b41e0f278273796ed9ac94bfd6",
+  "lastmod": "2026-09-26"
+ },
+ "/he/blog/pdf-hebrew-rtl/": {
+  "hash": "4efbd0b02d7df4a9913072c35a53e0cd",
+  "lastmod": "2026-09-26"
+ },
+ "/he/blog/pdf-password-protected/": {
+  "hash": "b0725245e905fd0b166f45b1f5fb3626",
+  "lastmod": "2026-09-26"
+ },
+ "/he/compress-pdf/": {
+  "hash": "1a781a7873274cfcbbd03d3860c51edf",
+  "lastmod": "2026-09-26"
+ },
+ "/he/contact/": {
+  "hash": "173838c7beff9a97a528f647538d1df3",
+  "lastmod": "2026-09-26"
+ },
+ "/he/help/": {
+  "hash": "8398af52f481a6012f845a657d51d4b6",
+  "lastmod": "2026-09-26"
+ },
+ "/he/merge-pdf/": {
+  "hash": "e451d8b1ff3b1d554dc27c7f598792d4",
+  "lastmod": "2026-09-26"
+ },
+ "/he/ocr-pdf/": {
+  "hash": "642147c63cf8772fd016f90752510959",
+  "lastmod": "2026-09-26"
+ },
+ "/he/pdf-to-excel/": {
+  "hash": "7cff2a66902cbbb9ca82e16ea5f9fe9b",
+  "lastmod": "2026-09-26"
+ },
+ "/he/pdf-to-word/": {
+  "hash": "866bbb6f728e38851a8f5528f29164ae",
+  "lastmod": "2026-09-26"
+ },
+ "/he/pricing/": {
+  "hash": "e6945e3a1c648ae02e3fbd6d1c78fcec",
+  "lastmod": "2026-09-26"
+ },
+ "/he/privacy/": {
+  "hash": "1fe849fe476e5d815fa0a36d34b6cb84",
+  "lastmod": "2026-09-26"
+ },
+ "/he/split-pdf/": {
+  "hash": "82a47ce2e963db71f7dfc6296a7c4066",
+  "lastmod": "2026-09-26"
+ },
+ "/he/terms/": {
+  "hash": "e7294837509caa4f094ef6289e134d9a",
+  "lastmod": "2026-09-26"
+ },
+ "/he/translate-pdf/": {
+  "hash": "029a4fd339e3d6eb2a70bcb24ccb95d6",
+  "lastmod": "2026-09-26"
+ },
+ "/help/": {
+  "hash": "b6e92d6efa18fe14e6a119e55362ad79",
+  "lastmod": "2026-09-26"
+ },
+ "/merge-pdf/": {
+  "hash": "39f63c3e2e4ce0c79c7a43973c142595",
+  "lastmod": "2026-09-26"
+ },
+ "/ocr-pdf/": {
+  "hash": "15f4037ec09f77678b250ae276764cf9",
+  "lastmod": "2026-09-26"
+ },
+ "/pdf-to-excel/": {
+  "hash": "166dd343f93200bd3cfcea1a78780db8",
+  "lastmod": "2026-09-26"
+ },
+ "/pdf-to-word/": {
+  "hash": "fd60ca4c6bbcc5d3b051987c7e45ff36",
+  "lastmod": "2026-09-26"
+ },
+ "/pricing/": {
+  "hash": "924278d4572dad0579d2ff9270a334a4",
+  "lastmod": "2026-09-26"
+ },
+ "/privacy/": {
+  "hash": "39ad05bd05a0a57422ed615cdf3a2441",
+  "lastmod": "2026-09-26"
+ },
+ "/split-pdf/": {
+  "hash": "f2be726dec5c2daee6e8ccd0b368e263",
+  "lastmod": "2026-09-26"
+ },
+ "/terms/": {
+  "hash": "b462d2878b4fe13e15a62e4e24834f6f",
+  "lastmod": "2026-09-26"
+ },
+ "/translate-pdf/": {
+  "hash": "279dc8120dcba827c467b166b38f5eee",
+  "lastmod": "2026-09-26"
+ }
+}

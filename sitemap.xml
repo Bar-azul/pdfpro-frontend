@@ -1,44 +1,283 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>https://www.pdfproapp.com/</loc><priority>1.0</priority></url>
-  <url><loc>https://www.pdfproapp.com/he/</loc><priority>1.0</priority></url>
-  <url><loc>https://www.pdfproapp.com/pdf-to-word/</loc><priority>0.9</priority></url>
-  <url><loc>https://www.pdfproapp.com/he/pdf-to-word/</loc><priority>0.9</priority></url>
-  <url><loc>https://www.pdfproapp.com/pdf-to-excel/</loc><priority>0.9</priority></url>
-  <url><loc>https://www.pdfproapp.com/he/pdf-to-excel/</loc><priority>0.9</priority></url>
-  <url><loc>https://www.pdfproapp.com/compress-pdf/</loc><priority>0.9</priority></url>
-  <url><loc>https://www.pdfproapp.com/he/compress-pdf/</loc><priority>0.9</priority></url>
-  <url><loc>https://www.pdfproapp.com/merge-pdf/</loc><priority>0.9</priority></url>
-  <url><loc>https://www.pdfproapp.com/he/merge-pdf/</loc><priority>0.9</priority></url>
-  <url><loc>https://www.pdfproapp.com/split-pdf/</loc><priority>0.9</priority></url>
-  <url><loc>https://www.pdfproapp.com/he/split-pdf/</loc><priority>0.9</priority></url>
-  <url><loc>https://www.pdfproapp.com/ocr-pdf/</loc><priority>0.9</priority></url>
-  <url><loc>https://www.pdfproapp.com/he/ocr-pdf/</loc><priority>0.9</priority></url>
-  <url><loc>https://www.pdfproapp.com/translate-pdf/</loc><priority>0.8</priority></url>
-  <url><loc>https://www.pdfproapp.com/he/translate-pdf/</loc><priority>0.8</priority></url>
-  <url><loc>https://www.pdfproapp.com/pricing/</loc><priority>0.7</priority></url>
-  <url><loc>https://www.pdfproapp.com/he/pricing/</loc><priority>0.7</priority></url>
-  <url><loc>https://www.pdfproapp.com/about/</loc><priority>0.5</priority></url>
-  <url><loc>https://www.pdfproapp.com/he/about/</loc><priority>0.5</priority></url>
-  <url><loc>https://www.pdfproapp.com/blog/</loc><priority>0.5</priority></url>
-  <url><loc>https://www.pdfproapp.com/he/blog/</loc><priority>0.5</priority></url>
-  <url><loc>https://www.pdfproapp.com/he/blog/pdf-hebrew-rtl/</loc><priority>0.6</priority></url>
-  <url><loc>https://www.pdfproapp.com/he/blog/electronic-signature-pdf/</loc><priority>0.6</priority></url>
-  <url><loc>https://www.pdfproapp.com/he/blog/pdf-password-protected/</loc><priority>0.6</priority></url>
-  <url><loc>https://www.pdfproapp.com/he/blog/pdf-broken-mobile/</loc><priority>0.6</priority></url>
-  <url><loc>https://www.pdfproapp.com/he/blog/compress-id-contract-pdf/</loc><priority>0.6</priority></url>
-  <url><loc>https://www.pdfproapp.com/blog/pdf-hebrew-rtl/</loc><priority>0.6</priority></url>
-  <url><loc>https://www.pdfproapp.com/blog/electronic-signature-pdf/</loc><priority>0.6</priority></url>
-  <url><loc>https://www.pdfproapp.com/blog/pdf-password-protected/</loc><priority>0.6</priority></url>
-  <url><loc>https://www.pdfproapp.com/blog/pdf-broken-mobile/</loc><priority>0.6</priority></url>
-  <url><loc>https://www.pdfproapp.com/blog/compress-id-contract-pdf/</loc><priority>0.6</priority></url>
-  <url><loc>https://www.pdfproapp.com/contact/</loc><priority>0.4</priority></url>
-  <url><loc>https://www.pdfproapp.com/he/contact/</loc><priority>0.4</priority></url>
-  <url><loc>https://www.pdfproapp.com/help/</loc><priority>0.4</priority></url>
-  <url><loc>https://www.pdfproapp.com/he/help/</loc><priority>0.4</priority></url>
-  <url><loc>https://www.pdfproapp.com/privacy/</loc><priority>0.2</priority></url>
-  <url><loc>https://www.pdfproapp.com/he/privacy/</loc><priority>0.2</priority></url>
-  <url><loc>https://www.pdfproapp.com/terms/</loc><priority>0.2</priority></url>
-  <url><loc>https://www.pdfproapp.com/he/terms/</loc><priority>0.2</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.pdfproapp.com/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/about/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/about/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/blog/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/blog/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/blog/compress-id-contract-pdf/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/blog/compress-id-contract-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/blog/compress-id-contract-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/blog/compress-id-contract-pdf/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/blog/electronic-signature-pdf/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/blog/electronic-signature-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/blog/electronic-signature-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/blog/electronic-signature-pdf/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/blog/pdf-broken-mobile/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/blog/pdf-broken-mobile/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/blog/pdf-broken-mobile/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/blog/pdf-broken-mobile/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/blog/pdf-hebrew-rtl/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/blog/pdf-hebrew-rtl/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/blog/pdf-hebrew-rtl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/blog/pdf-hebrew-rtl/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/blog/pdf-password-protected/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/blog/pdf-password-protected/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/blog/pdf-password-protected/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/blog/pdf-password-protected/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/compress-pdf/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/compress-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/compress-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/compress-pdf/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/contact/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/contact/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/contact/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/merge-pdf/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/merge-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/merge-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/merge-pdf/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/ocr-pdf/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/ocr-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/ocr-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/ocr-pdf/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/pdf-to-excel/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/pdf-to-excel/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/pdf-to-excel/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/pdf-to-excel/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/pdf-to-word/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/pdf-to-word/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/pdf-to-word/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/pdf-to-word/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/pricing/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/pricing/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/pricing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/pricing/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/privacy/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/privacy/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/split-pdf/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/split-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/split-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/split-pdf/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/terms/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/terms/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/terms/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/translate-pdf/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/translate-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/translate-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/translate-pdf/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/he/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/he/about/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/about/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/he/blog/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/blog/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/he/blog/compress-id-contract-pdf/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/blog/compress-id-contract-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/blog/compress-id-contract-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/blog/compress-id-contract-pdf/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/he/blog/electronic-signature-pdf/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/blog/electronic-signature-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/blog/electronic-signature-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/blog/electronic-signature-pdf/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/he/blog/pdf-broken-mobile/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/blog/pdf-broken-mobile/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/blog/pdf-broken-mobile/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/blog/pdf-broken-mobile/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/he/blog/pdf-hebrew-rtl/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/blog/pdf-hebrew-rtl/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/blog/pdf-hebrew-rtl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/blog/pdf-hebrew-rtl/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/he/blog/pdf-password-protected/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/blog/pdf-password-protected/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/blog/pdf-password-protected/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/blog/pdf-password-protected/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/he/compress-pdf/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/compress-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/compress-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/compress-pdf/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/he/contact/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/contact/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/contact/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/he/help/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/help/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/help/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/help/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/he/merge-pdf/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/merge-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/merge-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/merge-pdf/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/he/ocr-pdf/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/ocr-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/ocr-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/ocr-pdf/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/he/pdf-to-excel/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/pdf-to-excel/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/pdf-to-excel/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/pdf-to-excel/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/he/pdf-to-word/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/pdf-to-word/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/pdf-to-word/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/pdf-to-word/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/he/pricing/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/pricing/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/pricing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/pricing/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/he/privacy/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/privacy/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/he/split-pdf/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/split-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/split-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/split-pdf/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/he/terms/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/terms/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/terms/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/he/translate-pdf/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/translate-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/translate-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/translate-pdf/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/help/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/help/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/help/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/help/"/>
+  </url>
 </urlset>

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+# API paths appear inside homepage JavaScript; they are not pages.
+Disallow: /api/
+
+Sitemap: https://www.pdfproapp.com/sitemap.xml
