@@ -13,7 +13,8 @@ then checks every internal link. Never edit generated `index.html` files by hand
 
 | What | Where |
 |---|---|
-| Tool pages (text, FAQ, API config) | `TOOLS` in `build.py` |
+| Tool pages (title, steps, FAQ, API config) | `TOOLS` in `build.py` |
+| Tool page long content | `content/tools/<en|he>/<slug>.html` (optional) |
 | About / Contact / Pricing / Help / Privacy / Terms | `static_pages()` in `build.py` |
 | Article metadata | `ARTICLES` in `build.py` |
 | Article body | `content/blog/<en|he>/<slug>.html` |

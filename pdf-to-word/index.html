@@ -70,7 +70,19 @@
   </section>
 
   <section class="prose">
-    
+    <h2>When you need PDF to Word</h2>
+<p>A PDF is built for reading, not for editing. Converting to Word is the quickest way to update an old contract, reuse text from a report, fix a CV you only have as a PDF, or fill in a form that wasn't made fillable.</p>
+<h2>Why Hebrew PDFs often break in other converters</h2>
+<p>A PDF doesn't store sentences. It stores the position of each character on the page. A converter has to rebuild the reading order from those positions, and many were built for left-to-right text only. The result is Hebrew words spelled backwards, numbers flipped inside sentences, and mixed Hebrew-English paragraphs scrambled. PDFPro detects right-to-left text when rebuilding the document. The <a href="/blog/pdf-hebrew-rtl/">RTL guide</a> explains the problem in detail.</p>
+<h2>Getting the best result</h2>
+<ul>
+<li><strong>Start from the original PDF</strong>, not a PDF that was printed and scanned. A scan is an image, and needs <a href="/ocr-pdf/">OCR</a> instead.</li>
+<li><strong>Check tables after converting.</strong> Simple tables come through cleanly. Tables with merged cells may need a quick fix.</li>
+<li><strong>Expect small layout shifts</strong> in designed documents like brochures, where text sits in many separate boxes.</li>
+</ul>
+<h2>Going the other way</h2>
+<p>Finished editing? Turn the document back into a PDF with <a href="/word-to-pdf/">Word to PDF</a>.</p>
+
     <h2>How it works</h2>
     <ol class="steps"><li><h3>Choose your PDF</h3><p>Drop the file into the box above or click to pick it from your device.</p></li><li><h3>Convert</h3><p>The file is rebuilt as a .docx document with its paragraphs, tables and images.</p></li><li><h3>Download</h3><p>Save the Word file and edit it in Word, Google Docs or LibreOffice.</p></li></ol>
     <h2>Frequently asked questions</h2>
@@ -91,7 +103,7 @@
         <a href="/he/pdf-to-word/" hreflang="he" lang="he">עברית</a>
       </div>
     </div>
-    <div class="footer-col"><h2>Tools</h2><ul><li><a href="/pdf-to-word/">PDF to Word</a></li><li><a href="/pdf-to-excel/">PDF to Excel</a></li><li><a href="/compress-pdf/">Compress PDF</a></li><li><a href="/merge-pdf/">Merge PDF</a></li><li><a href="/split-pdf/">Split PDF</a></li><li><a href="/ocr-pdf/">OCR PDF</a></li><li><a href="/translate-pdf/">Translate PDF</a></li><li><a href="/unlock-pdf/">Unlock PDF</a></li><li><a href="/protect-pdf/">Password protect PDF</a></li></ul></div>
+    <div class="footer-col"><h2>Tools</h2><ul><li><a href="/pdf-to-word/">PDF to Word</a></li><li><a href="/pdf-to-excel/">PDF to Excel</a></li><li><a href="/compress-pdf/">Compress PDF</a></li><li><a href="/merge-pdf/">Merge PDF</a></li><li><a href="/split-pdf/">Split PDF</a></li><li><a href="/ocr-pdf/">OCR PDF</a></li><li><a href="/translate-pdf/">Translate PDF</a></li><li><a href="/unlock-pdf/">Unlock PDF</a></li><li><a href="/protect-pdf/">Password protect PDF</a></li><li><a href="/jpg-to-pdf/">JPG to PDF</a></li><li><a href="/word-to-pdf/">Word to PDF</a></li><li><a href="/pdf-to-jpg/">PDF to JPG</a></li><li><a href="/pdf-to-powerpoint/">PDF to PowerPoint</a></li><li><a href="/rotate-pdf/">Rotate PDF</a></li><li><a href="/watermark-pdf/">Watermark PDF</a></li><li><a href="/sign-pdf/">Sign PDF</a></li><li><a href="/redact-pdf/">Redact PDF</a></li></ul></div>
     <div class="footer-col"><h2>Company</h2><ul>
       <li><a href="/about/">About</a></li>
       <li><a href="/blog/">Blog</a></li>
@@ -108,7 +120,7 @@
 </footer>
 <script src="/assets/site.js?v=7737bbd0"></script>
 <script>window.TOOL={"slug": "pdf-to-word", "endpoint": "/api/convert/pdf-to-word", "field": "file", "multi": false, "minFiles": 1, "accept": ".pdf", "result": "file", "maxMB": 100, "t": {"remove": "Remove", "move_up": "Move up", "need_more": "Add at least one more file.", "bad_type": "{name} isn't a supported file type.", "too_big": "{name} is larger than {max} MB.", "uploading": "Uploading and processing…", "waking": "The server is starting up. The first file can take up to a minute.", "done": "Your file is ready", "done_parts": "{n} files are ready", "download": "Download", "download_txt": "Download text (.txt)", "no_text": "No text was found. Try a clearer scan or a different language setting.", "saved": "File size reduced by {p}%.", "deleted_note": "Download now. The file is deleted from the server after one hour.", "expired": "This file has expired. Process it again to get a new copy.", "rate_limited": "Hourly limit reached for this tool. Try again in an hour.", "timeout": "The server took too long to respond. Try again, or try a smaller file.", "network": "Couldn't reach the server. Check your connection and try again.", "generic_error": "Something went wrong while processing the file", "pw_required": "Enter a password.", "pw_short": "The password must be at least {n} characters.", "pw_mismatch": "The two passwords don't match."}, "errors": {}};</script>
-<script src="/assets/tool.js?v=67bc9afb"></script>
+<script src="/assets/tool.js?v=56c95f42"></script>
 <script>document.getElementById('tool-dropzone').addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();document.getElementById('tool-input').click();}});</script>
 </body>
 </html>

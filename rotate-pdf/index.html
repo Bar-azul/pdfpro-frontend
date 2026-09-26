@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rotate PDF – Turn PDF Pages and Save Free | PDFPro</title>
+<meta name="description" content="Rotate all pages or just the ones that are sideways, and save the PDF that way permanently. Free, no sign-up.">
+<link rel="canonical" href="https://www.pdfproapp.com/rotate-pdf/">
+<link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/rotate-pdf/">
+<link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/rotate-pdf/">
+<link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/rotate-pdf/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PDFPro">
+<meta property="og:title" content="Rotate PDF – Turn PDF Pages and Save Free | PDFPro">
+<meta property="og:description" content="Rotate all pages or just the ones that are sideways, and save the PDF that way permanently. Free, no sign-up.">
+<meta property="og:url" content="https://www.pdfproapp.com/rotate-pdf/">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://pdfproweb.onrender.com">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css?v=feff84c2">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5921716820042715" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ3VYWT5RY"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-WJ3VYWT5RY');</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "PDFPro Rotate PDF", "url": "https://www.pdfproapp.com/rotate-pdf/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "inLanguage": "en", "description": "Rotate all pages or just the ones that are sideways, and save the PDF that way permanently. Free, no sign-up.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is the rotation saved, or only in my viewer?", "acceptedAnswer": {"@type": "Answer", "text": "It's saved in the file, so it opens correctly on any device and for anyone you send it to."}}, {"@type": "Question", "name": "Only some pages are sideways.", "acceptedAnswer": {"@type": "Answer", "text": "List just those pages, for example 2,5, and the rest stay as they are."}}, {"@type": "Question", "name": "Does rotating reduce quality?", "acceptedAnswer": {"@type": "Answer", "text": "No. Rotation doesn't touch the content of the page."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pdfproapp.com/"}, {"@type": "ListItem", "position": 2, "name": "Rotate PDF"}]}]}</script>
+</head>
+<body class="ltr">
+<header class="site-nav">
+  <a href="/" class="logo" aria-label="PDFPro">PDF<span>Pro</span></a>
+  <ul class="nav-links">
+    <li><a href="/#tools" class="active">Tools</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/pricing/">Pricing</a></li>
+  </ul>
+  <div class="nav-right">
+    <span class="api-status" id="api-status" role="status" data-online="Server online" data-waking="Starting server…" data-offline="Server offline">
+      <span class="api-dot"></span><span id="api-status-text">Starting server…</span>
+    </span>
+    <a class="nav-cta" href="/#tools">All tools</a>
+  </div>
+</header>
+<main>
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Rotate PDF</li></ol></nav>
+  <h1>Rotate PDF pages</h1>
+  <p class="lead">Fix a scan that came out sideways or upside down, and save it so it opens the right way for everyone.</p>
+
+  <section class="tool" aria-label="Rotate PDF">
+    <label class="dropzone" id="tool-dropzone" tabindex="0">
+      <strong>Drop your file here or click to choose</strong>
+      <small>Accepted: PDF. Up to 100 MB.</small>
+      <input type="file" id="tool-input" class="visually-hidden" accept=".pdf">
+    </label>
+    <ul class="file-list" id="tool-files"></ul>
+    <div class="tool-options" id="tool-options"><div><label for="opt-angle">Rotate</label><select id="opt-angle" name="angle"><option value="90" selected>90° clockwise</option><option value="180">180° (upside down)</option><option value="270">90° counter-clockwise</option></select></div><div><label for="opt-pages">Pages (optional)</label><input id="opt-pages" name="pages" type="text" value="" dir="ltr" placeholder="All pages" aria-describedby="opt-pages-hint"><p class="hint" id="opt-pages-hint">Leave empty for all pages, or list pages like 1,3,5.</p></div></div>
+    <div class="tool-actions">
+      <button type="button" class="cta" id="tool-run" disabled>Rotate PDF</button>
+      <button type="button" class="link-btn" id="tool-reset" hidden>Process another file</button>
+    </div>
+    <div class="progress" id="tool-progress" aria-hidden="true"><div></div></div>
+    <p class="tool-status" id="tool-status" role="status" aria-live="polite"></p>
+    <div class="tool-result" id="tool-result" aria-live="polite">
+      <h2 id="tool-result-title"></h2>
+      <div class="downloads" id="tool-downloads"></div>
+      <pre id="tool-preview" hidden></pre>
+    </div>
+    <p class="tool-note">Files are processed on our server and deleted automatically after one hour.</p>
+  </section>
+
+  <section class="prose">
+    <h2>Why pages come out sideways</h2>
+<p>Scanners and phone scanning apps guess which way is up, and they often guess wrong: a landscape table ends up on its side, or a page fed upside down stays that way. Rotating in your PDF viewer only changes what you see. The file you send still opens sideways for everyone else. Rotating here saves the change into the file.</p>
+<h2>Rotating only some pages</h2>
+<p>Mixed documents are common, like a report with a few landscape tables. Leave the pages field empty to rotate everything, or list only the pages that need turning, for example <code>3,7</code>. The rest stay as they are. If different pages need different directions, rotate one group, download, and run the result again for the next group.</p>
+<h2>Which direction?</h2>
+<ul>
+<li>Text reads from bottom to top: <strong>90° clockwise</strong>.</li>
+<li>Text reads from top to bottom: <strong>90° counter-clockwise</strong>.</li>
+<li>Page is upside down: <strong>180°</strong>.</li>
+</ul>
+<h2>Before OCR</h2>
+<p>Text recognition works much better on upright pages. If you're going to run a scan through <a href="/ocr-pdf/">OCR</a>, rotate it first.</p>
+
+    <h2>How it works</h2>
+    <ol class="steps"><li><h3>Choose your PDF</h3><p>Drop the file into the box above.</p></li><li><h3>Pick direction and pages</h3><p>Leave pages empty to rotate the whole file, or list only the pages that are sideways.</p></li><li><h3>Download</h3><p>The rotation is saved in the file.</p></li></ol>
+    <h2>Frequently asked questions</h2>
+    <details><summary>Is the rotation saved, or only in my viewer?</summary><p>It&#x27;s saved in the file, so it opens correctly on any device and for anyone you send it to.</p></details><details><summary>Only some pages are sideways.</summary><p>List just those pages, for example 2,5, and the rest stay as they are.</p></details><details><summary>Does rotating reduce quality?</summary><p>No. Rotation doesn&#x27;t touch the content of the page.</p></details>
+    
+    <h2>Related tools</h2>
+    <ul class="chip-row"><li><a href="/merge-pdf/">Merge PDF</a></li><li><a href="/split-pdf/">Split PDF</a></li><li><a href="/compress-pdf/">Compress PDF</a></li></ul>
+  </section>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="logo">PDF<span>Pro</span></a>
+      <p>Free online PDF tools with proper Hebrew and RTL support.</p>
+      <div class="footer-lang">
+        <a href="/rotate-pdf/" hreflang="en" lang="en" aria-current="true">English</a>
+        <a href="/he/rotate-pdf/" hreflang="he" lang="he">עברית</a>
+      </div>
+    </div>
+    <div class="footer-col"><h2>Tools</h2><ul><li><a href="/pdf-to-word/">PDF to Word</a></li><li><a href="/pdf-to-excel/">PDF to Excel</a></li><li><a href="/compress-pdf/">Compress PDF</a></li><li><a href="/merge-pdf/">Merge PDF</a></li><li><a href="/split-pdf/">Split PDF</a></li><li><a href="/ocr-pdf/">OCR PDF</a></li><li><a href="/translate-pdf/">Translate PDF</a></li><li><a href="/unlock-pdf/">Unlock PDF</a></li><li><a href="/protect-pdf/">Password protect PDF</a></li><li><a href="/jpg-to-pdf/">JPG to PDF</a></li><li><a href="/word-to-pdf/">Word to PDF</a></li><li><a href="/pdf-to-jpg/">PDF to JPG</a></li><li><a href="/pdf-to-powerpoint/">PDF to PowerPoint</a></li><li><a href="/rotate-pdf/">Rotate PDF</a></li><li><a href="/watermark-pdf/">Watermark PDF</a></li><li><a href="/sign-pdf/">Sign PDF</a></li><li><a href="/redact-pdf/">Redact PDF</a></li></ul></div>
+    <div class="footer-col"><h2>Company</h2><ul>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/contact/">Contact</a></li>
+      <li><a href="/pricing/">Pricing</a></li>
+    </ul></div>
+    <div class="footer-col"><h2>Support</h2><ul>
+      <li><a href="/help/">Help center</a></li>
+      <li><a href="/privacy/">Privacy policy</a></li>
+      <li><a href="/terms/">Terms of use</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">© 2026 PDFPro</div>
+</footer>
+<script src="/assets/site.js?v=7737bbd0"></script>
+<script>window.TOOL={"slug": "rotate-pdf", "endpoint": "/api/organize/rotate", "field": "file", "multi": false, "minFiles": 1, "accept": ".pdf", "result": "file", "maxMB": 100, "t": {"remove": "Remove", "move_up": "Move up", "need_more": "Add at least one more file.", "bad_type": "{name} isn't a supported file type.", "too_big": "{name} is larger than {max} MB.", "uploading": "Uploading and processing…", "waking": "The server is starting up. The first file can take up to a minute.", "done": "Your file is ready", "done_parts": "{n} files are ready", "download": "Download", "download_txt": "Download text (.txt)", "no_text": "No text was found. Try a clearer scan or a different language setting.", "saved": "File size reduced by {p}%.", "deleted_note": "Download now. The file is deleted from the server after one hour.", "expired": "This file has expired. Process it again to get a new copy.", "rate_limited": "Hourly limit reached for this tool. Try again in an hour.", "timeout": "The server took too long to respond. Try again, or try a smaller file.", "network": "Couldn't reach the server. Check your connection and try again.", "generic_error": "Something went wrong while processing the file", "pw_required": "Enter a password.", "pw_short": "The password must be at least {n} characters.", "pw_mismatch": "The two passwords don't match."}, "errors": {}};</script>
+<script src="/assets/tool.js?v=56c95f42"></script>
+<script>document.getElementById('tool-dropzone').addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();document.getElementById('tool-input').click();}});</script>
+</body>
+</html>

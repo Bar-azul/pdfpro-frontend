@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PDF to JPG – Convert PDF Pages to Images Free | PDFPro</title>
+<meta name="description" content="Save every page of a PDF as a JPG or PNG image, in the quality you need. Free, no sign-up.">
+<link rel="canonical" href="https://www.pdfproapp.com/pdf-to-jpg/">
+<link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/pdf-to-jpg/">
+<link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/pdf-to-jpg/">
+<link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/pdf-to-jpg/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PDFPro">
+<meta property="og:title" content="PDF to JPG – Convert PDF Pages to Images Free | PDFPro">
+<meta property="og:description" content="Save every page of a PDF as a JPG or PNG image, in the quality you need. Free, no sign-up.">
+<meta property="og:url" content="https://www.pdfproapp.com/pdf-to-jpg/">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://pdfproweb.onrender.com">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css?v=feff84c2">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5921716820042715" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ3VYWT5RY"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-WJ3VYWT5RY');</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "PDFPro PDF to JPG", "url": "https://www.pdfproapp.com/pdf-to-jpg/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "inLanguage": "en", "description": "Save every page of a PDF as a JPG or PNG image, in the quality you need. Free, no sign-up.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "JPG or PNG?", "acceptedAnswer": {"@type": "Answer", "text": "JPG files are smaller and fine for photos and sharing. PNG keeps text and lines sharper, at a larger size."}}, {"@type": "Question", "name": "Which quality should I choose?", "acceptedAnswer": {"@type": "Answer", "text": "High works for almost everything. Print quality makes large files, so use it only when you'll print the images."}}, {"@type": "Question", "name": "Can I convert just one page?", "acceptedAnswer": {"@type": "Answer", "text": "Convert the whole file and keep the page you need, or first pull the page out with Split PDF."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pdfproapp.com/"}, {"@type": "ListItem", "position": 2, "name": "PDF to JPG"}]}]}</script>
+</head>
+<body class="ltr">
+<header class="site-nav">
+  <a href="/" class="logo" aria-label="PDFPro">PDF<span>Pro</span></a>
+  <ul class="nav-links">
+    <li><a href="/#tools" class="active">Tools</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/pricing/">Pricing</a></li>
+  </ul>
+  <div class="nav-right">
+    <span class="api-status" id="api-status" role="status" data-online="Server online" data-waking="Starting server…" data-offline="Server offline">
+      <span class="api-dot"></span><span id="api-status-text">Starting server…</span>
+    </span>
+    <a class="nav-cta" href="/#tools">All tools</a>
+  </div>
+</header>
+<main>
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">PDF to JPG</li></ol></nav>
+  <h1>PDF to JPG: pages to images</h1>
+  <p class="lead">Turn each page of a PDF into an image you can post, send on WhatsApp, or drop into a presentation.</p>
+
+  <section class="tool" aria-label="PDF to JPG">
+    <label class="dropzone" id="tool-dropzone" tabindex="0">
+      <strong>Drop your file here or click to choose</strong>
+      <small>Accepted: PDF. Up to 100 MB.</small>
+      <input type="file" id="tool-input" class="visually-hidden" accept=".pdf">
+    </label>
+    <ul class="file-list" id="tool-files"></ul>
+    <div class="tool-options" id="tool-options"><div><label for="opt-format">Image format</label><select id="opt-format" name="format" data-query="1"><option value="jpg" selected>JPG (smaller files)</option><option value="png">PNG (sharper text)</option></select></div><div><label for="opt-dpi">Quality</label><select id="opt-dpi" name="dpi" data-query="1"><option value="100">Standard (screen)</option><option value="150" selected>High (recommended)</option><option value="300">Print quality</option></select></div></div>
+    <div class="tool-actions">
+      <button type="button" class="cta" id="tool-run" disabled>Convert to images</button>
+      <button type="button" class="link-btn" id="tool-reset" hidden>Process another file</button>
+    </div>
+    <div class="progress" id="tool-progress" aria-hidden="true"><div></div></div>
+    <p class="tool-status" id="tool-status" role="status" aria-live="polite"></p>
+    <div class="tool-result" id="tool-result" aria-live="polite">
+      <h2 id="tool-result-title"></h2>
+      <div class="downloads" id="tool-downloads"></div>
+      <pre id="tool-preview" hidden></pre>
+    </div>
+    <p class="tool-note">Files are processed on our server and deleted automatically after one hour.</p>
+  </section>
+
+  <section class="prose">
+    <h2>When you need PDF to JPG</h2>
+<p>Images are easier to share than PDFs in many places. Social networks, messaging apps and website builders often don't accept PDF files, and a phone shows an image instantly without opening a separate app. Converting pages to images is useful for posting a flyer or menu, sending a single page on WhatsApp, or putting a page into a presentation or document.</p>
+<h2>Choosing format and quality</h2>
+<ul>
+<li><strong>JPG</strong> gives smaller files and suits pages with photos and colors.</li>
+<li><strong>PNG</strong> keeps text, tables and thin lines crisp, which suits documents and diagrams.</li>
+<li><strong>High quality</strong> looks sharp on any screen. Use <strong>Print quality</strong> only when you're going to print, because the files get much larger.</li>
+</ul>
+<h2>Long documents</h2>
+<p>Every page becomes a separate image, so a 40-page PDF gives you 40 files. If you only need a few pages, extract them first with <a href="/split-pdf/">Split PDF</a>.</p>
+<h2>Going the other way</h2>
+<p>To turn images back into a PDF, use <a href="/jpg-to-pdf/">JPG to PDF</a>.</p>
+
+    <h2>How it works</h2>
+    <ol class="steps"><li><h3>Choose your PDF</h3><p>Drop the file into the box above.</p></li><li><h3>Pick format and quality</h3><p>JPG for sharing, PNG when text needs to stay crisp.</p></li><li><h3>Download the images</h3><p>One image per page.</p></li></ol>
+    <h2>Frequently asked questions</h2>
+    <details><summary>JPG or PNG?</summary><p>JPG files are smaller and fine for photos and sharing. PNG keeps text and lines sharper, at a larger size.</p></details><details><summary>Which quality should I choose?</summary><p>High works for almost everything. Print quality makes large files, so use it only when you&#x27;ll print the images.</p></details><details><summary>Can I convert just one page?</summary><p>Convert the whole file and keep the page you need, or first pull the page out with Split PDF.</p></details>
+    
+    <h2>Related tools</h2>
+    <ul class="chip-row"><li><a href="/jpg-to-pdf/">JPG to PDF</a></li><li><a href="/split-pdf/">Split PDF</a></li><li><a href="/compress-pdf/">Compress PDF</a></li></ul>
+  </section>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="logo">PDF<span>Pro</span></a>
+      <p>Free online PDF tools with proper Hebrew and RTL support.</p>
+      <div class="footer-lang">
+        <a href="/pdf-to-jpg/" hreflang="en" lang="en" aria-current="true">English</a>
+        <a href="/he/pdf-to-jpg/" hreflang="he" lang="he">עברית</a>
+      </div>
+    </div>
+    <div class="footer-col"><h2>Tools</h2><ul><li><a href="/pdf-to-word/">PDF to Word</a></li><li><a href="/pdf-to-excel/">PDF to Excel</a></li><li><a href="/compress-pdf/">Compress PDF</a></li><li><a href="/merge-pdf/">Merge PDF</a></li><li><a href="/split-pdf/">Split PDF</a></li><li><a href="/ocr-pdf/">OCR PDF</a></li><li><a href="/translate-pdf/">Translate PDF</a></li><li><a href="/unlock-pdf/">Unlock PDF</a></li><li><a href="/protect-pdf/">Password protect PDF</a></li><li><a href="/jpg-to-pdf/">JPG to PDF</a></li><li><a href="/word-to-pdf/">Word to PDF</a></li><li><a href="/pdf-to-jpg/">PDF to JPG</a></li><li><a href="/pdf-to-powerpoint/">PDF to PowerPoint</a></li><li><a href="/rotate-pdf/">Rotate PDF</a></li><li><a href="/watermark-pdf/">Watermark PDF</a></li><li><a href="/sign-pdf/">Sign PDF</a></li><li><a href="/redact-pdf/">Redact PDF</a></li></ul></div>
+    <div class="footer-col"><h2>Company</h2><ul>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/contact/">Contact</a></li>
+      <li><a href="/pricing/">Pricing</a></li>
+    </ul></div>
+    <div class="footer-col"><h2>Support</h2><ul>
+      <li><a href="/help/">Help center</a></li>
+      <li><a href="/privacy/">Privacy policy</a></li>
+      <li><a href="/terms/">Terms of use</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">© 2026 PDFPro</div>
+</footer>
+<script src="/assets/site.js?v=7737bbd0"></script>
+<script>window.TOOL={"slug": "pdf-to-jpg", "endpoint": "/api/convert/pdf-to-images", "field": "file", "multi": false, "minFiles": 1, "accept": ".pdf", "result": "parts", "maxMB": 100, "t": {"remove": "Remove", "move_up": "Move up", "need_more": "Add at least one more file.", "bad_type": "{name} isn't a supported file type.", "too_big": "{name} is larger than {max} MB.", "uploading": "Uploading and processing…", "waking": "The server is starting up. The first file can take up to a minute.", "done": "Your file is ready", "done_parts": "{n} files are ready", "download": "Download", "download_txt": "Download text (.txt)", "no_text": "No text was found. Try a clearer scan or a different language setting.", "saved": "File size reduced by {p}%.", "deleted_note": "Download now. The file is deleted from the server after one hour.", "expired": "This file has expired. Process it again to get a new copy.", "rate_limited": "Hourly limit reached for this tool. Try again in an hour.", "timeout": "The server took too long to respond. Try again, or try a smaller file.", "network": "Couldn't reach the server. Check your connection and try again.", "generic_error": "Something went wrong while processing the file", "pw_required": "Enter a password.", "pw_short": "The password must be at least {n} characters.", "pw_mismatch": "The two passwords don't match."}, "errors": {}};</script>
+<script src="/assets/tool.js?v=56c95f42"></script>
+<script>document.getElementById('tool-dropzone').addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();document.getElementById('tool-input').click();}});</script>
+</body>
+</html>

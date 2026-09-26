@@ -70,7 +70,24 @@
   </section>
 
   <section class="prose">
-    
+    <h2>When you need to split a PDF</h2>
+<p>Sometimes you only need part of a document: one signed page from a long contract, a single month from a year of statements, one chapter of a report. Splitting lets you send exactly what's needed, and nothing you'd rather keep private.</p>
+<h2>How to write page ranges</h2>
+<ul>
+<li><strong>A single page:</strong> <code>5</code></li>
+<li><strong>A range:</strong> <code>3-7</code> gives one file with pages 3 to 7.</li>
+<li><strong>Several separate files:</strong> <code>1-2,3-5,6-10</code> gives three PDFs.</li>
+</ul>
+<p>Each range you write becomes its own PDF, and each can be downloaded separately.</p>
+<h2>Common uses</h2>
+<ul>
+<li>Sending only the relevant pages of a medical file or a legal document.</li>
+<li>Breaking a large scanned batch into separate documents.</li>
+<li>Making a file small enough for an upload limit by leaving out pages that aren't needed.</li>
+</ul>
+<h2>Need to put pages back together?</h2>
+<p>Use <a href="/merge-pdf/">Merge PDF</a> to combine the parts, in any order.</p>
+
     <h2>How it works</h2>
     <ol class="steps"><li><h3>Choose your PDF</h3><p>Drop the file into the box above.</p></li><li><h3>Enter page ranges</h3><p>Write the ranges you want, like 1-3,4-6. Each range becomes a separate file.</p></li><li><h3>Download</h3><p>Save each part.</p></li></ol>
     <h2>Frequently asked questions</h2>
@@ -91,7 +108,7 @@
         <a href="/he/split-pdf/" hreflang="he" lang="he">עברית</a>
       </div>
     </div>
-    <div class="footer-col"><h2>Tools</h2><ul><li><a href="/pdf-to-word/">PDF to Word</a></li><li><a href="/pdf-to-excel/">PDF to Excel</a></li><li><a href="/compress-pdf/">Compress PDF</a></li><li><a href="/merge-pdf/">Merge PDF</a></li><li><a href="/split-pdf/">Split PDF</a></li><li><a href="/ocr-pdf/">OCR PDF</a></li><li><a href="/translate-pdf/">Translate PDF</a></li><li><a href="/unlock-pdf/">Unlock PDF</a></li><li><a href="/protect-pdf/">Password protect PDF</a></li></ul></div>
+    <div class="footer-col"><h2>Tools</h2><ul><li><a href="/pdf-to-word/">PDF to Word</a></li><li><a href="/pdf-to-excel/">PDF to Excel</a></li><li><a href="/compress-pdf/">Compress PDF</a></li><li><a href="/merge-pdf/">Merge PDF</a></li><li><a href="/split-pdf/">Split PDF</a></li><li><a href="/ocr-pdf/">OCR PDF</a></li><li><a href="/translate-pdf/">Translate PDF</a></li><li><a href="/unlock-pdf/">Unlock PDF</a></li><li><a href="/protect-pdf/">Password protect PDF</a></li><li><a href="/jpg-to-pdf/">JPG to PDF</a></li><li><a href="/word-to-pdf/">Word to PDF</a></li><li><a href="/pdf-to-jpg/">PDF to JPG</a></li><li><a href="/pdf-to-powerpoint/">PDF to PowerPoint</a></li><li><a href="/rotate-pdf/">Rotate PDF</a></li><li><a href="/watermark-pdf/">Watermark PDF</a></li><li><a href="/sign-pdf/">Sign PDF</a></li><li><a href="/redact-pdf/">Redact PDF</a></li></ul></div>
     <div class="footer-col"><h2>Company</h2><ul>
       <li><a href="/about/">About</a></li>
       <li><a href="/blog/">Blog</a></li>
@@ -108,7 +125,7 @@
 </footer>
 <script src="/assets/site.js?v=7737bbd0"></script>
 <script>window.TOOL={"slug": "split-pdf", "endpoint": "/api/organize/split", "field": "file", "multi": false, "minFiles": 1, "accept": ".pdf", "result": "parts", "maxMB": 100, "t": {"remove": "Remove", "move_up": "Move up", "need_more": "Add at least one more file.", "bad_type": "{name} isn't a supported file type.", "too_big": "{name} is larger than {max} MB.", "uploading": "Uploading and processing…", "waking": "The server is starting up. The first file can take up to a minute.", "done": "Your file is ready", "done_parts": "{n} files are ready", "download": "Download", "download_txt": "Download text (.txt)", "no_text": "No text was found. Try a clearer scan or a different language setting.", "saved": "File size reduced by {p}%.", "deleted_note": "Download now. The file is deleted from the server after one hour.", "expired": "This file has expired. Process it again to get a new copy.", "rate_limited": "Hourly limit reached for this tool. Try again in an hour.", "timeout": "The server took too long to respond. Try again, or try a smaller file.", "network": "Couldn't reach the server. Check your connection and try again.", "generic_error": "Something went wrong while processing the file", "pw_required": "Enter a password.", "pw_short": "The password must be at least {n} characters.", "pw_mismatch": "The two passwords don't match."}, "errors": {}};</script>
-<script src="/assets/tool.js?v=67bc9afb"></script>
+<script src="/assets/tool.js?v=56c95f42"></script>
 <script>document.getElementById('tool-dropzone').addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();document.getElementById('tool-input').click();}});</script>
 </body>
 </html>

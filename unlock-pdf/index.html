@@ -54,7 +54,7 @@
       <input type="file" id="tool-input" class="visually-hidden" accept=".pdf">
     </label>
     <ul class="file-list" id="tool-files"></ul>
-    <div class="tool-options" id="tool-options"><div><label for="opt-password">The file&#x27;s current password</label><input id="opt-password" name="password" type="password" autocomplete="current-password" dir="ltr" data-required="1" aria-describedby="opt-password-hint"><p class="hint" id="opt-password-hint">This is the password you type today to open the file.</p></div></div>
+    <div class="tool-options" id="tool-options"><div><label for="opt-password">The file&#x27;s current password</label><input id="opt-password" name="password" type="password" autocomplete="current-password" dir="ltr" data-required="Enter a password." aria-describedby="opt-password-hint"><p class="hint" id="opt-password-hint">This is the password you type today to open the file.</p></div></div>
     <div class="tool-actions">
       <button type="button" class="cta" id="tool-run" disabled>Remove password</button>
       <button type="button" class="link-btn" id="tool-reset" hidden>Process another file</button>
@@ -70,8 +70,7 @@
   </section>
 
   <section class="prose">
-    
-<h2>When this is useful</h2>
+    <h2>When this is useful</h2>
 <p>Banks, payroll systems, insurers and phone companies often email documents as password-protected PDFs. That's sensible for sending, but once the file is on your own computer, typing the password every time gets old fast. It also gets in the way when you need to upload the file somewhere: many upload forms reject encrypted PDFs, and tools like merge or compress can't open them.</p>
 <p>Removing the password gives you a normal PDF with the same pages, text and quality. Only the lock is gone.</p>
 <h2>You need to know the password</h2>
@@ -80,6 +79,7 @@
 <p>The file is uploaded over an encrypted connection, the password is used once to open it, and both the original and the unlocked copy are deleted from the server after an hour. The password isn't stored. Keep in mind that the unlocked copy can be opened by anyone who gets it, so store it somewhere private.</p>
 <h2>Protecting a file instead?</h2>
 <p>To add a password to a PDF before sending it, use <a href="/protect-pdf/">Password protect PDF</a>.</p>
+
     <h2>How it works</h2>
     <ol class="steps"><li><h3>Choose the locked PDF</h3><p>Drop the file into the box above.</p></li><li><h3>Enter its password</h3><p>Type the password you normally use to open it.</p></li><li><h3>Download the unlocked copy</h3><p>The new file opens without asking for a password.</p></li></ol>
     <h2>Frequently asked questions</h2>
@@ -100,7 +100,7 @@
         <a href="/he/unlock-pdf/" hreflang="he" lang="he">עברית</a>
       </div>
     </div>
-    <div class="footer-col"><h2>Tools</h2><ul><li><a href="/pdf-to-word/">PDF to Word</a></li><li><a href="/pdf-to-excel/">PDF to Excel</a></li><li><a href="/compress-pdf/">Compress PDF</a></li><li><a href="/merge-pdf/">Merge PDF</a></li><li><a href="/split-pdf/">Split PDF</a></li><li><a href="/ocr-pdf/">OCR PDF</a></li><li><a href="/translate-pdf/">Translate PDF</a></li><li><a href="/unlock-pdf/">Unlock PDF</a></li><li><a href="/protect-pdf/">Password protect PDF</a></li></ul></div>
+    <div class="footer-col"><h2>Tools</h2><ul><li><a href="/pdf-to-word/">PDF to Word</a></li><li><a href="/pdf-to-excel/">PDF to Excel</a></li><li><a href="/compress-pdf/">Compress PDF</a></li><li><a href="/merge-pdf/">Merge PDF</a></li><li><a href="/split-pdf/">Split PDF</a></li><li><a href="/ocr-pdf/">OCR PDF</a></li><li><a href="/translate-pdf/">Translate PDF</a></li><li><a href="/unlock-pdf/">Unlock PDF</a></li><li><a href="/protect-pdf/">Password protect PDF</a></li><li><a href="/jpg-to-pdf/">JPG to PDF</a></li><li><a href="/word-to-pdf/">Word to PDF</a></li><li><a href="/pdf-to-jpg/">PDF to JPG</a></li><li><a href="/pdf-to-powerpoint/">PDF to PowerPoint</a></li><li><a href="/rotate-pdf/">Rotate PDF</a></li><li><a href="/watermark-pdf/">Watermark PDF</a></li><li><a href="/sign-pdf/">Sign PDF</a></li><li><a href="/redact-pdf/">Redact PDF</a></li></ul></div>
     <div class="footer-col"><h2>Company</h2><ul>
       <li><a href="/about/">About</a></li>
       <li><a href="/blog/">Blog</a></li>
@@ -117,7 +117,7 @@
 </footer>
 <script src="/assets/site.js?v=7737bbd0"></script>
 <script>window.TOOL={"slug": "unlock-pdf", "endpoint": "/api/edit/unlock", "field": "file", "multi": false, "minFiles": 1, "accept": ".pdf", "result": "file", "maxMB": 100, "t": {"remove": "Remove", "move_up": "Move up", "need_more": "Add at least one more file.", "bad_type": "{name} isn't a supported file type.", "too_big": "{name} is larger than {max} MB.", "uploading": "Uploading and processing…", "waking": "The server is starting up. The first file can take up to a minute.", "done": "Your file is ready", "done_parts": "{n} files are ready", "download": "Download", "download_txt": "Download text (.txt)", "no_text": "No text was found. Try a clearer scan or a different language setting.", "saved": "File size reduced by {p}%.", "deleted_note": "Download now. The file is deleted from the server after one hour.", "expired": "This file has expired. Process it again to get a new copy.", "rate_limited": "Hourly limit reached for this tool. Try again in an hour.", "timeout": "The server took too long to respond. Try again, or try a smaller file.", "network": "Couldn't reach the server. Check your connection and try again.", "generic_error": "Something went wrong while processing the file", "pw_required": "Enter a password.", "pw_short": "The password must be at least {n} characters.", "pw_mismatch": "The two passwords don't match."}, "errors": {"403": "That password is incorrect. Check it and try again. Passwords are case-sensitive."}};</script>
-<script src="/assets/tool.js?v=67bc9afb"></script>
+<script src="/assets/tool.js?v=56c95f42"></script>
 <script>document.getElementById('tool-dropzone').addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();document.getElementById('tool-input').click();}});</script>
 </body>
 </html>

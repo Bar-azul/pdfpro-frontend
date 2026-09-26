@@ -70,7 +70,19 @@
   </section>
 
   <section class="prose">
-    
+    <h2>מתי צריך למזג קבצי PDF</h2>
+<p>הרבה טפסים מבקשים קובץ אחד: מועמדות לעבודה עם קורות חיים ותעודות, בקשת משכנתא עם תלושי שכר של כמה חודשים, תביעת ביטוח עם קבלות וסיכום רפואי. המיזוג הופך ערימה של קבצים נפרדים למסמך אחד, בסדר שהקורא מצפה לו.</p>
+<h2>איך קובעים את הסדר</h2>
+<p>הקובץ הראשון ברשימה הופך לעמודים הראשונים. מוסיפים את הקבצים ומסדרים עם 'הזז למעלה'. כשמאחדים מסמכים לבקשה רשמית, כדאי לשמור על הסדר שהגוף המבקש מפרט, כי הבודקים עוברים על המסמכים לפי הסדר הזה.</p>
+<h2>קבצים שלא מתמזגים</h2>
+<ul>
+<li><strong>קבצים מוגנים בסיסמה</strong>, כמו תלושי שכר ודפי חשבון שנפתחים עם מספר תעודת הזהות, צריכים הסרת סיסמה קודם. מעבירים כל אחד דרך <a href="/he/unlock-pdf/">הסרת סיסמה מ-PDF</a> ואז ממזגים.</li>
+<li><strong>צילומים וסריקות</strong> שהם JPG או PNG ולא PDF הופכים ל-PDF עם <a href="/he/jpg-to-pdf/">המרת תמונה ל-PDF</a>, ואז ממזגים.</li>
+<li><strong>מסמכי Word</strong> ממירים עם <a href="/he/word-to-pdf/">Word ל-PDF</a>.</li>
+</ul>
+<h2>אחרי המיזוג</h2>
+<p>קובץ מאוחד יכול להיות כבד, במיוחד כשיש בו סריקות. אם טופס העלאה דוחה אותו, מעבירים אותו דרך <a href="/he/compress-pdf/">דחיסת PDF</a>.</p>
+
     <h2>איך זה עובד</h2>
     <ol class="steps"><li><h3>מוסיפים קבצים</h3><p>בין 2 ל-20 קבצים. אפשר להוסיף בכמה סבבים.</p></li><li><h3>קובעים סדר</h3><p>משתמשים ב&#x27;הזז למעלה&#x27;. הקובץ הראשון ברשימה יהיה העמודים הראשונים.</p></li><li><h3>מורידים</h3><p>שומרים את ה-PDF המאוחד.</p></li></ol>
     <h2>שאלות נפוצות</h2>
@@ -91,7 +103,7 @@
         <a href="/he/merge-pdf/" hreflang="he" lang="he" aria-current="true">עברית</a>
       </div>
     </div>
-    <div class="footer-col"><h2>כלים</h2><ul><li><a href="/he/pdf-to-word/">PDF ל-Word</a></li><li><a href="/he/pdf-to-excel/">PDF ל-Excel</a></li><li><a href="/he/compress-pdf/">דחיסת PDF</a></li><li><a href="/he/merge-pdf/">מיזוג PDF</a></li><li><a href="/he/split-pdf/">פיצול PDF</a></li><li><a href="/he/ocr-pdf/">OCR לעברית</a></li><li><a href="/he/translate-pdf/">תרגום PDF</a></li><li><a href="/he/unlock-pdf/">הסרת סיסמה מ-PDF</a></li><li><a href="/he/protect-pdf/">הוספת סיסמה ל-PDF</a></li></ul></div>
+    <div class="footer-col"><h2>כלים</h2><ul><li><a href="/he/pdf-to-word/">PDF ל-Word</a></li><li><a href="/he/pdf-to-excel/">PDF ל-Excel</a></li><li><a href="/he/compress-pdf/">דחיסת PDF</a></li><li><a href="/he/merge-pdf/">מיזוג PDF</a></li><li><a href="/he/split-pdf/">פיצול PDF</a></li><li><a href="/he/ocr-pdf/">OCR לעברית</a></li><li><a href="/he/translate-pdf/">תרגום PDF</a></li><li><a href="/he/unlock-pdf/">הסרת סיסמה מ-PDF</a></li><li><a href="/he/protect-pdf/">הוספת סיסמה ל-PDF</a></li><li><a href="/he/jpg-to-pdf/">תמונה ל-PDF</a></li><li><a href="/he/word-to-pdf/">Word ל-PDF</a></li><li><a href="/he/pdf-to-jpg/">PDF לתמונה</a></li><li><a href="/he/pdf-to-powerpoint/">PDF ל-PowerPoint</a></li><li><a href="/he/rotate-pdf/">סיבוב PDF</a></li><li><a href="/he/watermark-pdf/">סימן מים</a></li><li><a href="/he/sign-pdf/">חתימה על PDF</a></li><li><a href="/he/redact-pdf/">השחרת טקסט</a></li></ul></div>
     <div class="footer-col"><h2>החברה</h2><ul>
       <li><a href="/he/about/">אודות</a></li>
       <li><a href="/he/blog/">בלוג</a></li>
@@ -108,7 +120,7 @@
 </footer>
 <script src="/assets/site.js?v=7737bbd0"></script>
 <script>window.TOOL={"slug": "merge-pdf", "endpoint": "/api/organize/merge", "field": "files", "multi": true, "minFiles": 2, "accept": ".pdf", "result": "file", "maxMB": 100, "t": {"remove": "הסר", "move_up": "הזז למעלה", "need_more": "הוסיפו לפחות קובץ אחד נוסף.", "bad_type": "סוג הקובץ {name} לא נתמך.", "too_big": "הקובץ {name} גדול מ-{max}MB.", "uploading": "מעלה ומעבד…", "waking": "השרת מתעורר. הקובץ הראשון יכול לקחת עד דקה.", "done": "הקובץ מוכן", "done_parts": "{n} קבצים מוכנים", "download": "הורדת", "download_txt": "הורדת הטקסט (txt.)", "no_text": "לא נמצא טקסט. נסו סריקה ברורה יותר או שפה אחרת.", "saved": "גודל הקובץ קטן ב-{p}%.", "deleted_note": "הורידו עכשיו. הקובץ נמחק מהשרת אחרי שעה.", "expired": "תוקף הקובץ פג. עבדו אותו שוב כדי לקבל עותק חדש.", "rate_limited": "הגעתם למגבלה השעתית של הכלי. נסו שוב בעוד שעה.", "timeout": "השרת לא הגיב בזמן. נסו שוב או נסו קובץ קטן יותר.", "network": "אין חיבור לשרת. בדקו את החיבור ונסו שוב.", "generic_error": "משהו השתבש בעיבוד הקובץ", "pw_required": "הקלידו סיסמה.", "pw_short": "הסיסמה צריכה להכיל לפחות {n} תווים.", "pw_mismatch": "שתי הסיסמאות לא תואמות."}, "errors": {}};</script>
-<script src="/assets/tool.js?v=67bc9afb"></script>
+<script src="/assets/tool.js?v=56c95f42"></script>
 <script>document.getElementById('tool-dropzone').addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();document.getElementById('tool-input').click();}});</script>
 </body>
 </html>

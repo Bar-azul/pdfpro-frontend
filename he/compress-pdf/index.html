@@ -70,7 +70,19 @@
   </section>
 
   <section class="prose">
-    
+    <h2>למה קבצי PDF כל כך כבדים</h2>
+<p>טקסט כמעט לא תופס מקום. מה שמכביד על PDF זה תמונות: עמודים סרוקים, צילומים מהטלפון וגרפיקה ברזולוציית הדפסה. סריקה של שלושה עמודים יכולה להיות גדולה יותר ממסמך טקסט של מאה עמודים. הדחיסה מקודדת מחדש את התמונות לגודל שעדיין נראה חד על המסך.</p>
+<h2>מתי צריך את זה</h2>
+<ul>
+<li><strong>קבצים מצורפים למייל</strong> שחוזרים כי הם גדולים מדי.</li>
+<li><strong>טפסי העלאה</strong> באתרי ממשלה, ביטוח לאומי, בנקים, אוניברסיטאות ואתרי דרושים, שדוחים קבצים מעל גודל מסוים.</li>
+<li><strong>שליחה בוואטסאפ</strong> או שמירה של הרבה מסמכים בטלפון.</li>
+</ul>
+<h2>איזו רמה לבחור</h2>
+<p>מתחילים ב<strong>בינונית</strong>. בדרך כלל היא מקטינה הרבה ועדיין שומרת על טקסט וחתימות חדים. אם אתר עדיין דוחה את הקובץ, נסו <strong>גבוהה</strong>, ואת ה<strong>מקסימלית</strong> שמרו למקרים שבהם חייבים לעמוד במגבלה קשוחה. תמיד פתחו את התוצאה והגדילו טקסט קטן וחתימות לפני השליחה, במיוחד בתעודות זהות ובחוזים. <a href="/he/blog/compress-id-contract-pdf/">המדריך לדחיסת תעודת זהות וחוזים</a> מרחיב על זה.</p>
+<h2>עדיין גדול מדי?</h2>
+<p>אם יש בקובץ עמודים שלא צריך, מוציאים אותם עם <a href="/he/split-pdf/">פיצול PDF</a> לפני הדחיסה. פחות עמודים תמיד אומר קובץ קטן יותר.</p>
+
     <h2>איך זה עובד</h2>
     <ol class="steps"><li><h3>בוחרים את ה-PDF</h3><p>גוררים את הקובץ לתיבה למעלה.</p></li><li><h3>בוחרים רמה</h3><p>בינונית מתאימה לרוב הקבצים. מקסימלית רק כשצריך לעמוד במגבלת גודל קשוחה.</p></li><li><h3>מורידים</h3><p>שומרים את הקובץ הקטן. בתוצאה מופיע כמה מקום נחסך.</p></li></ol>
     <h2>שאלות נפוצות</h2>
@@ -91,7 +103,7 @@
         <a href="/he/compress-pdf/" hreflang="he" lang="he" aria-current="true">עברית</a>
       </div>
     </div>
-    <div class="footer-col"><h2>כלים</h2><ul><li><a href="/he/pdf-to-word/">PDF ל-Word</a></li><li><a href="/he/pdf-to-excel/">PDF ל-Excel</a></li><li><a href="/he/compress-pdf/">דחיסת PDF</a></li><li><a href="/he/merge-pdf/">מיזוג PDF</a></li><li><a href="/he/split-pdf/">פיצול PDF</a></li><li><a href="/he/ocr-pdf/">OCR לעברית</a></li><li><a href="/he/translate-pdf/">תרגום PDF</a></li><li><a href="/he/unlock-pdf/">הסרת סיסמה מ-PDF</a></li><li><a href="/he/protect-pdf/">הוספת סיסמה ל-PDF</a></li></ul></div>
+    <div class="footer-col"><h2>כלים</h2><ul><li><a href="/he/pdf-to-word/">PDF ל-Word</a></li><li><a href="/he/pdf-to-excel/">PDF ל-Excel</a></li><li><a href="/he/compress-pdf/">דחיסת PDF</a></li><li><a href="/he/merge-pdf/">מיזוג PDF</a></li><li><a href="/he/split-pdf/">פיצול PDF</a></li><li><a href="/he/ocr-pdf/">OCR לעברית</a></li><li><a href="/he/translate-pdf/">תרגום PDF</a></li><li><a href="/he/unlock-pdf/">הסרת סיסמה מ-PDF</a></li><li><a href="/he/protect-pdf/">הוספת סיסמה ל-PDF</a></li><li><a href="/he/jpg-to-pdf/">תמונה ל-PDF</a></li><li><a href="/he/word-to-pdf/">Word ל-PDF</a></li><li><a href="/he/pdf-to-jpg/">PDF לתמונה</a></li><li><a href="/he/pdf-to-powerpoint/">PDF ל-PowerPoint</a></li><li><a href="/he/rotate-pdf/">סיבוב PDF</a></li><li><a href="/he/watermark-pdf/">סימן מים</a></li><li><a href="/he/sign-pdf/">חתימה על PDF</a></li><li><a href="/he/redact-pdf/">השחרת טקסט</a></li></ul></div>
     <div class="footer-col"><h2>החברה</h2><ul>
       <li><a href="/he/about/">אודות</a></li>
       <li><a href="/he/blog/">בלוג</a></li>
@@ -108,7 +120,7 @@
 </footer>
 <script src="/assets/site.js?v=7737bbd0"></script>
 <script>window.TOOL={"slug": "compress-pdf", "endpoint": "/api/organize/compress", "field": "file", "multi": false, "minFiles": 1, "accept": ".pdf", "result": "file", "maxMB": 100, "t": {"remove": "הסר", "move_up": "הזז למעלה", "need_more": "הוסיפו לפחות קובץ אחד נוסף.", "bad_type": "סוג הקובץ {name} לא נתמך.", "too_big": "הקובץ {name} גדול מ-{max}MB.", "uploading": "מעלה ומעבד…", "waking": "השרת מתעורר. הקובץ הראשון יכול לקחת עד דקה.", "done": "הקובץ מוכן", "done_parts": "{n} קבצים מוכנים", "download": "הורדת", "download_txt": "הורדת הטקסט (txt.)", "no_text": "לא נמצא טקסט. נסו סריקה ברורה יותר או שפה אחרת.", "saved": "גודל הקובץ קטן ב-{p}%.", "deleted_note": "הורידו עכשיו. הקובץ נמחק מהשרת אחרי שעה.", "expired": "תוקף הקובץ פג. עבדו אותו שוב כדי לקבל עותק חדש.", "rate_limited": "הגעתם למגבלה השעתית של הכלי. נסו שוב בעוד שעה.", "timeout": "השרת לא הגיב בזמן. נסו שוב או נסו קובץ קטן יותר.", "network": "אין חיבור לשרת. בדקו את החיבור ונסו שוב.", "generic_error": "משהו השתבש בעיבוד הקובץ", "pw_required": "הקלידו סיסמה.", "pw_short": "הסיסמה צריכה להכיל לפחות {n} תווים.", "pw_mismatch": "שתי הסיסמאות לא תואמות."}, "errors": {}};</script>
-<script src="/assets/tool.js?v=67bc9afb"></script>
+<script src="/assets/tool.js?v=56c95f42"></script>
 <script>document.getElementById('tool-dropzone').addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();document.getElementById('tool-input').click();}});</script>
 </body>
 </html>

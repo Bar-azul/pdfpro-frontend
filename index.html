@@ -539,8 +539,16 @@ body.rtl .footer-col h4{
       <li><a href="/split-pdf/">Split PDF</a></li>
       <li><a href="/ocr-pdf/">OCR PDF</a></li>
       <li><a href="/translate-pdf/">Translate PDF</a></li>
-      <li><a href="/protect-pdf/">Password protect PDF</a></li>
       <li><a href="/unlock-pdf/">Unlock PDF</a></li>
+      <li><a href="/protect-pdf/">Password protect PDF</a></li>
+      <li><a href="/jpg-to-pdf/">JPG to PDF</a></li>
+      <li><a href="/word-to-pdf/">Word to PDF</a></li>
+      <li><a href="/pdf-to-jpg/">PDF to JPG</a></li>
+      <li><a href="/pdf-to-powerpoint/">PDF to PowerPoint</a></li>
+      <li><a href="/rotate-pdf/">Rotate PDF</a></li>
+      <li><a href="/watermark-pdf/">Watermark PDF</a></li>
+      <li><a href="/sign-pdf/">Sign PDF</a></li>
+      <li><a href="/redact-pdf/">Redact PDF</a></li>
     </ul></div>
 
     <div class="footer-col"><h4>Company</h4><ul>
@@ -844,7 +852,7 @@ function applyLang(nl){
 }
 
 const TAB_CATS=['all','convert','organize','edit','other'];
-const TOOL_PAGES={'pdf-to-word':'pdf-to-word','pdf-to-excel':'pdf-to-excel','compress':'compress-pdf','merge':'merge-pdf','split':'split-pdf','ocr':'ocr-pdf','translate':'translate-pdf','protect':'protect-pdf','unlock':'unlock-pdf'};
+const TOOL_PAGES={'pdf-to-word':'pdf-to-word','pdf-to-excel':'pdf-to-excel','pdf-to-pptx':'pdf-to-powerpoint','pdf-to-images':'pdf-to-jpg','office-to-pdf':'word-to-pdf','images-to-pdf':'jpg-to-pdf','merge':'merge-pdf','split':'split-pdf','compress':'compress-pdf','rotate':'rotate-pdf','watermark':'watermark-pdf','sign':'sign-pdf','protect':'protect-pdf','unlock':'unlock-pdf','redact':'redact-pdf','ocr':'ocr-pdf','translate':'translate-pdf'};
 function buildToolsUI(){
   const tools=T[lang].tools,tabs=T[lang].tabs;
   const tabsEl=document.getElementById('tools-tabs');tabsEl.innerHTML='';

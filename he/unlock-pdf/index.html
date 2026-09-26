@@ -54,7 +54,7 @@
       <input type="file" id="tool-input" class="visually-hidden" accept=".pdf">
     </label>
     <ul class="file-list" id="tool-files"></ul>
-    <div class="tool-options" id="tool-options"><div><label for="opt-password">הסיסמה הנוכחית של הקובץ</label><input id="opt-password" name="password" type="password" autocomplete="current-password" dir="ltr" data-required="1" aria-describedby="opt-password-hint"><p class="hint" id="opt-password-hint">הסיסמה שאתם מקלידים היום כדי לפתוח את הקובץ.</p></div></div>
+    <div class="tool-options" id="tool-options"><div><label for="opt-password">הסיסמה הנוכחית של הקובץ</label><input id="opt-password" name="password" type="password" autocomplete="current-password" dir="ltr" data-required="הקלידו סיסמה." aria-describedby="opt-password-hint"><p class="hint" id="opt-password-hint">הסיסמה שאתם מקלידים היום כדי לפתוח את הקובץ.</p></div></div>
     <div class="tool-actions">
       <button type="button" class="cta" id="tool-run" disabled>הסר סיסמה</button>
       <button type="button" class="link-btn" id="tool-reset" hidden>עיבוד קובץ נוסף</button>
@@ -70,8 +70,7 @@
   </section>
 
   <section class="prose">
-    
-<h2>מתי זה שימושי</h2>
+    <h2>מתי זה שימושי</h2>
 <p>הרבה מסמכים בישראל מגיעים במייל כ-PDF מוגן בסיסמה: תלושי שכר, דוחות מהבנק, מסמכים מחברות ביטוח, קופות גמל וחברות סלולר. לרוב הסיסמה היא מספר תעודת הזהות. זה הגיוני כשהקובץ נשלח, אבל כשהוא כבר שמור אצלכם במחשב, להקליד את הסיסמה בכל פתיחה זה מעייף.</p>
 <p>זה גם מפריע כשצריך להעלות את הקובץ לאתר, למשל תלושי שכר לבקשת משכנתא, להחזר מס או לביטוח לאומי. הרבה טפסי העלאה דוחים קבצים מוצפנים בלי להסביר למה, וכלים כמו מיזוג או דחיסה לא מצליחים לפתוח אותם. אם יש לכם כמה תלושים שצריך לאחד לקובץ אחד, מסירים קודם את הסיסמה מכל אחד ואז <a href="/he/merge-pdf/">ממזגים</a>.</p>
 <p>הסרת הסיסמה נותנת PDF רגיל, עם אותם עמודים, אותו טקסט ואותה איכות. רק המנעול יורד.</p>
@@ -81,6 +80,7 @@
 <p>הקובץ עולה בחיבור מוצפן, הסיסמה משמשת פעם אחת כדי לפתוח אותו, וגם המקור וגם העותק הפתוח נמחקים מהשרת אחרי שעה. הסיסמה לא נשמרת. זכרו שאת העותק הפתוח יכול לפתוח כל מי שמקבל אותו, אז שמרו אותו במקום פרטי.</p>
 <h2>רוצים דווקא להוסיף סיסמה?</h2>
 <p>כדי לנעול PDF לפני ששולחים אותו, השתמשו ב<a href="/he/protect-pdf/">הוספת סיסמה ל-PDF</a>.</p>
+
     <h2>איך זה עובד</h2>
     <ol class="steps"><li><h3>בוחרים את ה-PDF הנעול</h3><p>גוררים את הקובץ לתיבה למעלה.</p></li><li><h3>מקלידים את הסיסמה</h3><p>את הסיסמה שבה אתם פותחים אותו בדרך כלל, למשל מספר תעודת הזהות.</p></li><li><h3>מורידים עותק פתוח</h3><p>הקובץ החדש נפתח בלי לבקש סיסמה.</p></li></ol>
     <h2>שאלות נפוצות</h2>
@@ -101,7 +101,7 @@
         <a href="/he/unlock-pdf/" hreflang="he" lang="he" aria-current="true">עברית</a>
       </div>
     </div>
-    <div class="footer-col"><h2>כלים</h2><ul><li><a href="/he/pdf-to-word/">PDF ל-Word</a></li><li><a href="/he/pdf-to-excel/">PDF ל-Excel</a></li><li><a href="/he/compress-pdf/">דחיסת PDF</a></li><li><a href="/he/merge-pdf/">מיזוג PDF</a></li><li><a href="/he/split-pdf/">פיצול PDF</a></li><li><a href="/he/ocr-pdf/">OCR לעברית</a></li><li><a href="/he/translate-pdf/">תרגום PDF</a></li><li><a href="/he/unlock-pdf/">הסרת סיסמה מ-PDF</a></li><li><a href="/he/protect-pdf/">הוספת סיסמה ל-PDF</a></li></ul></div>
+    <div class="footer-col"><h2>כלים</h2><ul><li><a href="/he/pdf-to-word/">PDF ל-Word</a></li><li><a href="/he/pdf-to-excel/">PDF ל-Excel</a></li><li><a href="/he/compress-pdf/">דחיסת PDF</a></li><li><a href="/he/merge-pdf/">מיזוג PDF</a></li><li><a href="/he/split-pdf/">פיצול PDF</a></li><li><a href="/he/ocr-pdf/">OCR לעברית</a></li><li><a href="/he/translate-pdf/">תרגום PDF</a></li><li><a href="/he/unlock-pdf/">הסרת סיסמה מ-PDF</a></li><li><a href="/he/protect-pdf/">הוספת סיסמה ל-PDF</a></li><li><a href="/he/jpg-to-pdf/">תמונה ל-PDF</a></li><li><a href="/he/word-to-pdf/">Word ל-PDF</a></li><li><a href="/he/pdf-to-jpg/">PDF לתמונה</a></li><li><a href="/he/pdf-to-powerpoint/">PDF ל-PowerPoint</a></li><li><a href="/he/rotate-pdf/">סיבוב PDF</a></li><li><a href="/he/watermark-pdf/">סימן מים</a></li><li><a href="/he/sign-pdf/">חתימה על PDF</a></li><li><a href="/he/redact-pdf/">השחרת טקסט</a></li></ul></div>
     <div class="footer-col"><h2>החברה</h2><ul>
       <li><a href="/he/about/">אודות</a></li>
       <li><a href="/he/blog/">בלוג</a></li>
@@ -118,7 +118,7 @@
 </footer>
 <script src="/assets/site.js?v=7737bbd0"></script>
 <script>window.TOOL={"slug": "unlock-pdf", "endpoint": "/api/edit/unlock", "field": "file", "multi": false, "minFiles": 1, "accept": ".pdf", "result": "file", "maxMB": 100, "t": {"remove": "הסר", "move_up": "הזז למעלה", "need_more": "הוסיפו לפחות קובץ אחד נוסף.", "bad_type": "סוג הקובץ {name} לא נתמך.", "too_big": "הקובץ {name} גדול מ-{max}MB.", "uploading": "מעלה ומעבד…", "waking": "השרת מתעורר. הקובץ הראשון יכול לקחת עד דקה.", "done": "הקובץ מוכן", "done_parts": "{n} קבצים מוכנים", "download": "הורדת", "download_txt": "הורדת הטקסט (txt.)", "no_text": "לא נמצא טקסט. נסו סריקה ברורה יותר או שפה אחרת.", "saved": "גודל הקובץ קטן ב-{p}%.", "deleted_note": "הורידו עכשיו. הקובץ נמחק מהשרת אחרי שעה.", "expired": "תוקף הקובץ פג. עבדו אותו שוב כדי לקבל עותק חדש.", "rate_limited": "הגעתם למגבלה השעתית של הכלי. נסו שוב בעוד שעה.", "timeout": "השרת לא הגיב בזמן. נסו שוב או נסו קובץ קטן יותר.", "network": "אין חיבור לשרת. בדקו את החיבור ונסו שוב.", "generic_error": "משהו השתבש בעיבוד הקובץ", "pw_required": "הקלידו סיסמה.", "pw_short": "הסיסמה צריכה להכיל לפחות {n} תווים.", "pw_mismatch": "שתי הסיסמאות לא תואמות."}, "errors": {"403": "הסיסמה שגויה. בדקו אותה ונסו שוב. יש הבדל בין אותיות גדולות לקטנות."}};</script>
-<script src="/assets/tool.js?v=67bc9afb"></script>
+<script src="/assets/tool.js?v=56c95f42"></script>
 <script>document.getElementById('tool-dropzone').addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();document.getElementById('tool-input').click();}});</script>
 </body>
 </html>

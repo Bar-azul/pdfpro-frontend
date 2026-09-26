@@ -152,7 +152,7 @@
     var fields = document.querySelectorAll('#tool-options input');
     for (var i = 0; i < fields.length; i++) {
       var el = fields[i];
-      if (el.dataset.required && !el.value) { el.focus(); return t.pw_required; }
+      if (el.dataset.required && !el.value.trim()) { el.focus(); return el.dataset.required; }
       if (el.dataset.minlength && el.value.length < +el.dataset.minlength) { el.focus(); return t.pw_short.replace('{n}', el.dataset.minlength); }
       if (el.dataset.confirm && el.value !== $(el.dataset.confirm).value) { el.focus(); return t.pw_mismatch; }
     }
@@ -173,15 +173,23 @@
 
     var fd = new FormData();
     files.forEach(function (f) { fd.append(cfg.field, f); });
+    var query = new URLSearchParams();
     document.querySelectorAll('#tool-options [name]').forEach(function (el) {
-      if (el.value !== '') fd.append(el.name, el.value);
+      if (el.value === '') return;
+      // one select can fill several API fields, e.g. position "0.6|0.85" -> x, y
+      var names = el.dataset.fields ? el.dataset.fields.split(',') : [el.name];
+      var values = el.dataset.fields ? el.value.split('|') : [el.value];
+      names.forEach(function (n, k) {
+        if (el.dataset.query) query.append(n, values[k]); else fd.append(n, values[k]);
+      });
     });
+    var qs = query.toString();
 
     if (window.gtag) gtag('event', 'tool_run', { tool: cfg.slug });
     var ctrl = new AbortController();
     var hardTimeout = setTimeout(function () { ctrl.abort(); }, 180000);
 
-    fetch(API + cfg.endpoint, { method: 'POST', body: fd, signal: ctrl.signal })
+    fetch(API + cfg.endpoint + (qs ? '?' + qs : ''), { method: 'POST', body: fd, signal: ctrl.signal })
       .then(function (resp) {
         if (!resp.ok) return errorFrom(resp).then(function (m) { throw new Error(m); });
         return resp.json();

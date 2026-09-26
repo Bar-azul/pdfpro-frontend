@@ -70,7 +70,24 @@
   </section>
 
   <section class="prose">
-    
+    <h2>מתי צריך לפצל PDF</h2>
+<p>לפעמים צריך רק חלק מהמסמך: עמוד חתום אחד מתוך חוזה ארוך, חודש אחד מתוך שנה של דפי חשבון, פרק אחד מדוח. פיצול מאפשר לשלוח בדיוק את מה שצריך, ולא שום דבר שהייתם מעדיפים להשאיר פרטי.</p>
+<h2>איך כותבים טווחי עמודים</h2>
+<ul>
+<li><strong>עמוד בודד:</strong> <code>5</code></li>
+<li><strong>טווח:</strong> <code>3-7</code> ייתן קובץ אחד עם עמודים 3 עד 7.</li>
+<li><strong>כמה קבצים נפרדים:</strong> <code>1-2,3-5,6-10</code> ייתן שלושה קבצים.</li>
+</ul>
+<p>כל טווח שכותבים הופך ל-PDF נפרד, ואפשר להוריד כל אחד בנפרד.</p>
+<h2>שימושים נפוצים</h2>
+<ul>
+<li>שליחת העמודים הרלוונטיים בלבד מתיק רפואי או ממסמך משפטי.</li>
+<li>חלוקה של סריקה גדולה למסמכים נפרדים.</li>
+<li>הקטנת קובץ למגבלת העלאה על ידי השמטת עמודים שלא צריך.</li>
+</ul>
+<h2>צריך לחבר עמודים בחזרה?</h2>
+<p>משתמשים ב<a href="/he/merge-pdf/">מיזוג PDF</a> כדי לאחד את החלקים, בכל סדר.</p>
+
     <h2>איך זה עובד</h2>
     <ol class="steps"><li><h3>בוחרים את ה-PDF</h3><p>גוררים את הקובץ לתיבה למעלה.</p></li><li><h3>כותבים טווחי עמודים</h3><p>למשל 1-3,4-6. כל טווח הופך לקובץ נפרד.</p></li><li><h3>מורידים</h3><p>שומרים כל חלק.</p></li></ol>
     <h2>שאלות נפוצות</h2>
@@ -91,7 +108,7 @@
         <a href="/he/split-pdf/" hreflang="he" lang="he" aria-current="true">עברית</a>
       </div>
     </div>
-    <div class="footer-col"><h2>כלים</h2><ul><li><a href="/he/pdf-to-word/">PDF ל-Word</a></li><li><a href="/he/pdf-to-excel/">PDF ל-Excel</a></li><li><a href="/he/compress-pdf/">דחיסת PDF</a></li><li><a href="/he/merge-pdf/">מיזוג PDF</a></li><li><a href="/he/split-pdf/">פיצול PDF</a></li><li><a href="/he/ocr-pdf/">OCR לעברית</a></li><li><a href="/he/translate-pdf/">תרגום PDF</a></li><li><a href="/he/unlock-pdf/">הסרת סיסמה מ-PDF</a></li><li><a href="/he/protect-pdf/">הוספת סיסמה ל-PDF</a></li></ul></div>
+    <div class="footer-col"><h2>כלים</h2><ul><li><a href="/he/pdf-to-word/">PDF ל-Word</a></li><li><a href="/he/pdf-to-excel/">PDF ל-Excel</a></li><li><a href="/he/compress-pdf/">דחיסת PDF</a></li><li><a href="/he/merge-pdf/">מיזוג PDF</a></li><li><a href="/he/split-pdf/">פיצול PDF</a></li><li><a href="/he/ocr-pdf/">OCR לעברית</a></li><li><a href="/he/translate-pdf/">תרגום PDF</a></li><li><a href="/he/unlock-pdf/">הסרת סיסמה מ-PDF</a></li><li><a href="/he/protect-pdf/">הוספת סיסמה ל-PDF</a></li><li><a href="/he/jpg-to-pdf/">תמונה ל-PDF</a></li><li><a href="/he/word-to-pdf/">Word ל-PDF</a></li><li><a href="/he/pdf-to-jpg/">PDF לתמונה</a></li><li><a href="/he/pdf-to-powerpoint/">PDF ל-PowerPoint</a></li><li><a href="/he/rotate-pdf/">סיבוב PDF</a></li><li><a href="/he/watermark-pdf/">סימן מים</a></li><li><a href="/he/sign-pdf/">חתימה על PDF</a></li><li><a href="/he/redact-pdf/">השחרת טקסט</a></li></ul></div>
     <div class="footer-col"><h2>החברה</h2><ul>
       <li><a href="/he/about/">אודות</a></li>
       <li><a href="/he/blog/">בלוג</a></li>
@@ -108,7 +125,7 @@
 </footer>
 <script src="/assets/site.js?v=7737bbd0"></script>
 <script>window.TOOL={"slug": "split-pdf", "endpoint": "/api/organize/split", "field": "file", "multi": false, "minFiles": 1, "accept": ".pdf", "result": "parts", "maxMB": 100, "t": {"remove": "הסר", "move_up": "הזז למעלה", "need_more": "הוסיפו לפחות קובץ אחד נוסף.", "bad_type": "סוג הקובץ {name} לא נתמך.", "too_big": "הקובץ {name} גדול מ-{max}MB.", "uploading": "מעלה ומעבד…", "waking": "השרת מתעורר. הקובץ הראשון יכול לקחת עד דקה.", "done": "הקובץ מוכן", "done_parts": "{n} קבצים מוכנים", "download": "הורדת", "download_txt": "הורדת הטקסט (txt.)", "no_text": "לא נמצא טקסט. נסו סריקה ברורה יותר או שפה אחרת.", "saved": "גודל הקובץ קטן ב-{p}%.", "deleted_note": "הורידו עכשיו. הקובץ נמחק מהשרת אחרי שעה.", "expired": "תוקף הקובץ פג. עבדו אותו שוב כדי לקבל עותק חדש.", "rate_limited": "הגעתם למגבלה השעתית של הכלי. נסו שוב בעוד שעה.", "timeout": "השרת לא הגיב בזמן. נסו שוב או נסו קובץ קטן יותר.", "network": "אין חיבור לשרת. בדקו את החיבור ונסו שוב.", "generic_error": "משהו השתבש בעיבוד הקובץ", "pw_required": "הקלידו סיסמה.", "pw_short": "הסיסמה צריכה להכיל לפחות {n} תווים.", "pw_mismatch": "שתי הסיסמאות לא תואמות."}, "errors": {}};</script>
-<script src="/assets/tool.js?v=67bc9afb"></script>
+<script src="/assets/tool.js?v=56c95f42"></script>
 <script>document.getElementById('tool-dropzone').addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();document.getElementById('tool-input').click();}});</script>
 </body>
 </html>

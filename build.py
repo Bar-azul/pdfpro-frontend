@@ -477,16 +477,6 @@ TOOLS = [
             "lead": "Tired of typing the same password every time you open a file? Enter it once here and download a copy that opens without it.",
             "run": "Remove password",
             "errors": {"403": "That password is incorrect. Check it and try again. Passwords are case-sensitive."},
-            "intro": """
-<h2>When this is useful</h2>
-<p>Banks, payroll systems, insurers and phone companies often email documents as password-protected PDFs. That's sensible for sending, but once the file is on your own computer, typing the password every time gets old fast. It also gets in the way when you need to upload the file somewhere: many upload forms reject encrypted PDFs, and tools like merge or compress can't open them.</p>
-<p>Removing the password gives you a normal PDF with the same pages, text and quality. Only the lock is gone.</p>
-<h2>You need to know the password</h2>
-<p>This tool removes a password you already have. It does not guess or crack passwords. If you've lost the password to your own document, the <a href="/blog/pdf-password-protected/">guide to lost PDF passwords</a> covers the legitimate options, like asking the sender for a new copy.</p>
-<h2>Is it safe?</h2>
-<p>The file is uploaded over an encrypted connection, the password is used once to open it, and both the original and the unlocked copy are deleted from the server after an hour. The password isn't stored. Keep in mind that the unlocked copy can be opened by anyone who gets it, so store it somewhere private.</p>
-<h2>Protecting a file instead?</h2>
-<p>To add a password to a PDF before sending it, use <a href="/protect-pdf/">Password protect PDF</a>.</p>""",
             "steps": [
                 ("Choose the locked PDF", "Drop the file into the box above."),
                 ("Enter its password", "Type the password you normally use to open it."),
@@ -508,17 +498,6 @@ TOOLS = [
             "lead": "נמאס להקליד את אותה סיסמה בכל פעם שפותחים את הקובץ? מקלידים אותה כאן פעם אחת ומורידים עותק שנפתח בלי סיסמה.",
             "run": "הסר סיסמה",
             "errors": {"403": "הסיסמה שגויה. בדקו אותה ונסו שוב. יש הבדל בין אותיות גדולות לקטנות."},
-            "intro": """
-<h2>מתי זה שימושי</h2>
-<p>הרבה מסמכים בישראל מגיעים במייל כ-PDF מוגן בסיסמה: תלושי שכר, דוחות מהבנק, מסמכים מחברות ביטוח, קופות גמל וחברות סלולר. לרוב הסיסמה היא מספר תעודת הזהות. זה הגיוני כשהקובץ נשלח, אבל כשהוא כבר שמור אצלכם במחשב, להקליד את הסיסמה בכל פתיחה זה מעייף.</p>
-<p>זה גם מפריע כשצריך להעלות את הקובץ לאתר, למשל תלושי שכר לבקשת משכנתא, להחזר מס או לביטוח לאומי. הרבה טפסי העלאה דוחים קבצים מוצפנים בלי להסביר למה, וכלים כמו מיזוג או דחיסה לא מצליחים לפתוח אותם. אם יש לכם כמה תלושים שצריך לאחד לקובץ אחד, מסירים קודם את הסיסמה מכל אחד ואז <a href="/he/merge-pdf/">ממזגים</a>.</p>
-<p>הסרת הסיסמה נותנת PDF רגיל, עם אותם עמודים, אותו טקסט ואותה איכות. רק המנעול יורד.</p>
-<h2>צריך לדעת את הסיסמה</h2>
-<p>הכלי מסיר סיסמה שכבר יש לכם. הוא לא מנחש ולא פורץ סיסמאות. אם שכחתם את הסיסמה של מסמך שלכם, ב<a href="/he/blog/pdf-password-protected/">מדריך על סיסמה שאבדה</a> יש את האפשרויות הלגיטימיות, כמו לבקש עותק חדש מהשולח.</p>
-<h2>זה בטוח?</h2>
-<p>הקובץ עולה בחיבור מוצפן, הסיסמה משמשת פעם אחת כדי לפתוח אותו, וגם המקור וגם העותק הפתוח נמחקים מהשרת אחרי שעה. הסיסמה לא נשמרת. זכרו שאת העותק הפתוח יכול לפתוח כל מי שמקבל אותו, אז שמרו אותו במקום פרטי.</p>
-<h2>רוצים דווקא להוסיף סיסמה?</h2>
-<p>כדי לנעול PDF לפני ששולחים אותו, השתמשו ב<a href="/he/protect-pdf/">הוספת סיסמה ל-PDF</a>.</p>""",
             "steps": [
                 ("בוחרים את ה-PDF הנעול", "גוררים את הקובץ לתיבה למעלה."),
                 ("מקלידים את הסיסמה", "את הסיסמה שבה אתם פותחים אותו בדרך כלל, למשל מספר תעודת הזהות."),
@@ -549,18 +528,6 @@ TOOLS = [
             "h1": "Add a password to a PDF",
             "lead": "Lock a PDF so only people with the password can open it. Useful before emailing ID scans, contracts, pay slips or medical documents.",
             "run": "Protect PDF",
-            "intro": """
-<h2>When to protect a PDF</h2>
-<p>Email isn't a private channel. Messages get forwarded, sit in shared inboxes and stay in sent folders for years. If a document contains an ID number, bank details, salary or health information, a password means that anyone who ends up with the file still can't read it.</p>
-<h2>How strong is the protection?</h2>
-<p>The file is encrypted with AES-256, the same standard PDF readers use for their strongest protection. In practice, the weak point is the password, not the encryption: a short password or an obvious one, like a phone number, is much easier to guess than a random phrase.</p>
-<h2>Tips for sharing a protected PDF</h2>
-<ul>
-<li>Send the password through a different channel than the file, for example the file by email and the password by text message.</li>
-<li>Don't reuse a password you use for an important account.</li>
-<li>Keep an unprotected copy for yourself, or keep the password somewhere safe. There's no way to recover a forgotten one.</li>
-</ul>
-<p>Received a protected file and want to remove the password? Use <a href="/unlock-pdf/">Unlock PDF</a>.</p>""",
             "steps": [
                 ("Choose your PDF", "Drop the file into the box above."),
                 ("Set a password", "Type it twice to avoid typos."),
@@ -581,19 +548,6 @@ TOOLS = [
             "h1": "הוספת סיסמה לקובץ PDF",
             "lead": "נועלים PDF כך שרק מי שיודע את הסיסמה יוכל לפתוח אותו. שימושי לפני ששולחים צילום תעודת זהות, חוזה, תלוש שכר או מסמך רפואי.",
             "run": "נעל PDF",
-            "intro": """
-<h2>מתי כדאי לנעול PDF</h2>
-<p>מייל הוא לא ערוץ פרטי. הודעות מועברות הלאה, יושבות בתיבות משותפות ונשארות בתיקיית "נשלח" שנים. אם במסמך יש מספר תעודת זהות, פרטי חשבון בנק, שכר או מידע רפואי, סיסמה אומרת שגם מי שהקובץ יגיע אליו בטעות לא יוכל לקרוא אותו.</p>
-<p>מקרים נפוצים: שליחת צילום תעודת זהות לבעל דירה או למעסיק חדש, תלושי שכר ליועץ משכנתאות, חוזה חתום, או מסמכים רפואיים לחברת ביטוח.</p>
-<h2>כמה ההגנה חזקה?</h2>
-<p>הקובץ מוצפן ב-AES-256, התקן החזק ביותר שקוראי PDF תומכים בו. בפועל, נקודת התורפה היא הסיסמה ולא ההצפנה: סיסמה קצרה או צפויה, כמו מספר טלפון, קלה הרבה יותר לניחוש ממשפט אקראי.</p>
-<h2>טיפים לשליחת PDF מוגן</h2>
-<ul>
-<li>שלחו את הסיסמה בערוץ אחר מהקובץ, למשל את הקובץ במייל ואת הסיסמה ב-SMS או בוואטסאפ.</li>
-<li>אל תשתמשו בסיסמה שמשמשת אתכם לחשבון חשוב.</li>
-<li>שמרו לעצמכם עותק לא מוגן, או שמרו את הסיסמה במקום בטוח. אין דרך לשחזר סיסמה שנשכחה.</li>
-</ul>
-<p>קיבלתם קובץ מוגן ורוצים להסיר ממנו את הסיסמה? השתמשו ב<a href="/he/unlock-pdf/">הסרת סיסמה מ-PDF</a>.</p>""",
             "steps": [
                 ("בוחרים את ה-PDF", "גוררים את הקובץ לתיבה למעלה."),
                 ("קובעים סיסמה", "מקלידים אותה פעמיים כדי למנוע טעות הקלדה."),
@@ -606,6 +560,399 @@ TOOLS = [
                 ("הסיסמה שלי נשמרת?", "לא. היא משמשת פעם אחת להצפנת הקובץ, והקבצים נמחקים מהשרת אחרי שעה."),
             ],
             "related": ["unlock-pdf", "compress-pdf", "merge-pdf"],
+        },
+    },
+    {
+        "slug": "jpg-to-pdf", "limit": 20,
+        "api": {"endpoint": "/api/convert/images-to-pdf", "field": "files", "multi": True, "accept": ".jpg,.jpeg,.png,.webp,.gif,.bmp,.tif,.tiff", "result": "file"},
+        "options": [
+            {"name": "page_size", "type": "select", "default": "A4", "values": ["A4", "fit", "Letter"],
+             "en": {"label": "Page size", "labels": ["A4 (standard document)", "Same as the image", "US Letter"]},
+             "he": {"label": "גודל עמוד", "labels": ["A4 (מסמך רגיל)", "לפי גודל התמונה", "Letter (ארה\"ב)"]}},
+        ],
+        "en": {
+            "name": "JPG to PDF",
+            "title": "JPG to PDF – Convert Images to PDF Free | PDFPro",
+            "desc": "Turn photos and scans (JPG, PNG and more) into a single PDF, in the order you choose. Up to 50 images. Free, no sign-up.",
+            "h1": "JPG to PDF: images to one PDF",
+            "lead": "Combine photos of documents, receipts or scans into one PDF file that's easy to email or upload.",
+            "run": "Create PDF",
+            "steps": [
+                ("Add your images", "JPG, PNG, WEBP and other common formats. Up to 50 at once."),
+                ("Set the order and page size", "Use Move up to reorder. A4 gives a standard document page."),
+                ("Download the PDF", "Each image becomes one page."),
+            ],
+            "faqs": [
+                ("How many images can I combine?", "Up to 50 images in one PDF."),
+                ("Which page size should I pick?", "A4 if the PDF is going to an office, a bank or a government site. Same as the image keeps each photo at its own size."),
+                ("Can I convert iPhone photos (HEIC)?", "When you pick photos from an iPhone in the browser, they are usually sent as JPG automatically. If a file is still rejected, change the camera format to Most Compatible in the iPhone settings."),
+                ("The PDF is too big to upload. What can I do?", "Run the result through Compress PDF."),
+            ],
+            "related": ["compress-pdf", "merge-pdf", "ocr-pdf"],
+        },
+        "he": {
+            "name": "תמונה ל-PDF",
+            "title": "המרת תמונה ל-PDF בחינם – JPG ל-PDF | PDFPro",
+            "desc": "הופכים צילומים וסריקות (JPG, PNG ועוד) לקובץ PDF אחד, בסדר שתבחרו. עד 50 תמונות. בחינם ובלי הרשמה.",
+            "h1": "המרת תמונות ל-PDF",
+            "lead": "מאחדים צילומי מסמכים, קבלות או סריקות לקובץ PDF אחד שקל לשלוח במייל או להעלות לאתר.",
+            "run": "צור PDF",
+            "steps": [
+                ("מוסיפים תמונות", "JPG, PNG, WEBP ופורמטים נפוצים אחרים. עד 50 בבת אחת."),
+                ("קובעים סדר וגודל עמוד", "משתמשים ב'הזז למעלה' כדי לסדר. A4 נותן עמוד מסמך רגיל."),
+                ("מורידים את ה-PDF", "כל תמונה הופכת לעמוד."),
+            ],
+            "faqs": [
+                ("כמה תמונות אפשר לאחד?", "עד 50 תמונות בקובץ PDF אחד."),
+                ("איזה גודל עמוד לבחור?", "A4 אם הקובץ הולך למשרד, לבנק או לאתר ממשלתי. 'לפי גודל התמונה' משאיר כל צילום בגודל שלו."),
+                ("אפשר להמיר תמונות מאייפון (HEIC)?", "כשבוחרים תמונות מהאייפון בדפדפן, הן בדרך כלל נשלחות כ-JPG אוטומטית. אם קובץ עדיין נדחה, משנים בהגדרות המצלמה את הפורמט ל'התאמה מרבית'."),
+                ("ה-PDF גדול מדי להעלאה, מה עושים?", "מעבירים את התוצאה דרך דחיסת PDF."),
+            ],
+            "related": ["compress-pdf", "merge-pdf", "ocr-pdf"],
+        },
+    },
+    {
+        "slug": "word-to-pdf", "limit": 20,
+        "api": {"endpoint": "/api/convert/office-to-pdf", "field": "file", "multi": False, "accept": ".doc,.docx,.xls,.xlsx,.ppt,.pptx", "result": "file"},
+        "options": [],
+        "en": {
+            "name": "Word to PDF",
+            "title": "Word to PDF – Convert DOCX, Excel & PowerPoint to PDF | PDFPro",
+            "desc": "Convert Word, Excel and PowerPoint files to PDF online, with Hebrew and right-to-left text kept intact. Free, no sign-up.",
+            "h1": "Word to PDF converter",
+            "lead": "Turn a Word document, Excel sheet or PowerPoint presentation into a PDF that looks the same on every device.",
+            "run": "Convert to PDF",
+            "steps": [
+                ("Choose your file", "DOC, DOCX, XLS, XLSX, PPT or PPTX."),
+                ("Convert", "The document is laid out exactly as it would print."),
+                ("Download the PDF", "Ready to email, upload or print."),
+            ],
+            "faqs": [
+                ("Does it work with Excel and PowerPoint too?", "Yes. Excel sheets and PowerPoint slides are converted the same way as Word documents."),
+                ("Will Hebrew text stay right-to-left?", "Yes. Right-to-left paragraphs and mixed Hebrew-English text are kept as they appear in the original."),
+                ("Why does a font look different in the PDF?", "If the document uses a font that isn't installed on our server, a similar font is used instead. For an exact match, export to PDF from Word itself with the font embedded."),
+                ("My Excel sheet is split across several pages.", "The PDF follows the sheet's print settings. Set the print area and Fit to page in Excel, save, and convert again."),
+            ],
+            "related": ["pdf-to-word", "compress-pdf", "merge-pdf"],
+        },
+        "he": {
+            "name": "Word ל-PDF",
+            "title": "המרת Word ל-PDF בחינם – גם Excel ו-PowerPoint | PDFPro",
+            "desc": "המרת קבצי Word, Excel ו-PowerPoint ל-PDF אונליין, עם עברית וכיווניות מימין לשמאל שנשמרות. בחינם ובלי הרשמה.",
+            "h1": "המרת Word ל-PDF",
+            "lead": "הופכים מסמך Word, גיליון Excel או מצגת PowerPoint ל-PDF שנראה אותו דבר בכל מכשיר.",
+            "run": "המר ל-PDF",
+            "steps": [
+                ("בוחרים קובץ", "DOC, DOCX, XLS, XLSX, PPT או PPTX."),
+                ("ממירים", "המסמך נפרס בדיוק כמו שהיה מודפס."),
+                ("מורידים את ה-PDF", "מוכן לשליחה במייל, להעלאה או להדפסה."),
+            ],
+            "faqs": [
+                ("זה עובד גם עם Excel ו-PowerPoint?", "כן. גיליונות Excel ומצגות PowerPoint מומרים בדיוק כמו מסמכי Word."),
+                ("העברית תישאר מימין לשמאל?", "כן. פסקאות בעברית וטקסט מעורב עברית-אנגלית נשמרים כמו במקור."),
+                ("למה גופן נראה אחרת ב-PDF?", "אם המסמך משתמש בגופן שלא מותקן בשרת שלנו, מוחלף גופן דומה. להתאמה מדויקת, ייצאו ל-PDF מתוך Word עצמו עם הטמעת גופנים."),
+                ("גיליון ה-Excel נחתך לכמה עמודים", "ה-PDF עוקב אחרי הגדרות ההדפסה של הגיליון. הגדירו ב-Excel אזור הדפסה והתאמה לעמוד, שמרו והמירו שוב."),
+            ],
+            "related": ["pdf-to-word", "compress-pdf", "merge-pdf"],
+        },
+    },
+    {
+        "slug": "pdf-to-jpg", "limit": 20,
+        "api": {"endpoint": "/api/convert/pdf-to-images", "field": "file", "multi": False, "accept": ".pdf", "result": "parts"},
+        "options": [
+            {"name": "format", "type": "select", "default": "jpg", "values": ["jpg", "png"], "query": True,
+             "en": {"label": "Image format", "labels": ["JPG (smaller files)", "PNG (sharper text)"]},
+             "he": {"label": "פורמט תמונה", "labels": ["JPG (קבצים קטנים)", "PNG (טקסט חד יותר)"]}},
+            {"name": "dpi", "type": "select", "default": "150", "values": ["100", "150", "300"], "query": True,
+             "en": {"label": "Quality", "labels": ["Standard (screen)", "High (recommended)", "Print quality"]},
+             "he": {"label": "איכות", "labels": ["רגילה (למסך)", "גבוהה (מומלץ)", "איכות הדפסה"]}},
+        ],
+        "en": {
+            "name": "PDF to JPG",
+            "title": "PDF to JPG – Convert PDF Pages to Images Free | PDFPro",
+            "desc": "Save every page of a PDF as a JPG or PNG image, in the quality you need. Free, no sign-up.",
+            "h1": "PDF to JPG: pages to images",
+            "lead": "Turn each page of a PDF into an image you can post, send on WhatsApp, or drop into a presentation.",
+            "run": "Convert to images",
+            "steps": [
+                ("Choose your PDF", "Drop the file into the box above."),
+                ("Pick format and quality", "JPG for sharing, PNG when text needs to stay crisp."),
+                ("Download the images", "One image per page."),
+            ],
+            "faqs": [
+                ("JPG or PNG?", "JPG files are smaller and fine for photos and sharing. PNG keeps text and lines sharper, at a larger size."),
+                ("Which quality should I choose?", "High works for almost everything. Print quality makes large files, so use it only when you'll print the images."),
+                ("Can I convert just one page?", "Convert the whole file and keep the page you need, or first pull the page out with Split PDF."),
+            ],
+            "related": ["jpg-to-pdf", "split-pdf", "compress-pdf"],
+        },
+        "he": {
+            "name": "PDF לתמונה",
+            "title": "המרת PDF לתמונה (JPG) בחינם | PDFPro",
+            "desc": "שומרים כל עמוד ב-PDF כתמונת JPG או PNG, באיכות שצריך. בחינם ובלי הרשמה.",
+            "h1": "המרת PDF לתמונות",
+            "lead": "הופכים כל עמוד ב-PDF לתמונה שאפשר לפרסם, לשלוח בוואטסאפ או להכניס למצגת.",
+            "run": "המר לתמונות",
+            "steps": [
+                ("בוחרים את ה-PDF", "גוררים את הקובץ לתיבה למעלה."),
+                ("בוחרים פורמט ואיכות", "JPG לשיתוף, PNG כשהטקסט צריך להישאר חד."),
+                ("מורידים את התמונות", "תמונה אחת לכל עמוד."),
+            ],
+            "faqs": [
+                ("JPG או PNG?", "קבצי JPG קטנים יותר ומתאימים לתמונות ולשיתוף. PNG שומר על טקסט וקווים חדים יותר, בגודל קובץ גדול יותר."),
+                ("איזו איכות לבחור?", "גבוהה מתאימה כמעט לכל דבר. איכות הדפסה יוצרת קבצים גדולים, אז כדאי רק כשמדפיסים."),
+                ("אפשר להמיר רק עמוד אחד?", "ממירים את כל הקובץ ושומרים את העמוד שצריך, או מוציאים קודם את העמוד בעזרת פיצול PDF."),
+            ],
+            "related": ["jpg-to-pdf", "split-pdf", "compress-pdf"],
+        },
+    },
+    {
+        "slug": "pdf-to-powerpoint", "limit": 10,
+        "api": {"endpoint": "/api/convert/pdf-to-pptx", "field": "file", "multi": False, "accept": ".pdf", "result": "file"},
+        "options": [
+            {"name": "dpi", "type": "select", "default": "150", "values": ["150", "200", "300"], "query": True,
+             "en": {"label": "Slide quality", "labels": ["Standard (smaller file)", "High", "Very high (large file)"]},
+             "he": {"label": "איכות השקופיות", "labels": ["רגילה (קובץ קטן)", "גבוהה", "גבוהה מאוד (קובץ גדול)"]}},
+        ],
+        "en": {
+            "name": "PDF to PowerPoint",
+            "title": "PDF to PowerPoint – Convert PDF to PPTX Slides Free | PDFPro",
+            "desc": "Turn each page of a PDF into a PowerPoint slide, ready to present. Free, no sign-up.",
+            "h1": "PDF to PowerPoint",
+            "lead": "Turn a PDF into a PowerPoint file with one slide per page, so you can present it, reorder it and add your own slides.",
+            "run": "Convert to PowerPoint",
+            "steps": [
+                ("Choose your PDF", "Slides exported as PDF convert best."),
+                ("Pick the quality", "Standard is enough for a projector or a screen share."),
+                ("Download the PPTX", "Open it in PowerPoint, Google Slides or Keynote."),
+            ],
+            "faqs": [
+                ("Can I edit the text on the slides?", "Each page is placed on its slide as a high-quality image, so the layout looks exactly like the PDF, but the text can't be edited directly. To edit the text, use PDF to Word."),
+                ("Why is the file large?", "Every slide is an image. Choose Standard quality for a smaller file."),
+                ("Will Hebrew slides look right?", "Yes. Because each page is copied as an image, Hebrew text and layout look exactly as in the PDF."),
+            ],
+            "related": ["pdf-to-word", "pdf-to-jpg", "compress-pdf"],
+        },
+        "he": {
+            "name": "PDF ל-PowerPoint",
+            "title": "המרת PDF ל-PowerPoint בחינם – PDF למצגת | PDFPro",
+            "desc": "הופכים כל עמוד ב-PDF לשקופית ב-PowerPoint, מוכנה להצגה. בחינם ובלי הרשמה.",
+            "h1": "המרת PDF ל-PowerPoint",
+            "lead": "הופכים PDF לקובץ PowerPoint עם שקופית לכל עמוד, כדי להציג אותו, לשנות סדר ולהוסיף שקופיות משלכם.",
+            "run": "המר למצגת",
+            "steps": [
+                ("בוחרים את ה-PDF", "מצגות שיוצאו ל-PDF מומרות הכי טוב."),
+                ("בוחרים איכות", "רגילה מספיקה למקרן או לשיתוף מסך."),
+                ("מורידים את ה-PPTX", "פותחים ב-PowerPoint, ב-Google Slides או ב-Keynote."),
+            ],
+            "faqs": [
+                ("אפשר לערוך את הטקסט בשקופיות?", "כל עמוד מונח על השקופית כתמונה באיכות גבוהה, כך שהעיצוב נראה בדיוק כמו ב-PDF, אבל אי אפשר לערוך את הטקסט ישירות. כדי לערוך טקסט, השתמשו ב-PDF ל-Word."),
+                ("למה הקובץ גדול?", "כל שקופית היא תמונה. בחרו איכות רגילה לקובץ קטן יותר."),
+                ("שקופיות בעברית ייראו תקין?", "כן. כיוון שכל עמוד מועתק כתמונה, הטקסט והעיצוב בעברית נראים בדיוק כמו ב-PDF."),
+            ],
+            "related": ["pdf-to-word", "pdf-to-jpg", "compress-pdf"],
+        },
+    },
+    {
+        "slug": "rotate-pdf", "limit": 30,
+        "api": {"endpoint": "/api/organize/rotate", "field": "file", "multi": False, "accept": ".pdf", "result": "file"},
+        "options": [
+            {"name": "angle", "type": "select", "default": "90", "values": ["90", "180", "270"],
+             "en": {"label": "Rotate", "labels": ["90° clockwise", "180° (upside down)", "90° counter-clockwise"]},
+             "he": {"label": "סיבוב", "labels": ["90° עם כיוון השעון", "180° (הפוך)", "90° נגד כיוון השעון"]}},
+            {"name": "pages", "type": "text", "default": "",
+             "en": {"label": "Pages (optional)", "placeholder": "All pages", "hint": "Leave empty for all pages, or list pages like 1,3,5."},
+             "he": {"label": "עמודים (לא חובה)", "placeholder": "כל העמודים", "hint": "השאירו ריק לכל העמודים, או כתבו עמודים כמו 1,3,5."}},
+        ],
+        "en": {
+            "name": "Rotate PDF",
+            "title": "Rotate PDF – Turn PDF Pages and Save Free | PDFPro",
+            "desc": "Rotate all pages or just the ones that are sideways, and save the PDF that way permanently. Free, no sign-up.",
+            "h1": "Rotate PDF pages",
+            "lead": "Fix a scan that came out sideways or upside down, and save it so it opens the right way for everyone.",
+            "run": "Rotate PDF",
+            "steps": [
+                ("Choose your PDF", "Drop the file into the box above."),
+                ("Pick direction and pages", "Leave pages empty to rotate the whole file, or list only the pages that are sideways."),
+                ("Download", "The rotation is saved in the file."),
+            ],
+            "faqs": [
+                ("Is the rotation saved, or only in my viewer?", "It's saved in the file, so it opens correctly on any device and for anyone you send it to."),
+                ("Only some pages are sideways.", "List just those pages, for example 2,5, and the rest stay as they are."),
+                ("Does rotating reduce quality?", "No. Rotation doesn't touch the content of the page."),
+            ],
+            "related": ["merge-pdf", "split-pdf", "compress-pdf"],
+        },
+        "he": {
+            "name": "סיבוב PDF",
+            "title": "סיבוב דפי PDF ושמירה בחינם | PDFPro",
+            "desc": "מסובבים את כל העמודים או רק את אלה שעומדים על הצד, ושומרים את ה-PDF כך לתמיד. בחינם ובלי הרשמה.",
+            "h1": "סיבוב עמודי PDF",
+            "lead": "מתקנים סריקה שיצאה על הצד או הפוכה, ושומרים אותה כך שתיפתח נכון אצל כולם.",
+            "run": "סובב PDF",
+            "steps": [
+                ("בוחרים את ה-PDF", "גוררים את הקובץ לתיבה למעלה."),
+                ("בוחרים כיוון ועמודים", "משאירים את שדה העמודים ריק לסיבוב כל הקובץ, או כותבים רק את העמודים שעומדים על הצד."),
+                ("מורידים", "הסיבוב נשמר בקובץ."),
+            ],
+            "faqs": [
+                ("הסיבוב נשמר, או רק בתצוגה אצלי?", "הוא נשמר בקובץ, כך שייפתח נכון בכל מכשיר ואצל כל מי שתשלחו לו."),
+                ("רק חלק מהעמודים על הצד", "כותבים רק אותם, למשל 2,5, ושאר העמודים נשארים כמו שהם."),
+                ("הסיבוב פוגע באיכות?", "לא. סיבוב לא נוגע בתוכן העמוד."),
+            ],
+            "related": ["merge-pdf", "split-pdf", "compress-pdf"],
+        },
+    },
+    {
+        "slug": "watermark-pdf", "limit": 20,
+        "api": {"endpoint": "/api/edit/watermark", "field": "file", "multi": False, "accept": ".pdf", "result": "file"},
+        "options": [
+            {"name": "type", "type": "hidden", "default": "text"},
+            {"name": "text", "type": "text", "default": {"en": "CONFIDENTIAL", "he": "סודי"}, "dir": "auto",
+             "en": {"label": "Watermark text", "required": "Enter the watermark text."},
+             "he": {"label": "טקסט סימן המים", "required": "הקלידו את טקסט סימן המים."}},
+            {"name": "opacity", "type": "select", "default": "0.25", "values": ["0.15", "0.25", "0.4"],
+             "en": {"label": "Strength", "labels": ["Light", "Medium", "Strong"]},
+             "he": {"label": "עוצמה", "labels": ["עדינה", "בינונית", "חזקה"]}},
+        ],
+        "en": {
+            "name": "Watermark PDF",
+            "title": "Add Watermark to PDF – Text Watermark Free | PDFPro",
+            "desc": "Stamp a diagonal text watermark like CONFIDENTIAL or DRAFT across every page of a PDF. Hebrew supported. Free.",
+            "h1": "Add a watermark to a PDF",
+            "lead": "Stamp a diagonal line of text across every page, such as Confidential, Draft or who the copy is for.",
+            "run": "Add watermark",
+            "steps": [
+                ("Choose your PDF", "Drop the file into the box above."),
+                ("Write the text and pick the strength", "Light keeps the page easy to read. Strong is harder to ignore."),
+                ("Download", "Every page now carries the watermark."),
+            ],
+            "faqs": [
+                ("Can I write the watermark in Hebrew?", "Yes. Hebrew, English and mixed text all render correctly."),
+                ("Can someone remove the watermark?", "It's drawn into the page, so it can't be switched off in a normal reader, but someone with editing software can remove it. It deters casual copying rather than preventing it."),
+                ("Can I use a logo instead of text?", "Not on this page yet. Text watermarks only for now."),
+            ],
+            "related": ["protect-pdf", "redact-pdf", "sign-pdf"],
+        },
+        "he": {
+            "name": "סימן מים",
+            "title": "הוספת סימן מים ל-PDF בחינם – גם בעברית | PDFPro",
+            "desc": "מוסיפים סימן מים באלכסון, כמו 'סודי' או 'טיוטה', על כל עמוד ב-PDF. תומך בעברית. בחינם.",
+            "h1": "הוספת סימן מים ל-PDF",
+            "lead": "מטביעים שורת טקסט באלכסון על כל עמוד, כמו 'סודי', 'טיוטה' או למי מיועד העותק.",
+            "run": "הוסף סימן מים",
+            "steps": [
+                ("בוחרים את ה-PDF", "גוררים את הקובץ לתיבה למעלה."),
+                ("כותבים טקסט ובוחרים עוצמה", "עדינה משאירה את העמוד קריא. חזקה קשה יותר להתעלם ממנה."),
+                ("מורידים", "כל העמודים נושאים עכשיו את סימן המים."),
+            ],
+            "faqs": [
+                ("אפשר לכתוב את סימן המים בעברית?", "כן. עברית, אנגלית וטקסט מעורב מוצגים נכון."),
+                ("אפשר להסיר את סימן המים?", "הוא מצויר בתוך העמוד, כך שאי אפשר לכבות אותו בקורא PDF רגיל, אבל מי שיש לו תוכנת עריכה יכול להסיר אותו. הוא מרתיע מהעתקה, לא מונע אותה."),
+                ("אפשר להשתמש בלוגו במקום טקסט?", "עדיין לא בעמוד הזה. כרגע רק סימן מים של טקסט."),
+            ],
+            "related": ["protect-pdf", "redact-pdf", "sign-pdf"],
+        },
+    },
+    {
+        "slug": "sign-pdf", "limit": 20,
+        "api": {"endpoint": "/api/edit/sign", "field": "file", "multi": False, "accept": ".pdf", "result": "file"},
+        "options": [
+            {"name": "signature_text", "type": "text", "default": "", "dir": "auto",
+             "en": {"label": "Your name", "placeholder": "e.g. Dana Levi", "required": "Enter the name to sign with."},
+             "he": {"label": "השם שלכם", "placeholder": "לדוגמה: דנה לוי", "required": "הקלידו את השם לחתימה."}},
+            {"name": "page", "type": "select", "default": "-1", "values": ["-1", "1"],
+             "en": {"label": "Page", "labels": ["Last page", "First page"]},
+             "he": {"label": "עמוד", "labels": ["העמוד האחרון", "העמוד הראשון"]}},
+            {"name": "position", "type": "select", "fields": "x,y", "default": {"en": "0.7|0.85", "he": "0.05|0.85"},
+             "values": ["0.7|0.85", "0.05|0.85", "0.375|0.85"],
+             "en": {"label": "Position", "labels": ["Bottom right", "Bottom left", "Bottom center"]},
+             "he": {"label": "מיקום", "labels": ["למטה מימין", "למטה משמאל", "למטה באמצע"]}},
+        ],
+        "en": {
+            "name": "Sign PDF",
+            "title": "Sign PDF Online – Add Your Signature Free | PDFPro",
+            "desc": "Add your name as a signature, with the date, to a PDF without printing or scanning. Hebrew names supported. Free.",
+            "h1": "Sign a PDF",
+            "lead": "Add your name as a signature, with today's date, to the page you choose. No printing, no scanning.",
+            "run": "Sign PDF",
+            "steps": [
+                ("Choose your PDF", "Drop the file into the box above."),
+                ("Type your name and pick the spot", "Choose the page and where the signature goes."),
+                ("Download the signed PDF", "The signature and date are added to the page."),
+            ],
+            "faqs": [
+                ("Is this a legally binding signature?", "It adds a visible signature with your name and the date, which is accepted for many everyday documents like forms, rental paperwork and approvals. Some documents require a certified digital signature, so check with whoever asked for it."),
+                ("Can I sign in Hebrew?", "Yes. Hebrew names are written right-to-left, correctly."),
+                ("Can I draw my own signature?", "Not yet. The signature is your typed name in a signature style."),
+            ],
+            "related": ["protect-pdf", "watermark-pdf", "compress-pdf"],
+        },
+        "he": {
+            "name": "חתימה על PDF",
+            "title": "חתימה על PDF אונליין בחינם – בלי להדפיס | PDFPro",
+            "desc": "מוסיפים את השם שלכם כחתימה, עם תאריך, למסמך PDF בלי להדפיס ולסרוק. תומך בשמות בעברית. בחינם.",
+            "h1": "חתימה על PDF",
+            "lead": "מוסיפים את השם שלכם כחתימה, עם התאריך של היום, בעמוד שתבחרו. בלי מדפסת ובלי סורק.",
+            "run": "חתום על PDF",
+            "steps": [
+                ("בוחרים את ה-PDF", "גוררים את הקובץ לתיבה למעלה."),
+                ("כותבים שם ובוחרים מקום", "בוחרים עמוד ואיפה החתימה תופיע."),
+                ("מורידים את ה-PDF החתום", "החתימה והתאריך מתווספים לעמוד."),
+            ],
+            "faqs": [
+                ("זו חתימה מחייבת משפטית?", "הכלי מוסיף חתימה גלויה עם השם והתאריך, שמתקבלת בהרבה מסמכים יומיומיים כמו טפסים, חוזי שכירות ואישורים. יש מסמכים שדורשים חתימה אלקטרונית מאושרת, אז כדאי לבדוק עם מי שביקש את המסמך."),
+                ("אפשר לחתום בעברית?", "כן. שמות בעברית נכתבים מימין לשמאל, בצורה תקינה."),
+                ("אפשר לצייר חתימה משלי?", "עדיין לא. החתימה היא השם שהקלדתם בסגנון חתימה."),
+            ],
+            "related": ["protect-pdf", "watermark-pdf", "compress-pdf"],
+        },
+    },
+    {
+        "slug": "redact-pdf", "limit": 20,
+        "api": {"endpoint": "/api/edit/redact", "field": "file", "multi": False, "accept": ".pdf", "result": "file"},
+        "options": [
+            {"name": "texts", "type": "text", "default": "", "dir": "auto",
+             "en": {"label": "Text to hide", "placeholder": "e.g. 123456782, Dana Levi", "hint": "Separate several items with commas. Every occurrence in the file is blacked out.", "required": "Enter the text you want to hide."},
+             "he": {"label": "טקסט להסתרה", "placeholder": "לדוגמה: 123456782, דנה לוי", "hint": "מפרידים כמה פריטים בפסיקים. כל מופע בקובץ מושחר.", "required": "הקלידו את הטקסט שרוצים להסתיר."}},
+        ],
+        "en": {
+            "name": "Redact PDF",
+            "title": "Redact PDF – Black Out Sensitive Text Free | PDFPro",
+            "desc": "Permanently black out ID numbers, names, account numbers or any text in a PDF before sharing it. Free, no sign-up.",
+            "h1": "Redact a PDF",
+            "lead": "Black out ID numbers, names or account details before you share a document. The hidden text is removed from the file, not just covered.",
+            "run": "Redact PDF",
+            "steps": [
+                ("Choose your PDF", "Drop the file into the box above."),
+                ("Type what to hide", "An ID number, a name, an address. Separate items with commas."),
+                ("Download", "Every occurrence is blacked out and removed."),
+            ],
+            "faqs": [
+                ("Is the text really removed, or just covered?", "Removed. The black box replaces the text in the file itself, so it can't be copied or found by searching."),
+                ("It didn't find my text.", "The text has to match exactly as it appears in the PDF, including spaces and dashes. Scanned documents contain images instead of text, so run them through OCR first."),
+                ("Does it work with Hebrew?", "Yes, as long as the PDF contains real Hebrew text, which is the case for most documents created on a computer."),
+            ],
+            "related": ["protect-pdf", "watermark-pdf", "ocr-pdf"],
+        },
+        "he": {
+            "name": "השחרת טקסט",
+            "title": "השחרת טקסט ב-PDF – הסתרת מידע רגיש בחינם | PDFPro",
+            "desc": "משחירים לצמיתות מספר תעודת זהות, שמות, מספרי חשבון או כל טקסט ב-PDF לפני ששולחים אותו. בחינם ובלי הרשמה.",
+            "h1": "השחרת מידע רגיש ב-PDF",
+            "lead": "משחירים מספר תעודת זהות, שמות או פרטי חשבון לפני ששולחים מסמך. הטקסט המושחר נמחק מהקובץ, לא רק מכוסה.",
+            "run": "השחר טקסט",
+            "steps": [
+                ("בוחרים את ה-PDF", "גוררים את הקובץ לתיבה למעלה."),
+                ("כותבים מה להסתיר", "מספר תעודת זהות, שם, כתובת. מפרידים כמה פריטים בפסיקים."),
+                ("מורידים", "כל המופעים מושחרים ונמחקים."),
+            ],
+            "faqs": [
+                ("הטקסט באמת נמחק, או רק מכוסה?", "נמחק. המלבן השחור מחליף את הטקסט בקובץ עצמו, כך שאי אפשר להעתיק אותו או למצוא אותו בחיפוש."),
+                ("הכלי לא מצא את הטקסט שלי", "הטקסט צריך להתאים בדיוק למה שכתוב ב-PDF, כולל רווחים ומקפים. מסמכים סרוקים מכילים תמונה ולא טקסט, אז מעבירים אותם קודם ב-OCR."),
+                ("זה עובד בעברית?", "כן, כל עוד ה-PDF מכיל טקסט עברי אמיתי, כמו ברוב המסמכים שנוצרו במחשב."),
+            ],
+            "related": ["protect-pdf", "watermark-pdf", "ocr-pdf"],
         },
     },
 ]
@@ -636,13 +983,13 @@ ARTICLES = [
      "he": {"title": "PDF מוגן סיסמה: מה עושים כשאיבדתם את הסיסמה",
             "desc": "מה לעשות כשאיבדתם את הסיסמה לקובץ PDF שלכם - אפשרויות לגיטימיות בלבד.",
             "tag": "אבטחה", "cta": "יודעים את הסיסמה? הסירו אותה"}},
-    {"slug": "electronic-signature-pdf", "published": "2026-07-03", "tool": None,
+    {"slug": "electronic-signature-pdf", "published": "2026-07-03", "tool": "sign-pdf",
      "en": {"title": "How to Sign a PDF Document Without Printing It",
             "desc": "A complete guide to electronically signing PDF documents — no printer, scanner, or wasted time required.",
-            "tag": "Signature", "cta": None},
+            "tag": "Signature", "cta": "Sign a PDF"},
      "he": {"title": "איך לחתום על מסמך PDF בעברית בלי להדפיס",
             "desc": "מדריך מלא לחתימה דיגיטלית על מסמכי PDF בעברית - בלי מדפסת, סורק או בזבוז זמן.",
-            "tag": "חתימה", "cta": None}},
+            "tag": "חתימה", "cta": "חתימה על PDF"}},
     {"slug": "pdf-hebrew-rtl", "published": "2026-07-01", "tool": "pdf-to-word",
      "en": {"title": "Why Hebrew or Arabic Text Gets Scrambled After PDF Conversion (And How to Fix It)",
             "desc": "A full explanation of RTL (right-to-left) text issues in PDF conversion, why it happens, and how to pick a tool that actually handles it correctly.",
@@ -1036,20 +1383,34 @@ def option_html(opt: dict, lang: str) -> str:
         mn = f' data-minlength="{opt["minlength"]}"' if opt.get("minlength") else ""
         ac = opt.get("autocomplete", "off")
         field = (f'<input id="{fid}" name="{name}" type="password" autocomplete="{ac}" dir="ltr" '
-                 f'data-required="1"{mn}{described}>')
+                 f'data-required="{esc(UI[lang]["js"]["pw_required"])}"{mn}{described}>')
         out = f'<div><label for="{fid}">{esc(o["label"])}</label>{field}{hint}</div>'
         if opt.get("confirm"):
             out += (f'<div><label for="{fid}-confirm">{esc(o["confirm_label"])}</label>'
                     f'<input id="{fid}-confirm" type="password" autocomplete="{ac}" dir="ltr" data-confirm="{fid}"></div>')
         return out
+    extra = ""
+    if opt.get("query"):
+        extra += ' data-query="1"'
+    if opt.get("fields"):
+        extra += f' data-fields="{opt["fields"]}"'
+    if o.get("required"):
+        extra += f' data-required="{esc(o["required"])}"'
     if opt["type"] == "select":
         opts = "".join(
             f'<option value="{esc(v)}"{" selected" if v == default else ""}>{esc(lbl)}</option>'
             for v, lbl in zip(opt["values"], o["labels"]))
-        field = f'<select id="{fid}" name="{name}"{described}>{opts}</select>'
+        field = f'<select id="{fid}" name="{name}"{described}{extra}>{opts}</select>'
     else:
-        field = f'<input id="{fid}" name="{name}" type="text" value="{esc(default)}" dir="ltr"{described}>'
+        tdir = opt.get("dir", "ltr")
+        ph = f' placeholder="{esc(o["placeholder"])}"' if o.get("placeholder") else ""
+        field = f'<input id="{fid}" name="{name}" type="text" value="{esc(default)}" dir="{tdir}"{ph}{described}{extra}>'
     return f'<div><label for="{fid}">{esc(o["label"])}</label>{field}{hint}</div>'
+
+
+def tool_intro(slug: str, lang: str, d: dict) -> str:
+    f = ROOT / "content" / "tools" / lang / f"{slug}.html"
+    return f.read_text(encoding="utf-8") if f.exists() else d.get("intro", "")
 
 
 def build_tool(tool: dict, lang: str) -> str:
@@ -1109,7 +1470,7 @@ def build_tool(tool: dict, lang: str) -> str:
   </section>
 
   <section class="prose">
-    {d.get('intro', '')}
+    {tool_intro(slug, lang, d)}
     <h2>{u['how']}</h2>
     <ol class="steps">{steps}</ol>
     <h2>{u['faq']}</h2>
