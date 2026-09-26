@@ -962,6 +962,41 @@ TOOL_BY_SLUG = {t["slug"]: t for t in TOOLS}
 # ARTICLES — body lives in content/blog/<lang>/<slug>.html
 # ════════════════════════════════════════════════════════════════════════════
 ARTICLES = [
+    {"slug": "combine-payslips-pdf", "published": "2026-09-26", "tool": "merge-pdf", "also": ["unlock-pdf"],
+     "en": {"title": "How to Combine Password-Protected Payslips into One PDF",
+            "desc": "Unlock and merge several payslips into a single PDF for a mortgage, loan or rental application, step by step.",
+            "tag": "Guides", "cta": "Merge PDF files"},
+     "he": {"title": "איך לאחד תלושי שכר מוגנים בסיסמה לקובץ PDF אחד",
+            "desc": "מדריך צעד אחר צעד להסרת סיסמה ואיחוד כמה תלושי שכר ל-PDF אחד, לבקשת משכנתא, הלוואה או שכירות.",
+            "tag": "מדריכים", "cta": "מיזוג PDF"}},
+    {"slug": "scan-document-with-phone", "published": "2026-09-26", "tool": "jpg-to-pdf", "also": ["compress-pdf"],
+     "en": {"title": "How to Scan a Document with Your Phone and Send It as a PDF",
+            "desc": "No scanner needed: how to photograph a document so it looks like a real scan, and turn the photos into one PDF.",
+            "tag": "Guides", "cta": "Convert JPG to PDF"},
+     "he": {"title": "איך לסרוק מסמך עם הטלפון ולשלוח אותו כ-PDF",
+            "desc": "בלי סורק: איך לצלם מסמך כך שייראה כמו סריקה אמיתית, ואיך להפוך את הצילומים לקובץ PDF אחד.",
+            "tag": "מדריכים", "cta": "המרת תמונה ל-PDF"}},
+    {"slug": "pdf-file-too-large", "published": "2026-09-26", "tool": "compress-pdf", "also": ["split-pdf"],
+     "en": {"title": "PDF Too Large to Upload? How to Make It Fit",
+            "desc": "Why PDFs get so big, and four ways to get under an upload limit, from compression to fixing the file at the source.",
+            "tag": "Compression", "cta": "Compress a PDF"},
+     "he": {"title": "הקובץ גדול מדי? איך להקטין PDF כשאתר לא מקבל אותו",
+            "desc": "למה קבצי PDF כל כך כבדים, וארבע דרכים לעמוד במגבלת ההעלאה, מדחיסה ועד תיקון הקובץ במקור.",
+            "tag": "דחיסה", "cta": "דחיסת PDF"}},
+    {"slug": "hide-personal-details-pdf", "published": "2026-09-26", "tool": "redact-pdf",
+     "en": {"title": "How to Hide an ID Number or Personal Details in a PDF Before Sending It",
+            "desc": "Which details to hide before sharing a document, why a black box in an editor isn't enough, and how to redact properly.",
+            "tag": "Privacy", "cta": "Redact a PDF"},
+     "he": {"title": "איך להסתיר מספר תעודת זהות ופרטים אישיים ב-PDF לפני ששולחים",
+            "desc": "אילו פרטים כדאי להסתיר לפני ששולחים מסמך, למה מלבן שחור בתוכנת עריכה לא מספיק, ואיך משחירים כמו שצריך.",
+            "tag": "פרטיות", "cta": "השחרת טקסט"}},
+    {"slug": "send-id-copy-safely", "published": "2026-09-26", "tool": "watermark-pdf", "also": ["protect-pdf"],
+     "en": {"title": "Sending a Copy of Your ID? How to Do It Safely",
+            "desc": "A landlord or employer asked for a copy of your ID. How to limit what the copy can be used for with a watermark and a password.",
+            "tag": "Privacy", "cta": "Add a watermark"},
+     "he": {"title": "שולחים צילום תעודת זהות? כך עושים את זה בצורה בטוחה",
+            "desc": "בעל דירה או מעסיק ביקשו צילום תעודת זהות. איך להגביל את השימוש בעותק עם סימן מים וסיסמה.",
+            "tag": "פרטיות", "cta": "הוספת סימן מים"}},
     {"slug": "compress-id-contract-pdf", "published": "2026-07-08", "tool": "compress-pdf",
      "en": {"title": "How to Compress an ID or Contract PDF Without Losing Signature Clarity",
             "desc": "A guide to compressing sensitive documents like ID cards and signed contracts while keeping text and signatures fully legible.",
@@ -1430,7 +1465,7 @@ def build_tool(tool: dict, lang: str) -> str:
     steps = "".join(f"<li><h3>{esc(a)}</h3><p>{esc(b)}</p></li>" for a, b in d["steps"])
     faqs = "".join(f"<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>" for q, a in d["faqs"])
     related = "".join(f'<li><a href="{url(lang, r)}">{esc(TOOL_BY_SLUG[r][lang]["name"])}</a></li>' for r in d["related"])
-    guides = [a for a in ARTICLES if a["tool"] == slug]
+    guides = [a for a in ARTICLES if a["tool"] == slug or slug in a.get("also", [])]
     guides_html = ""
     if guides:
         cards = "".join(

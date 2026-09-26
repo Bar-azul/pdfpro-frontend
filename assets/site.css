@@ -149,3 +149,6 @@ body.rtl .progress div{animation-direction:reverse}
   h1{font-size:1.55rem}
   .dropzone{padding:2rem 1rem}
 }
+
+/* inline examples: keep the body font (monospace Hebrew looks broken), isolate direction for numbers */
+.prose code{font-family:inherit;background:#efe9e0;color:var(--text);padding:.1rem .45rem;border-radius:4px;font-size:.95em;unicode-bidi:isolate}

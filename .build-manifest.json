@@ -8,7 +8,11 @@
   "lastmod": "2026-09-26"
  },
  "/blog/": {
-  "hash": "8d16a349e3782c452da295621bcba7f8",
+  "hash": "0d9bef9c44e97f4e077e8452b4d76444",
+  "lastmod": "2026-09-26"
+ },
+ "/blog/combine-payslips-pdf/": {
+  "hash": "1987c846de365538ba201cebef011da3",
   "lastmod": "2026-09-26"
  },
  "/blog/compress-id-contract-pdf/": {
@@ -19,8 +23,16 @@
   "hash": "ea442ae7f4663f8546cf948aa2bce281",
   "lastmod": "2026-09-26"
  },
+ "/blog/hide-personal-details-pdf/": {
+  "hash": "b1fc04cee15a04a9127fb9f48a01c14f",
+  "lastmod": "2026-09-26"
+ },
  "/blog/pdf-broken-mobile/": {
   "hash": "f5f80b112442b06bd6d7abf110180ffc",
+  "lastmod": "2026-09-26"
+ },
+ "/blog/pdf-file-too-large/": {
+  "hash": "9589295b8c0c814929e90ffc4ad9c4e9",
   "lastmod": "2026-09-26"
  },
  "/blog/pdf-hebrew-rtl/": {
@@ -31,8 +43,16 @@
   "hash": "1e7be0d497aff34d30bb1453a631f77d",
   "lastmod": "2026-09-26"
  },
+ "/blog/scan-document-with-phone/": {
+  "hash": "a8db8e52d2eca8d415b74d167932efd5",
+  "lastmod": "2026-09-26"
+ },
+ "/blog/send-id-copy-safely/": {
+  "hash": "bc2d880a8f1e95f32b49447abcb4bc62",
+  "lastmod": "2026-09-26"
+ },
  "/compress-pdf/": {
-  "hash": "7742dd38679bba6982e2ebaac1615ab9",
+  "hash": "57b77aac92eaed91cc0060c85b2fbba3",
   "lastmod": "2026-09-26"
  },
  "/contact/": {
@@ -48,7 +68,11 @@
   "lastmod": "2026-09-26"
  },
  "/he/blog/": {
-  "hash": "e98877a3b935f15feef062e4c741e259",
+  "hash": "f73e3e22e0aaf35287da465043fffd28",
+  "lastmod": "2026-09-26"
+ },
+ "/he/blog/combine-payslips-pdf/": {
+  "hash": "b3e9c94afb8ea4f356f534870d258795",
   "lastmod": "2026-09-26"
  },
  "/he/blog/compress-id-contract-pdf/": {
@@ -59,8 +83,16 @@
   "hash": "130fe872cd172a82143de5fb45cc44a6",
   "lastmod": "2026-09-26"
  },
+ "/he/blog/hide-personal-details-pdf/": {
+  "hash": "c675fc46e01253c495d3dfbdb1279793",
+  "lastmod": "2026-09-26"
+ },
  "/he/blog/pdf-broken-mobile/": {
   "hash": "aceb902069b0fcf9e7114d8da99eba7a",
+  "lastmod": "2026-09-26"
+ },
+ "/he/blog/pdf-file-too-large/": {
+  "hash": "0fdbfa4c654deb8b9a6490aa7daec2ee",
   "lastmod": "2026-09-26"
  },
  "/he/blog/pdf-hebrew-rtl/": {
@@ -71,8 +103,16 @@
   "hash": "aa5c4933446b3ee8d6e9c17a75a8ece9",
   "lastmod": "2026-09-26"
  },
+ "/he/blog/scan-document-with-phone/": {
+  "hash": "87d2354db9cf5556d82fcbf6e550929e",
+  "lastmod": "2026-09-26"
+ },
+ "/he/blog/send-id-copy-safely/": {
+  "hash": "09dc3291585b4b4b360b56c4d93b6249",
+  "lastmod": "2026-09-26"
+ },
  "/he/compress-pdf/": {
-  "hash": "1f06b7e5fd8edc78c1a8e7e5d46c909b",
+  "hash": "702439ba1a3e8c4eb4905caed6ffd25a",
   "lastmod": "2026-09-26"
  },
  "/he/contact/": {
@@ -84,11 +124,11 @@
   "lastmod": "2026-09-26"
  },
  "/he/jpg-to-pdf/": {
-  "hash": "2645c3bc6d55a96220eabfbeaa57ea31",
+  "hash": "abd7df1045821d6ac503b0c5bb5cc26f",
   "lastmod": "2026-09-26"
  },
  "/he/merge-pdf/": {
-  "hash": "ff4fa85a494bb9753bb7e5fd99b6f8cc",
+  "hash": "4cab1417ab23d89b846987ec8e7cd32a",
   "lastmod": "2026-09-26"
  },
  "/he/ocr-pdf/": {
@@ -120,11 +160,11 @@
   "lastmod": "2026-09-26"
  },
  "/he/protect-pdf/": {
-  "hash": "65e60e7ed87f27617a4a5bab53578748",
+  "hash": "ee394e21a31e646a098db6d5db42e91f",
   "lastmod": "2026-09-26"
  },
  "/he/redact-pdf/": {
-  "hash": "a11987fafcd290f6b01749e3de6d2e54",
+  "hash": "f347a3408f8c2230f1b1300e71082f11",
   "lastmod": "2026-09-26"
  },
  "/he/rotate-pdf/": {
@@ -136,7 +176,7 @@
   "lastmod": "2026-09-26"
  },
  "/he/split-pdf/": {
-  "hash": "2d7934104d419d85c459d39ad646fb6e",
+  "hash": "c501b00a40fea9637ceabb6f10a938b6",
   "lastmod": "2026-09-26"
  },
  "/he/terms/": {
@@ -148,11 +188,11 @@
   "lastmod": "2026-09-26"
  },
  "/he/unlock-pdf/": {
-  "hash": "45c816eeed303e226a0a5b57ef2296e5",
+  "hash": "072eebaad314fecac8d08658756e1775",
   "lastmod": "2026-09-26"
  },
  "/he/watermark-pdf/": {
-  "hash": "82cc19070e809edf44fac7c7358c326d",
+  "hash": "9b5ed61e79b178be9f00f5bd4940dcd4",
   "lastmod": "2026-09-26"
  },
  "/he/word-to-pdf/": {
@@ -164,11 +204,11 @@
   "lastmod": "2026-09-26"
  },
  "/jpg-to-pdf/": {
-  "hash": "9abff12fe1362a47f8ab1b32f5b4c14c",
+  "hash": "89f98924ad1f59362a58c6ea09d1ff24",
   "lastmod": "2026-09-26"
  },
  "/merge-pdf/": {
-  "hash": "b8310e731857199f4be712e89ce81be1",
+  "hash": "e22f44d3143c9ae6efb8ca3f4c9ece01",
   "lastmod": "2026-09-26"
  },
  "/ocr-pdf/": {
@@ -200,11 +240,11 @@
   "lastmod": "2026-09-26"
  },
  "/protect-pdf/": {
-  "hash": "0616da1ba1818ec490055ed046301b80",
+  "hash": "60a90b324ccdf1af7d6d3df70706c46b",
   "lastmod": "2026-09-26"
  },
  "/redact-pdf/": {
-  "hash": "212ba9d5527f5f3c99c36af44d8b9a6e",
+  "hash": "bd97f55f81ca0b335c24342d3c65aae6",
   "lastmod": "2026-09-26"
  },
  "/rotate-pdf/": {
@@ -216,7 +256,7 @@
   "lastmod": "2026-09-26"
  },
  "/split-pdf/": {
-  "hash": "37b16373af50255b859a53127f1ffff3",
+  "hash": "0d8f8679443ffbb1d4afc2036ab9156d",
   "lastmod": "2026-09-26"
  },
  "/terms/": {
@@ -228,11 +268,11 @@
   "lastmod": "2026-09-26"
  },
  "/unlock-pdf/": {
-  "hash": "d0ba754b67a0874206bdc11f22bff720",
+  "hash": "333d9e81927d283ed301a0093fd1faf5",
   "lastmod": "2026-09-26"
  },
  "/watermark-pdf/": {
-  "hash": "731b2712f64cb61fe9e1916d500616bf",
+  "hash": "ad490afd7c30327ce3f2b71e4b174546",
   "lastmod": "2026-09-26"
  },
  "/word-to-pdf/": {

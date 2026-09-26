@@ -1,0 +1,47 @@
+<p class="lead">Sending a payslip to a landlord, a bank statement to an accountant, or a medical summary to an insurer? Most documents carry more personal details than the recipient actually needs. Here's how to hide them properly, and why a black rectangle drawn in an editor usually isn't enough.</p>
+
+<h2>What's worth hiding</h2>
+<p>There's no single rule, but these are the details worth pausing on to ask "does the recipient need this?":</p>
+<ul>
+<li><strong>ID number.</strong> The easiest detail to misuse, especially together with a name and date of birth.</li>
+<li><strong>Bank account and credit card numbers.</strong></li>
+<li><strong>Home address and phone number</strong>, when they aren't relevant.</li>
+<li><strong>Medical details</strong> unrelated to the claim or request.</li>
+<li><strong>Account transactions</strong> that have nothing to do with the matter, for example when you only need to show that your salary comes in.</li>
+</ul>
+<p>Before hiding anything, check what the organization actually needs. A bank reviewing a loan application will probably need your ID number, and a redacted document will only delay things.</p>
+
+<h2>The common mistake: covering instead of removing</h2>
+<p>The intuitive approach is to open the PDF in an editor and draw a black box over the detail. On screen it looks perfect. But in most cases the box just sits <strong>on top of</strong> the text, and the text itself is still in the file. Anyone who receives the document can:</p>
+<ul>
+<li>Select the area and copy the hidden text.</li>
+<li>Search the file and find it.</li>
+<li>Delete the box in an editor.</li>
+</ul>
+<p>This isn't theoretical. Documents from large organizations have leaked exactly this way. Real redaction removes the text from the file and leaves only the box.</p>
+
+<h2>How to redact properly</h2>
+<ol>
+<li>Open <a href="/redact-pdf/">Redact PDF</a>.</li>
+<li>Upload the document.</li>
+<li>Type the details to hide, separated by commas. For example: <code>123456782, 12-345-678901</code>.</li>
+<li>Download the file.</li>
+</ol>
+<p>The tool finds every occurrence of the text on every page, removes it, and replaces it with a black box.</p>
+
+<h2>Tips for a complete result</h2>
+<ul>
+<li><strong>Type it exactly as it appears.</strong> If the ID shows as <code>12345678-2</code>, type it that way. If it appears in two forms, enter both.</li>
+<li><strong>Think about other occurrences.</strong> A name can appear in the header, the address and the signature. An account number may appear with dashes in one place and without in another.</li>
+<li><strong>Check the result.</strong> Open the file, press Ctrl+F and search for what you hid. If nothing is found, it worked.</li>
+</ul>
+
+<h2>Scanned documents</h2>
+<p>A scan is an image, so there's no text for the tool to find. The fix: first run the scan through <a href="/ocr-pdf/">OCR</a> with the Searchable PDF output, then redact the result.</p>
+
+<h2>Extra layers of protection</h2>
+<p>Redaction is the key step, but it combines well with two other tools:</p>
+<ul>
+<li>A <a href="/watermark-pdf/">watermark</a> that states who the document is for and why.</li>
+<li>A <a href="/protect-pdf/">password</a> when sending by email, with the password in a separate message.</li>
+</ul>
