@@ -1,0 +1,33 @@
+<p class="lead">Copying a table out of a PDF usually ends badly: paste it into Excel and every row lands in a single cell, numbers turn into text, and columns slide out of place. Converting the file instead keeps rows and columns where they belong. Here's how to do it, and what to do about the cases that don't convert cleanly.</p>
+
+<h2>First, check what kind of PDF you have</h2>
+<p>Open the PDF and try to select a word in the table with your mouse.</p>
+<ul>
+<li><strong>The text highlights:</strong> the PDF contains real text. This is the usual case for files downloaded from a website, exported from accounting software, or saved from Word or Excel. These convert accurately.</li>
+<li><strong>Nothing highlights, or the whole page highlights as one block:</strong> the page is an image, usually a scan or a phone photo. Skip to the section on scanned tables below.</li>
+</ul>
+
+<h2>Converting a PDF table to Excel</h2>
+<ol>
+<li>If the PDF asks for a password when you open it, remove it first with <a href="/unlock-pdf/">Unlock PDF</a>.</li>
+<li>Open <a href="/pdf-to-excel/">PDF to Excel</a> and upload the file.</li>
+<li>Download the .xlsx file and open it in Excel, Google Sheets or LibreOffice Calc.</li>
+</ol>
+<p>Every table goes to its own sheet, named after the page it came from ("Page 1", "Page 2 table 2" and so on), so two tables on the same page never get mixed together. Amounts such as <code>12,450.00</code> arrive as real numbers you can sum, including negative amounts written with the minus sign after the number, as many bank statements do. Long numbers like account or ID numbers, and numbers that start with a zero, are kept as text so Excel doesn't round them or drop the zero.</p>
+
+<h2>Which tables convert best</h2>
+<p>Tables drawn with lines between the cells, like most statements, invoices and reports, convert cell by cell. A "table" that is really just text lined up with spaces has no cell borders to detect, so it comes out as one line of text per row in column A. That's still faster than retyping: select column A, then use <strong>Data → Text to Columns</strong> and split by spaces or by fixed width.</p>
+
+<h2>Tidying up in Excel</h2>
+<ul>
+<li><strong>One table across several pages:</strong> you'll get one sheet per page. Copy them under each other into one sheet and delete the repeated header rows.</li>
+<li><strong>Merged header cells:</strong> a header that spans two columns in the PDF may land in only one of them. Fix the header row by hand. It takes a minute.</li>
+<li><strong>Dates:</strong> if sorting by date gives a strange order, Excel is treating them as text. Select the column and use Text to Columns with the date format set (for example DMY).</li>
+<li><strong>Hebrew or Arabic tables:</strong> the text comes out in the right order, but the sheet itself is left-to-right. To view it right-to-left, use <strong>Page Layout → Sheet Right-to-Left</strong> in Excel.</li>
+</ul>
+
+<h2>Scanned tables</h2>
+<p>A scan is a picture of a table, so there are no cells to extract. Run it through <a href="/ocr-pdf/">OCR</a> first and choose <em>Searchable PDF</em>, then convert that file to Excel. The result is one line of text per row, which you split into columns with Text to Columns as described above. Check the numbers against the original: OCR can misread a digit, especially on a blurry photo.</p>
+
+<h2>Is it safe to upload?</h2>
+<p>Statements and invoices are sensitive. Files are processed on our server and deleted automatically after one hour. If you only need part of a long document, take out the relevant pages first with <a href="/split-pdf/">Split PDF</a>. For bank and credit card statements specifically, see the <a href="/blog/bank-statement-to-excel/">guide to turning a bank statement into a spreadsheet</a>.</p>

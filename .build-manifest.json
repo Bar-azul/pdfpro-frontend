@@ -8,7 +8,7 @@
   "lastmod": "2026-10-09"
  },
  "/blog/": {
-  "hash": "34a13c937e9ffb574d95d3d25ec77e9f",
+  "hash": "4816c2b5b37bfc221d738e074f4a6409",
   "lastmod": "2026-10-09"
  },
  "/blog/bank-statement-to-excel/": {
@@ -25,6 +25,10 @@
  },
  "/blog/copy-text-from-image-hebrew/": {
   "hash": "756e48130a454cbead2fc75851f3f7a9",
+  "lastmod": "2026-10-09"
+ },
+ "/blog/delete-text-from-pdf/": {
+  "hash": "95277799cc04dc29e0adf1f6234d10c3",
   "lastmod": "2026-10-09"
  },
  "/blog/electronic-signature-pdf/": {
@@ -55,6 +59,10 @@
   "hash": "b9d0764d43f28551b52404e0507ed509",
   "lastmod": "2026-10-09"
  },
+ "/blog/pdf-table-to-excel/": {
+  "hash": "46d07dded0605449d3e8b17da59cc568",
+  "lastmod": "2026-10-09"
+ },
  "/blog/powerpoint-to-pdf/": {
   "hash": "de8e051ceb74c8cb2e2386f69120cca2",
   "lastmod": "2026-10-09"
@@ -68,11 +76,15 @@
   "lastmod": "2026-10-09"
  },
  "/blog/scan-document-with-phone/": {
-  "hash": "eadd0892b800957b5af03e9beb51c10f",
+  "hash": "02e27bd8e4adfd44592dda3afb9ed272",
   "lastmod": "2026-10-09"
  },
  "/blog/send-id-copy-safely/": {
   "hash": "0358087082a1704b1e9b95110e004cf4",
+  "lastmod": "2026-10-09"
+ },
+ "/blog/sign-pdf-on-phone/": {
+  "hash": "3098f5f27112e50b2cc824ee8bbc573d",
   "lastmod": "2026-10-09"
  },
  "/blog/sign-rental-contract-online/": {
@@ -108,7 +120,7 @@
   "lastmod": "2026-10-09"
  },
  "/he/blog/": {
-  "hash": "2cdf10b28755fd8e9dba4f989d8052cf",
+  "hash": "0ef70cf9380a81ccc500bf5f07654551",
   "lastmod": "2026-10-09"
  },
  "/he/blog/bank-statement-to-excel/": {
@@ -125,6 +137,10 @@
  },
  "/he/blog/copy-text-from-image-hebrew/": {
   "hash": "e58799697378d4adb8a4832fbdff147d",
+  "lastmod": "2026-10-09"
+ },
+ "/he/blog/delete-text-from-pdf/": {
+  "hash": "8c52f732bac44633238ad6cf6d159081",
   "lastmod": "2026-10-09"
  },
  "/he/blog/electronic-signature-pdf/": {
@@ -155,6 +171,10 @@
   "hash": "8115d4cd8dea8f1d27452efdfbe73c1b",
   "lastmod": "2026-10-09"
  },
+ "/he/blog/pdf-table-to-excel/": {
+  "hash": "a809396112573aa0cc9978d13e582f6f",
+  "lastmod": "2026-10-09"
+ },
  "/he/blog/powerpoint-to-pdf/": {
   "hash": "b16520e10dd908950db29edc39facf7d",
   "lastmod": "2026-10-09"
@@ -168,11 +188,15 @@
   "lastmod": "2026-10-09"
  },
  "/he/blog/scan-document-with-phone/": {
-  "hash": "f250d10653c4739e83b64b36883de9bc",
+  "hash": "90866077fcd6bb8cc776253b17391d9a",
   "lastmod": "2026-10-09"
  },
  "/he/blog/send-id-copy-safely/": {
   "hash": "5c1bcb97886f7f5ab92c08b514f26e31",
+  "lastmod": "2026-10-09"
+ },
+ "/he/blog/sign-pdf-on-phone/": {
+  "hash": "70af835713b4a009ca660f830e5e3d51",
   "lastmod": "2026-10-09"
  },
  "/he/blog/sign-rental-contract-online/": {
@@ -212,11 +236,11 @@
   "lastmod": "2026-10-09"
  },
  "/he/ocr-pdf/": {
-  "hash": "224aa37b70f4e4a7c7a4e79d854c2f49",
+  "hash": "e7420e528ea14edead948f977ce77756",
   "lastmod": "2026-10-09"
  },
  "/he/pdf-to-excel/": {
-  "hash": "9e2fad4fd7ad92dca4d0715ac08e8149",
+  "hash": "2b9096091294df9c1ab448a48d419b02",
   "lastmod": "2026-10-09"
  },
  "/he/pdf-to-jpg/": {
@@ -244,7 +268,7 @@
   "lastmod": "2026-10-09"
  },
  "/he/redact-pdf/": {
-  "hash": "1bf7ae359a6d00583163f11f2a78ef00",
+  "hash": "2bb09af7593ef53b6e79043309f76143",
   "lastmod": "2026-10-09"
  },
  "/he/rotate-pdf/": {
@@ -252,7 +276,7 @@
   "lastmod": "2026-10-09"
  },
  "/he/sign-pdf/": {
-  "hash": "eea17f0f650a8d3c8ae50796357ed2ee",
+  "hash": "bc3fc9c71f01b3cf6ad9c76e99943805",
   "lastmod": "2026-10-09"
  },
  "/he/split-pdf/": {
@@ -292,11 +316,11 @@
   "lastmod": "2026-10-09"
  },
  "/ocr-pdf/": {
-  "hash": "340c38cbbaf40aededb4204759ab4930",
+  "hash": "003560273db01efc24e1f9fc7842d95e",
   "lastmod": "2026-10-09"
  },
  "/pdf-to-excel/": {
-  "hash": "1e34b0272744913e91dc058b5c249c68",
+  "hash": "5bf5507ac72b9bbeab8490fef6849de7",
   "lastmod": "2026-10-09"
  },
  "/pdf-to-jpg/": {
@@ -324,7 +348,7 @@
   "lastmod": "2026-10-09"
  },
  "/redact-pdf/": {
-  "hash": "b937e092d75ff2bbc954726943452a0f",
+  "hash": "284a0621c333ef165cf7f3f05c96b546",
   "lastmod": "2026-10-09"
  },
  "/rotate-pdf/": {
@@ -332,7 +356,7 @@
   "lastmod": "2026-10-09"
  },
  "/sign-pdf/": {
-  "hash": "ec8a942aaa1317e3a54d2e0e3570385f",
+  "hash": "706b87f7bcad0d813cc3fe551c76b909",
   "lastmod": "2026-10-09"
  },
  "/split-pdf/": {
