@@ -462,7 +462,6 @@ body.rtl .footer-col h4{
     <li><a href="/he/pricing/">מחירים</a></li>
   </ul>
   <div class="nav-right">
-    <span class="api-status offline" id="api-status"><span class="api-dot"></span><span id="api-status-text">מתחבר...</span></span>
     <button class="nav-cta" onclick="document.getElementById('tools')?.scrollIntoView({behavior:'smooth'})">התחל עכשיו</button>
   </div>
 </nav>
@@ -895,12 +894,6 @@ function buildHeroSelect(){
   Object.entries(cats).forEach(([cat,items])=>{if(!items.length)return;const og=document.createElement('optgroup');og.label=labels[cat];items.forEach(item=>{const o=document.createElement('option');o.value=item.k;o.textContent=item.t;og.appendChild(o);});sel.appendChild(og);});
 }
 
-async function checkAPI(){
-  try{const r=await fetch(`${API}/api/health`,{signal:AbortSignal.timeout(75000)});if(r.ok){document.getElementById('api-status').className='api-status online';document.getElementById('api-status-text').textContent=t('api_online');}else setOffline();}
-  catch{setOffline();}
-}
-function setOffline(){document.getElementById('api-status').className='api-status offline';document.getElementById('api-status-text').textContent=t('api_offline');}
-checkAPI();setInterval(checkAPI,60000);
 
 function hookFooterLinks(){
   const base=lang==='he'?'/he':'';

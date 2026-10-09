@@ -42,7 +42,6 @@ LANGS = ("en", "he")
 UI = {
     "en": {
         "home": "Home", "tools": "Tools", "blog": "Blog", "pricing": "Pricing", "cta": "All tools",
-        "online": "Server online", "waking": "Starting server…", "offline": "Server offline",
         "footer_desc": "Free online PDF tools with proper Hebrew and RTL support.",
         "company": "Company", "support": "Support", "about": "About", "contact": "Contact",
         "help": "Help center", "privacy": "Privacy policy", "terms": "Terms of use",
@@ -58,7 +57,7 @@ UI = {
             "bad_type": "{name} isn't a supported file type.",
             "too_big": "{name} is larger than {max} MB.",
             "uploading": "Uploading and processing…",
-            "waking": "The server is starting up. The first file can take up to a minute.",
+            "waking": "Still working. Large files can take up to a minute.",
             "done": "Your file is ready", "done_parts": "{n} files are ready",
             "download": "Download", "download_txt": "Download text (.txt)",
             "no_text": "No text was found. Try a clearer scan or a different language setting.",
@@ -77,7 +76,6 @@ UI = {
     },
     "he": {
         "home": "בית", "tools": "כלים", "blog": "בלוג", "pricing": "מחירים", "cta": "כל הכלים",
-        "online": "השרת פעיל", "waking": "השרת עולה…", "offline": "השרת לא זמין",
         "footer_desc": "כלי PDF חינמיים אונליין, עם תמיכה אמיתית בעברית ובכיווניות RTL.",
         "company": "החברה", "support": "תמיכה", "about": "אודות", "contact": "צור קשר",
         "help": "מרכז עזרה", "privacy": "מדיניות פרטיות", "terms": "תנאי שימוש",
@@ -93,7 +91,7 @@ UI = {
             "bad_type": "סוג הקובץ {name} לא נתמך.",
             "too_big": "הקובץ {name} גדול מ-{max}MB.",
             "uploading": "מעלה ומעבד…",
-            "waking": "השרת מתעורר. הקובץ הראשון יכול לקחת עד דקה.",
+            "waking": "עדיין עובד. קבצים גדולים יכולים לקחת עד דקה.",
             "done": "הקובץ מוכן", "done_parts": "{n} קבצים מוכנים",
             "download": "הורדת", "download_txt": "הורדת הטקסט (txt.)",
             "no_text": "לא נמצא טקסט. נסו סריקה ברורה יותר או שפה אחרת.",
@@ -1402,9 +1400,6 @@ def header(lang: str, active: str) -> str:
     {link("pricing", url(lang, "pricing"))}
   </ul>
   <div class="nav-right">
-    <span class="api-status" id="api-status" role="status" data-online="{u['online']}" data-waking="{u['waking']}" data-offline="{u['offline']}">
-      <span class="api-dot"></span><span id="api-status-text">{u['waking']}</span>
-    </span>
     <a class="nav-cta" href="{url(lang)}#tools">{u['cta']}</a>
   </div>
 </header>"""
