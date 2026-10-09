@@ -197,7 +197,7 @@
         if (!resp.ok) return errorFrom(resp).then(function (m) { throw new Error(m); });
         return resp.json();
       })
-      .then(function (data) { setStatus(''); showResult(data); if (window.PDFPro) PDFPro.setState('online'); })
+      .then(function (data) { setStatus(''); showResult(data); })
       .catch(function (e) {
         var msg = e.name === 'AbortError' ? t.timeout : (e.message === 'Failed to fetch' ? t.network : e.message);
         setStatus(msg, 'error');
