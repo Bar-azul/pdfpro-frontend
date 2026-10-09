@@ -149,7 +149,9 @@
   }
 
   function validateOptions() {
-    var fields = document.querySelectorAll('#tool-options input');
+    var hooks = window.TOOL_HOOKS || {};
+    if (hooks.validate) { var h = hooks.validate(); if (h) return h; }
+    var fields = document.querySelectorAll('#tool-options input:not([disabled])');
     for (var i = 0; i < fields.length; i++) {
       var el = fields[i];
       if (el.dataset.required && !el.value.trim()) { el.focus(); return el.dataset.required; }
@@ -175,7 +177,7 @@
     files.forEach(function (f) { fd.append(cfg.field, f); });
     var query = new URLSearchParams();
     document.querySelectorAll('#tool-options [name]').forEach(function (el) {
-      if (el.value === '') return;
+      if (el.value === '' || el.disabled) return;
       // one select can fill several API fields, e.g. position "0.6|0.85" -> x, y
       var names = el.dataset.fields ? el.dataset.fields.split(',') : [el.name];
       var values = el.dataset.fields ? el.value.split('|') : [el.value];
@@ -184,6 +186,7 @@
       });
     });
     var qs = query.toString();
+    if (window.TOOL_HOOKS && window.TOOL_HOOKS.append) window.TOOL_HOOKS.append(fd);
 
     if (window.gtag) gtag('event', 'tool_run', { tool: cfg.slug });
     var ctrl = new AbortController();

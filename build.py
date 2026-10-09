@@ -860,9 +860,17 @@ TOOLS = [
         "slug": "sign-pdf", "limit": 20,
         "api": {"endpoint": "/api/edit/sign", "field": "file", "multi": False, "accept": ".pdf", "result": "file"},
         "options": [
-            {"name": "signature_text", "type": "text", "default": "", "dir": "auto",
-             "en": {"label": "Your name", "placeholder": "e.g. Dana Levi", "required": "Enter the name to sign with."},
-             "he": {"label": "השם שלכם", "placeholder": "לדוגמה: דנה לוי", "required": "הקלידו את השם לחתימה."}},
+            {"name": "signature_text", "type": "signature",
+             "en": {"label": "Your signature", "draw": "Draw", "type": "Type",
+                    "pad": "Sign here with your mouse or finger", "clear": "Clear",
+                    "name_label": "Your name", "placeholder": "e.g. Dana Levi",
+                    "need_draw": "Draw your signature, or switch to Type.",
+                    "need_text": "Enter the name to sign with."},
+             "he": {"label": "החתימה שלכם", "draw": "ציור", "type": "הקלדה",
+                    "pad": "חתמו כאן עם העכבר או עם האצבע", "clear": "נקה",
+                    "name_label": "השם שלכם", "placeholder": "לדוגמה: דנה לוי",
+                    "need_draw": "ציירו את החתימה, או עברו להקלדה.",
+                    "need_text": "הקלידו את השם לחתימה."}},
             {"name": "page", "type": "select", "default": "-1", "values": ["-1", "1"],
              "en": {"label": "Page", "labels": ["Last page", "First page"]},
              "he": {"label": "עמוד", "labels": ["העמוד האחרון", "העמוד הראשון"]}},
@@ -870,44 +878,50 @@ TOOLS = [
              "values": ["0.7|0.85", "0.05|0.85", "0.375|0.85"],
              "en": {"label": "Position", "labels": ["Bottom right", "Bottom left", "Bottom center"]},
              "he": {"label": "מיקום", "labels": ["למטה מימין", "למטה משמאל", "למטה באמצע"]}},
+            {"name": "add_date", "type": "select", "default": "true", "values": ["true", "false"],
+             "en": {"label": "Today's date under the signature", "labels": ["Add date", "No date"]},
+             "he": {"label": "תאריך מתחת לחתימה", "labels": ["להוסיף תאריך", "בלי תאריך"]}},
         ],
+        "script": "sign.js",
         "en": {
             "name": "Sign PDF",
-            "title": "Sign PDF Online – Add Your Signature Free | PDFPro",
-            "desc": "Add your name as a signature, with the date, to a PDF without printing or scanning. Hebrew names supported. Free.",
+            "title": "Sign PDF Online Free – Draw or Type Your Signature | PDFPro",
+            "desc": "Draw your signature with a mouse or finger, or type your name, and add it to a PDF without printing or scanning. Free, no sign-up.",
             "h1": "Sign a PDF",
-            "lead": "Add your name as a signature, with today's date, to the page you choose. No printing, no scanning.",
+            "lead": "Draw your signature with your mouse or finger, or type your name, and place it on the page you choose. No printing, no scanning.",
             "run": "Sign PDF",
             "steps": [
                 ("Choose your PDF", "Drop the file into the box above."),
-                ("Type your name and pick the spot", "Choose the page and where the signature goes."),
-                ("Download the signed PDF", "The signature and date are added to the page."),
+                ("Draw or type your signature", "Then choose the page and where the signature goes."),
+                ("Download the signed PDF", "The signature, and the date if you want it, are added to the page."),
             ],
             "faqs": [
-                ("Is this a legally binding signature?", "It adds a visible signature with your name and the date, which is accepted for many everyday documents like forms, rental paperwork and approvals. Some documents require a certified digital signature, so check with whoever asked for it."),
+                ("Is this a legally binding signature?", "It adds a visible signature, like ink on paper, which is accepted for many everyday documents like forms, rental paperwork and approvals. Some documents require a certified digital signature, so check with whoever asked for it."),
                 ("Can I sign in Hebrew?", "Yes. Hebrew names are written right-to-left, correctly."),
-                ("Can I draw my own signature?", "Not yet. The signature is your typed name in a signature style."),
+                ("Can I draw my own signature?", "Yes. Draw it in the box with a mouse, a trackpad or your finger on a phone. It's added to the PDF as you drew it, without a frame."),
+                ("Is my drawn signature saved anywhere?", "No. It's sent only with the file you're signing and deleted from the server with it after an hour."),
             ],
             "related": ["protect-pdf", "watermark-pdf", "compress-pdf"],
         },
         "he": {
             "name": "חתימה על PDF",
             "title": "חתימה דיגיטלית על PDF בחינם – לחתום על מסמך אונליין | PDFPro",
-            "desc": "חתימה דיגיטלית על מסמך PDF אונליין, מהמחשב או מהטלפון: מוסיפים את השם כחתימה עם תאריך, בלי להדפיס ולסרוק. בחינם ובלי הרשמה.",
+            "desc": "חתימה דיגיטלית על מסמך PDF אונליין: מציירים חתימה עם העכבר או עם האצבע, או מקלידים שם, בלי להדפיס ולסרוק. בחינם ובלי הרשמה.",
             "h1": "חתימה דיגיטלית על PDF",
-            "lead": "חותמים על מסמך PDF אונליין, מהמחשב או מהטלפון: השם שלכם מתווסף כחתימה, עם התאריך של היום, בעמוד שתבחרו. בלי מדפסת ובלי סורק.",
+            "lead": "חותמים על מסמך PDF אונליין, מהמחשב או מהטלפון: מציירים את החתימה עם העכבר או עם האצבע, או מקלידים שם, ובוחרים איפה היא תופיע. בלי מדפסת ובלי סורק.",
             "run": "חתום על PDF",
             "steps": [
                 ("בוחרים את ה-PDF", "גוררים את הקובץ לתיבה למעלה."),
-                ("כותבים שם ובוחרים מקום", "בוחרים עמוד ואיפה החתימה תופיע."),
-                ("מורידים את ה-PDF החתום", "החתימה והתאריך מתווספים לעמוד."),
+                ("מציירים או מקלידים חתימה", "ואז בוחרים עמוד ואיפה החתימה תופיע."),
+                ("מורידים את ה-PDF החתום", "החתימה, ואם רוצים גם התאריך, מתווספות לעמוד."),
             ],
             "faqs": [
                 ("זו חתימה דיגיטלית?", "בשפה היומיומית כן: זו חתימה על מסמך בלי נייר. היא לא 'חתימה אלקטרונית מאושרת' עם תעודה דיגיטלית, שחלק מהגופים דורשים. ההבדלים מוסברים במדריך על סוגי חתימות."),
                 ("אפשר לחתום מהטלפון?", "כן. פותחים את העמוד בדפדפן בטלפון, בוחרים את ה-PDF מהקבצים או מהמייל, ומורידים את הקובץ החתום."),
-                ("זו חתימה מחייבת משפטית?", "הכלי מוסיף חתימה גלויה עם השם והתאריך, שמתקבלת בהרבה מסמכים יומיומיים כמו טפסים, חוזי שכירות ואישורים. יש מסמכים שדורשים חתימה אלקטרונית מאושרת, אז כדאי לבדוק עם מי שביקש את המסמך."),
+                ("זו חתימה מחייבת משפטית?", "הכלי מוסיף חתימה גלויה, כמו חתימה בעט על נייר, שמתקבלת בהרבה מסמכים יומיומיים כמו טפסים, חוזי שכירות ואישורים. יש מסמכים שדורשים חתימה אלקטרונית מאושרת, אז כדאי לבדוק עם מי שביקש את המסמך."),
                 ("אפשר לחתום בעברית?", "כן. שמות בעברית נכתבים מימין לשמאל, בצורה תקינה."),
-                ("אפשר לצייר חתימה משלי?", "עדיין לא. החתימה היא השם שהקלדתם בסגנון חתימה."),
+                ("אפשר לצייר חתימה משלי?", "כן. מציירים בתיבה עם העכבר, עם משטח המגע או עם האצבע בטלפון. החתימה נכנסת ל-PDF בדיוק כמו שציירתם, בלי מסגרת."),
+                ("החתימה שציירתי נשמרת איפשהו?", "לא. היא נשלחת רק עם הקובץ שאתם חותמים עליו, ונמחקת מהשרת יחד איתו אחרי שעה."),
             ],
             "related": ["protect-pdf", "watermark-pdf", "compress-pdf"],
         },
@@ -1428,6 +1442,14 @@ def footer(lang: str, slug: str) -> str:
 </footer>"""
 
 
+ICON_LINKS = """<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0D1B2A">"""
+
+
 def page(*, lang: str, slug: str, title: str, desc: str, body: str, active: str = "",
          schema: list | None = None, og_type: str = "website", scripts: str = "") -> str:
     """slug: path without language prefix and without slashes ('' for home, 'blog/x' for articles)."""
@@ -1441,6 +1463,7 @@ def page(*, lang: str, slug: str, title: str, desc: str, body: str, active: str 
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{canonical}">
+{ICON_LINKS}
 <link rel="alternate" hreflang="en" href="{abs_url('en', slug)}">
 <link rel="alternate" hreflang="he" href="{abs_url('he', slug)}">
 <link rel="alternate" hreflang="x-default" href="{abs_url('en', slug)}">
@@ -1488,6 +1511,23 @@ def option_html(opt: dict, lang: str) -> str:
     fid = f"opt-{name}"
     hint = f'<p class="hint" id="{fid}-hint">{esc(o["hint"])}</p>' if o.get("hint") else ""
     described = f' aria-describedby="{fid}-hint"' if o.get("hint") else ""
+    if opt["type"] == "signature":
+        return f"""<div class="sig" id="sig" data-mode="draw" data-need-draw="{esc(o['need_draw'])}" data-need-text="{esc(o['need_text'])}">
+  <div class="sig-head"><span class="sig-label" id="sig-label">{esc(o['label'])}</span>
+    <div class="sig-tabs" role="group" aria-labelledby="sig-label">
+      <button type="button" data-mode="draw" aria-pressed="true">{esc(o['draw'])}</button>
+      <button type="button" data-mode="type" aria-pressed="false">{esc(o['type'])}</button>
+    </div></div>
+  <div class="sig-draw">
+    <canvas id="sig-canvas" aria-label="{esc(o['pad'])}"></canvas>
+    <span class="sig-hint" aria-hidden="true">{esc(o['pad'])}</span>
+    <button type="button" class="link-btn sig-clear" id="sig-clear">{esc(o['clear'])}</button>
+  </div>
+  <div class="sig-type" hidden>
+    <label for="{fid}">{esc(o['name_label'])}</label>
+    <input id="{fid}" name="{name}" type="text" dir="auto" autocomplete="name" placeholder="{esc(o['placeholder'])}" disabled>
+  </div>
+</div>"""
     if opt["type"] == "password":
         mn = f' data-minlength="{opt["minlength"]}"' if opt.get("minlength") else ""
         ac = opt.get("autocomplete", "off")
@@ -1598,7 +1638,8 @@ def build_tool(tool: dict, lang: str) -> str:
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in d["faqs"]]},
         crumbs_ld,
     ]
-    scripts = (f"<script>window.TOOL={json.dumps(js_cfg, ensure_ascii=False)};</script>\n"
+    extra_js = f'<script src="{asset(tool["script"])}"></script>\n' if tool.get("script") else ""
+    scripts = extra_js + (f"<script>window.TOOL={json.dumps(js_cfg, ensure_ascii=False)};</script>\n"
                f'<script src="{asset("tool.js")}"></script>')
     # keyboard: Enter/Space on the dropzone opens the file picker
     scripts += "\n<script>document.getElementById('tool-dropzone').addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();document.getElementById('tool-input').click();}});</script>"
@@ -1727,7 +1768,7 @@ def main() -> None:
     for p in urls:
         f = ROOT / "index.html" if p == "/" else ROOT / p.strip("/") / "index.html"
         for href in re.findall(r'href="(/[^"#?]*)', f.read_text(encoding="utf-8")):
-            if href.startswith("/assets/") or href.endswith((".xml", ".txt", ".css", ".js", ".png", ".ico", ".svg")):
+            if href.startswith("/assets/") or href.endswith((".xml", ".txt", ".css", ".js", ".png", ".ico", ".svg", ".webmanifest")):
                 continue
             target = href if href.endswith("/") else href + "/"
             if target not in known:

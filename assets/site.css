@@ -152,3 +152,20 @@ body.rtl .progress div{animation-direction:reverse}
 
 /* inline examples: keep the body font (monospace Hebrew looks broken), isolate direction for numbers */
 .prose code{font-family:inherit;background:#efe9e0;color:var(--text);padding:.1rem .45rem;border-radius:4px;font-size:.95em;unicode-bidi:isolate}
+
+/* signature pad (Sign PDF) */
+.tool-options .sig{grid-column:1/-1}
+.sig-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:.5rem;flex-wrap:wrap}
+.sig-label{font-size:.85rem;font-weight:600;color:var(--navy)}
+.sig-tabs{display:inline-flex;border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.sig-tabs button{background:white;border:0;padding:.4rem 1rem;font:inherit;font-size:.88rem;color:var(--muted);cursor:pointer}
+.sig-tabs button[aria-pressed="true"]{background:var(--navy);color:white;font-weight:600}
+.sig-draw{position:relative}
+.sig-draw[hidden],.sig-type[hidden]{display:none}
+#sig-canvas{display:block;width:100%;height:180px;background:white;border:1px solid var(--border);border-radius:10px;touch-action:none;cursor:crosshair;
+  background-image:linear-gradient(var(--border),var(--border));background-size:calc(100% - 3rem) 1px;background-position:center 75%;background-repeat:no-repeat}
+.sig-hint{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#a39a8c;font-size:.95rem;pointer-events:none;padding:0 1rem;text-align:center}
+.sig.has-ink .sig-hint{display:none}
+.sig-clear{position:absolute;top:.5rem;inset-inline-end:.75rem;display:none}
+.sig.has-ink .sig-clear{display:block}
+.sig-type label{display:block;font-size:.85rem;font-weight:600;color:var(--navy);margin-bottom:.35rem}
