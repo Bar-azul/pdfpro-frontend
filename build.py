@@ -31,7 +31,7 @@ ROOT = Path(__file__).resolve().parent
 SITE = "https://www.pdfproapp.com"
 API = "https://pdfproweb.onrender.com"
 ADSENSE_CLIENT = "ca-pub-5921716820042715"
-GA_ID = "G-WJ3VYWT5RY"
+GA_ID = "G-TL72YY4S22"
 CONTACT_EMAIL = "support@pdfproapp.com"   # make sure this inbox actually receives mail
 MAX_MB = 100                              # matches MAX_FILE_SIZE_MB in the backend
 LANGS = ("en", "he")
@@ -1723,7 +1723,9 @@ def main() -> None:
         f = ROOT / path.strip("/") / "index.html"
         f.parent.mkdir(parents=True, exist_ok=True)
         # lastmod only moves when the page content (ignoring asset hashes) changes
-        h = hashlib.md5(re.sub(r"\?v=[0-9a-f]{8}", "", html_doc).encode()).hexdigest()
+        # ignore asset hashes and tracking IDs: changing them is not a content update
+        stable = re.sub(r"\?v=[0-9a-f]{8}|G-[A-Z0-9]{6,12}", "", html_doc)
+        h = hashlib.md5(stable.encode()).hexdigest()
         if manifest.get(path, {}).get("hash") != h:
             manifest[path] = {"hash": h, "lastmod": today}
         if not f.exists() or f.read_text(encoding="utf-8") != html_doc:

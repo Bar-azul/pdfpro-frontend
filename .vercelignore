@@ -5,3 +5,4 @@ content/
 README.md
 *.py
 *.bak
+__pycache__/
