@@ -118,6 +118,7 @@ body.rtl .progress div{animation-direction:reverse}
 .tool-result .cta{margin-top:0}
 .tool-result pre{white-space:pre-wrap;background:white;border:1px solid var(--border);border-radius:8px;padding:.8rem;margin-top:.8rem;max-height:220px;overflow:auto;font-size:.85rem;color:var(--text)}
 .tool-note{font-size:.85rem;color:var(--muted);margin-top:.4rem}
+#tool-preview{unicode-bidi:plaintext;text-align:start;white-space:pre-wrap}
 .steps{counter-reset:s;list-style:none;margin:0}
 .steps li{counter-increment:s;position:relative;padding-inline-start:3rem;margin-bottom:1.2rem}
 .steps li::before{content:counter(s);position:absolute;inset-inline-start:0;top:0;width:2rem;height:2rem;border-radius:50%;background:var(--navy);color:white;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:.9rem}
