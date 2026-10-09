@@ -388,7 +388,7 @@ TOOLS = [
         },
     },
     {
-        "slug": "ocr-pdf", "limit": 10,
+        "slug": "ocr-pdf", "limit": 10, "timeout": 330,
         "api": {"endpoint": "/api/ocr/extract", "field": "file", "multi": False, "accept": ".pdf,.jpg,.jpeg,.png", "result": "text"},
         "options": [
             {"name": "language", "type": "select", "default": "heb+eng",
@@ -442,7 +442,7 @@ TOOLS = [
         },
     },
     {
-        "slug": "translate-pdf", "limit": 5,
+        "slug": "translate-pdf", "limit": 5, "timeout": 330,
         "api": {"endpoint": "/api/translate/pdf", "field": "file", "multi": False, "accept": ".pdf", "result": "file"},
         "options": [
             {"name": "target_language", "type": "select", "default": {"en": "iw", "he": "en"},
@@ -1639,7 +1639,8 @@ def build_tool(tool: dict, lang: str) -> str:
 
     js_cfg = {"slug": slug, "endpoint": api["endpoint"], "field": api["field"], "multi": api["multi"],
               "minFiles": api.get("minFiles", 1), "accept": api["accept"], "result": api["result"],
-              "maxMB": MAX_MB, "t": u["js"], "errors": d.get("errors", {})}
+              "maxMB": MAX_MB, "t": u["js"], "errors": d.get("errors", {}),
+              "timeoutSec": tool.get("timeout", 180)}
 
     body = f"""<div class="container">
   {crumbs_html}
