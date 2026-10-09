@@ -1,0 +1,32 @@
+<p class="lead">Need to remove an ID number, a name or an account number from a PDF before you send it? The usual trick, drawing a black box over it, doesn't actually delete anything. Here's why, and how to remove text so it's really gone from the file.</p>
+
+<h2>Why a black box isn't enough</h2>
+<p>When you draw a black rectangle or a black highlight in Word, Mac Preview, a PDF editor or any markup tool, the box sits <strong>on top of</strong> the text. The text itself is still in the file. Anyone who receives it can:</p>
+<ul>
+<li>select the area and copy it. The "hidden" text pastes in full.</li>
+<li>search the file with Ctrl+F and find it.</li>
+<li>open the file in a PDF editor and move the box aside.</li>
+</ul>
+<p>This isn't theoretical. Government and court documents have leaked exactly this way.</p>
+
+<h2>How to remove it for real</h2>
+<p>Proper redaction deletes the text from the file first, then draws a black box where it was. To do it:</p>
+<ol>
+<li>Open <a href="/redact-pdf/">Redact PDF</a> and upload the file.</li>
+<li>Type what you want to hide. Separate several items with commas, for example: <code>123456782, Dana Levi, 12-345-678901</code>.</li>
+<li>Download the file. Every occurrence of every item, on every page, is deleted and blacked out.</li>
+</ol>
+
+<h2>A thirty-second check</h2>
+<p>After redacting, open the new file and:</p>
+<ul>
+<li>search with Ctrl+F for what you hid. There should be no results.</li>
+<li>select the black box and copy. There should be no text there.</li>
+</ul>
+<p>If something still turns up, it's probably written slightly differently in the file, for example with spaces (<code>123 456 782</code>) or dashes. Add that version too and run it again.</p>
+
+<h2>What if the document is scanned?</h2>
+<p>In a scan, the text is part of the image, so there's nothing to search for. Run the file through <a href="/ocr-pdf/">OCR</a> first and choose <em>Searchable PDF</em>, then redact the file you get back. Redaction also wipes the image pixels under the box, not just the text. Look over the result yourself, because OCR can miss a word that isn't clearly printed.</p>
+
+<h2>What if you want to change text, not hide it?</h2>
+<p>To fix a word or change a number, the simple route is to convert the file to Word with <a href="/pdf-to-word/">PDF to Word</a>, edit it, and save it as a PDF again with <a href="/word-to-pdf/">Word to PDF</a>. What exactly to hide on common documents like a payslip or an ID copy is covered in the <a href="/blog/hide-personal-details-pdf/">guide to hiding personal details</a>.</p>
