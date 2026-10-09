@@ -170,8 +170,7 @@
     if (invalid) { setStatus(invalid, 'error'); return; }
     busy = true; render();
     result.classList.remove('show');
-    bar.classList.add('show');
-    setStatus(t.uploading, 'busy');
+    setProgress(0, t.p_upload.replace('{p}', 0));
 
     // If the server is still waking up, tell the user instead of looking stuck.
     var slowTimer = setTimeout(function () { setStatus(t.waking, 'busy'); }, 6000);
@@ -192,25 +191,94 @@
     if (window.TOOL_HOOKS && window.TOOL_HOOKS.append) window.TOOL_HOOKS.append(fd);
 
     if (window.gtag) gtag('event', 'tool_run', { tool: cfg.slug });
-    var ctrl = new AbortController();
-    var hardTimeout = setTimeout(function () { ctrl.abort(); }, (cfg.timeoutSec || 180) * 1000);
 
-    fetch(API + cfg.endpoint + (qs ? '?' + qs : ''), { method: 'POST', body: fd, signal: ctrl.signal })
-      .then(function (resp) {
-        if (!resp.ok) return errorFrom(resp).then(function (m) { throw new Error(m); });
-        return resp.json();
-      })
-      .then(function (data) { setStatus(''); showResult(data); })
-      .catch(function (e) {
-        var msg = e.name === 'AbortError' ? t.timeout : (e.message === 'Failed to fetch' ? t.network : e.message);
-        setStatus(msg, 'error');
-      })
-      .then(function () {
-        clearTimeout(slowTimer); clearTimeout(hardTimeout);
-        bar.classList.remove('show');
+    // Real progress: upload bytes from the browser, then the server's own count
+    // (pages read, images compressed, files merged...) polled by job id.
+    var job = newJobId();
+    var url = API + cfg.endpoint + '?' + (qs ? qs + '&' : '') + 'job_id=' + job;
+    var xhr = new XMLHttpRequest();
+    var poller = null, finished = false;
+    xhr.open('POST', url);
+    xhr.timeout = (cfg.timeoutSec || 180) * 1000;
+    xhr.responseType = 'text';
+
+    xhr.upload.onprogress = function (e) {
+      if (!e.lengthComputable) return;
+      var p = Math.round(100 * e.loaded / e.total);
+      clearTimeout(slowTimer);
+      setProgress(p, t.p_upload.replace('{p}', p));
+    };
+    xhr.upload.onload = function () {
+      setProgress(null, t.p_processing);
+      pollProgress(job);
+      poller = setInterval(function () { pollProgress(job); }, 700);
+    };
+
+    function done(err, data) {
+      if (finished) return;
+      finished = true;
+      clearInterval(poller); clearTimeout(slowTimer);
+      if (err) { setStatus(err, 'error'); hideProgress(); busy = false; render(); return; }
+      setProgress(100, t.p_finishing);
+      setTimeout(function () {
+        hideProgress(); setStatus('');
         busy = false; render();
-      });
+        try { showResult(data); } catch (e) { setStatus(e.message, 'error'); }
+      }, 300);
+    }
+    function respObj() {
+      return { status: xhr.status, json: function () {
+        return new Promise(function (res, rej) { try { res(JSON.parse(xhr.responseText)); } catch (e) { rej(e); } });
+      } };
+    }
+    xhr.onload = function () {
+      if (xhr.status >= 200 && xhr.status < 300) {
+        var data; try { data = JSON.parse(xhr.responseText); } catch (e) { return done(t.generic_error); }
+        done(null, data);
+      } else {
+        errorFrom(respObj()).then(function (m) { done(m); });
+      }
+    };
+    xhr.onerror = function () { done(t.network); };
+    xhr.ontimeout = function () { done(t.timeout); };
+    xhr.send(fd);
   });
+
+  function newJobId() {
+    if (window.crypto && crypto.randomUUID) return crypto.randomUUID().replace(/-/g, '');
+    return Date.now().toString(36) + Math.random().toString(36).slice(2, 12);
+  }
+  function setProgress(percent, label) {
+    bar.classList.add('show');
+    var fill = bar.firstElementChild;
+    if (percent === null) {
+      bar.classList.add('indeterminate'); fill.style.width = '';
+      bar.removeAttribute('aria-valuenow');
+    } else {
+      bar.classList.remove('indeterminate'); fill.style.width = percent + '%';
+      bar.setAttribute('aria-valuenow', percent);
+    }
+    if (label) setStatus(label, 'busy');
+  }
+  function hideProgress() {
+    bar.classList.remove('show', 'indeterminate');
+    bar.firstElementChild.style.width = '0';
+  }
+  function pollProgress(job) {
+    fetch(API + '/api/progress/' + job).then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (p) {
+        if (!p || !busy) return;
+        var key = 'p_' + p.stage;
+        var label = t[key] || t.p_processing;
+        if (p.total > 0) {
+          var n = Math.min(p.total, Math.floor(p.done) + 1);
+          label = label.replace('{n}', n).replace('{total}', p.total);
+          setProgress(Math.max(2, Math.min(99, p.percent)), label);
+        } else {
+          setProgress(null, label.replace('{n}', '').replace('{total}', ''));
+        }
+      }).catch(function () { /* polling is best-effort */ });
+  }
 
   resetBtn.addEventListener('click', function () {
     files = []; result.classList.remove('show'); resetBtn.hidden = true; setStatus(''); render();

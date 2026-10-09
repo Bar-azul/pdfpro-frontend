@@ -57,6 +57,17 @@ UI = {
             "bad_type": "{name} isn't a supported file type.",
             "too_big": "{name} is larger than {max} MB.",
             "uploading": "Uploading and processing…",
+            "p_upload": "Uploading… {p}%",
+            "p_processing": "Processing…",
+            "p_pages": "Processing page {n} of {total}",
+            "p_ocr": "Reading page {n} of {total}",
+            "p_translating": "Translating page {n} of {total}",
+            "p_images": "Image {n} of {total}",
+            "p_files": "Merging file {n} of {total}",
+            "p_parts": "Creating file {n} of {total}",
+            "p_saving": "Saving the result…",
+            "p_converting": "Converting…",
+            "p_finishing": "Almost done…",
             "waking": "Still working. Large files can take up to a minute.",
             "done": "Your file is ready", "done_parts": "{n} files are ready",
             "download": "Download", "download_txt": "Download text (.txt)",
@@ -107,6 +118,17 @@ UI = {
             "bad_type": "סוג הקובץ {name} לא נתמך.",
             "too_big": "הקובץ {name} גדול מ-{max}MB.",
             "uploading": "מעלה ומעבד…",
+            "p_upload": "מעלה… {p}%",
+            "p_processing": "מעבד…",
+            "p_pages": "מעבד עמוד {n} מתוך {total}",
+            "p_ocr": "קורא עמוד {n} מתוך {total}",
+            "p_translating": "מתרגם עמוד {n} מתוך {total}",
+            "p_images": "תמונה {n} מתוך {total}",
+            "p_files": "ממזג קובץ {n} מתוך {total}",
+            "p_parts": "יוצר קובץ {n} מתוך {total}",
+            "p_saving": "שומר את התוצאה…",
+            "p_converting": "ממיר…",
+            "p_finishing": "עוד רגע…",
             "waking": "עדיין עובד. קבצים גדולים יכולים לקחת עד דקה.",
             "done": "הקובץ מוכן", "done_parts": "{n} קבצים מוכנים",
             "download": "הורדת", "download_txt": "הורדת הטקסט (txt.)",
@@ -1659,7 +1681,7 @@ def build_tool(tool: dict, lang: str) -> str:
       <button type="button" class="cta" id="tool-run" disabled>{esc(d['run'])}</button>
       <button type="button" class="link-btn" id="tool-reset" hidden>{u['again']}</button>
     </div>
-    <div class="progress" id="tool-progress" aria-hidden="true"><div></div></div>
+    <div class="progress" id="tool-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"><div></div></div>
     <p class="tool-status" id="tool-status" role="status" aria-live="polite"></p>
     <div class="tool-result" id="tool-result" aria-live="polite">
       <h2 id="tool-result-title"></h2>
