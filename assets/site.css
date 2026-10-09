@@ -107,10 +107,12 @@ details p{margin:.8rem 0 0}
 .tool-status.busy{color:var(--navy)}
 .progress{height:6px;background:#eee;border-radius:3px;overflow:hidden;margin-top:.6rem;display:none}
 .progress.show{display:block}
-.progress div{height:100%;width:30%;background:var(--red);border-radius:3px;animation:slide 1.2s ease-in-out infinite}
+.progress div{height:100%;width:0;background:var(--red);border-radius:3px;transition:width .4s ease}
+.progress.indeterminate div{width:30%;transition:none;animation:slide 1.2s ease-in-out infinite}
 @keyframes slide{0%{transform:translateX(-100%)}100%{transform:translateX(350%)}}
-body.rtl .progress div{animation-direction:reverse}
-@media (prefers-reduced-motion:reduce){.progress div{animation:none;width:100%;opacity:.6}}
+[dir=rtl] .progress.indeterminate div{animation-direction:reverse}
+[dir=rtl] .progress div{margin-left:auto}
+@media (prefers-reduced-motion:reduce){.progress.indeterminate div{animation:none;width:100%;opacity:.6}}
 .tool-result{margin-top:1rem;padding:1.2rem;border-radius:10px;background:#f0fdf4;border:1px solid #bbf7d0;display:none}
 .tool-result.show{display:block}
 .tool-result h2{margin:0 0 .6rem;font-size:1.05rem;color:var(--ok)}
