@@ -169,8 +169,8 @@ TOOLS = [
         "options": [],
         "en": {
             "name": "PDF to Excel",
-            "title": "PDF to Excel Converter – Extract Tables Free | PDFPro",
-            "desc": "Extract tables from a PDF into an Excel (.xlsx) spreadsheet. Each table gets its own sheet. Free, no sign-up.",
+            "title": "Free PDF to Excel Converter Online – No Sign-Up | PDFPro",
+            "desc": "Convert PDF to Excel free and online, with no sign-up and nothing to download. Every table becomes its own sheet in an .xlsx spreadsheet.",
             "h1": "PDF to Excel converter",
             "lead": "Pull the tables out of a PDF and into an Excel spreadsheet, ready to sort, filter and calculate.",
             "run": "Convert to Excel",
@@ -183,6 +183,8 @@ TOOLS = [
                 ("What if the PDF has several tables?", "Every table goes to a separate sheet, labeled with the page it came from, so nothing gets merged by mistake."),
                 ("Does it work with scanned PDFs?", "Table extraction needs real text in the PDF. For a scan, run it through the OCR tool first."),
                 ("Is it free?", "Yes, with an hourly limit per tool and no sign-up."),
+                ("Do I need to download or install anything?", "No. The converter runs in your browser, on any computer or phone. You only download the finished Excel file."),
+                ("Can I open the result in Google Sheets?", "Yes. Upload the .xlsx file to Google Drive and open it with Google Sheets, or use File, Import in an existing sheet."),
                 ("What's the maximum file size?", f"Up to {MAX_MB} MB per file."),
             ],
             "related": ["pdf-to-word", "ocr-pdf", "split-pdf"],
@@ -890,10 +892,10 @@ TOOLS = [
         },
         "he": {
             "name": "חתימה על PDF",
-            "title": "חתימה על PDF אונליין בחינם – בלי להדפיס | PDFPro",
-            "desc": "מוסיפים את השם שלכם כחתימה, עם תאריך, למסמך PDF בלי להדפיס ולסרוק. תומך בשמות בעברית. בחינם.",
-            "h1": "חתימה על PDF",
-            "lead": "מוסיפים את השם שלכם כחתימה, עם התאריך של היום, בעמוד שתבחרו. בלי מדפסת ובלי סורק.",
+            "title": "חתימה דיגיטלית על PDF בחינם – לחתום על מסמך אונליין | PDFPro",
+            "desc": "חתימה דיגיטלית על מסמך PDF אונליין, מהמחשב או מהטלפון: מוסיפים את השם כחתימה עם תאריך, בלי להדפיס ולסרוק. בחינם ובלי הרשמה.",
+            "h1": "חתימה דיגיטלית על PDF",
+            "lead": "חותמים על מסמך PDF אונליין, מהמחשב או מהטלפון: השם שלכם מתווסף כחתימה, עם התאריך של היום, בעמוד שתבחרו. בלי מדפסת ובלי סורק.",
             "run": "חתום על PDF",
             "steps": [
                 ("בוחרים את ה-PDF", "גוררים את הקובץ לתיבה למעלה."),
@@ -901,6 +903,8 @@ TOOLS = [
                 ("מורידים את ה-PDF החתום", "החתימה והתאריך מתווספים לעמוד."),
             ],
             "faqs": [
+                ("זו חתימה דיגיטלית?", "בשפה היומיומית כן: זו חתימה על מסמך בלי נייר. היא לא 'חתימה אלקטרונית מאושרת' עם תעודה דיגיטלית, שחלק מהגופים דורשים. ההבדלים מוסברים במדריך על סוגי חתימות."),
+                ("אפשר לחתום מהטלפון?", "כן. פותחים את העמוד בדפדפן בטלפון, בוחרים את ה-PDF מהקבצים או מהמייל, ומורידים את הקובץ החתום."),
                 ("זו חתימה מחייבת משפטית?", "הכלי מוסיף חתימה גלויה עם השם והתאריך, שמתקבלת בהרבה מסמכים יומיומיים כמו טפסים, חוזי שכירות ואישורים. יש מסמכים שדורשים חתימה אלקטרונית מאושרת, אז כדאי לבדוק עם מי שביקש את המסמך."),
                 ("אפשר לחתום בעברית?", "כן. שמות בעברית נכתבים מימין לשמאל, בצורה תקינה."),
                 ("אפשר לצייר חתימה משלי?", "עדיין לא. החתימה היא השם שהקלדתם בסגנון חתימה."),
