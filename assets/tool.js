@@ -126,7 +126,9 @@
       downloads.appendChild(downloadButton(data.download_url, data.filename || 'result'));
       if (data.saved_percentage !== undefined) {
         var n = document.createElement('p'); n.className = 'tool-note';
-        n.textContent = t.saved.replace('{p}', data.saved_percentage);
+        n.textContent = data.saved_percentage > 0
+          ? t.saved.replace('{p}', data.saved_percentage)
+          : t.saved_none;
         downloads.appendChild(n);
       }
     } else {
@@ -143,6 +145,7 @@
     if (resp.status === 429) return Promise.resolve(t.rate_limited);
     return resp.json().then(function (j) {
       var d = j && j.detail;
+      if (j && j.code && t.err && t.err[j.code]) return t.err[j.code];
       if (Array.isArray(d)) d = d.map(function (x) { return x.msg; }).join(', ');
       return d || (t.generic_error + ' (' + resp.status + ')');
     }).catch(function () { return t.generic_error + ' (' + resp.status + ')'; });
