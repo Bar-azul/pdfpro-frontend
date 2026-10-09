@@ -193,7 +193,7 @@
 
     if (window.gtag) gtag('event', 'tool_run', { tool: cfg.slug });
     var ctrl = new AbortController();
-    var hardTimeout = setTimeout(function () { ctrl.abort(); }, 180000);
+    var hardTimeout = setTimeout(function () { ctrl.abort(); }, (cfg.timeoutSec || 180) * 1000);
 
     fetch(API + cfg.endpoint + (qs ? '?' + qs : ''), { method: 'POST', body: fd, signal: ctrl.signal })
       .then(function (resp) {
