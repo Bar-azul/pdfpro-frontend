@@ -1112,7 +1112,7 @@ ARTICLES = [
             "desc": "מוציאים עמוד בודד, טווח או כמה עמודים לא רציפים מ-PDF לקובץ חדש, בפחות מדקה.",
             "tag": "ארגון", "cta": "פיצול PDF"}},
     {"slug": "translate-official-document", "published": "2026-09-26", "tool": "translate-pdf",
-     "en": {"title": "Translating an Official Document: When Machine Translation Is Enough",
+     "en": {"title": "Translating an Official Document: Is Machine Translation Enough?",
             "desc": "When translating a PDF automatically is fine, when you need a certified translator, and how to get the best machine translation.",
             "tag": "Translation", "cta": "Translate a PDF"},
      "he": {"title": "תרגום מסמך רשמי: מתי תרגום מכונה מספיק ומתי צריך מתרגם",
@@ -1147,7 +1147,7 @@ ARTICLES = [
             "desc": "למה קבצי PDF כל כך כבדים, וארבע דרכים לעמוד במגבלת ההעלאה, מדחיסה ועד תיקון הקובץ במקור.",
             "tag": "דחיסה", "cta": "דחיסת PDF"}},
     {"slug": "hide-personal-details-pdf", "published": "2026-09-26", "tool": "redact-pdf",
-     "en": {"title": "How to Hide an ID Number or Personal Details in a PDF Before Sending It",
+     "en": {"title": "How to Hide an ID Number or Personal Details in a PDF",
             "desc": "Which details to hide before sharing a document, why a black box in an editor isn't enough, and how to redact properly.",
             "tag": "Privacy", "cta": "Redact a PDF"},
      "he": {"title": "איך להסתיר מספר תעודת זהות ופרטים אישיים ב-PDF לפני ששולחים",
@@ -1161,7 +1161,7 @@ ARTICLES = [
             "desc": "בעל דירה או מעסיק ביקשו צילום תעודת זהות. איך להגביל את השימוש בעותק עם סימן מים וסיסמה.",
             "tag": "פרטיות", "cta": "הוספת סימן מים"}},
     {"slug": "compress-id-contract-pdf", "published": "2026-07-08", "tool": "compress-pdf",
-     "en": {"title": "How to Compress an ID or Contract PDF Without Losing Signature Clarity",
+     "en": {"title": "Compress an ID or Contract PDF and Keep the Signature Sharp",
             "desc": "A guide to compressing sensitive documents like ID cards and signed contracts while keeping text and signatures fully legible.",
             "tag": "Compression", "cta": "Compress a PDF"},
      "he": {"title": "איך לדחוס PDF של תעודת זהות או חוזה בלי לפגוע בקריאות החתימה",
@@ -1189,7 +1189,7 @@ ARTICLES = [
             "desc": "מדריך מלא לחתימה דיגיטלית על מסמכי PDF בעברית - בלי מדפסת, סורק או בזבוז זמן.",
             "tag": "חתימה", "cta": "חתימה על PDF"}},
     {"slug": "pdf-hebrew-rtl", "published": "2026-07-01", "tool": "pdf-to-word",
-     "en": {"title": "Why Hebrew or Arabic Text Gets Scrambled After PDF Conversion (And How to Fix It)",
+     "en": {"title": "Why Hebrew Text Gets Scrambled in PDF Conversion (and the Fix)",
             "desc": "A full explanation of RTL (right-to-left) text issues in PDF conversion, why it happens, and how to pick a tool that actually handles it correctly.",
             "tag": "Conversion", "cta": "Convert PDF to Word"},
      "he": {"title": "למה הטקסט בעברית \"מתהפך\" אחרי המרת PDF? והפתרון המלא",
@@ -1288,15 +1288,20 @@ def static_pages() -> dict:
 <details><summary>Do I need an account?</summary><p>No. Open a tool, add your file, and download the result.</p></details>
 <details><summary>What's the maximum file size?</summary><p>{MAX_MB} MB per file. Merge accepts up to 20 files at once.</p></details>
 <details><summary>Is there a usage limit?</summary><p>Yes, a number of files per hour for each tool. The exact numbers are on the <a href="/pricing/">pricing page</a>.</p></details>
-<details><summary>Why did the first file take so long?</summary><p>When nobody has used the site for a while, the server goes to sleep and needs up to a minute to start. After that, files are processed in seconds.</p></details>
+<details><summary>Does it work on my phone?</summary><p>Yes. Every tool runs in the browser on iPhone and Android, with nothing to install. You can pick files from your phone, Google Drive or iCloud, and the result downloads to your phone.</p></details>
+<details><summary>How long does processing take?</summary><p>Most files are ready in a few seconds. OCR and translation take longer because every page is read or translated: roughly a few seconds per page. The progress bar shows which page is being processed.</p></details>
 <h2>Hebrew and RTL</h2>
 <details><summary>My Hebrew text came out reversed. What happened?</summary><p>This usually happens with other converters that don't handle right-to-left text. If it happens with PDFPro, please <a href="/contact/">tell us</a> which tool you used. The <a href="/blog/pdf-hebrew-rtl/">RTL guide</a> explains the cause.</p></details>
 <details><summary>Can I OCR a document that mixes Hebrew and English?</summary><p>Yes. In <a href="/ocr-pdf/">OCR</a>, choose Hebrew + English.</p></details>
+<details><summary>Can I search a scanned PDF after OCR?</summary><p>Yes. Choose "Searchable PDF" as the output: the page looks exactly the same, with an invisible text layer you can search and copy. Single Hebrew words are found in every PDF reader; in some recent Chrome versions a search for several Hebrew words in a row can fail on any PDF, so search one word at a time there.</p></details>
 <h2>Privacy</h2>
 <details><summary>What happens to my files?</summary><p>They're processed on our server and deleted automatically after one hour. We don't read or keep them. See the <a href="/privacy/">privacy policy</a>.</p></details>
 <h2>Troubleshooting</h2>
 <details><summary>"The file has expired" when downloading</summary><p>Results are kept for one hour. Process the file again to get a new copy.</p></details>
 <details><summary>"Hourly limit reached"</summary><p>Wait an hour, or use a different tool in the meantime.</p></details>
+<details><summary>"This PDF is password-protected"</summary><p>Most tools can't open a locked file. Remove the password with <a href="/unlock-pdf/">Unlock PDF</a> (you need to know it), then run the tool on the unlocked file.</p></details>
+<details><summary>"This PDF has no selectable text"</summary><p>The file is a scan or a photo, so there's no text to convert or translate. Run it through <a href="/ocr-pdf/">OCR</a> first and choose "Searchable PDF", then use that file.</p></details>
+<details><summary>The result isn't what I expected</summary><p>Conversions are automatic, so complex layouts can need small fixes afterwards. Machine translation is good for understanding a document, not for legal use. If a file comes out clearly wrong, <a href="/contact/">tell us</a> which tool you used and what happened; reports like that are how the tools get better.</p></details>
 <p>Still stuck? <a href="/contact/">Contact us</a>.</p>"""},
             "he": {"title": "מרכז עזרה | PDFPro", "desc": "תשובות לשאלות נפוצות על PDFPro: מגבלות, פרטיות, תמיכה בעברית ופתרון תקלות.",
                    "body": f"""
@@ -1305,15 +1310,20 @@ def static_pages() -> dict:
 <details><summary>צריך חשבון?</summary><p>לא. פותחים כלי, מוסיפים קובץ ומורידים את התוצאה.</p></details>
 <details><summary>מה גודל הקובץ המקסימלי?</summary><p>{MAX_MB}MB לקובץ. במיזוג אפשר עד 20 קבצים בבת אחת.</p></details>
 <details><summary>יש מגבלת שימוש?</summary><p>כן, מספר קבצים לשעה בכל כלי. המספרים המדויקים ב<a href="/he/pricing/">עמוד המחירים</a>.</p></details>
-<details><summary>למה הקובץ הראשון לקח הרבה זמן?</summary><p>כשאף אחד לא השתמש באתר זמן מה, השרת נכנס למצב שינה וצריך עד דקה כדי לעלות. אחרי זה הקבצים מעובדים תוך שניות.</p></details>
+<details><summary>זה עובד בטלפון?</summary><p>כן. כל הכלים עובדים בדפדפן באייפון ובאנדרואיד, בלי להתקין כלום. אפשר לבחור קבצים מהטלפון, מ-Google Drive או מ-iCloud, והתוצאה יורדת לטלפון.</p></details>
+<details><summary>כמה זמן לוקח העיבוד?</summary><p>רוב הקבצים מוכנים תוך כמה שניות. OCR ותרגום לוקחים יותר, כי כל עמוד נקרא או מתורגם: בערך כמה שניות לעמוד. פס ההתקדמות מראה איזה עמוד מעובד כרגע.</p></details>
 <h2>עברית ו-RTL</h2>
 <details><summary>הטקסט בעברית יצא הפוך. מה קרה?</summary><p>זה קורה בדרך כלל בממירים שלא יודעים לטפל בטקסט מימין לשמאל. אם זה קרה ב-PDFPro, <a href="/he/contact/">ספרו לנו</a> באיזה כלי השתמשתם. <a href="/he/blog/pdf-hebrew-rtl/">המדריך על RTL</a> מסביר את הסיבה.</p></details>
 <details><summary>אפשר לעשות OCR למסמך עברית-אנגלית?</summary><p>כן. בכלי ה-<a href="/he/ocr-pdf/">OCR</a> בוחרים עברית + אנגלית.</p></details>
+<details><summary>אפשר לחפש בסריקה אחרי OCR?</summary><p>כן. בוחרים בפלט "PDF עם טקסט לחיפוש": העמוד נראה בדיוק אותו דבר, עם שכבת טקסט שקופה שאפשר לחפש בה ולהעתיק ממנה. חיפוש של מילה אחת בעברית עובד בכל תוכנה. בחלק מהגרסאות האחרונות של Chrome חיפוש של כמה מילים ברצף בעברית נכשל בכל PDF, אז שם כדאי לחפש מילה אחת בכל פעם.</p></details>
 <h2>פרטיות</h2>
 <details><summary>מה קורה לקבצים שלי?</summary><p>הם מעובדים בשרת שלנו ונמחקים אוטומטית אחרי שעה. אנחנו לא קוראים ולא שומרים אותם. ראו <a href="/he/privacy/">מדיניות פרטיות</a>.</p></details>
 <h2>תקלות</h2>
 <details><summary>"תוקף הקובץ פג" בזמן ההורדה</summary><p>התוצאות נשמרות שעה אחת. עבדו את הקובץ שוב כדי לקבל עותק חדש.</p></details>
 <details><summary>"הגעתם למגבלה השעתית"</summary><p>חכו שעה, או השתמשו בינתיים בכלי אחר.</p></details>
+<details><summary>"ה-PDF מוגן בסיסמה"</summary><p>רוב הכלים לא יכולים לפתוח קובץ נעול. הסירו את הסיסמה עם <a href="/he/unlock-pdf/">הסרת סיסמה מ-PDF</a> (צריך לדעת אותה), ואז הריצו את הכלי על הקובץ הפתוח.</p></details>
+<details><summary>"אין ב-PDF טקסט שאפשר לבחור"</summary><p>הקובץ הוא סריקה או צילום, ולכן אין בו טקסט להמרה או לתרגום. העבירו אותו קודם דרך <a href="/he/ocr-pdf/">OCR</a>, בחרו "PDF עם טקסט לחיפוש", והשתמשו בקובץ שמתקבל.</p></details>
+<details><summary>התוצאה לא כמו שציפיתי</summary><p>ההמרות אוטומטיות, ולכן פריסות מורכבות יכולות לדרוש תיקונים קטנים אחרי. תרגום מכונה טוב להבנת מסמך, לא לשימוש משפטי. אם קובץ יצא שגוי בבירור, <a href="/he/contact/">ספרו לנו</a> באיזה כלי השתמשתם ומה קרה. דיווחים כאלה הם מה שמשפר את הכלים.</p></details>
 <p>עדיין תקועים? <a href="/he/contact/">צרו קשר</a>.</p>"""},
         },
         "privacy": {
@@ -1332,7 +1342,7 @@ def static_pages() -> dict:
 <h2>5. Other cookies and storage</h2>
 <p>We store your language preference in your browser. We don't use accounts, so there's no login data.</p>
 <h2>6. Service providers</h2>
-<p>The website is hosted on Vercel and files are processed on a server hosted by Render. Fonts are loaded from Google Fonts. Translation uses a third-party machine-translation service, which receives the text of the document being translated.</p>
+<p>The website is hosted on Vercel and files are processed on a server hosted by Render. Fonts are loaded from Google Fonts. Translation is done by Cloudflare's machine-translation service (Workers AI), which receives the text of the document being translated and nothing else.</p>
 <h2>7. Children</h2>
 <p>The service isn't directed at children under 13, and we don't knowingly collect their information.</p>
 <h2>8. Your rights and contact</h2>
@@ -1354,7 +1364,7 @@ def static_pages() -> dict:
 <h2>5. עוגיות ואחסון נוספים</h2>
 <p>אנחנו שומרים בדפדפן את העדפת השפה שלכם. אין באתר חשבונות משתמש, ולכן אין נתוני התחברות.</p>
 <h2>6. ספקי שירות</h2>
-<p>האתר מאוחסן ב-Vercel והקבצים מעובדים בשרת שמאוחסן ב-Render. הגופנים נטענים מ-Google Fonts. התרגום נעשה באמצעות שירות תרגום מכונה חיצוני, שמקבל את טקסט המסמך המתורגם.</p>
+<p>האתר מאוחסן ב-Vercel והקבצים מעובדים בשרת שמאוחסן ב-Render. הגופנים נטענים מ-Google Fonts. התרגום נעשה באמצעות שירות תרגום המכונה של Cloudflare ‏(Workers AI), שמקבל רק את טקסט המסמך המתורגם.</p>
 <h2>7. ילדים</h2>
 <p>השירות לא מיועד לילדים מתחת לגיל 13, ואנחנו לא אוספים ביודעין מידע עליהם.</p>
 <h2>8. הזכויות שלכם ויצירת קשר</h2>
@@ -1404,7 +1414,7 @@ def static_pages() -> dict:
         },
     }
 
-PRIVACY_UPDATED = "September 26, 2026"
+PRIVACY_UPDATED = "October 10, 2026"
 BLOG_META = {
     "en": {"title": "PDF Guides and Tips | PDFPro Blog", "h1": "Guides",
            "desc": "Practical guides for working with PDF files: compression, conversion, Hebrew and RTL text, signatures and more.",
@@ -1767,7 +1777,9 @@ def build_article(art: dict, lang: str) -> str:
          "mainEntityOfPage": abs_url(lang, slug)},
         crumbs_ld,
     ]
-    return page(lang=lang, slug=slug, title=f"{d['title']} | PDFPro", desc=d["desc"], body=body,
+    # Google shows ~60 characters; add the brand only when it fits
+    title = d["title"] if len(d["title"]) + 9 > 60 else f"{d['title']} | PDFPro"
+    return page(lang=lang, slug=slug, title=title, desc=d["desc"], body=body,
                 active="blog", schema=schema, og_type="article")
 
 
