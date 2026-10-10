@@ -287,8 +287,12 @@
   "hash": "c4e19acdef2ad81a9c93c3e0d883cd18",
   "lastmod": "2026-10-10"
  },
+ "/he/translate-menu/": {
+  "hash": "6405027763e45d77d06f73c85dde76c0",
+  "lastmod": "2026-10-10"
+ },
  "/he/translate-pdf/": {
-  "hash": "0e717e10fd5cbadd896c887ab92d2f2c",
+  "hash": "d95756ebd20b9a85453b2d15cb169c13",
   "lastmod": "2026-10-10"
  },
  "/he/unlock-pdf/": {
@@ -367,8 +371,12 @@
   "hash": "5aa4f0aac0eb928def2924722cf63297",
   "lastmod": "2026-10-10"
  },
+ "/translate-menu/": {
+  "hash": "d1a0ce0faf01f448f657f5d3257de046",
+  "lastmod": "2026-10-10"
+ },
  "/translate-pdf/": {
-  "hash": "2025d90ab5b65c020937308e5a2b57bd",
+  "hash": "b6f0ece8e788a39aa70118e8da50c6cb",
   "lastmod": "2026-10-10"
  },
  "/unlock-pdf/": {

@@ -498,7 +498,7 @@ TOOLS = [
                 ("Is the translation good enough for official use?", "It's machine translation, fine for understanding a document. For legal or official submissions, use a certified translator."),
                 ("Why is there a lower limit on this tool?", "Translation is the heaviest tool to run, so it allows fewer files per hour."),
             ],
-            "related": ["ocr-pdf", "pdf-to-word", "compress-pdf"],
+            "related": ["translate-menu", "ocr-pdf", "pdf-to-word"],
         },
         "he": {
             "name": "תרגום PDF",
@@ -518,7 +518,62 @@ TOOLS = [
                 ("התרגום מספיק טוב לשימוש רשמי?", "זה תרגום מכונה, מתאים להבנת המסמך. למסמכים משפטיים או רשמיים עדיף מתרגם מוסמך."),
                 ("למה המגבלה בכלי הזה נמוכה יותר?", "תרגום הוא הכלי הכבד ביותר להרצה, ולכן מותר בו פחות קבצים בשעה."),
             ],
-            "related": ["ocr-pdf", "pdf-to-word", "compress-pdf"],
+            "related": ["translate-menu", "ocr-pdf", "pdf-to-word"],
+        },
+    },
+    {
+        # Landing page for one use of the translate tool (same backend endpoint and
+        # hourly quota). "listed": False keeps it out of the footer and pricing table.
+        "slug": "translate-menu", "limit": 5, "timeout": 330, "listed": False,
+        "api": {"endpoint": "/api/translate/pdf", "field": "file", "multi": False, "accept": ".pdf", "result": "file"},
+        "options": [
+            {"name": "target_language", "type": "select", "default": {"en": "en", "he": "iw"},
+             "values": ["iw", "en", "ar", "ru", "fr", "de", "es"],
+             "en": {"label": "Translate to", "labels": ["Hebrew", "English", "Arabic", "Russian", "French", "German", "Spanish"]},
+             "he": {"label": "לתרגם ל", "labels": ["עברית", "אנגלית", "ערבית", "רוסית", "צרפתית", "גרמנית", "ספרדית"]}},
+            {"name": "preserve_layout", "type": "hidden", "default": "true"},
+        ],
+        "en": {
+            "name": "Translate a menu",
+            "title": "Translate a Restaurant Menu PDF – Free | PDFPro",
+            "desc": "Translate a restaurant menu PDF into English, Hebrew and more. Dish names, prices and allergy marks stay in place, in the original design.",
+            "h1": "Translate a restaurant menu",
+            "lead": "Upload a menu as a PDF and get the same menu back in another language: same design, same prices, dish names written so you can still order them.",
+            "run": "Translate menu",
+            "steps": [
+                ("Upload the menu PDF", "A menu with real text works best. For a photo of a menu, run OCR first."),
+                ("Pick the language", "The menu's language is detected automatically, including Thai, Arabic and Chinese."),
+                ("Download", "The translated menu keeps the layout, colours and prices of the original."),
+            ],
+            "faqs": [
+                ("What happens to dish names?", "Names like Tom Yam Goong are written out in the new language next to the original name, so you can read them and still point to them when you order. The description under each dish is translated."),
+                ("Are prices and allergy marks kept?", "Yes. Prices, currencies and marks such as (V) vegetarian, (N) nuts or (P) pork are kept exactly as they are."),
+                ("Can I translate a photo of a menu?", "Turn the photo into a PDF with JPG to PDF, run OCR so it has text, then translate it here."),
+                ("I own a restaurant. Can I make an English or Hebrew version of my menu?", "Yes. Upload your menu PDF and choose the language. Have someone fluent check the result before you print it: it is machine translation."),
+                ("Is it free?", "Yes, with no sign-up. Translation allows a few files per hour per visitor."),
+            ],
+            "related": ["translate-pdf", "ocr-pdf", "jpg-to-pdf"],
+        },
+        "he": {
+            "name": "תרגום תפריט",
+            "title": "תרגום תפריט מסעדה מ-PDF – בחינם | PDFPro",
+            "desc": "תרגום תפריט מסעדה בקובץ PDF לעברית, אנגלית ועוד. שמות המנות, המחירים וסימוני האלרגנים נשארים במקום, בעיצוב המקורי.",
+            "h1": "תרגום תפריט מסעדה",
+            "lead": "מעלים תפריט כ-PDF ומקבלים את אותו תפריט בשפה אחרת: אותו עיצוב, אותם מחירים, ושמות המנות כתובים כך שאפשר להזמין אותן.",
+            "run": "תרגם תפריט",
+            "steps": [
+                ("מעלים את התפריט", "תפריט עם טקסט אמיתי עובד הכי טוב. לצילום של תפריט, מעבירים קודם ב-OCR."),
+                ("בוחרים שפה", "שפת התפריט מזוהה אוטומטית, כולל תאית, ערבית וסינית."),
+                ("מורידים", "התפריט המתורגם שומר על הפריסה, הצבעים והמחירים של המקור."),
+            ],
+            "faqs": [
+                ("מה קורה לשמות המנות?", "שמות כמו Tom Yam Goong נכתבים בתעתיק עברי לצד השם המקורי, כך שאפשר לקרוא אותם וגם להראות למלצר מה מזמינים. התיאור שמתחת לכל מנה מתורגם."),
+                ("המחירים וסימוני האלרגנים נשמרים?", "כן. מחירים, מטבעות וסימונים כמו (V) צמחוני, (N) אגוזים או (P) חזיר נשארים בדיוק כמו שהם."),
+                ("אפשר לתרגם צילום של תפריט?", "הופכים את התמונה ל-PDF בכלי JPG ל-PDF, מעבירים ב-OCR כדי שיהיה בו טקסט, ואז מתרגמים כאן."),
+                ("יש לי מסעדה. אפשר להכין גרסה באנגלית של התפריט?", "כן. מעלים את התפריט ובוחרים אנגלית. לפני הדפסה כדאי שמישהו שולט בשפה יעבור על התוצאה, כי זה תרגום מכונה."),
+                ("זה בחינם?", "כן, בלי הרשמה. בתרגום מותרים כמה קבצים בשעה לכל משתמש."),
+            ],
+            "related": ["translate-pdf", "ocr-pdf", "jpg-to-pdf"],
         },
     },
     {
@@ -1208,7 +1263,7 @@ def _limits_table(lang: str) -> str:
     head = ("<tr><th>Tool</th><th>Files per hour</th></tr>" if lang == "en"
             else "<tr><th>כלי</th><th>קבצים לשעה</th></tr>")
     rows = "".join(f'<tr><td><a href="{url(lang, t["slug"])}">{esc(t[lang]["name"])}</a></td><td>{t["limit"]}</td></tr>'
-                   for t in TOOLS)
+                   for t in TOOLS if t.get("listed", True))
     return f'<table class="limits">{head}{rows}</table>'
 
 
@@ -1498,7 +1553,8 @@ def header(lang: str, active: str) -> str:
 
 def footer(lang: str, slug: str) -> str:
     u = UI[lang]
-    tools = "".join(f'<li><a href="{url(lang, t["slug"])}">{esc(t[lang]["name"])}</a></li>' for t in TOOLS)
+    tools = "".join(f'<li><a href="{url(lang, t["slug"])}">{esc(t[lang]["name"])}</a></li>'
+                    for t in TOOLS if t.get("listed", True))
     en_cur = ' aria-current="true"' if lang == "en" else ""
     he_cur = ' aria-current="true"' if lang == "he" else ""
     return f"""<footer class="site-footer">
