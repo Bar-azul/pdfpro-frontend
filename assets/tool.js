@@ -150,17 +150,21 @@
     clearInterval(limitTimer);
     function tick() {
       var left = Math.ceil((until - Date.now()) / 1000);
-      if (busy) return;
       if (left <= 0) {
-        clearInterval(limitTimer); limitTimer = null;
-        try { localStorage.removeItem(LIMIT_KEY); } catch (e) {}
-        setStatus(t.rate_limit_over, 'ok');
+        clearLimit();
+        if (!busy) setStatus(t.rate_limit_over, 'ok');
         return;
       }
+      if (busy) return;
       setStatus(limitText(left), 'error');
     }
     tick();
     limitTimer = setInterval(tick, 1000);
+  }
+  // the server let a request through, so this visitor isn't limited any more
+  function clearLimit() {
+    clearInterval(limitTimer); limitTimer = null;
+    try { localStorage.removeItem(LIMIT_KEY); } catch (e) {}
   }
   try {
     var savedUntil = +localStorage.getItem(LIMIT_KEY);
@@ -204,7 +208,7 @@
     if (busy || !files.length) return;
     var invalid = validateOptions();
     if (invalid) { setStatus(invalid, 'error'); return; }
-    busy = true; clearInterval(limitTimer); render();
+    busy = true; render();
     result.classList.remove('show');
     setProgress(0, t.p_upload.replace('{p}', 0));
 
@@ -268,6 +272,7 @@
       } };
     }
     xhr.onload = function () {
+      if (xhr.status !== 429) clearLimit();
       if (xhr.status >= 200 && xhr.status < 300) {
         var data; try { data = JSON.parse(xhr.responseText); } catch (e) { return done(t.generic_error); }
         done(null, data);
