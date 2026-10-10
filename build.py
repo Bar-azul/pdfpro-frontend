@@ -169,7 +169,7 @@ UI = {
 # ════════════════════════════════════════════════════════════════════════════
 TOOLS = [
     {
-        "slug": "pdf-to-word", "limit": 20,
+        "slug": "pdf-to-word", "limit": 30,
         "api": {"endpoint": "/api/convert/pdf-to-word", "field": "file", "multi": False, "accept": ".pdf", "result": "file"},
         "options": [],
         "en": {
@@ -216,7 +216,7 @@ TOOLS = [
         },
     },
     {
-        "slug": "pdf-to-excel", "limit": 20,
+        "slug": "pdf-to-excel", "limit": 60,
         "api": {"endpoint": "/api/convert/pdf-to-excel", "field": "file", "multi": False, "accept": ".pdf", "result": "file"},
         "options": [],
         "en": {
@@ -263,7 +263,7 @@ TOOLS = [
         },
     },
     {
-        "slug": "compress-pdf", "limit": 20,
+        "slug": "compress-pdf", "limit": 50,
         "api": {"endpoint": "/api/organize/compress", "field": "file", "multi": False, "accept": ".pdf", "result": "file"},
         "options": [
             {"name": "level", "type": "select", "default": "medium",
@@ -315,7 +315,7 @@ TOOLS = [
         },
     },
     {
-        "slug": "merge-pdf", "limit": 15,
+        "slug": "merge-pdf", "limit": 100,
         "api": {"endpoint": "/api/organize/merge", "field": "files", "multi": True, "minFiles": 2, "accept": ".pdf", "result": "file"},
         "options": [],
         "en": {
@@ -360,7 +360,7 @@ TOOLS = [
         },
     },
     {
-        "slug": "split-pdf", "limit": 15,
+        "slug": "split-pdf", "limit": 100,
         "api": {"endpoint": "/api/organize/split", "field": "file", "multi": False, "accept": ".pdf", "result": "parts"},
         "options": [
             {"name": "mode", "type": "hidden", "default": "ranges"},
@@ -410,7 +410,7 @@ TOOLS = [
         },
     },
     {
-        "slug": "ocr-pdf", "limit": 10, "timeout": 330,
+        "slug": "ocr-pdf", "limit": 15, "timeout": 330,
         "api": {"endpoint": "/api/ocr/extract", "field": "file", "multi": False, "accept": ".pdf,.jpg,.jpeg,.png", "result": "text"},
         "options": [
             {"name": "language", "type": "select", "default": "heb+eng",
@@ -518,7 +518,7 @@ TOOLS = [
         },
     },
     {
-        "slug": "unlock-pdf", "limit": 20,
+        "slug": "unlock-pdf", "limit": 100,
         "api": {"endpoint": "/api/edit/unlock", "field": "file", "multi": False, "accept": ".pdf", "result": "file"},
         "options": [
             {"name": "password", "type": "password", "autocomplete": "current-password",
@@ -570,7 +570,7 @@ TOOLS = [
         },
     },
     {
-        "slug": "protect-pdf", "limit": 20,
+        "slug": "protect-pdf", "limit": 100,
         "api": {"endpoint": "/api/edit/protect", "field": "file", "multi": False, "accept": ".pdf", "result": "file"},
         "options": [
             {"name": "password", "type": "password", "autocomplete": "new-password", "minlength": 4, "confirm": True,
@@ -619,7 +619,7 @@ TOOLS = [
         },
     },
     {
-        "slug": "jpg-to-pdf", "limit": 20,
+        "slug": "jpg-to-pdf", "limit": 100,
         "api": {"endpoint": "/api/convert/images-to-pdf", "field": "files", "multi": True, "accept": ".jpg,.jpeg,.png,.webp,.gif,.bmp,.tif,.tiff", "result": "file"},
         "options": [
             {"name": "page_size", "type": "select", "default": "A4", "values": ["A4", "fit", "Letter"],
@@ -668,7 +668,7 @@ TOOLS = [
         },
     },
     {
-        "slug": "word-to-pdf", "limit": 20,
+        "slug": "word-to-pdf", "limit": 30,
         "api": {"endpoint": "/api/convert/office-to-pdf", "field": "file", "multi": False, "accept": ".doc,.docx,.xls,.xlsx,.ppt,.pptx", "result": "file"},
         "options": [],
         "en": {
@@ -713,7 +713,7 @@ TOOLS = [
         },
     },
     {
-        "slug": "pdf-to-jpg", "limit": 20,
+        "slug": "pdf-to-jpg", "limit": 60,
         "api": {"endpoint": "/api/convert/pdf-to-images", "field": "file", "multi": False, "accept": ".pdf", "result": "parts"},
         "options": [
             {"name": "format", "type": "select", "default": "jpg", "values": ["jpg", "png"], "query": True,
@@ -763,7 +763,7 @@ TOOLS = [
         },
     },
     {
-        "slug": "pdf-to-powerpoint", "limit": 10,
+        "slug": "pdf-to-powerpoint", "limit": 30,
         "api": {"endpoint": "/api/convert/pdf-to-pptx", "field": "file", "multi": False, "accept": ".pdf", "result": "file"},
         "options": [
             {"name": "dpi", "type": "select", "default": "150", "values": ["150", "200", "300"], "query": True,
@@ -810,7 +810,7 @@ TOOLS = [
         },
     },
     {
-        "slug": "rotate-pdf", "limit": 30,
+        "slug": "rotate-pdf", "limit": 100,
         "api": {"endpoint": "/api/organize/rotate", "field": "file", "multi": False, "accept": ".pdf", "result": "file"},
         "options": [
             {"name": "angle", "type": "select", "default": "90", "values": ["90", "180", "270"],
@@ -860,7 +860,7 @@ TOOLS = [
         },
     },
     {
-        "slug": "watermark-pdf", "limit": 20,
+        "slug": "watermark-pdf", "limit": 100,
         "api": {"endpoint": "/api/edit/watermark", "field": "file", "multi": False, "accept": ".pdf", "result": "file"},
         "options": [
             {"name": "type", "type": "hidden", "default": "text"},
@@ -911,7 +911,7 @@ TOOLS = [
         },
     },
     {
-        "slug": "sign-pdf", "limit": 20,
+        "slug": "sign-pdf", "limit": 100,
         "api": {"endpoint": "/api/edit/sign", "field": "file", "multi": False, "accept": ".pdf", "result": "file"},
         "options": [
             {"name": "signature_text", "type": "signature",
@@ -981,7 +981,7 @@ TOOLS = [
         },
     },
     {
-        "slug": "redact-pdf", "limit": 20,
+        "slug": "redact-pdf", "limit": 60,
         "api": {"endpoint": "/api/edit/redact", "field": "file", "multi": False, "accept": ".pdf", "result": "file"},
         "options": [
             {"name": "texts", "type": "text", "default": "", "dir": "auto",
