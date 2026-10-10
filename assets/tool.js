@@ -140,9 +140,45 @@
     resetBtn.hidden = false;
   }
 
+  // ── hourly limit: count down to the reset the server reports ──────────────
+  var LIMIT_KEY = 'pdfpro_limit_' + cfg.slug, limitTimer = null;
+  function limitText(sec) {
+    var m = Math.floor(sec / 60), s = sec % 60;
+    return t.rate_limited_in.replace('{t}', m + ':' + (s < 10 ? '0' : '') + s);
+  }
+  function startCountdown(until) {
+    clearInterval(limitTimer);
+    function tick() {
+      var left = Math.ceil((until - Date.now()) / 1000);
+      if (busy) return;
+      if (left <= 0) {
+        clearInterval(limitTimer); limitTimer = null;
+        try { localStorage.removeItem(LIMIT_KEY); } catch (e) {}
+        setStatus(t.rate_limit_over, 'ok');
+        return;
+      }
+      setStatus(limitText(left), 'error');
+    }
+    tick();
+    limitTimer = setInterval(tick, 1000);
+  }
+  try {
+    var savedUntil = +localStorage.getItem(LIMIT_KEY);
+    if (savedUntil > Date.now()) setTimeout(function () { startCountdown(savedUntil); }, 0);
+  } catch (e) {}
+
   function errorFrom(resp) {
     if (cfg.errors && cfg.errors[resp.status]) return Promise.resolve(cfg.errors[resp.status]);
-    if (resp.status === 429) return Promise.resolve(t.rate_limited);
+    if (resp.status === 429) {
+      return resp.json().then(function (j) {
+        var sec = j && +j.retry_after;
+        if (!(sec > 0)) return t.rate_limited;
+        var until = Date.now() + sec * 1000;
+        try { localStorage.setItem(LIMIT_KEY, String(until)); } catch (e) {}
+        setTimeout(function () { startCountdown(until); }, 0);
+        return limitText(sec);
+      }).catch(function () { return t.rate_limited; });
+    }
     return resp.json().then(function (j) {
       var d = j && j.detail;
       if (j && j.code && t.err && t.err[j.code]) return t.err[j.code];
@@ -168,7 +204,7 @@
     if (busy || !files.length) return;
     var invalid = validateOptions();
     if (invalid) { setStatus(invalid, 'error'); return; }
-    busy = true; render();
+    busy = true; clearInterval(limitTimer); render();
     result.classList.remove('show');
     setProgress(0, t.p_upload.replace('{p}', 0));
 
