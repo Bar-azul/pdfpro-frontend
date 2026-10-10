@@ -18,7 +18,7 @@
 <link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/">
 <link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"></noscript>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5921716820042715" crossorigin="anonymous"></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TL72YY4S22"></script>
@@ -53,7 +53,7 @@ nav{background:var(--navy);padding:0 3rem;height:68px;display:flex;align-items:c
 .hero p{font-size:1.05rem;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:2rem}
 .hero-stats{display:flex;gap:2rem;margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.1)}
 .stat-num{font-size:1.8rem;font-weight:900;color:var(--white);letter-spacing:-1px}
-.stat-label{font-size:0.8rem;color:rgba(255,255,255,0.5)}
+.stat-label{font-size:0.8rem;color:rgba(255,255,255,0.7)}
 .upload-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:2rem}
 .upload-zone{border:2px dashed rgba(255,255,255,0.2);border-radius:12px;padding:2rem;text-align:center;cursor:pointer;transition:all 0.2s;background:rgba(255,255,255,0.03)}
 .upload-zone:hover,.upload-zone.drag-over{border-color:var(--red-light);background:rgba(224,32,32,0.08)}
@@ -62,7 +62,7 @@ nav{background:var(--navy);padding:0 3rem;height:68px;display:flex;align-items:c
 .upload-zone p{color:rgba(255,255,255,0.7);font-size:0.95rem;margin-bottom:0.4rem}
 .upload-zone small{color:rgba(255,255,255,0.35);font-size:0.78rem}
 .upload-formats{display:flex;gap:0.5rem;margin-top:1rem;flex-wrap:wrap;justify-content:center}
-.fmt-badge{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.5);font-size:0.72rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:4px}
+.fmt-badge{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.7);font-size:0.72rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:4px}
 .upload-select{margin-top:1rem}
 .upload-select select{width:100%;padding:0.65rem 1rem;border-radius:8px;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:var(--white);font-size:0.9rem;cursor:pointer}
 .upload-select select{color-scheme:dark}
@@ -105,7 +105,7 @@ nav{background:var(--navy);padding:0 3rem;height:68px;display:flex;align-items:c
 .result-box.error .result-meta{color:#991b1b}
 .section{padding:5rem 3rem;max-width:1200px;margin:0 auto}
 .section-header{text-align:center;margin-bottom:3.5rem}
-.section-label{font-size:0.8rem;font-weight:700;letter-spacing:2px;color:var(--red);text-transform:uppercase;margin-bottom:0.8rem}
+.section-label{font-size:0.8rem;font-weight:700;letter-spacing:2px;color:var(--red-dark);text-transform:uppercase;margin-bottom:0.8rem}
 .section-title{font-size:2.4rem;font-weight:900;color:var(--navy);letter-spacing:-0.5px;line-height:1.2}
 .section-sub{font-size:1.05rem;color:var(--text-muted);margin-top:0.8rem}
 .tools-tabs{display:flex;gap:0.5rem;justify-content:center;margin-bottom:2.5rem;flex-wrap:wrap}
@@ -132,18 +132,18 @@ a.tool-card{text-decoration:none;color:inherit}
 .features-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:3rem}
 .feature-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:2rem;transition:border-color 0.2s}
 .feature-card:hover{border-color:rgba(224,32,32,0.4)}
-.feature-num{font-size:2rem;font-weight:900;color:rgba(224,32,32,0.25);letter-spacing:-1px;margin-bottom:1rem}
+.feature-num{font-size:2rem;font-weight:900;color:#F05A5A;letter-spacing:-1px;margin-bottom:1rem}
 .feature-card h3{font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:0.6rem}
 .feature-card p{font-size:0.9rem;color:rgba(255,255,255,0.55);line-height:1.7}
 footer{background:var(--navy);padding:3rem;border-top:2px solid rgba(255,255,255,0.06)}
 .footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem}
-.footer-brand p{font-size:0.85rem;color:rgba(255,255,255,0.4);line-height:1.6;margin-top:0.8rem}
-.footer-col h4{font-size:0.85rem;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-bottom:1rem}
+.footer-brand p{font-size:0.85rem;color:rgba(255,255,255,0.7);line-height:1.6;margin-top:0.8rem}
+.footer-col h4{font-size:0.85rem;font-weight:700;color:rgba(255,255,255,0.7);text-transform:uppercase;letter-spacing:1px;margin-bottom:1rem}
 .footer-col ul{list-style:none}
 .footer-col ul li{margin-bottom:0.6rem}
-.footer-col ul li a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:0.88rem;transition:color 0.2s}
+.footer-col ul li a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.88rem;transition:color 0.2s}
 .footer-col ul li a:hover{color:var(--white)}
-.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;color:rgba(255,255,255,0.3);font-size:0.82rem;flex-wrap:wrap;gap:1rem}
+.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;color:rgba(255,255,255,0.65);font-size:0.82rem;flex-wrap:wrap;gap:1rem}
 .api-status{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.78rem;font-weight:600;padding:0.25rem 0.7rem;border-radius:20px}
 .api-status.online{background:rgba(34,197,94,0.15);color:#22c55e}
 .api-status.offline{background:rgba(239,68,68,0.15);color:#ef4444}
@@ -154,7 +154,7 @@ footer{background:var(--navy);padding:3rem;border-top:2px solid rgba(255,255,255
 /* ══ MOBILE ═══════════════════════════════════════════════════ */
 
 .footer-language{margin-top:1.2rem}
-.footer-language label{display:block;color:rgba(255,255,255,0.5);font-size:0.85rem;margin-bottom:0.45rem}
+.footer-language label{display:block;color:rgba(255,255,255,0.7);font-size:0.85rem;margin-bottom:0.45rem}
 .footer-language select{width:190px;max-width:100%;padding:0.55rem 0.8rem;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:var(--navy-light);color:var(--white);font-size:0.9rem;cursor:pointer}
 .footer-language select:focus{outline:2px solid rgba(255,68,68,0.45);outline-offset:2px}
 
@@ -345,7 +345,7 @@ footer{
 
 .footer-brand p{
   font-size:0.85rem;
-  color:rgba(255,255,255,0.4);
+  color:rgba(255,255,255,0.7);
   line-height:1.6;
   margin-top:0.8rem;
 }
@@ -353,7 +353,7 @@ footer{
 .footer-col h4{
   font-size:0.85rem;
   font-weight:700;
-  color:rgba(255,255,255,0.5);
+  color:rgba(255,255,255,0.7);
   text-transform:uppercase;
   letter-spacing:1px;
   margin-bottom:1rem;
@@ -390,7 +390,7 @@ body.rtl .footer-col h4{
 
 .footer-language label{
   display:block;
-  color:rgba(255,255,255,0.5);
+  color:rgba(255,255,255,0.7);
   font-size:0.85rem;
   margin-bottom:0.4rem;
 }
@@ -414,7 +414,7 @@ body.rtl .footer-col h4{
   border-top:1px solid rgba(255,255,255,0.08);
   display:flex;
   justify-content:space-between;
-  color:rgba(255,255,255,0.3);
+  color:rgba(255,255,255,0.7);
   font-size:0.82rem;
   flex-wrap:wrap;
   gap:1rem;
@@ -494,7 +494,7 @@ body.rtl .footer-col h4{
         <input type="file" id="hero-file-input" style="display:none"/>
       </div>
       <div class="upload-select" style="margin-top:1rem">
-        <select id="hero-tool-select"><option value="" data-t="select_action">— Select an action —</option></select>
+        <select id="hero-tool-select" aria-label="Choose a tool"><option value="" data-t="select_action">— Select an action —</option></select>
       </div>
       <button class="upload-btn" onclick="startHeroProcess()" data-t="upload_btn">Select file &amp; action ➜</button>
       <div class="upload-formats"><span class="fmt-badge">PDF</span><span class="fmt-badge">WORD</span><span class="fmt-badge">EXCEL</span><span class="fmt-badge">PPT</span><span class="fmt-badge">JPG</span></div>
@@ -517,10 +517,10 @@ body.rtl .footer-col h4{
       <h2 class="section-title" style="color:var(--white)" data-t="feat_title">Professional, Fast &amp; Secure</h2>
     </div>
     <div class="features-grid">
-      <div class="feature-card"><div class="feature-num">01</div><h3 data-t="feat1_h">Works in your browser</h3><p data-t="feat1_p">No software to install. Work from any device, anywhere.</p></div>
-      <div class="feature-card"><div class="feature-num">02</div><h3 data-t="feat2_h">Complete privacy</h3><p data-t="feat2_p">Files are automatically deleted from our servers after one hour.</p></div>
-      <div class="feature-card"><div class="feature-num">03</div><h3 data-t="feat3_h">Maximum quality</h3><p data-t="feat3_p">Our conversion engines preserve formatting and fonts exactly as they are.</p></div>
-      <div class="feature-card"><div class="feature-num">04</div><h3 data-t="feat4_h">Hebrew &amp; RTL support</h3><p data-t="feat4_p">Hebrew and Arabic documents handled with maximum precision and RTL detection.</p></div>
+      <div class="feature-card"><div class="feature-num" aria-hidden="true">01</div><h3 data-t="feat1_h">Works in your browser</h3><p data-t="feat1_p">No software to install. Work from any device, anywhere.</p></div>
+      <div class="feature-card"><div class="feature-num" aria-hidden="true">02</div><h3 data-t="feat2_h">Complete privacy</h3><p data-t="feat2_p">Files are automatically deleted from our servers after one hour.</p></div>
+      <div class="feature-card"><div class="feature-num" aria-hidden="true">03</div><h3 data-t="feat3_h">Maximum quality</h3><p data-t="feat3_p">Our conversion engines preserve formatting and fonts exactly as they are.</p></div>
+      <div class="feature-card"><div class="feature-num" aria-hidden="true">04</div><h3 data-t="feat4_h">Hebrew &amp; RTL support</h3><p data-t="feat4_p">Hebrew and Arabic documents handled with maximum precision and RTL detection.</p></div>
     </div>
   </div>
 </section>
@@ -645,14 +645,14 @@ const API='https://pdfproweb.onrender.com';
 const FORMAT_BADGES={
   'pdf-to-word':   [['PDF','#E02020'],['WORD','#2B5797']],
   'pdf-to-excel':  [['PDF','#E02020'],['XLS','#217346']],
-  'pdf-to-pptx':   [['PDF','#E02020'],['PPT','#D24726']],
-  'pdf-to-images': [['PDF','#E02020'],['JPG','#D47E10']],
+  'pdf-to-pptx':   [['PDF','#E02020'],['PPT','#B33A1C']],
+  'pdf-to-images': [['PDF','#E02020'],['JPG','#9A5A00']],
   'office-to-pdf': [['DOC','#2B5797'],['PDF','#E02020']],
   'images-to-pdf': [['IMG','#7B4FD4'],['PDF','#E02020']],
-  'merge':         [['PDF','#E02020'],['+PDF','#1A8A72']],
-  'split':         [['PDF','#E02020'],['2x','#D47E10']],
-  'compress':      [['PDF','#E02020'],['ZIP','#1A8A72']],
-  'rotate':        [['PDF','#E02020'],['\u21BB','#3B6FE0']],
+  'merge':         [['PDF','#E02020'],['+PDF','#136B58']],
+  'split':         [['PDF','#E02020'],['2x','#9A5A00']],
+  'compress':      [['PDF','#E02020'],['ZIP','#136B58']],
+  'rotate':        [['PDF','#E02020'],['\u21BB','#2F5BC0']],
   'watermark':     [['PDF','#E02020'],['\uD83D\uDD0F','#5A6A7A']],
   'sign':          [['PDF','#E02020'],['\u270D','#5A6A7A']],
   'protect':       [['PDF','#E02020'],['\uD83D\uDD12','#5A6A7A']],
