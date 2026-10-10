@@ -302,6 +302,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/terms/"/>
   </url>
   <url>
+    <loc>https://www.pdfproapp.com/translate-menu/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/translate-menu/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/translate-menu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/translate-menu/"/>
+  </url>
+  <url>
     <loc>https://www.pdfproapp.com/translate-pdf/</loc>
     <lastmod>2026-10-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/translate-pdf/"/>
@@ -636,6 +643,13 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/terms/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/terms/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/he/translate-menu/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/translate-menu/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/translate-menu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/translate-menu/"/>
   </url>
   <url>
     <loc>https://www.pdfproapp.com/he/translate-pdf/</loc>
