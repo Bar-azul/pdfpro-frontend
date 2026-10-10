@@ -1293,7 +1293,7 @@ def static_pages() -> dict:
 <h2>Hebrew and RTL</h2>
 <details><summary>My Hebrew text came out reversed. What happened?</summary><p>This usually happens with other converters that don't handle right-to-left text. If it happens with PDFPro, please <a href="/contact/">tell us</a> which tool you used. The <a href="/blog/pdf-hebrew-rtl/">RTL guide</a> explains the cause.</p></details>
 <details><summary>Can I OCR a document that mixes Hebrew and English?</summary><p>Yes. In <a href="/ocr-pdf/">OCR</a>, choose Hebrew + English.</p></details>
-<details><summary>Can I search a scanned PDF after OCR?</summary><p>Yes. Choose "Searchable PDF" as the output: the page looks exactly the same, with an invisible text layer you can search and copy. Single Hebrew words are found in every PDF reader; in some recent Chrome versions a search for several Hebrew words in a row can fail on any PDF, so search one word at a time there.</p></details>
+<details><summary>Can I search a scanned PDF after OCR?</summary><p>Yes. Choose "Searchable PDF" as the output: the page looks exactly the same, with an invisible text layer you can search and copy. OCR can misread a letter, especially in blurry photos, so a word occasionally isn't found as written; searching for part of the word or a nearby word helps. In some recent Chrome versions, a search for several Hebrew words in a row can fail on any PDF, so search one word at a time there.</p></details>
 <h2>Privacy</h2>
 <details><summary>What happens to my files?</summary><p>They're processed on our server and deleted automatically after one hour. We don't read or keep them. See the <a href="/privacy/">privacy policy</a>.</p></details>
 <h2>Troubleshooting</h2>
@@ -1315,7 +1315,7 @@ def static_pages() -> dict:
 <h2>עברית ו-RTL</h2>
 <details><summary>הטקסט בעברית יצא הפוך. מה קרה?</summary><p>זה קורה בדרך כלל בממירים שלא יודעים לטפל בטקסט מימין לשמאל. אם זה קרה ב-PDFPro, <a href="/he/contact/">ספרו לנו</a> באיזה כלי השתמשתם. <a href="/he/blog/pdf-hebrew-rtl/">המדריך על RTL</a> מסביר את הסיבה.</p></details>
 <details><summary>אפשר לעשות OCR למסמך עברית-אנגלית?</summary><p>כן. בכלי ה-<a href="/he/ocr-pdf/">OCR</a> בוחרים עברית + אנגלית.</p></details>
-<details><summary>אפשר לחפש בסריקה אחרי OCR?</summary><p>כן. בוחרים בפלט "PDF עם טקסט לחיפוש": העמוד נראה בדיוק אותו דבר, עם שכבת טקסט שקופה שאפשר לחפש בה ולהעתיק ממנה. חיפוש של מילה אחת בעברית עובד בכל תוכנה. בחלק מהגרסאות האחרונות של Chrome חיפוש של כמה מילים ברצף בעברית נכשל בכל PDF, אז שם כדאי לחפש מילה אחת בכל פעם.</p></details>
+<details><summary>אפשר לחפש בסריקה אחרי OCR?</summary><p>כן. בוחרים בפלט "PDF עם טקסט לחיפוש": העמוד נראה בדיוק אותו דבר, עם שכבת טקסט שקופה שאפשר לחפש בה ולהעתיק ממנה. OCR יכול לטעות באות, במיוחד בצילום מטושטש, ולכן לפעמים מילה לא נמצאת בדיוק כפי שהיא כתובה. חיפוש של חלק מהמילה או של מילה סמוכה עוזר. בחלק מהגרסאות האחרונות של Chrome חיפוש של כמה מילים ברצף בעברית נכשל בכל PDF, אז שם כדאי לחפש מילה אחת בכל פעם.</p></details>
 <h2>פרטיות</h2>
 <details><summary>מה קורה לקבצים שלי?</summary><p>הם מעובדים בשרת שלנו ונמחקים אוטומטית אחרי שעה. אנחנו לא קוראים ולא שומרים אותם. ראו <a href="/he/privacy/">מדיניות פרטיות</a>.</p></details>
 <h2>תקלות</h2>
