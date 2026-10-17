@@ -323,6 +323,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/terms/"/>
   </url>
   <url>
+    <loc>https://www.pdfproapp.com/transcribe-audio/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/transcribe-audio/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/transcribe-audio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/transcribe-audio/"/>
+  </url>
+  <url>
     <loc>https://www.pdfproapp.com/translate-menu/</loc>
     <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/translate-menu/"/>
@@ -685,6 +692,13 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/terms/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/terms/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/he/transcribe-audio/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/transcribe-audio/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/transcribe-audio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/transcribe-audio/"/>
   </url>
   <url>
     <loc>https://www.pdfproapp.com/he/translate-menu/</loc>
