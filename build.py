@@ -101,6 +101,7 @@ UI = {
                 "translate_no_text": "This PDF has no selectable text to translate. If it's a scan, run it through OCR first.",
                 "translate_failed": "The translation service isn't responding right now. Try again in a few minutes.",
                 "transcribe_failed": "The transcription service isn't responding right now. Try again in a few minutes.",
+                "daily_quota": "Today's free allowance for this tool has been used up. It resets every night, so please try again tomorrow morning.",
                 "transcribe_no_speech": "No speech was found in this recording.",
                 "audio_too_long": "The recording is longer than 60 minutes. Cut it into shorter parts and transcribe each one.",
                 "audio_unreadable": "We couldn't read the audio in this file. Try MP3, M4A, WAV or OGG.",
@@ -172,6 +173,7 @@ UI = {
                 "translate_no_text": "אין ב-PDF טקסט לתרגום. אם זו סריקה, העבירו אותה קודם ב-OCR.",
                 "translate_failed": "שירות התרגום לא מגיב כרגע. נסו שוב בעוד כמה דקות.",
                 "transcribe_failed": "שירות התמלול לא מגיב כרגע. נסו שוב בעוד כמה דקות.",
+                "daily_quota": "המכסה החינמית היומית של הכלי נוצלה. היא מתחדשת כל לילה, אז נסו שוב מחר בבוקר.",
                 "transcribe_no_speech": "לא נמצא דיבור בהקלטה הזו.",
                 "audio_too_long": "ההקלטה ארוכה מ-60 דקות. חתכו אותה לחלקים קצרים יותר ותמללו כל חלק בנפרד.",
                 "audio_unreadable": "לא הצלחנו לקרוא את האודיו בקובץ. נסו MP3, M4A, WAV או OGG.",
@@ -608,10 +610,10 @@ TOOLS = [
         ],
         "en": {
             "name": "Transcribe audio",
-            "title": "Transcribe Audio to Text Free – Hebrew & English | PDFPro",
-            "desc": "Turn a voice message, recorded call, lecture or video into text, a Word document or subtitles. Hebrew and English, up to 60 minutes. Free, no sign-up.",
+            "title": "Free Audio Transcription – No Sign-Up, No Paywall | PDFPro",
+            "desc": "Turn a voice note, call, lecture or video into text, Word or subtitles. Really free: no sign-up, no login, no payment at the end. Up to 60 minutes.",
             "h1": "Transcribe audio and video to text",
-            "lead": "Upload a recording and get a transcript with timestamps: as a Word document, plain text or subtitles. Works with Hebrew, English and more, up to 60 minutes per file.",
+            "lead": "Upload a recording and download the full transcript with timestamps, as a Word document, plain text or subtitles. No sign-up, no login and no payment screen after the upload. Hebrew, English and more, up to 60 minutes per file.",
             "run": "Transcribe",
             "steps": [
                 ("Upload the recording", "Voice notes, call recordings, MP3, M4A, WAV, OGG or a video file, up to 100 MB and 60 minutes."),
@@ -619,6 +621,7 @@ TOOLS = [
                 ("Download the transcript", "Long recordings take a few minutes; the bar shows the progress."),
             ],
             "faqs": [
+                ("Is it really free?", "Yes. You get the whole transcript, not a preview, without signing up, logging in or paying. The site is funded by ads. There is a fair-use limit of 5 files an hour, and on very busy days the shared daily allowance can run out until the next morning."),
                 ("Does it work in Hebrew?", "Yes. Choose Hebrew as the spoken language for the best result. The Word document comes out right to left, with English words and numbers in order."),
                 ("How accurate is it?", "Clear recordings of one person speaking, like a voice note, a lecture or an interview, come out very accurate. Phone-quality calls, background noise, people talking over each other and slang lower the accuracy, so check names and numbers."),
                 ("Does it say who is speaking?", "Not yet. The transcript is continuous text with a timestamp every paragraph, without speaker names."),
@@ -629,10 +632,10 @@ TOOLS = [
         },
         "he": {
             "name": "תמלול הקלטה",
-            "title": "תמלול הקלטה לטקסט בחינם – עברית ואנגלית | PDFPro",
-            "desc": "תמלול הודעה קולית, הקלטת שיחה, הרצאה או סרטון לטקסט, למסמך Word או לכתוביות. עברית ואנגלית, עד 60 דקות. בחינם ובלי הרשמה.",
+            "title": "תמלול הקלטה לטקסט – באמת בחינם, בלי הרשמה | PDFPro",
+            "desc": "תמלול הודעה קולית, הקלטת שיחה, הרצאה או סרטון לטקסט, Word או כתוביות. באמת בחינם: בלי הרשמה, בלי התחברות ובלי תשלום בסוף. עברית ואנגלית, עד 60 דקות.",
             "h1": "תמלול הקלטה לטקסט",
-            "lead": "מעלים הקלטה ומקבלים תמלול עם חותמות זמן: כמסמך Word, כטקסט או ככתוביות. עובד בעברית, באנגלית ובשפות נוספות, עד 60 דקות לקובץ.",
+            "lead": "מעלים הקלטה ומורידים את התמלול המלא עם חותמות זמן, כמסמך Word, כטקסט או ככתוביות. בלי הרשמה, בלי התחברות ובלי מסך תשלום אחרי ההעלאה. עברית, אנגלית ושפות נוספות, עד 60 דקות לקובץ.",
             "run": "תמלל",
             "steps": [
                 ("מעלים את ההקלטה", "הודעה קולית, הקלטת שיחה, MP3, M4A, WAV, OGG או סרטון, עד 100MB ו-60 דקות."),
@@ -640,6 +643,7 @@ TOOLS = [
                 ("מורידים את התמלול", "הקלטה ארוכה לוקחת כמה דקות, והפס מראה את ההתקדמות."),
             ],
             "faqs": [
+                ("זה באמת בחינם?", "כן. מקבלים את כל התמלול, לא תצוגה מקדימה, בלי הרשמה, בלי התחברות ובלי לשלם. האתר ממומן מפרסומות. יש מגבלה הוגנת של 5 קבצים בשעה, ובימים עמוסים מאוד המכסה היומית המשותפת יכולה להיגמר עד הבוקר."),
                 ("זה עובד בעברית?", "כן. בוחרים עברית כשפת הדיבור לתוצאה הכי טובה. מסמך ה-Word יוצא מימין לשמאל, עם מילים באנגלית ומספרים בסדר הנכון."),
                 ("כמה התמלול מדויק?", "הקלטה ברורה של דובר אחד, כמו הודעה קולית, הרצאה או ראיון, יוצאת מדויקת מאוד. שיחת טלפון באיכות נמוכה, רעש רקע, דיבור בו-זמני וסלנג מורידים את הדיוק, אז כדאי לבדוק שמות ומספרים."),
                 ("התמלול מפריד בין הדוברים?", "עדיין לא. התמלול הוא טקסט רציף עם חותמת זמן בכל פסקה, בלי שמות דוברים."),
