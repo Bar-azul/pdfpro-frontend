@@ -62,6 +62,7 @@ UI = {
             "p_pages": "Processing page {n} of {total}",
             "p_ocr": "Reading page {n} of {total}",
             "p_translating": "Translating page {n} of {total}",
+            "p_transcribing": "Transcribing part {n} of {total}",
             "p_images": "Image {n} of {total}",
             "p_files": "Merging file {n} of {total}",
             "p_parts": "Creating file {n} of {total}",
@@ -99,6 +100,11 @@ UI = {
                 "no_text": "This PDF has no selectable text (it looks like a scan). Run it through OCR first, then convert.",
                 "translate_no_text": "This PDF has no selectable text to translate. If it's a scan, run it through OCR first.",
                 "translate_failed": "The translation service isn't responding right now. Try again in a few minutes.",
+                "transcribe_failed": "The transcription service isn't responding right now. Try again in a few minutes.",
+                "transcribe_no_speech": "No speech was found in this recording.",
+                "audio_too_long": "The recording is longer than 60 minutes. Cut it into shorter parts and transcribe each one.",
+                "audio_unreadable": "We couldn't read the audio in this file. Try MP3, M4A, WAV or OGG.",
+                "audio_unsupported": "Upload an audio or video file (MP3, M4A, WAV, OGG, OPUS, MP4...).",
                 "ocr_bad_language": "That OCR language isn't available.",
                 "invalid_input": "One of the settings isn't valid. Check the options and try again.",
             },
@@ -127,6 +133,7 @@ UI = {
             "p_pages": "מעבד עמוד {n} מתוך {total}",
             "p_ocr": "קורא עמוד {n} מתוך {total}",
             "p_translating": "מתרגם עמוד {n} מתוך {total}",
+            "p_transcribing": "מתמלל חלק {n} מתוך {total}",
             "p_images": "תמונה {n} מתוך {total}",
             "p_files": "ממזג קובץ {n} מתוך {total}",
             "p_parts": "יוצר קובץ {n} מתוך {total}",
@@ -164,6 +171,11 @@ UI = {
                 "no_text": "אין ב-PDF טקסט שאפשר לבחור (נראה שזו סריקה). העבירו אותו קודם ב-OCR ואז המירו.",
                 "translate_no_text": "אין ב-PDF טקסט לתרגום. אם זו סריקה, העבירו אותה קודם ב-OCR.",
                 "translate_failed": "שירות התרגום לא מגיב כרגע. נסו שוב בעוד כמה דקות.",
+                "transcribe_failed": "שירות התמלול לא מגיב כרגע. נסו שוב בעוד כמה דקות.",
+                "transcribe_no_speech": "לא נמצא דיבור בהקלטה הזו.",
+                "audio_too_long": "ההקלטה ארוכה מ-60 דקות. חתכו אותה לחלקים קצרים יותר ותמללו כל חלק בנפרד.",
+                "audio_unreadable": "לא הצלחנו לקרוא את האודיו בקובץ. נסו MP3, M4A, WAV או OGG.",
+                "audio_unsupported": "העלו קובץ אודיו או וידאו (MP3, M4A, WAV, OGG, OPUS, MP4...).",
                 "ocr_bad_language": "שפת ה-OCR הזו לא זמינה.",
                 "invalid_input": "אחת ההגדרות לא תקינה. בדקו את האפשרויות ונסו שוב.",
             },
@@ -578,6 +590,64 @@ TOOLS = [
                 ("זה בחינם?", "כן, בלי הרשמה. בתרגום מותרים כמה קבצים בשעה לכל משתמש."),
             ],
             "related": ["translate-pdf", "ocr-pdf", "jpg-to-pdf"],
+        },
+    },
+    {
+        "slug": "transcribe-audio", "limit": 5, "timeout": 900,
+        "api": {"endpoint": "/api/transcribe/audio", "field": "file", "multi": False,
+                "accept": ".mp3,.m4a,.wav,.ogg,.opus,.oga,.aac,.flac,.amr,.webm,.mp4,.mov,.3gp", "result": "file"},
+        "options": [
+            {"name": "language", "type": "select", "default": {"en": "auto", "he": "he"},
+             "values": ["auto", "he", "en", "ar", "ru", "fr", "es"],
+             "en": {"label": "Spoken language", "labels": ["Detect automatically", "Hebrew", "English", "Arabic", "Russian", "French", "Spanish"]},
+             "he": {"label": "שפת הדיבור", "labels": ["זיהוי אוטומטי", "עברית", "אנגלית", "ערבית", "רוסית", "צרפתית", "ספרדית"]}},
+            {"name": "output_format", "type": "select", "default": "docx",
+             "values": ["docx", "txt", "srt"],
+             "en": {"label": "Get the transcript as", "labels": ["Word document", "Plain text", "Subtitles (SRT)"]},
+             "he": {"label": "פורמט התמלול", "labels": ["מסמך Word", "טקסט רגיל", "כתוביות (SRT)"]}},
+        ],
+        "en": {
+            "name": "Transcribe audio",
+            "title": "Transcribe Audio to Text Free – Hebrew & English | PDFPro",
+            "desc": "Turn a voice message, recorded call, lecture or video into text, a Word document or subtitles. Hebrew and English, up to 60 minutes. Free, no sign-up.",
+            "h1": "Transcribe audio and video to text",
+            "lead": "Upload a recording and get a transcript with timestamps: as a Word document, plain text or subtitles. Works with Hebrew, English and more, up to 60 minutes per file.",
+            "run": "Transcribe",
+            "steps": [
+                ("Upload the recording", "Voice notes, call recordings, MP3, M4A, WAV, OGG or a video file, up to 100 MB and 60 minutes."),
+                ("Pick the language and format", "Choosing the spoken language helps accuracy. Word for reading, SRT for video subtitles."),
+                ("Download the transcript", "Long recordings take a few minutes; the bar shows the progress."),
+            ],
+            "faqs": [
+                ("Does it work in Hebrew?", "Yes. Choose Hebrew as the spoken language for the best result. The Word document comes out right to left, with English words and numbers in order."),
+                ("How accurate is it?", "Clear recordings of one person speaking, like a voice note, a lecture or an interview, come out very accurate. Phone-quality calls, background noise, people talking over each other and slang lower the accuracy, so check names and numbers."),
+                ("Does it say who is speaking?", "Not yet. The transcript is continuous text with a timestamp every paragraph, without speaker names."),
+                ("How long can a recording be?", "Up to 60 minutes and 100 MB per file, 5 files per hour."),
+                ("What happens to my recording?", "The audio is sent to a speech-recognition service to be transcribed and the files are deleted from our server after one hour. See the privacy policy."),
+            ],
+            "related": ["translate-pdf", "ocr-pdf", "word-to-pdf"],
+        },
+        "he": {
+            "name": "תמלול הקלטה",
+            "title": "תמלול הקלטה לטקסט בחינם – עברית ואנגלית | PDFPro",
+            "desc": "תמלול הודעה קולית, הקלטת שיחה, הרצאה או סרטון לטקסט, למסמך Word או לכתוביות. עברית ואנגלית, עד 60 דקות. בחינם ובלי הרשמה.",
+            "h1": "תמלול הקלטה לטקסט",
+            "lead": "מעלים הקלטה ומקבלים תמלול עם חותמות זמן: כמסמך Word, כטקסט או ככתוביות. עובד בעברית, באנגלית ובשפות נוספות, עד 60 דקות לקובץ.",
+            "run": "תמלל",
+            "steps": [
+                ("מעלים את ההקלטה", "הודעה קולית, הקלטת שיחה, MP3, M4A, WAV, OGG או סרטון, עד 100MB ו-60 דקות."),
+                ("בוחרים שפה ופורמט", "בחירת שפת הדיבור משפרת את הדיוק. Word לקריאה, SRT לכתוביות לסרטון."),
+                ("מורידים את התמלול", "הקלטה ארוכה לוקחת כמה דקות, והפס מראה את ההתקדמות."),
+            ],
+            "faqs": [
+                ("זה עובד בעברית?", "כן. בוחרים עברית כשפת הדיבור לתוצאה הכי טובה. מסמך ה-Word יוצא מימין לשמאל, עם מילים באנגלית ומספרים בסדר הנכון."),
+                ("כמה התמלול מדויק?", "הקלטה ברורה של דובר אחד, כמו הודעה קולית, הרצאה או ראיון, יוצאת מדויקת מאוד. שיחת טלפון באיכות נמוכה, רעש רקע, דיבור בו-זמני וסלנג מורידים את הדיוק, אז כדאי לבדוק שמות ומספרים."),
+                ("התמלול מפריד בין הדוברים?", "עדיין לא. התמלול הוא טקסט רציף עם חותמת זמן בכל פסקה, בלי שמות דוברים."),
+                ("מה האורך המקסימלי?", "עד 60 דקות ו-100MB לקובץ, 5 קבצים בשעה."),
+                ("מה קורה להקלטה שלי?", "האודיו נשלח לשירות זיהוי דיבור כדי לתמלל אותו, והקבצים נמחקים מהשרת שלנו אחרי שעה. הפרטים במדיניות הפרטיות."),
+            ],
+            "related": ["translate-pdf", "ocr-pdf", "word-to-pdf"],
+            "errors": {},
         },
     },
     {
@@ -1426,7 +1496,7 @@ def static_pages() -> dict:
 <h2>5. Other cookies and storage</h2>
 <p>We store your language preference in your browser. We don't use accounts, so there's no login data.</p>
 <h2>6. Service providers</h2>
-<p>The website is hosted on Vercel and files are processed on a server hosted by Render. Fonts are loaded from Google Fonts. Translation is done by Cloudflare's machine-translation service (Workers AI), which receives the text of the document being translated and nothing else.</p>
+<p>The website is hosted on Vercel and files are processed on a server hosted by Render. Fonts are loaded from Google Fonts. Translation is done by Cloudflare's machine-translation service (Workers AI), which receives the text of the document being translated and nothing else. Transcription is done by Cloudflare's speech-recognition service (Workers AI, Whisper model), which receives the audio of the recording being transcribed and nothing else.</p>
 <h2>7. Children</h2>
 <p>The service isn't directed at children under 13, and we don't knowingly collect their information.</p>
 <h2>8. Your rights and contact</h2>
@@ -1448,7 +1518,7 @@ def static_pages() -> dict:
 <h2>5. עוגיות ואחסון נוספים</h2>
 <p>אנחנו שומרים בדפדפן את העדפת השפה שלכם. אין באתר חשבונות משתמש, ולכן אין נתוני התחברות.</p>
 <h2>6. ספקי שירות</h2>
-<p>האתר מאוחסן ב-Vercel והקבצים מעובדים בשרת שמאוחסן ב-Render. הגופנים נטענים מ-Google Fonts. התרגום נעשה באמצעות שירות תרגום המכונה של Cloudflare ‏(Workers AI), שמקבל רק את טקסט המסמך המתורגם.</p>
+<p>האתר מאוחסן ב-Vercel והקבצים מעובדים בשרת שמאוחסן ב-Render. הגופנים נטענים מ-Google Fonts. התרגום נעשה באמצעות שירות תרגום המכונה של Cloudflare ‏(Workers AI), שמקבל רק את טקסט המסמך המתורגם. התמלול נעשה באמצעות שירות זיהוי הדיבור של Cloudflare ‏(Workers AI, מודל Whisper), שמקבל רק את האודיו של ההקלטה שמתמללים.</p>
 <h2>7. ילדים</h2>
 <p>השירות לא מיועד לילדים מתחת לגיל 13, ואנחנו לא אוספים ביודעין מידע עליהם.</p>
 <h2>8. הזכויות שלכם ויצירת קשר</h2>
@@ -1498,7 +1568,7 @@ def static_pages() -> dict:
         },
     }
 
-PRIVACY_UPDATED = "October 10, 2026"
+PRIVACY_UPDATED = "October 17, 2026"
 BLOG_META = {
     "en": {"title": "PDF Guides and Tips | PDFPro Blog", "h1": "Guides",
            "desc": "Practical guides for working with PDF files: compression, conversion, Hebrew and RTL text, signatures and more.",
