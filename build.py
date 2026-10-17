@@ -595,7 +595,7 @@ TOOLS = [
     {
         "slug": "transcribe-audio", "limit": 5, "timeout": 900,
         "api": {"endpoint": "/api/transcribe/audio", "field": "file", "multi": False,
-                "accept": ".mp3,.m4a,.wav,.ogg,.opus,.oga,.aac,.flac,.amr,.webm,.mp4,.mov,.3gp", "result": "file"},
+                "accept": "audio/*,video/*,.mp3,.m4a,.wav,.ogg,.opus,.oga,.aac,.flac,.amr,.webm,.mp4,.mov,.3gp", "result": "file"},
         "options": [
             {"name": "language", "type": "select", "default": {"en": "auto", "he": "he"},
              "values": ["auto", "he", "en", "ar", "ru", "fr", "es"],
@@ -1817,7 +1817,7 @@ def build_tool(tool: dict, lang: str) -> str:
     slug = tool["slug"]
     crumbs_html, crumbs_ld = breadcrumb(lang, [(u["home"], url(lang)), (d["name"], None)])
 
-    accept_label = ", ".join(a.strip().lstrip(".").upper() for a in api["accept"].split(","))
+    accept_label = ", ".join(a.strip().lstrip(".").upper() for a in api["accept"].split(",") if "/" not in a)
     multi_attr = " multiple" if api["multi"] else ""
     drop_text = u["drop_multi"] if api["multi"] else u["drop"]
     opts = "".join(option_html(o, lang) for o in tool["options"])

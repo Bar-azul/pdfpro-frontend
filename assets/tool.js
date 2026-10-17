@@ -29,7 +29,8 @@
     var name = f.name.toLowerCase();
     return cfg.accept.split(',').some(function (a) {
       a = a.trim().toLowerCase();
-      if (a === 'image/*') return /^image\//.test(f.type);
+      if (/^[a-z]+\/\*$/.test(a)) return f.type.indexOf(a.slice(0, -1)) === 0;  // image/*, audio/*...
+      if (a.indexOf('/') > 0) return f.type === a;
       return name.endsWith(a);
     });
   }
