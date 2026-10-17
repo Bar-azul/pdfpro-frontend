@@ -7,3 +7,4 @@ README.md
 *.bak
 __pycache__/
 .coderabbit.yaml
+tools/

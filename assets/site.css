@@ -172,3 +172,9 @@ details p{margin:.8rem 0 0}
 .sig-clear{position:absolute;top:.5rem;inset-inline-end:.75rem;display:none}
 .sig.has-ink .sig-clear{display:block}
 .sig-type label{display:block;font-size:.85rem;font-weight:600;color:var(--navy);margin-bottom:.35rem}
+
+.share-box{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border);font-size:.92rem;color:var(--muted)}
+.share-btn{display:inline-flex;align-items:center;padding:.4rem .9rem;border-radius:999px;border:1px solid var(--border);background:var(--white);color:var(--text);font:inherit;font-weight:600;text-decoration:none;cursor:pointer}
+.share-btn:hover{border-color:var(--text)}
+.share-wa{background:#1F7A4D;border-color:#1F7A4D;color:#fff}
+.share-wa:hover{background:#18633E;border-color:#18633E}
