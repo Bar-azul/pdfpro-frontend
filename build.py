@@ -74,6 +74,8 @@ UI = {
             "no_text": "No text was found. Try a clearer scan or a different language setting.",
             "saved": "File size reduced by {p}%.",
             "deleted_note": "Download now. The file is deleted from the server after one hour.",
+            "share_prompt": "Did this help? Pass it on:", "share_text": "Free {name} tool, no sign-up:",
+            "share_more": "Share…", "share_copy": "Copy link", "share_copied": "Link copied",
             "expired": "This file has expired. Process it again to get a new copy.",
             "rate_limited": "Hourly limit reached for this tool. Try again in an hour.",
             "rate_limited_in": "You've used this tool's free hourly limit. It resets in {t} — you can keep using the other tools meanwhile.",
@@ -137,6 +139,8 @@ UI = {
             "no_text": "לא נמצא טקסט. נסו סריקה ברורה יותר או שפה אחרת.",
             "saved": "גודל הקובץ קטן ב-{p}%.",
             "deleted_note": "הורידו עכשיו. הקובץ נמחק מהשרת אחרי שעה.",
+            "share_prompt": "עזר לכם? שתפו עם מי שצריך:", "share_text": "{name} בחינם ובלי הרשמה:",
+            "share_more": "שיתוף…", "share_copy": "העתקת קישור", "share_copied": "הקישור הועתק",
             "expired": "תוקף הקובץ פג. עבדו אותו שוב כדי לקבל עותק חדש.",
             "rate_limited": "הגעתם למגבלה השעתית של הכלי. נסו שוב בעוד שעה.",
             "rate_limited_in": "ניצלתם את המכסה השעתית החינמית של הכלי. היא תתאפס בעוד {t}. בינתיים אפשר להמשיך להשתמש בשאר הכלים.",
@@ -1613,6 +1617,14 @@ ICON_LINKS = """<link rel="icon" href="/favicon.ico" sizes="48x48">
 <meta name="theme-color" content="#0D1B2A">"""
 
 
+def og_image(lang: str, slug: str) -> str:
+    """Share card for a page (made by tools/make_og.py), else the language's default card."""
+    name = f"{lang}-{slug.replace('/', '-') or 'home'}"
+    if not (ROOT / "assets" / "og" / f"{name}.jpg").exists():
+        name = f"{lang}-default"
+    return f"{SITE}/assets/og/{name}.jpg"
+
+
 def page(*, lang: str, slug: str, title: str, desc: str, body: str, active: str = "",
          schema: list | None = None, og_type: str = "website", scripts: str = "") -> str:
     """slug: path without language prefix and without slashes ('' for home, 'blog/x' for articles)."""
@@ -1636,7 +1648,12 @@ def page(*, lang: str, slug: str, title: str, desc: str, body: str, active: str 
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{canonical}">
 <meta property="og:locale" content="{'he_IL' if lang == 'he' else 'en_US'}">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="{og_image(lang, slug)}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{esc(title)}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{og_image(lang, slug)}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="{API}">
@@ -1750,7 +1767,7 @@ def build_tool(tool: dict, lang: str) -> str:
             for a in guides)
         guides_html = f'<h2>{u["guides"]}</h2>{cards}'
 
-    js_cfg = {"slug": slug, "endpoint": api["endpoint"], "field": api["field"], "multi": api["multi"],
+    js_cfg = {"slug": slug, "name": d["name"], "endpoint": api["endpoint"], "field": api["field"], "multi": api["multi"],
               "minFiles": api.get("minFiles", 1), "accept": api["accept"], "result": api["result"],
               "maxMB": MAX_MB, "t": u["js"], "errors": d.get("errors", {}),
               "timeoutSec": tool.get("timeout", 180)}

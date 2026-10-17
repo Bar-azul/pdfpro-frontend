@@ -136,6 +136,7 @@
     }
     var note = document.createElement('p'); note.className = 'tool-note'; note.textContent = t.deleted_note;
     downloads.appendChild(note);
+    downloads.appendChild(shareBox());
     result.classList.add('show');
     resetBtn.hidden = false;
   }
@@ -170,6 +171,33 @@
     var savedUntil = +localStorage.getItem(LIMIT_KEY);
     if (savedUntil > Date.now()) setTimeout(function () { startCountdown(savedUntil); }, 0);
   } catch (e) {}
+
+  // after a successful run: invite people to pass the tool on (WhatsApp is how
+  // most Israeli users share links; the native share sheet covers the rest)
+  function shareBox() {
+    var url = location.origin + location.pathname;
+    var text = t.share_text.replace('{name}', cfg.name || document.title.split(' | ')[0]) + ' ' + url;
+    var box = document.createElement('div'); box.className = 'share-box';
+    var label = document.createElement('span'); label.textContent = t.share_prompt;
+    var wa = document.createElement('a'); wa.className = 'share-btn share-wa';
+    wa.href = 'https://wa.me/?text=' + encodeURIComponent(text);
+    wa.target = '_blank'; wa.rel = 'noopener'; wa.textContent = 'WhatsApp';
+    wa.addEventListener('click', function () { if (window.gtag) gtag('event', 'share', { method: 'whatsapp', tool: cfg.slug }); });
+    var more = document.createElement('button'); more.type = 'button'; more.className = 'share-btn';
+    more.textContent = navigator.share ? t.share_more : t.share_copy;
+    more.addEventListener('click', function () {
+      if (navigator.share) {
+        navigator.share({ title: document.title, url: url }).catch(function () {});
+        if (window.gtag) gtag('event', 'share', { method: 'native', tool: cfg.slug });
+        return;
+      }
+      var done = function () { more.textContent = t.share_copied; };
+      if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, function () {});
+      if (window.gtag) gtag('event', 'share', { method: 'copy', tool: cfg.slug });
+    });
+    box.appendChild(label); box.appendChild(wa); box.appendChild(more);
+    return box;
+  }
 
   function errorFrom(resp) {
     if (cfg.errors && cfg.errors[resp.status]) return Promise.resolve(cfg.errors[resp.status]);
