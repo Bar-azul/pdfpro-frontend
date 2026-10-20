@@ -1367,15 +1367,34 @@ def _limits_table(lang: str) -> str:
 
 
 def static_pages() -> dict:
+    n_tools = sum(1 for t in TOOLS if t.get("listed", True))
+    n_guides = len(ARTICLES)
     return {
         "about": {
-            "en": {"title": "About PDFPro", "desc": "Who builds PDFPro, why it exists, and how your files are handled.",
+            "en": {"title": "About PDFPro", "desc": "What PDFPro does, who it is for, how the tools are tested and how your files are handled.",
                    "body": f"""
 <p class="lead">PDFPro is a set of free online PDF tools built with one specific gap in mind: most converters mangle Hebrew and other right-to-left languages.</p>
 <h2>Why it exists</h2>
 <p>Convert a Hebrew PDF with a typical online tool and you often get reversed words, flipped numbers and paragraphs in the wrong order. PDFPro is built and tested on Hebrew and mixed Hebrew-English documents first, and it works just as well for English-only files.</p>
-<h2>Who builds it</h2>
-<p>PDFPro is an independent project, built and maintained by a software developer in Israel. It is not affiliated with any other product called PDF Pro.</p>
+<h2>Who we are</h2>
+<p>PDFPro is an independent project from Israel, built for people who work with Hebrew documents every day and are tired of converters that reverse them. It is not affiliated with any other product called PDF Pro.</p>
+
+<h2>At a glance</h2>
+<ul class="glance">
+<li><strong>{n_tools}</strong> tools for PDFs, scans and recordings</li>
+<li><strong>{n_guides}</strong> practical guides in English and Hebrew</li>
+<li><strong>7</strong> languages for document translation</li>
+<li><strong>2026</strong> the year the site launched</li>
+</ul>
+
+<h2>Who it's for</h2>
+<ul>
+<li><strong>Renters and landlords:</strong> sign a contract without printing, and send an ID copy safely.</li>
+<li><strong>Freelancers and small businesses:</strong> quotes, invoices, bank statements to Excel and call transcripts.</li>
+<li><strong>Students:</strong> convert notes and slides, combine files and transcribe lectures.</li>
+<li><strong>Anyone filing paperwork:</strong> shrink files for government, bank and pension websites, and combine payslips into one file.</li>
+<li><strong>Travellers:</strong> translate menus and documents from abroad.</li>
+</ul>
 <h2>How your files are handled</h2>
 <p>Files are uploaded over an encrypted connection, processed on our server, and deleted automatically one hour later. We don't look at, keep or share their contents. Details are in the <a href="/privacy/">privacy policy</a>.</p>
 <h2>What you can do here</h2>
@@ -1398,14 +1417,32 @@ def static_pages() -> dict:
 
 <h2>How it's funded</h2>
 <p>The tools are free. The site shows ads that pay for the servers. A paid plan for advanced features, such as larger files and longer recordings, will come later; the basic tools will stay free.</p>
-<p>A question, a bug or an idea for a new tool? <a href="/contact/">Write to us</a>. We read every message.</p>"""},
-            "he": {"title": "אודות PDFPro", "desc": "מי בונה את PDFPro, למה הוא קיים ואיך הקבצים שלכם מטופלים.",
+<h2>Talk to us</h2>
+<p>A question, a bug or an idea for a new tool? Email <a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a> or use the <a href="/contact/">contact page</a>. We read every message.</p>"""},
+            "he": {"title": "אודות PDFPro", "desc": "מה PDFPro עושה, למי הוא מתאים, איך אנחנו בודקים את הכלים ואיך הקבצים שלכם מטופלים.",
                    "body": f"""
 <p class="lead">PDFPro הוא אוסף כלי PDF חינמיים אונליין, שנבנה בגלל בעיה אחת מוכרת: רוב הממירים הורסים טקסט בעברית ובשפות אחרות שנכתבות מימין לשמאל.</p>
 <h2>למה הוא קיים</h2>
 <p>ממירים PDF בעברית בכלי אונליין רגיל ומקבלים מילים הפוכות, מספרים שהתהפכו ופסקאות בסדר הלא נכון. PDFPro נבנה ונבדק קודם כול על מסמכים בעברית ובעברית-אנגלית, ועובד באותה רמה גם עם קבצים באנגלית בלבד.</p>
-<h2>מי בונה אותו</h2>
-<p>PDFPro הוא פרויקט עצמאי שנבנה ומתוחזק על ידי מפתח תוכנה בישראל. אין לו קשר למוצרים אחרים בשם PDF Pro.</p>
+<h2>מי אנחנו</h2>
+<p>PDFPro הוא פרויקט עצמאי מישראל, שנבנה בשביל מי שעובד עם מסמכים בעברית כל יום ונמאס לו מממירים שהופכים אותה. אין לו קשר למוצרים אחרים בשם PDF Pro.</p>
+
+<h2>במבט מהיר</h2>
+<ul class="glance">
+<li><strong>{n_tools}</strong> כלים ל-PDF, לסריקות ולהקלטות</li>
+<li><strong>{n_guides}</strong> מדריכים מעשיים בעברית ובאנגלית</li>
+<li><strong>7</strong> שפות לתרגום מסמכים</li>
+<li><strong>2026</strong> השנה שבה האתר עלה</li>
+</ul>
+
+<h2>למי זה מתאים</h2>
+<ul>
+<li><strong>שוכרים ובעלי דירות:</strong> חתימה על חוזה בלי להדפיס, ושליחת צילום תעודה בצורה בטוחה.</li>
+<li><strong>עצמאים ועסקים קטנים:</strong> הצעות מחיר, חשבוניות, דפי חשבון ל-Excel ותמלול שיחות.</li>
+<li><strong>סטודנטים:</strong> המרה של סיכומים ומצגות, איחוד קבצים ותמלול הרצאות.</li>
+<li><strong>כל מי שמגיש מסמכים:</strong> הקטנת קבצים לאתרי ביטוח לאומי, בנקים וקופות גמל, ואיחוד תלושים לקובץ אחד.</li>
+<li><strong>מטיילים:</strong> תרגום תפריטים ומסמכים מחו"ל.</li>
+</ul>
 <h2>מה קורה לקבצים שלכם</h2>
 <p>הקבצים עולים בחיבור מוצפן, מעובדים בשרת שלנו ונמחקים אוטומטית אחרי שעה. אנחנו לא מסתכלים על התוכן, לא שומרים אותו ולא משתפים אותו. הפרטים ב<a href="/he/privacy/">מדיניות הפרטיות</a>.</p>
 <h2>מה אפשר לעשות כאן</h2>
@@ -1428,7 +1465,8 @@ def static_pages() -> dict:
 
 <h2>איך האתר ממומן</h2>
 <p>הכלים בחינם. באתר מוצגות פרסומות שמממנות את עלויות השרתים. בעתיד נוסיף מסלול בתשלום ליכולות מתקדמות, כמו קבצים גדולים יותר והקלטות ארוכות, והכלים הבסיסיים יישארו חינמיים.</p>
-<p>שאלה, באג או רעיון לכלי חדש? <a href="/he/contact/">כתבו לנו</a>. אנחנו קוראים כל פנייה.</p>"""},
+<h2>דברו איתנו</h2>
+<p>שאלה, באג או רעיון לכלי חדש? כתבו ל-<a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a> או דרך <a href="/he/contact/">עמוד יצירת הקשר</a>. אנחנו קוראים כל פנייה.</p>"""},
         },
         "contact": {
             "en": {"title": "Contact PDFPro", "desc": "Contact PDFPro for support, bug reports or feedback.",
