@@ -13,6 +13,7 @@ What it generates (EN + HE):
     robots.txt
 
 NOT generated (hand-maintained for now): /index.html and /he/index.html (homepages).
+Their hero counters (data-stat="tools|langs") are refreshed by sync_home_stats().
 They are included in the sitemap, but this script never overwrites them.
 
 To add a tool:     add an entry to TOOLS.
@@ -1366,9 +1367,34 @@ def _limits_table(lang: str) -> str:
     return f'<table class="limits">{head}{rows}</table>'
 
 
+def site_stats() -> dict:
+    """Numbers shown on the homepages and the About page, counted from TOOLS/ARTICLES."""
+    langs = set()
+    for t in TOOLS:
+        for o in t.get("options", []):
+            if o.get("name") == "target_language":
+                langs.update(o["values"])
+    return {"tools": sum(1 for t in TOOLS if t.get("listed", True)),
+            "langs": len(langs), "guides": len(ARTICLES)}
+
+
+def sync_home_stats() -> None:
+    """The homepages are hand-maintained; keep their counters in step with the site."""
+    st = site_stats()
+    for f in (ROOT / "index.html", ROOT / "he" / "index.html"):
+        s = f.read_text(encoding="utf-8")
+        new = re.sub(r'(<div class="stat-num" data-stat="(\w+)">)[^<]*(</div>)',
+                     lambda m: f"{m.group(1)}{st[m.group(2)]}{m.group(3)}", s)
+        new = re.sub(r"(Translate documents into )\d+( languages)", rf"\g<1>{st['langs']}\2", new)
+        new = re.sub(r"(\\u05DC-)\d+( \\u05E9\\u05E4\\u05D5\\u05EA)", rf"\g<1>{st['langs']}\2", new)
+        if new != s:
+            f.write_text(new, encoding="utf-8")
+            print(f"Updated stats in {f.relative_to(ROOT)}")
+
+
 def static_pages() -> dict:
-    n_tools = sum(1 for t in TOOLS if t.get("listed", True))
-    n_guides = len(ARTICLES)
+    st = site_stats()
+    n_tools, n_guides, n_langs = st["tools"], st["guides"], st["langs"]
     return {
         "about": {
             "en": {"title": "About PDFPro", "desc": "What PDFPro does, who it is for, how the tools are tested and how your files are handled.",
@@ -1383,7 +1409,7 @@ def static_pages() -> dict:
 <ul class="glance">
 <li><strong>{n_tools}</strong> tools for PDFs, scans and recordings</li>
 <li><strong>{n_guides}</strong> practical guides in English and Hebrew</li>
-<li><strong>7</strong> languages for document translation</li>
+<li><strong>{n_langs}</strong> languages for document translation</li>
 <li><strong>2026</strong> the year the site launched</li>
 </ul>
 
@@ -1431,7 +1457,7 @@ def static_pages() -> dict:
 <ul class="glance">
 <li><strong>{n_tools}</strong> כלים ל-PDF, לסריקות ולהקלטות</li>
 <li><strong>{n_guides}</strong> מדריכים מעשיים בעברית ובאנגלית</li>
-<li><strong>7</strong> שפות לתרגום מסמכים</li>
+<li><strong>{n_langs}</strong> שפות לתרגום מסמכים</li>
 <li><strong>2026</strong> השנה שבה האתר עלה</li>
 </ul>
 
@@ -2036,6 +2062,7 @@ MANIFEST = ROOT / ".build-manifest.json"
 
 
 def main() -> None:
+    sync_home_stats()
     manifest = json.loads(MANIFEST.read_text()) if MANIFEST.exists() else {}
     today = date.today().isoformat()
     outputs: dict[str, str] = {}   # site path -> html
