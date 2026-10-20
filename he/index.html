@@ -494,9 +494,9 @@ body.rtl .footer-col h4{
       <h1 data-t="hero_h1">Professional<br/>PDF Tools<br/>for <em>Everyone</em></h1>
       <p data-t="hero_p">Edit, convert, merge, split and sign PDF documents — all in your browser, no installation needed, completely free.</p>
       <div class="hero-stats">
-        <div><div class="stat-num">50+</div><div class="stat-label" data-t="stat_tools">Tools</div></div>
-        <div><div class="stat-num">100%</div><div class="stat-label" data-t="stat_secure">Secure</div></div>
-        <div><div class="stat-num">40+</div><div class="stat-label" data-t="stat_langs">Languages</div></div>
+        <div><div class="stat-num">18</div><div class="stat-label" data-t="stat_tools">כלים</div></div>
+        <div><div class="stat-num">100%</div><div class="stat-label" data-t="stat_secure">חינם</div></div>
+        <div><div class="stat-num">7</div><div class="stat-label" data-t="stat_langs">שפות תרגום</div></div>
       </div>
     </div>
     <div class="upload-card">
@@ -728,7 +728,7 @@ const T={
     hero_badge:'Free, no sign-up needed',
     hero_h1:'Professional<br/>PDF Tools<br/>for <em>Everyone</em>',
     hero_p:'Edit, convert, merge, split and sign PDF documents \u2014 all in your browser, no installation needed, completely free.',
-    stat_tools:'Tools',stat_secure:'Secure',stat_langs:'Languages',
+    stat_tools:'Tools',stat_secure:'Free',stat_langs:'Translation languages',
     upload_drag:'Drop a file here or click to upload',
     upload_formats:'PDF, Word, Excel, JPG, PNG and more',
     upload_btn:'Select file & action \u279C',
@@ -772,7 +772,7 @@ const T={
       {k:'unlock',       t:'Unlock PDF',           d:'Remove a known password from a PDF',    cat:'edit'},
       {k:'redact',       t:'Redact Text',          d:'Permanently hide sensitive info',       cat:'edit'},
       {k:'ocr',          t:'OCR \u2014 Extract Text',d:'Extract text from images and scans', cat:'other'},
-      {k:'translate',    t:'Translate PDF',        d:'Translate documents into 40+ languages',cat:'other'},
+      {k:'translate',    t:'Translate PDF',        d:'Translate documents into 7 languages',cat:'other'},
       {k:'transcribe',   t:'Transcribe audio',     d:'Recordings and voice notes to text',cat:'other'},
     ],
     tool_opts:{level_label:'Compression level',level_opts:['Low','Medium','High','Extreme'],dpi_label:'Quality (DPI)',format_label:'Format',page_size_label:'Page size',angle_label:'Rotation angle',wm_text_label:'Watermark text',wm_opacity_label:'Opacity (0.1\u20131.0)',sig_label:'Name for signature',pass_label:'Password',redact_label:'Text to redact (comma-separated)',ocr_lang_label:'Language',ocr_fmt_label:'Output format',translate_lang_label:'Target language',translate_layout_label:'Preserve layout',ranges_label:'Page ranges (e.g. 1-3,4-6)',yes:'Yes',no:'No'}
@@ -782,7 +782,7 @@ const T={
     hero_badge:'\u05D7\u05D9\u05E0\u05DD, \u05D1\u05DC\u05D9 \u05D4\u05E8\u05E9\u05DE\u05D4',
     hero_h1:'\u05DB\u05DC\u05D9 PDF<br/><em>\u05DE\u05E7\u05E6\u05D5\u05E2\u05D9\u05D9\u05DD</em><br/>\u05DC\u05DB\u05DC \u05E6\u05D5\u05E8\u05DA',
     hero_p:'\u05E2\u05E8\u05D5\u05DA, \u05D4\u05DE\u05E8, \u05DE\u05D6\u05D2, \u05E4\u05E6\u05DC \u05D5\u05D7\u05EA\u05D5\u05DD \u05E2\u05DC \u05DE\u05E1\u05DE\u05DB\u05D9 PDF \u2014 \u05D4\u05DB\u05DC \u05D1\u05D3\u05E4\u05D3\u05E4\u05DF, \u05DC\u05DC\u05D0 \u05D4\u05EA\u05E7\u05E0\u05D5\u05EA, \u05D1\u05D7\u05D9\u05E0\u05DD.',
-    stat_tools:'\u05DB\u05DC\u05D9\u05DD',stat_secure:'\u05D0\u05D1\u05D8\u05D7\u05D4',stat_langs:'\u05E9\u05E4\u05D5\u05EA',
+    stat_tools:'\u05DB\u05DC\u05D9\u05DD',stat_secure:'חינם',stat_langs:'שפות תרגום',
     upload_drag:'\u05D2\u05E8\u05D5\u05E8 \u05E7\u05D5\u05D1\u05E5 \u05DC\u05DB\u05D0\u05DF \u05D0\u05D5 \u05DC\u05D7\u05E5 \u05DC\u05D4\u05E2\u05DC\u05D0\u05D4',
     upload_formats:'PDF, Word, Excel, JPG, PNG \u05D5\u05E2\u05D5\u05D3',
     upload_btn:'\u05D1\u05D7\u05E8 \u05E7\u05D5\u05D1\u05E5 \u05D5\u05E4\u05E2\u05D5\u05DC\u05D4 \u279C',
@@ -827,7 +827,7 @@ const T={
       {k:'unlock',       t:'הסרת סיסמה',           d:'הסרת סיסמה ידועה מקובץ PDF',            cat:'edit'},
       {k:'redact',       t:'\u05DE\u05D7\u05D9\u05E7\u05EA \u05D8\u05E7\u05E1\u05D8', d:'\u05D4\u05E1\u05EA\u05E8 \u05DE\u05D9\u05D3\u05E2 \u05E8\u05D2\u05D9\u05E9',           cat:'edit'},
       {k:'ocr',          t:'OCR \u2014 \u05D6\u05D9\u05D4\u05D5\u05D9 \u05D8\u05E7\u05E1\u05D8', d:'\u05D7\u05DC\u05E5 \u05D8\u05E7\u05E1\u05D8 \u05DE\u05EA\u05DE\u05D5\u05E0\u05D5\u05EA', cat:'other'},
-      {k:'translate',    t:'\u05EA\u05E8\u05D2\u05D5\u05DD PDF', d:'\u05EA\u05E8\u05D2\u05DD \u05DC-40+ \u05E9\u05E4\u05D5\u05EA',                             cat:'other'},
+      {k:'translate',    t:'\u05EA\u05E8\u05D2\u05D5\u05DD PDF', d:'\u05EA\u05E8\u05D2\u05DD \u05DC-7 \u05E9\u05E4\u05D5\u05EA',                             cat:'other'},
       {k:'transcribe',   t:'תמלול הקלטה', d:'הקלטות והודעות קוליות לטקסט', cat:'other'},
     ],
     tool_opts:{level_label:'\u05E8\u05DE\u05EA \u05D3\u05D7\u05D9\u05E1\u05D4',level_opts:['\u05E0\u05DE\u05D5\u05DB\u05D4','\u05D1\u05D9\u05E0\u05D5\u05E0\u05D9\u05EA','\u05D2\u05D1\u05D5\u05D4\u05D4','\u05DE\u05E7\u05E1\u05D9\u05DE\u05DC\u05D9\u05EA'],dpi_label:'\u05D0\u05D9\u05DB\u05D5\u05EA (DPI)',format_label:'\u05E4\u05D5\u05E8\u05DE\u05D8',page_size_label:'\u05D2\u05D5\u05D3\u05DC \u05E2\u05DE\u05D5\u05D3',angle_label:'\u05D6\u05D5\u05D5\u05D9\u05EA \u05E1\u05D9\u05D1\u05D5\u05D1',wm_text_label:'\u05D8\u05E7\u05E1\u05D8 \u05E1\u05D9\u05DE\u05DF \u05D4\u05DE\u05D9\u05DD',wm_opacity_label:'\u05E9\u05E7\u05D9\u05E4\u05D5\u05EA',sig_label:'\u05E9\u05DD \u05DC\u05D7\u05EA\u05D9\u05DE\u05D4',pass_label:'\u05E1\u05D9\u05E1\u05DE\u05D0',redact_label:'\u05D8\u05E7\u05E1\u05D8\u05D9\u05DD \u05DC\u05DE\u05D7\u05D9\u05E7\u05D4',ocr_lang_label:'\u05E9\u05E4\u05D4',ocr_fmt_label:'\u05E4\u05D5\u05E8\u05DE\u05D8 \u05E4\u05DC\u05D8',translate_lang_label:'\u05E9\u05E4\u05EA \u05D9\u05E2\u05D3',translate_layout_label:'\u05E9\u05DE\u05D5\u05E8 \u05E4\u05E8\u05D9\u05E1\u05D4',ranges_label:'\u05D8\u05D5\u05D5\u05D7\u05D9 \u05E2\u05DE\u05D5\u05D3\u05D9\u05DD',yes:'\u05DB\u05DF',no:'\u05DC\u05D0'}
