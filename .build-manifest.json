@@ -1,15 +1,15 @@
 {
  "/": {
-  "hash": "99c1b5886d5edb92c4ac6e3a92277adb",
-  "lastmod": "2026-10-17"
+  "hash": "98ef118cc0ef426d0b5f174d94b58439",
+  "lastmod": "2026-10-20"
  },
  "/about/": {
-  "hash": "a6d46e4b864554258ce0f266640b756b",
-  "lastmod": "2026-10-17"
+  "hash": "265e3ab6e48a9ecfdd5218fc446a69c8",
+  "lastmod": "2026-10-20"
  },
  "/blog/": {
-  "hash": "f729c4e3e7112e9d8f1068501b31e0fc",
-  "lastmod": "2026-10-17"
+  "hash": "552e3d584211f0c8942872570151bbe2",
+  "lastmod": "2026-10-20"
  },
  "/blog/bank-statement-to-excel/": {
   "hash": "8758bea181895a75d188d049b424cabc",
@@ -32,8 +32,8 @@
   "lastmod": "2026-10-17"
  },
  "/blog/electronic-signature-pdf/": {
-  "hash": "ee8bcec6daeb81ac2158835e2b87510d",
-  "lastmod": "2026-10-17"
+  "hash": "ce680b9e126665b450291343521e2f12",
+  "lastmod": "2026-10-20"
  },
  "/blog/extract-page-from-pdf/": {
   "hash": "a27c409e2c35161826d8570a9b15d5bc",
@@ -48,8 +48,8 @@
   "lastmod": "2026-10-17"
  },
  "/blog/pdf-broken-mobile/": {
-  "hash": "436b3c4a5c7e340baef8b008dc7daf6d",
-  "lastmod": "2026-10-17"
+  "hash": "83aae5067de995a542837d2b747b47f8",
+  "lastmod": "2026-10-20"
  },
  "/blog/pdf-file-too-large/": {
   "hash": "de7c61a1cd0e4ff17e4c7880063bfc39",
@@ -60,8 +60,8 @@
   "lastmod": "2026-10-17"
  },
  "/blog/pdf-password-protected/": {
-  "hash": "bafcfa93f3e345c4c5c57551836451f2",
-  "lastmod": "2026-10-17"
+  "hash": "f4126440642fe21f60b910d245357d17",
+  "lastmod": "2026-10-20"
  },
  "/blog/pdf-table-to-excel/": {
   "hash": "4f48c43032507c0a32786dacb6afeefd",
@@ -116,24 +116,24 @@
   "lastmod": "2026-10-17"
  },
  "/compress-pdf/": {
-  "hash": "5016d9f60397c0db10d6dc87d668ee03",
-  "lastmod": "2026-10-17"
+  "hash": "e8b835d3f51c8d5230061e9ef17e0eed",
+  "lastmod": "2026-10-20"
  },
  "/contact/": {
   "hash": "41a225f508cfa0f504eb74a904da22e7",
   "lastmod": "2026-10-17"
  },
  "/he/": {
-  "hash": "92754bacb78f5cfa1ea26a5a0858e3f3",
-  "lastmod": "2026-10-17"
+  "hash": "c60998745118ed411e2826b89ac693c2",
+  "lastmod": "2026-10-20"
  },
  "/he/about/": {
-  "hash": "e2e785cd9867de3599af3036cf13d7ea",
-  "lastmod": "2026-10-17"
+  "hash": "64f697d66635cd868e994ca8b9115514",
+  "lastmod": "2026-10-20"
  },
  "/he/blog/": {
-  "hash": "e1761ad03320496534432175daab3be7",
-  "lastmod": "2026-10-17"
+  "hash": "c85d7eb4cac504389722012f94594692",
+  "lastmod": "2026-10-20"
  },
  "/he/blog/bank-statement-to-excel/": {
   "hash": "bd4c93b7c7526b366dbd0df1584fe5f2",
@@ -156,8 +156,8 @@
   "lastmod": "2026-10-17"
  },
  "/he/blog/electronic-signature-pdf/": {
-  "hash": "803127cf1eff8271bfb399b22bb45090",
-  "lastmod": "2026-10-17"
+  "hash": "2281ccb804819ed50430fd5bb813a7d0",
+  "lastmod": "2026-10-20"
  },
  "/he/blog/extract-page-from-pdf/": {
   "hash": "d98ef252d0a66039925b6ab8e28eba41",
@@ -172,8 +172,8 @@
   "lastmod": "2026-10-17"
  },
  "/he/blog/pdf-broken-mobile/": {
-  "hash": "b39cf13cba880c1d70818f1a102eb627",
-  "lastmod": "2026-10-17"
+  "hash": "563d97c33cdfd366fe3500d508d001d7",
+  "lastmod": "2026-10-20"
  },
  "/he/blog/pdf-file-too-large/": {
   "hash": "2d7416825e90769e28d42d306fcdeca4",
@@ -184,8 +184,8 @@
   "lastmod": "2026-10-17"
  },
  "/he/blog/pdf-password-protected/": {
-  "hash": "5c422a9d97bef1ec97119967993fec66",
-  "lastmod": "2026-10-17"
+  "hash": "4d5ca1439b1845b997387f5501f92ff5",
+  "lastmod": "2026-10-20"
  },
  "/he/blog/pdf-table-to-excel/": {
   "hash": "e46f26ad76411910f2e1f3d3a51fc9de",
@@ -240,8 +240,8 @@
   "lastmod": "2026-10-17"
  },
  "/he/compress-pdf/": {
-  "hash": "4ea10b2ae34a588ed5c34e460aecb62e",
-  "lastmod": "2026-10-17"
+  "hash": "0157b90643dfcbbe45207ee8c174b914",
+  "lastmod": "2026-10-20"
  },
  "/he/contact/": {
   "hash": "e49d56020d0afa4585c19663b01bfc72",
@@ -300,8 +300,8 @@
   "lastmod": "2026-10-17"
  },
  "/he/sign-pdf/": {
-  "hash": "f3a478d193eb098b41151eb2be866a83",
-  "lastmod": "2026-10-17"
+  "hash": "18f0549e1c5d969047617c517cffa474",
+  "lastmod": "2026-10-20"
  },
  "/he/split-pdf/": {
   "hash": "44613b8da55dc8e024fd21d3b19cd6b4",
@@ -324,8 +324,8 @@
   "lastmod": "2026-10-17"
  },
  "/he/unlock-pdf/": {
-  "hash": "20e14dd5db008fbd82487fba8532f8e7",
-  "lastmod": "2026-10-17"
+  "hash": "2a77c71fe005c95c5a9bbaf8a4f872f4",
+  "lastmod": "2026-10-20"
  },
  "/he/watermark-pdf/": {
   "hash": "188a17bac039302cff67e69aa847d922",
@@ -388,8 +388,8 @@
   "lastmod": "2026-10-17"
  },
  "/sign-pdf/": {
-  "hash": "8351cd9033371f2ce04bb3b7b8e130c5",
-  "lastmod": "2026-10-17"
+  "hash": "2c5b2b254956719d6aa60db655fea94f",
+  "lastmod": "2026-10-20"
  },
  "/split-pdf/": {
   "hash": "fc4b270c008b5d8e21f8834da2863d5a",
@@ -412,8 +412,8 @@
   "lastmod": "2026-10-17"
  },
  "/unlock-pdf/": {
-  "hash": "32028233a69bd8e6f9509d17cb301a98",
-  "lastmod": "2026-10-17"
+  "hash": "740da0fcc548f062652026fb1f91877f",
+  "lastmod": "2026-10-20"
  },
  "/watermark-pdf/": {
   "hash": "db9e74709ad7fb92458e6539e52472e3",

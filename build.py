@@ -1325,26 +1325,26 @@ ARTICLES = [
      "he": {"title": "איך לדחוס PDF של תעודת זהות או חוזה בלי לפגוע בקריאות החתימה",
             "desc": "מקטינים PDF של תעודת זהות או חוזה חתום כדי שהאתר יקבל אותו, בלי לטשטש את מספר הזהות ואת החתימה. איזו רמה לבחור ואיך לבדוק לפני ששולחים.",
             "tag": "דחיסה", "cta": "דחיסת PDF"}},
-    {"slug": "pdf-broken-mobile", "published": "2026-07-07", "tool": "compress-pdf",
+    {"slug": "pdf-broken-mobile", "published": "2026-07-07", "updated": "2026-10-20", "tool": "compress-pdf",
      "en": {"title": "5 Mistakes That Make Your PDF Look Broken on Mobile",
-            "desc": "The most common reasons PDF files look broken, cut off, or unreadable on a mobile phone.",
+            "desc": "Boxes instead of letters, pages on their side, files that will not load: the five reasons a PDF looks broken on a phone, and a one-minute fix for each.",
             "tag": "Compatibility", "cta": "Compress a PDF"},
      "he": {"title": "5 טעויות שגורמות ל-PDF להיראות שבור בפתיחה בנייד",
-            "desc": "הסיבות הנפוצות ביותר לכך שקבצי PDF נראים שבורים, חתוכים או לא קריאים בטלפון הנייד.",
+            "desc": "ריבועים במקום אותיות, עמוד על הצד, קובץ שלא נטען: חמש הסיבות ש-PDF נראה שבור בטלפון, ותיקון של דקה לכל אחת.",
             "tag": "תאימות", "cta": "דחיסת PDF"}},
-    {"slug": "pdf-password-protected", "published": "2026-07-05", "tool": "unlock-pdf",
+    {"slug": "pdf-password-protected", "published": "2026-07-05", "updated": "2026-10-20", "tool": "unlock-pdf",
      "en": {"title": "Password-Protected PDF: What to Do When You've Lost the Password",
-            "desc": "What to do when you've lost the password to your own PDF file — legitimate options only.",
+            "desc": "Where to find the password of a payslip or bank statement, how to remove a password you know, and the real options when it is lost.",
             "tag": "Security", "cta": "Know the password? Remove it"},
      "he": {"title": "PDF מוגן סיסמה: מה עושים כשאיבדתם את הסיסמה",
-            "desc": "מה לעשות כשאיבדתם את הסיסמה לקובץ PDF שלכם - אפשרויות לגיטימיות בלבד.",
+            "desc": "איפה מוצאים את הסיסמה של תלוש שכר או דף חשבון, איך מסירים סיסמה ידועה, ומה האפשרויות האמיתיות כשהיא אבדה.",
             "tag": "אבטחה", "cta": "יודעים את הסיסמה? הסירו אותה"}},
-    {"slug": "electronic-signature-pdf", "published": "2026-07-03", "tool": "sign-pdf",
+    {"slug": "electronic-signature-pdf", "published": "2026-07-03", "updated": "2026-10-20", "tool": "sign-pdf",
      "en": {"title": "How to Sign a PDF Document Without Printing It",
-            "desc": "A complete guide to electronically signing PDF documents — no printer, scanner, or wasted time required.",
+            "desc": "Sign a PDF on your computer in a minute: draw or type your signature, pick the page and position, add the date. What to check before sending and when it is valid.",
             "tag": "Signature", "cta": "Sign a PDF"},
      "he": {"title": "איך לחתום על מסמך PDF בעברית בלי להדפיס",
-            "desc": "מדריך מלא לחתימה דיגיטלית על מסמכי PDF בעברית - בלי מדפסת, סורק או בזבוז זמן.",
+            "desc": "חותמים על PDF מהמחשב בתוך דקה: מציירים או מקלידים חתימה, בוחרים עמוד ומיקום ומוסיפים תאריך. מה לבדוק לפני ששולחים ומתי החתימה תקפה.",
             "tag": "חתימה", "cta": "חתימה על PDF"}},
     {"slug": "pdf-hebrew-rtl", "published": "2026-07-01", "updated": "2026-10-16", "tool": "pdf-to-word",
      "en": {"title": "Why Hebrew Text Gets Scrambled in PDF Conversion (and the Fix)",
@@ -1378,9 +1378,27 @@ def static_pages() -> dict:
 <p>PDFPro is an independent project, built and maintained by a software developer in Israel. It is not affiliated with any other product called PDF Pro.</p>
 <h2>How your files are handled</h2>
 <p>Files are uploaded over an encrypted connection, processed on our server, and deleted automatically one hour later. We don't look at, keep or share their contents. Details are in the <a href="/privacy/">privacy policy</a>.</p>
+<h2>What you can do here</h2>
+<ul>
+<li><strong>Convert:</strong> <a href="/pdf-to-word/">PDF to Word</a>, <a href="/pdf-to-excel/">PDF to Excel</a>, <a href="/pdf-to-powerpoint/">PDF to PowerPoint</a>, <a href="/pdf-to-jpg/">PDF to JPG</a>, and back with <a href="/word-to-pdf/">Word to PDF</a> and <a href="/jpg-to-pdf/">JPG to PDF</a>.</li>
+<li><strong>Organize:</strong> <a href="/merge-pdf/">merge</a>, <a href="/split-pdf/">split</a>, <a href="/compress-pdf/">compress</a> and <a href="/rotate-pdf/">rotate</a>.</li>
+<li><strong>Edit and secure:</strong> <a href="/sign-pdf/">sign</a>, <a href="/watermark-pdf/">watermark</a>, <a href="/redact-pdf/">redact sensitive details</a>, <a href="/protect-pdf/">add a password</a> and <a href="/unlock-pdf/">remove one</a>.</li>
+<li><strong>Text and language:</strong> <a href="/ocr-pdf/">OCR for scans</a>, <a href="/translate-pdf/">document translation</a> and <a href="/transcribe-audio/">audio transcription</a>.</li>
+</ul>
+
+<h2>How we test the tools</h2>
+<p>Every tool is tested on real Hebrew documents: contracts with numbers and dates, bank statements, payslips, phone scans and menus. When something doesn't work well in Hebrew, we fix it in the tool rather than hide it. PDF to Word, for example, rebuilds each Hebrew line in reading order, and the compressor returns your original file if it can't shrink it without damage. Tool pages and guides also say what a tool does <em>not</em> do, for instance that machine translation doesn't replace a certified translation.</p>
+
+<h2>Our principles</h2>
+<ul>
+<li><strong>Really free:</strong> no sign-up, no watermark and no payment screen after the upload.</li>
+<li><strong>Transparent:</strong> each tool's limits are on the <a href="/pricing/">pricing page</a>, and the outside services we use are named in the privacy policy.</li>
+<li><strong>Minimal data:</strong> no account needed, and files aren't kept.</li>
+</ul>
+
 <h2>How it's funded</h2>
-<p>The tools are free to use. The site shows ads to cover server costs.</p>
-<p>Questions or a bug to report? <a href="/contact/">Get in touch</a>.</p>"""},
+<p>The tools are free. The site shows ads that pay for the servers. A paid plan for advanced features, such as larger files and longer recordings, will come later; the basic tools will stay free.</p>
+<p>A question, a bug or an idea for a new tool? <a href="/contact/">Write to us</a>. We read every message.</p>"""},
             "he": {"title": "אודות PDFPro", "desc": "מי בונה את PDFPro, למה הוא קיים ואיך הקבצים שלכם מטופלים.",
                    "body": f"""
 <p class="lead">PDFPro הוא אוסף כלי PDF חינמיים אונליין, שנבנה בגלל בעיה אחת מוכרת: רוב הממירים הורסים טקסט בעברית ובשפות אחרות שנכתבות מימין לשמאל.</p>
@@ -1390,9 +1408,27 @@ def static_pages() -> dict:
 <p>PDFPro הוא פרויקט עצמאי שנבנה ומתוחזק על ידי מפתח תוכנה בישראל. אין לו קשר למוצרים אחרים בשם PDF Pro.</p>
 <h2>מה קורה לקבצים שלכם</h2>
 <p>הקבצים עולים בחיבור מוצפן, מעובדים בשרת שלנו ונמחקים אוטומטית אחרי שעה. אנחנו לא מסתכלים על התוכן, לא שומרים אותו ולא משתפים אותו. הפרטים ב<a href="/he/privacy/">מדיניות הפרטיות</a>.</p>
+<h2>מה אפשר לעשות כאן</h2>
+<ul>
+<li><strong>המרה:</strong> <a href="/he/pdf-to-word/">PDF ל-Word</a>, <a href="/he/pdf-to-excel/">PDF ל-Excel</a>, <a href="/he/pdf-to-powerpoint/">PDF ל-PowerPoint</a>, <a href="/he/pdf-to-jpg/">PDF לתמונה</a>, ובכיוון ההפוך <a href="/he/word-to-pdf/">Word ל-PDF</a> ו-<a href="/he/jpg-to-pdf/">תמונות ל-PDF</a>.</li>
+<li><strong>סידור:</strong> <a href="/he/merge-pdf/">מיזוג</a>, <a href="/he/split-pdf/">פיצול</a>, <a href="/he/compress-pdf/">דחיסה</a> ו<a href="/he/rotate-pdf/">סיבוב</a>.</li>
+<li><strong>עריכה ואבטחה:</strong> <a href="/he/sign-pdf/">חתימה</a>, <a href="/he/watermark-pdf/">סימן מים</a>, <a href="/he/redact-pdf/">השחרת מידע רגיש</a>, <a href="/he/protect-pdf/">הוספת סיסמה</a> ו<a href="/he/unlock-pdf/">הסרת סיסמה</a>.</li>
+<li><strong>טקסט ושפה:</strong> <a href="/he/ocr-pdf/">זיהוי טקסט בסריקה (OCR)</a>, <a href="/he/translate-pdf/">תרגום מסמך</a> ו<a href="/he/transcribe-audio/">תמלול הקלטה</a>.</li>
+</ul>
+
+<h2>איך אנחנו בודקים את הכלים</h2>
+<p>כל כלי נבדק על מסמכים אמיתיים בעברית: חוזים עם מספרים ותאריכים, דפי חשבון, תלושים, סריקות מהטלפון ותפריטים. כשמשהו לא עובד טוב בעברית, מתקנים אותו בכלי עצמו ולא מסתירים את זה. כך, למשל, ההמרה ל-Word בונה מחדש כל שורה בעברית לפי סדר הקריאה, וכלי הדחיסה מחזיר את הקובץ המקורי אם הוא לא מצליח להקטין אותו בלי לפגוע בו. בדפי הכלים ובמדריכים אנחנו כותבים גם מה הכלי <em>לא</em> עושה, למשל שתרגום מכונה לא מחליף תרגום נוטריוני.</p>
+
+<h2>העקרונות שלנו</h2>
+<ul>
+<li><strong>חינם באמת:</strong> בלי הרשמה, בלי סימן מים ובלי מסך תשלום אחרי ההעלאה.</li>
+<li><strong>שקיפות:</strong> המגבלות של כל כלי מופיעות ב<a href="/he/pricing/">עמוד המחירים</a>, והשירותים החיצוניים שאנחנו משתמשים בהם מופיעים במדיניות הפרטיות.</li>
+<li><strong>מינימום מידע:</strong> לא צריך חשבון, ולא שומרים את הקבצים.</li>
+</ul>
+
 <h2>איך האתר ממומן</h2>
-<p>הכלים בחינם. באתר מוצגות פרסומות שמממנות את עלויות השרת.</p>
-<p>שאלה או באג? <a href="/he/contact/">כתבו לנו</a>.</p>"""},
+<p>הכלים בחינם. באתר מוצגות פרסומות שמממנות את עלויות השרתים. בעתיד נוסיף מסלול בתשלום ליכולות מתקדמות, כמו קבצים גדולים יותר והקלטות ארוכות, והכלים הבסיסיים יישארו חינמיים.</p>
+<p>שאלה, באג או רעיון לכלי חדש? <a href="/he/contact/">כתבו לנו</a>. אנחנו קוראים כל פנייה.</p>"""},
         },
         "contact": {
             "en": {"title": "Contact PDFPro", "desc": "Contact PDFPro for support, bug reports or feedback.",
