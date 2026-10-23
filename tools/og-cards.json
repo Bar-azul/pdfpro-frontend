@@ -84,7 +84,7 @@
 "he-pdf-to-excel": "e9e928bc347bfd525a7d989ee15137e0",
 "he-pdf-to-jpg": "28a84919a76bc29cbdc3178ed96e59c0",
 "he-pdf-to-powerpoint": "3ecca8cd66f2e6909335b0065103e27c",
-"he-pdf-to-word": "cabd268d843691d099e17c5ca4903609",
+"he-pdf-to-word": "1aaf607b1619132c8d5e8d39576ede2e",
 "he-protect-pdf": "b8dcf91f78d7aaef455fd13be40ba58e",
 "he-redact-pdf": "d89f685e354ef2b17c5779767233920b",
 "he-rotate-pdf": "cccea3fbfa35317e8a551260d8a7663e",
@@ -98,5 +98,5 @@
 "he-translate-pdf": "be1d503fbfead15abe4fa2aceea351ff",
 "he-unlock-pdf": "43718bc8795beecfa16a2d3c0acb0d0b",
 "he-watermark-pdf": "5d5ef291ec13f04e1b78f055b5b8a1bd",
-"he-word-to-pdf": "f20dc59693a282cda6d8708219f4c6d3"
+"he-word-to-pdf": "5b44a00efca198a8bd98e7e576900546"
 }
