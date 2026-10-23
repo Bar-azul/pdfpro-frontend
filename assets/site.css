@@ -183,3 +183,6 @@ details p{margin:.8rem 0 0}
 .glance{list-style:none;padding:0;margin:16px 0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
 .glance li{background:#f6f7f9;border-radius:12px;padding:16px;margin:0;line-height:1.4}
 .glance strong{display:block;font-size:28px;color:var(--red-dark,#b91c1c)}
+
+/* long paths in guides wrap instead of widening the page */
+.prose code{overflow-wrap:anywhere;word-break:break-all}
