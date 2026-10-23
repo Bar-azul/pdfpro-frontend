@@ -521,10 +521,10 @@ TOOLS = [
         },
         "he": {
             "name": "תרגום PDF",
-            "title": "תרגום PDF לעברית ומעברית – בחינם אונליין | PDFPro",
-            "desc": "תרגום קובץ PDF בין עברית, אנגלית, ערבית, רוסית, צרפתית, גרמנית וספרדית, עם שמירה על הפריסה. בחינם.",
-            "h1": "תרגום קובץ PDF",
-            "lead": "מתרגמים PDF שלם לשפה אחרת ומקבלים אותו בחזרה כ-PDF, עם הפריסה המקורית ככל האפשר.",
+            "title": "תרגום מסמכים PDF לעברית ומעברית – בחינם | PDFPro",
+            "desc": "תרגום מסמכים וקובצי PDF בין עברית, אנגלית, ערבית, רוסית, צרפתית, גרמנית וספרדית, עם שמירה על העיצוב. בחינם, בלי הרשמה.",
+            "h1": "תרגום מסמכים PDF",
+            "lead": "מתרגמים מסמך PDF שלם, מכתב, חוזה, הוראות או מאמר, לשפה אחרת, ומקבלים אותו בחזרה כ-PDF עם הפריסה המקורית ככל האפשר.",
             "run": "תרגם PDF",
             "steps": [
                 ("בוחרים את ה-PDF", "הקובץ צריך להכיל טקסט אמיתי. אם זו סריקה, מעבירים קודם ב-OCR."),
@@ -611,9 +611,9 @@ TOOLS = [
         ],
         "en": {
             "name": "Transcribe audio",
-            "title": "Free Audio Transcription – No Sign-Up, No Paywall | PDFPro",
+            "title": "Audio to Text – Free Transcription, No Sign-Up | PDFPro",
             "desc": "Turn a voice note, call, lecture or video into text, Word or subtitles. Really free: no sign-up, no login, no payment at the end. Up to 60 minutes.",
-            "h1": "Transcribe audio and video to text",
+            "h1": "Audio and video to text",
             "lead": "Upload a recording and download the full transcript with timestamps, as a Word document, plain text or subtitles. No sign-up, no login and no payment screen after the upload. Hebrew, English and more, up to 60 minutes per file.",
             "run": "Transcribe",
             "steps": [
