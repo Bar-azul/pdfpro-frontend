@@ -312,8 +312,12 @@
   "lastmod": "2026-10-17"
  },
  "/he/transcribe-audio/": {
-  "hash": "c1e00fa6d27d34d6a83ef2c13bd85bf6",
-  "lastmod": "2026-10-17"
+  "hash": "708960711befc0583cb64809c0835472",
+  "lastmod": "2026-10-23"
+ },
+ "/he/transcribe-whatsapp/": {
+  "hash": "54f847c4fc0e086c3cec02b3345b7630",
+  "lastmod": "2026-10-23"
  },
  "/he/translate-menu/": {
   "hash": "2779144e984e93eb4d9078a4d25fb371",
@@ -400,8 +404,12 @@
   "lastmod": "2026-10-17"
  },
  "/transcribe-audio/": {
-  "hash": "5ace69598d2be16ca5c7e5802025eb41",
-  "lastmod": "2026-10-17"
+  "hash": "b1b622d1136ab5a394d442d9ec17513b",
+  "lastmod": "2026-10-23"
+ },
+ "/transcribe-whatsapp/": {
+  "hash": "154d3d97057ebc540820c0eff066af2c",
+  "lastmod": "2026-10-23"
  },
  "/translate-menu/": {
   "hash": "31cfb8e0293904140ef44ec3c2d7b8ff",
