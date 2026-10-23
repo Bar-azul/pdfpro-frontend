@@ -337,6 +337,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/transcribe-whatsapp/"/>
   </url>
   <url>
+    <loc>https://www.pdfproapp.com/translate-english-to-hebrew/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/translate-english-to-hebrew/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/translate-english-to-hebrew/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/translate-english-to-hebrew/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/translate-hebrew-to-english/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/translate-hebrew-to-english/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/translate-hebrew-to-english/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/translate-hebrew-to-english/"/>
+  </url>
+  <url>
     <loc>https://www.pdfproapp.com/translate-menu/</loc>
     <lastmod>2026-10-23</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/translate-menu/"/>
@@ -713,6 +727,20 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/transcribe-whatsapp/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/transcribe-whatsapp/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/transcribe-whatsapp/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/he/translate-english-to-hebrew/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/translate-english-to-hebrew/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/translate-english-to-hebrew/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/translate-english-to-hebrew/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/he/translate-hebrew-to-english/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/translate-hebrew-to-english/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/translate-hebrew-to-english/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/translate-hebrew-to-english/"/>
   </url>
   <url>
     <loc>https://www.pdfproapp.com/he/translate-menu/</loc>

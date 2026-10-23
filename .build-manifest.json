@@ -319,12 +319,20 @@
   "hash": "54f847c4fc0e086c3cec02b3345b7630",
   "lastmod": "2026-10-23"
  },
+ "/he/translate-english-to-hebrew/": {
+  "hash": "6ef221b3e557d632c2bdfe2243b82d66",
+  "lastmod": "2026-10-23"
+ },
+ "/he/translate-hebrew-to-english/": {
+  "hash": "9b54613bf5db5c7aac18c66f4a32639e",
+  "lastmod": "2026-10-23"
+ },
  "/he/translate-menu/": {
   "hash": "2779144e984e93eb4d9078a4d25fb371",
   "lastmod": "2026-10-23"
  },
  "/he/translate-pdf/": {
-  "hash": "20b78c2cf82f082a3d80c783c7bbf285",
+  "hash": "75a761bb10b19dd7c840de1e5f50a8ad",
   "lastmod": "2026-10-23"
  },
  "/he/unlock-pdf/": {
@@ -411,12 +419,20 @@
   "hash": "154d3d97057ebc540820c0eff066af2c",
   "lastmod": "2026-10-23"
  },
+ "/translate-english-to-hebrew/": {
+  "hash": "b5ab45c84a17e5286c07b0814d469961",
+  "lastmod": "2026-10-23"
+ },
+ "/translate-hebrew-to-english/": {
+  "hash": "efabeed3539bf25d1f9089f9a35e5d61",
+  "lastmod": "2026-10-23"
+ },
  "/translate-menu/": {
   "hash": "31cfb8e0293904140ef44ec3c2d7b8ff",
   "lastmod": "2026-10-23"
  },
  "/translate-pdf/": {
-  "hash": "8f7d0c12115b455aa13b61015f38107f",
+  "hash": "ec511d806a103bb2487fd34e402a2357",
   "lastmod": "2026-10-23"
  },
  "/unlock-pdf/": {
