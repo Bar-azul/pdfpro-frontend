@@ -218,6 +218,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/contact/"/>
   </url>
   <url>
+    <loc>https://www.pdfproapp.com/create-signature/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/create-signature/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/create-signature/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/create-signature/"/>
+  </url>
+  <url>
     <loc>https://www.pdfproapp.com/jpg-to-pdf/</loc>
     <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/jpg-to-pdf/"/>
@@ -303,7 +310,7 @@
   </url>
   <url>
     <loc>https://www.pdfproapp.com/sign-pdf/</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/sign-pdf/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/sign-pdf/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/sign-pdf/"/>
@@ -601,6 +608,13 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/contact/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/contact/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/contact/"/>
+  </url>
+  <url>
+    <loc>https://www.pdfproapp.com/he/create-signature/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pdfproapp.com/create-signature/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.pdfproapp.com/he/create-signature/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pdfproapp.com/create-signature/"/>
   </url>
   <url>
     <loc>https://www.pdfproapp.com/he/help/</loc>

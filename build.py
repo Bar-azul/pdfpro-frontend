@@ -1217,6 +1217,66 @@ TOOLS = [
         },
     },
     {
+        # Runs entirely in the browser (assets/sigmaker.js): no upload, no API, no hourly limit.
+        "slug": "create-signature", "listed": False, "widget": "signature-maker", "script": "sigmaker.js",
+        "ui": {
+            "en": {"draw": "Draw", "type": "Type", "pad": "Sign here with your mouse or finger", "clear": "Clear",
+                   "name_label": "Your name", "placeholder": "e.g. Dana Levi", "style": "Style", "color": "Ink color",
+                   "blue": "Blue", "black": "Black", "download": "Download signature (PNG)",
+                   "need_draw": "Draw your signature first, or switch to Type.", "need_text": "Type the name to sign with.",
+                   "done": "Downloaded. The PNG has a transparent background, ready to paste into Word, an email or a form.",
+                   "filename": "signature.png", "note": "Your signature is created in your browser and never sent to our server."},
+            "he": {"draw": "ציור", "type": "הקלדה", "pad": "חתמו כאן עם העכבר או עם האצבע", "clear": "נקה",
+                   "name_label": "השם שלכם", "placeholder": "לדוגמה: דנה לוי", "style": "סגנון", "color": "צבע",
+                   "blue": "כחול", "black": "שחור", "download": "הורדת החתימה (PNG)",
+                   "need_draw": "ציירו קודם את החתימה, או עברו להקלדה.", "need_text": "הקלידו את השם לחתימה.",
+                   "done": "ירד. לקובץ PNG יש רקע שקוף, והוא מוכן להדבקה ב-Word, במייל או בטופס.",
+                   "filename": "חתימה.png", "note": "החתימה נוצרת בדפדפן שלכם ולא נשלחת לשרת שלנו."},
+        },
+        "en": {
+            "name": "Create a signature",
+            "title": "Create a Digital Signature Online – Free, Transparent PNG | PDFPro",
+            "desc": "Draw your signature or type your name in a handwriting style, then download it as a transparent PNG for Word, email, forms and PDFs. Free, no sign-up, nothing uploaded.",
+            "h1": "Create a digital signature",
+            "lead": "Draw your signature with a mouse or finger, or type your name and pick a handwriting style. Download it as an image with a transparent background and paste it wherever you need to sign.",
+            "run": "Download",
+            "steps": [
+                ("Draw or type", "Draw in the box, or switch to Type, enter your name and choose a style."),
+                ("Pick the ink color", "Blue looks like a pen signature; black suits official forms."),
+                ("Download the PNG", "A transparent image you can insert into Word, Google Docs, an email signature or a PDF."),
+            ],
+            "faqs": [
+                ("What can I do with the signature image?", "Insert it into a Word or Google Docs document, add it to an email signature, upload it to a site that asks for a signature image, or place it on a PDF. To sign a PDF directly, Sign PDF does it in one step."),
+                ("Is this a legally binding digital signature?", "It's a picture of your signature, like a scanned one, which is accepted for many everyday documents. Some documents require a certified digital signature with an identity certificate; check with whoever asked you to sign."),
+                ("Is my signature uploaded or stored?", "No. It's created in your browser and downloaded straight to your device. Nothing is sent to our server."),
+                ("Can I type my name in Hebrew?", "Yes. Each style has a matching Hebrew handwriting font, and mixed Hebrew and English names work too."),
+                ("Is it free?", "Yes, with no sign-up and no limit."),
+            ],
+            "related": ["sign-pdf", "jpg-to-pdf", "word-to-pdf"],
+        },
+        "he": {
+            "name": "יצירת חתימה דיגיטלית",
+            "title": "יצירת חתימה דיגיטלית בחינם – חתימה כתמונה עם רקע שקוף | PDFPro",
+            "desc": "יוצרים חתימה דיגיטלית: מציירים עם העכבר או האצבע, או מקלידים שם בכתב יד, ומורידים כתמונת PNG עם רקע שקוף ל-Word, למייל ולטפסים. בחינם, בלי הרשמה.",
+            "h1": "יצירת חתימה דיגיטלית",
+            "lead": "מציירים את החתימה עם העכבר או עם האצבע, או מקלידים שם ובוחרים סגנון כתב יד. מורידים אותה כתמונה עם רקע שקוף ומדביקים בכל מקום שצריך לחתום.",
+            "run": "הורדה",
+            "steps": [
+                ("מציירים או מקלידים", "מציירים בתיבה, או עוברים להקלדה, כותבים את השם ובוחרים סגנון."),
+                ("בוחרים צבע", "כחול נראה כמו חתימה בעט, שחור מתאים לטפסים רשמיים."),
+                ("מורידים את ה-PNG", "תמונה עם רקע שקוף שאפשר להכניס ל-Word, ל-Google Docs, לחתימת מייל או ל-PDF."),
+            ],
+            "faqs": [
+                ("מה עושים עם תמונת החתימה?", "מכניסים אותה למסמך Word או Google Docs, מוסיפים לחתימת המייל, מעלים לאתר שמבקש תמונת חתימה, או מוסיפים ל-PDF. כדי לחתום ישירות על PDF, חתימה על PDF עושה את זה בצעד אחד."),
+                ("זו חתימה דיגיטלית מחייבת?", "זו תמונה של החתימה שלכם, כמו חתימה סרוקה, והיא מתקבלת בהרבה מסמכים יומיומיים. יש מסמכים שדורשים חתימה דיגיטלית מאושרת עם תעודה מזהה, אז כדאי לבדוק עם מי שביקש את החתימה."),
+                ("החתימה נשלחת או נשמרת איפשהו?", "לא. היא נוצרת בדפדפן שלכם ויורדת ישר למכשיר. שום דבר לא נשלח לשרת שלנו."),
+                ("אפשר להקליד שם בעברית?", "כן. לכל סגנון יש גופן כתב יד מתאים בעברית, וגם שם שמשלב עברית ואנגלית עובד."),
+                ("זה בחינם?", "כן, בלי הרשמה ובלי הגבלה."),
+            ],
+            "related": ["sign-pdf", "jpg-to-pdf", "word-to-pdf"],
+        },
+    },
+    {
         "slug": "sign-pdf", "limit": 20,
         "api": {"endpoint": "/api/edit/sign", "field": "file", "multi": False, "accept": ".pdf", "result": "file"},
         "options": [
@@ -1261,7 +1321,7 @@ TOOLS = [
                 ("Can I draw my own signature?", "Yes. Draw it in the box with a mouse, a trackpad or your finger on a phone. It's added to the PDF as you drew it, without a frame."),
                 ("Is my drawn signature saved anywhere?", "No. It's sent only with the file you're signing and deleted from the server with it after an hour."),
             ],
-            "related": ["protect-pdf", "watermark-pdf", "compress-pdf"],
+            "related": ["create-signature", "protect-pdf", "watermark-pdf", "compress-pdf"],
         },
         "he": {
             "name": "חתימה על PDF",
@@ -1283,7 +1343,7 @@ TOOLS = [
                 ("אפשר לצייר חתימה משלי?", "כן. מציירים בתיבה עם העכבר, עם משטח המגע או עם האצבע בטלפון. החתימה נכנסת ל-PDF בדיוק כמו שציירתם, בלי מסגרת."),
                 ("החתימה שציירתי נשמרת איפשהו?", "לא. היא נשלחת רק עם הקובץ שאתם חותמים עליו, ונמחקת מהשרת יחד איתו אחרי שעה."),
             ],
-            "related": ["protect-pdf", "watermark-pdf", "compress-pdf"],
+            "related": ["create-signature", "protect-pdf", "watermark-pdf", "compress-pdf"],
         },
     },
     {
@@ -2084,7 +2144,44 @@ def tool_intro(slug: str, lang: str, d: dict) -> str:
     return f.read_text(encoding="utf-8") if f.exists() else d.get("intro", "")
 
 
+def signature_maker_html(tool: dict, lang: str) -> str:
+    """Browser-only tool: draw or type a signature, download a transparent PNG (assets/sigmaker.js)."""
+    s, d = tool["ui"][lang], tool[lang]
+    styles = "".join(
+        f'<button type="button" class="sm-style" data-font="{f}" aria-pressed="{str(i == 0).lower()}" style="font-family:{f},cursive"><span></span></button>'
+        for i, f in enumerate(("SigA", "SigB", "SigC")))
+    return f"""<section class="tool" aria-label="{esc(d['name'])}">
+  <div class="sm sig" id="sm" data-mode="draw" data-need-draw="{esc(s['need_draw'])}" data-need-text="{esc(s['need_text'])}" data-done="{esc(s['done'])}" data-filename="{esc(s['filename'])}">
+    <div class="sig-tabs" role="group" aria-label="{esc(d['name'])}">
+      <button type="button" data-mode="draw" aria-pressed="true">{esc(s['draw'])}</button>
+      <button type="button" data-mode="type" aria-pressed="false">{esc(s['type'])}</button>
+    </div>
+    <div class="sig-draw">
+      <canvas id="sm-canvas" aria-label="{esc(s['pad'])}"></canvas>
+      <span class="sig-hint" aria-hidden="true">{esc(s['pad'])}</span>
+      <button type="button" class="link-btn sig-clear" id="sm-clear">{esc(s['clear'])}</button>
+    </div>
+    <div class="sm-type" hidden>
+      <label for="sm-name">{esc(s['name_label'])}</label>
+      <input id="sm-name" type="text" dir="auto" autocomplete="name" placeholder="{esc(s['placeholder'])}">
+      <span class="sm-row-label" style="margin-top:.75rem">{esc(s['style'])}</span>
+      <div class="sm-styles" role="group">{styles}</div>
+    </div>
+    <div class="sm-colors" role="group" aria-label="{esc(s['color'])}">
+      <span class="sm-row-label" style="margin:0">{esc(s['color'])}</span>
+      <button type="button" class="sm-color" data-color="#0b1f66" aria-pressed="true" aria-label="{esc(s['blue'])}" style="background:#0b1f66"></button>
+      <button type="button" class="sm-color" data-color="#111111" aria-pressed="false" aria-label="{esc(s['black'])}" style="background:#111111"></button>
+    </div>
+    <div class="tool-actions"><button type="button" class="cta" id="sm-download">{esc(s['download'])}</button></div>
+    <p class="sm-status" id="sm-status" role="status" aria-live="polite"></p>
+  </div>
+  <p class="tool-note">{esc(s['note'])}</p>
+</section>"""
+
+
 def build_tool(tool: dict, lang: str) -> str:
+    if tool.get("widget"):
+        return build_widget_tool(tool, lang)
     d, u, api = tool[lang], UI[lang], tool["api"]
     slug = tool["slug"]
     crumbs_html, crumbs_ld = breadcrumb(lang, [(u["home"], url(lang)), (d["name"], None)])
@@ -2166,6 +2263,49 @@ def build_tool(tool: dict, lang: str) -> str:
                f'<script src="{asset("tool.js")}"></script>')
     # keyboard: Enter/Space on the dropzone opens the file picker
     scripts += "\n<script>document.getElementById('tool-dropzone').addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();document.getElementById('tool-input').click();}});</script>"
+    return page(lang=lang, slug=slug, title=d["title"], desc=d["desc"], body=body,
+                active="tools", schema=schema, scripts=scripts)
+
+
+def build_widget_tool(tool: dict, lang: str) -> str:
+    d, u, slug = tool[lang], UI[lang], tool["slug"]
+    crumbs_html, crumbs_ld = breadcrumb(lang, [(u["home"], url(lang)), (d["name"], None)])
+    steps = "".join(f"<li><h3>{esc(a)}</h3><p>{esc(b)}</p></li>" for a, b in d["steps"])
+    faqs = "".join(f"<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>" for q, a in d["faqs"])
+    related = "".join(f'<li><a href="{url(lang, r)}">{esc(TOOL_BY_SLUG[r][lang]["name"])}</a></li>' for r in d["related"])
+    guides = [a for a in ARTICLES if a["tool"] == slug or slug in a.get("also", [])]
+    guides_html = ""
+    if guides:
+        cards = "".join(
+            f'<a class="blog-card" href="{url(lang, "blog/" + a["slug"])}"><h3 style="margin:0 0 .3rem">{esc(a[lang]["title"])}</h3><p>{esc(a[lang]["desc"])}</p></a>'
+            for a in guides)
+        guides_html = f'<h2>{u["guides"]}</h2>{cards}'
+    widget = {"signature-maker": signature_maker_html}[tool["widget"]](tool, lang)
+    body = f"""<div class="container">
+  {crumbs_html}
+  <h1>{esc(d['h1'])}</h1>
+  <p class="lead">{esc(d['lead'])}</p>
+  {widget}
+  <section class="prose">
+    {tool_intro(slug, lang, d)}
+    <h2>{u['how']}</h2>
+    <ol class="steps">{steps}</ol>
+    <h2>{u['faq']}</h2>
+    {faqs}
+    {guides_html}
+    <h2>{u['related']}</h2>
+    <ul class="chip-row">{related}</ul>
+  </section>
+</div>"""
+    schema = [
+        {"@type": "WebApplication", "name": f"PDFPro {d['name']}", "url": abs_url(lang, slug),
+         "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "inLanguage": lang,
+         "description": d["desc"], "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}},
+        {"@type": "FAQPage", "mainEntity": [
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in d["faqs"]]},
+        crumbs_ld,
+    ]
+    scripts = f'<script src="{asset(tool["script"])}"></script>'
     return page(lang=lang, slug=slug, title=d["title"], desc=d["desc"], body=body,
                 active="tools", schema=schema, scripts=scripts)
 

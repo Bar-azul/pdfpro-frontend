@@ -123,6 +123,10 @@
   "hash": "41a225f508cfa0f504eb74a904da22e7",
   "lastmod": "2026-10-17"
  },
+ "/create-signature/": {
+  "hash": "aec32f409190928e0a2560afa7bb86f6",
+  "lastmod": "2026-11-06"
+ },
  "/he/": {
   "hash": "bec1d6ecca7b041e30b24b951d7548e5",
   "lastmod": "2026-10-20"
@@ -247,6 +251,10 @@
   "hash": "e49d56020d0afa4585c19663b01bfc72",
   "lastmod": "2026-10-17"
  },
+ "/he/create-signature/": {
+  "hash": "bcdf93aa4e64463292a3fc4aeb62de50",
+  "lastmod": "2026-11-06"
+ },
  "/he/help/": {
   "hash": "5c267b7f68193adb65488f9163156607",
   "lastmod": "2026-10-17"
@@ -300,7 +308,7 @@
   "lastmod": "2026-10-17"
  },
  "/he/sign-pdf/": {
-  "hash": "ddd136d4e439e3610b7fb99741606255",
+  "hash": "e60bb9f7b691ba32281f45cc066440ff",
   "lastmod": "2026-11-06"
  },
  "/he/split-pdf/": {
@@ -400,8 +408,8 @@
   "lastmod": "2026-10-17"
  },
  "/sign-pdf/": {
-  "hash": "a8516c10b6a15420ef4ffaf60cedc9d8",
-  "lastmod": "2026-10-23"
+  "hash": "d1b0dacd0d28cdf28db45b1cffa4a6d4",
+  "lastmod": "2026-11-06"
  },
  "/split-pdf/": {
   "hash": "fc4b270c008b5d8e21f8834da2863d5a",
