@@ -34,6 +34,13 @@
       return name.endsWith(a);
     });
   }
+  // Analytics funnel: file_selected → tool_run → tool_done | tool_error → file_download
+  function track(name, params) {
+    if (!window.gtag) return;
+    var p = { tool: cfg.slug }; for (var k in params || {}) p[k] = params[k];
+    gtag('event', name, p);
+  }
+
   function setStatus(msg, kind) {
     status.textContent = msg || '';
     status.className = 'tool-status' + (kind ? ' ' + kind : '');
@@ -69,9 +76,11 @@
     var incoming = Array.prototype.slice.call(fileList);
     for (var i = 0; i < incoming.length; i++) {
       var f = incoming[i];
-      if (!extOk(f)) { setStatus(t.bad_type.replace('{name}', f.name), 'error'); continue; }
-      if (f.size > cfg.maxMB * 1024 * 1024) { setStatus(t.too_big.replace('{name}', f.name).replace('{max}', cfg.maxMB), 'error'); continue; }
+      var ext = (f.name.split('.').pop() || '').toLowerCase().slice(0, 8);
+      if (!extOk(f)) { setStatus(t.bad_type.replace('{name}', f.name), 'error'); track('file_rejected', { reason: 'type', file_type: ext }); continue; }
+      if (f.size > cfg.maxMB * 1024 * 1024) { setStatus(t.too_big.replace('{name}', f.name).replace('{max}', cfg.maxMB), 'error'); track('file_rejected', { reason: 'size', file_type: ext }); continue; }
       if (cfg.multi) files.push(f); else files = [f];
+      track('file_selected', { file_type: ext });
     }
     result.classList.remove('show');
     render();
@@ -115,7 +124,7 @@
     if (cfg.result === 'text' && typeof data.text === 'string') {
       var txt = data.text;
       var b = document.createElement('button'); b.type = 'button'; b.className = 'cta'; b.textContent = t.download_txt;
-      b.onclick = function () { saveBlob(new Blob([txt], { type: 'text/plain;charset=utf-8' }), 'ocr_result.txt'); };
+      b.onclick = function () { saveBlob(new Blob([txt], { type: 'text/plain;charset=utf-8' }), 'ocr_result.txt'); track('file_download'); };
       downloads.appendChild(b);
       if (txt.trim()) { preview.hidden = false; preview.textContent = txt.slice(0, 1500) + (txt.length > 1500 ? '…' : ''); }
       else { resultTitle.textContent = t.no_text; }
@@ -287,7 +296,8 @@
       if (finished) return;
       finished = true;
       clearInterval(poller); clearTimeout(slowTimer);
-      if (err) { setStatus(err, 'error'); hideProgress(); busy = false; render(); return; }
+      if (err) { setStatus(err, 'error'); hideProgress(); busy = false; render(); track('tool_error', { reason: errReason }); return; }
+      track('tool_done');
       setProgress(100, t.p_finishing);
       setTimeout(function () {
         hideProgress(); setStatus('');
@@ -300,17 +310,20 @@
         return new Promise(function (res, rej) { try { res(JSON.parse(xhr.responseText)); } catch (e) { rej(e); } });
       } };
     }
+    var errReason = '';
     xhr.onload = function () {
       if (xhr.status !== 429) clearLimit();
+      errReason = 'http_' + xhr.status;
       if (xhr.status >= 200 && xhr.status < 300) {
         var data; try { data = JSON.parse(xhr.responseText); } catch (e) { return done(t.generic_error); }
         done(null, data);
       } else {
+        try { var c = JSON.parse(xhr.responseText).code; if (c) errReason += ':' + String(c).slice(0, 30); } catch (e) {}
         errorFrom(respObj()).then(function (m) { done(m); });
       }
     };
-    xhr.onerror = function () { done(t.network); };
-    xhr.ontimeout = function () { done(t.timeout); };
+    xhr.onerror = function () { errReason = 'network'; done(t.network); };
+    xhr.ontimeout = function () { errReason = 'timeout'; done(t.timeout); };
     xhr.send(fd);
   });
 
