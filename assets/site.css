@@ -209,3 +209,9 @@ details p{margin:.8rem 0 0}
 .sm-status{min-height:1.2em;margin:0;font-size:.92rem;color:var(--muted)}
 #sm-name{width:100%;padding:.65rem .8rem;border:1px solid var(--border);border-radius:10px;font:inherit;font-size:1rem;background:white}
 .sm .sig-tabs{justify-self:start}
+
+/* extended-plan waitlist (shown after hitting a limit) */
+.wl-box{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-top:.75rem;padding:.9rem 1rem;border:1px dashed var(--border);border-radius:10px;font-size:.92rem;color:var(--text)}
+.wl-box p{flex-basis:100%;margin:0}
+.wl-box input{flex:1 1 200px;padding:.55rem .7rem;border:1px solid var(--border);border-radius:8px;font:inherit;background:white}
+.wl-box .wl-msg{color:var(--err);min-height:0}

@@ -82,6 +82,7 @@ UI = {
             "rate_limited": "Hourly limit reached for this tool. Try again in an hour.",
             "rate_limited_in": "You've used this tool's free hourly limit. It resets in {t} — you can keep using the other tools meanwhile.",
             "rate_limit_over": "The limit has reset. You can use this tool again.",
+            "wl_text": "Need more? Leave your email and we'll let you know when there's an extended plan: bigger files, longer recordings, no hourly limit.", "wl_placeholder": "your@email.com", "wl_button": "Let me know", "wl_thanks": "Thanks! We'll email you once, when it's ready.", "wl_bad_email": "Please enter a valid email address.",
             "timeout": "The server took too long to respond. Try again, or try a smaller file.",
             "network": "Couldn't reach the server. Check your connection and try again.",
             "generic_error": "Something went wrong while processing the file",
@@ -154,6 +155,7 @@ UI = {
             "rate_limited": "הגעתם למגבלה השעתית של הכלי. נסו שוב בעוד שעה.",
             "rate_limited_in": "ניצלתם את המכסה השעתית החינמית של הכלי. היא תתאפס בעוד {t}. בינתיים אפשר להמשיך להשתמש בשאר הכלים.",
             "rate_limit_over": "המכסה התאפסה. אפשר להשתמש בכלי שוב.",
+            "wl_text": "צריכים יותר? השאירו מייל ונעדכן כשיהיה מסלול מורחב: קבצים גדולים יותר, הקלטות ארוכות יותר ובלי הגבלה שעתית.", "wl_placeholder": "your@email.com", "wl_button": "עדכנו אותי", "wl_thanks": "תודה! נשלח מייל אחד, כשזה יהיה מוכן.", "wl_bad_email": "הקלידו כתובת מייל תקינה.",
             "timeout": "השרת לא הגיב בזמן. נסו שוב או נסו קובץ קטן יותר.",
             "network": "אין חיבור לשרת. בדקו את החיבור ונסו שוב.",
             "generic_error": "משהו השתבש בעיבוד הקובץ",
@@ -1595,6 +1597,12 @@ def _limits_table(lang: str) -> str:
     return f'<table class="limits">{head}{rows}</table>'
 
 
+# "Extended plan" waitlist, shown when someone hits a limit (hourly quota, file size,
+# recording length). Submissions go to a Google Form; leave "action" empty to turn it off.
+# action = https://docs.google.com/forms/d/e/<id>/formResponse ; the others are entry.<n> field names.
+WAITLIST_FORM = {"action": "", "email": "", "tool": "", "reason": "", "lang": ""}
+
+
 def site_stats() -> dict:
     """Numbers shown on the homepages and the About page, counted from TOOLS/ARTICLES."""
     langs = set()
@@ -1827,6 +1835,7 @@ def static_pages() -> dict:
 <p>You can opt out of personalized advertising in <a href="https://www.google.com/settings/ads" rel="nofollow">Google Ads Settings</a>, or opt out of some third-party vendors' use of cookies at <a href="https://www.aboutads.info/choices/" rel="nofollow">aboutads.info</a>. Learn more in <a href="https://policies.google.com/technologies/partner-sites" rel="nofollow">how Google uses information from sites that use its services</a>.</p>
 <h2>5. Other cookies and storage</h2>
 <p>We store your language preference in your browser. We don't use accounts, so there's no login data.</p>
+<p><strong>Extended-plan list:</strong> if you reach a usage limit you can choose to leave your email so we can tell you when an extended plan is available. We use it only for that, store it in a Google Form, never share or sell it, and delete it on request.</p>
 <h2>6. Service providers</h2>
 <p>The website is hosted on Vercel and files are processed on a server hosted by Render. Fonts are loaded from Google Fonts. Translation is done by Cloudflare's machine-translation service (Workers AI), which receives the text of the document being translated and nothing else. Transcription is done by Cloudflare's speech-recognition service (Workers AI, Whisper model), which receives the audio of the recording being transcribed and nothing else.</p>
 <h2>7. Children</h2>
@@ -1849,6 +1858,7 @@ def static_pages() -> dict:
 <p>אפשר לבטל פרסום מותאם אישית ב<a href="https://www.google.com/settings/ads" rel="nofollow">הגדרות המודעות של Google</a>, או לבטל שימוש בעוגיות של חלק מספקי הצד השלישי ב-<a href="https://www.aboutads.info/choices/" rel="nofollow">aboutads.info</a>. מידע נוסף: <a href="https://policies.google.com/technologies/partner-sites" rel="nofollow">איך Google משתמשת במידע מאתרים שמשתמשים בשירותים שלה</a>.</p>
 <h2>5. עוגיות ואחסון נוספים</h2>
 <p>אנחנו שומרים בדפדפן את העדפת השפה שלכם. אין באתר חשבונות משתמש, ולכן אין נתוני התחברות.</p>
+<p><strong>רשימת המסלול המורחב:</strong> כשמגיעים למגבלת שימוש אפשר לבחור להשאיר מייל, כדי שנעדכן כשיהיה מסלול מורחב. אנחנו משתמשים בו רק לזה, שומרים אותו בטופס של Google Forms, לא משתפים ולא מוכרים אותו, ומוחקים אותו לפי בקשה.</p>
 <h2>6. ספקי שירות</h2>
 <p>האתר מאוחסן ב-Vercel והקבצים מעובדים בשרת שמאוחסן ב-Render. הגופנים נטענים מ-Google Fonts. התרגום נעשה באמצעות שירות תרגום המכונה של Cloudflare ‏(Workers AI), שמקבל רק את טקסט המסמך המתורגם. התמלול נעשה באמצעות שירות זיהוי הדיבור של Cloudflare ‏(Workers AI, מודל Whisper), שמקבל רק את האודיו של ההקלטה שמתמללים.</p>
 <h2>7. ילדים</h2>
@@ -1900,7 +1910,7 @@ def static_pages() -> dict:
         },
     }
 
-PRIVACY_UPDATED = "October 17, 2026"
+PRIVACY_UPDATED = "November 14, 2026"
 BLOG_META = {
     "en": {"title": "PDF Guides and Tips | PDFPro Blog", "h1": "Guides",
            "desc": "Practical guides for working with PDF files: compression, conversion, Hebrew and RTL text, signatures and more.",
@@ -2209,7 +2219,8 @@ def build_tool(tool: dict, lang: str) -> str:
     js_cfg = {"slug": slug, "name": d["name"], "endpoint": api["endpoint"], "field": api["field"], "multi": api["multi"],
               "minFiles": api.get("minFiles", 1), "accept": api["accept"], "result": api["result"],
               "maxMB": MAX_MB, "t": u["js"], "errors": d.get("errors", {}),
-              "timeoutSec": tool.get("timeout", 180)}
+              "timeoutSec": tool.get("timeout", 180), "lang": lang,
+              "waitlist": WAITLIST_FORM if WAITLIST_FORM["action"] else None}
 
     body = f"""<div class="container">
   {crumbs_html}
