@@ -78,7 +78,7 @@
       var f = incoming[i];
       var ext = (f.name.split('.').pop() || '').toLowerCase().slice(0, 8);
       if (!extOk(f)) { setStatus(t.bad_type.replace('{name}', f.name), 'error'); track('file_rejected', { reason: 'type', file_type: ext }); continue; }
-      if (f.size > cfg.maxMB * 1024 * 1024) { setStatus(t.too_big.replace('{name}', f.name).replace('{max}', cfg.maxMB), 'error'); track('file_rejected', { reason: 'size', file_type: ext }); continue; }
+      if (f.size > cfg.maxMB * 1024 * 1024) { setStatus(t.too_big.replace('{name}', f.name).replace('{max}', cfg.maxMB), 'error'); track('file_rejected', { reason: 'size', file_type: ext }); offerWaitlist('file_size'); continue; }
       if (cfg.multi) files.push(f); else files = [f];
       track('file_selected', { file_type: ext });
     }
@@ -209,11 +209,44 @@
     return box;
   }
 
+  // invite people who hit a limit to an "extended plan" waitlist (demand test, no payments)
+  var WL_KEY = 'pdfpro_waitlist';
+  function offerWaitlist(reason) {
+    var wl = cfg.waitlist;
+    if (!wl || document.getElementById('wl-box')) return;
+    try { if (localStorage.getItem(WL_KEY)) return; } catch (e) {}
+    var box = document.createElement('form'); box.id = 'wl-box'; box.className = 'wl-box'; box.noValidate = true;
+    var p = document.createElement('p'); p.textContent = t.wl_text;
+    var input = document.createElement('input'); input.type = 'email'; input.required = true;
+    input.placeholder = t.wl_placeholder; input.autocomplete = 'email'; input.dir = 'ltr';
+    input.setAttribute('aria-label', t.wl_placeholder);
+    var btn = document.createElement('button'); btn.type = 'submit'; btn.className = 'share-btn'; btn.textContent = t.wl_button;
+    var msg = document.createElement('p'); msg.className = 'wl-msg'; msg.setAttribute('role', 'status');
+    box.appendChild(p); box.appendChild(input); box.appendChild(btn); box.appendChild(msg);
+    box.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var email = input.value.trim();
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { msg.textContent = t.wl_bad_email; input.focus(); return; }
+      var fd = new URLSearchParams();
+      fd.append(wl.email, email); fd.append(wl.tool, cfg.slug); fd.append(wl.reason, reason); fd.append(wl.lang, cfg.lang || '');
+      btn.disabled = true;
+      fetch(wl.action, { method: 'POST', mode: 'no-cors', body: fd }).catch(function () {}).then(function () {
+        try { localStorage.setItem(WL_KEY, '1'); } catch (e) {}
+        box.innerHTML = ''; var ok = document.createElement('p'); ok.textContent = t.wl_thanks; box.appendChild(ok);
+        track('waitlist_signup', { reason: reason });
+      });
+    });
+    var anchor = document.getElementById('tool-status');
+    anchor.parentNode.insertBefore(box, anchor.nextSibling);
+    track('waitlist_shown', { reason: reason });
+  }
+
   function errorFrom(resp) {
     if (cfg.errors && cfg.errors[resp.status]) return Promise.resolve(cfg.errors[resp.status]);
     if (resp.status === 429) {
       return resp.json().then(function (j) {
         var sec = j && +j.retry_after;
+        track('limit_reached', { reason: 'hourly' });
         if (!(sec > 0)) return t.rate_limited;
         var until = Date.now() + sec * 1000;
         try { localStorage.setItem(LIMIT_KEY, String(until)); } catch (e) {}
@@ -296,7 +329,10 @@
       if (finished) return;
       finished = true;
       clearInterval(poller); clearTimeout(slowTimer);
-      if (err) { setStatus(err, 'error'); hideProgress(); busy = false; render(); track('tool_error', { reason: errReason }); return; }
+      if (err) { setStatus(err, 'error'); hideProgress(); busy = false; render(); track('tool_error', { reason: errReason });
+        var lim = /429|audio_too_long|too_many_files|file_too_large|daily_quota/.exec(errReason);
+        if (lim) offerWaitlist(lim[0] === '429' ? 'hourly' : lim[0]);
+        return; }
       track('tool_done');
       setProgress(100, t.p_finishing);
       setTimeout(function () {
