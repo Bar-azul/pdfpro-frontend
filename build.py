@@ -2027,8 +2027,12 @@ ICON_LINKS = """<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
+<link rel="manifest" href="{manifest}">
 <meta name="theme-color" content="#0D1B2A">"""
+
+
+def icon_links(lang: str) -> str:
+    return ICON_LINKS.replace("{manifest}", "/he/site.webmanifest" if lang == "he" else "/site.webmanifest")
 
 
 def og_image(lang: str, slug: str) -> str:
@@ -2040,9 +2044,10 @@ def og_image(lang: str, slug: str) -> str:
 
 
 def page(*, lang: str, slug: str, title: str, desc: str, body: str, active: str = "",
-         schema: list | None = None, og_type: str = "website", scripts: str = "") -> str:
+         schema: list | None = None, og_type: str = "website", scripts: str = "", noindex: bool = False) -> str:
     """slug: path without language prefix and without slashes ('' for home, 'blog/x' for articles)."""
     canonical = abs_url(lang, slug)
+    robots = '\n<meta name="robots" content="noindex">' if noindex else ""
     graph = {"@context": "https://schema.org", "@graph": schema or []}
     return f"""<!DOCTYPE html>
 <html lang="{lang}" dir="{'rtl' if lang == 'he' else 'ltr'}">
@@ -2052,7 +2057,7 @@ def page(*, lang: str, slug: str, title: str, desc: str, body: str, active: str 
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{canonical}">
-{ICON_LINKS}
+{icon_links(lang)}{robots}
 <link rel="alternate" hreflang="en" href="{abs_url('en', slug)}">
 <link rel="alternate" hreflang="he" href="{abs_url('he', slug)}">
 <link rel="alternate" hreflang="x-default" href="{abs_url('en', slug)}">
@@ -2272,6 +2277,7 @@ def build_tool(tool: dict, lang: str) -> str:
         crumbs_ld,
     ]
     extra_js = f'<script src="{asset(tool["script"])}"></script>\n' if tool.get("script") else ""
+    extra_js += f'<script src="{asset("shared-files.js")}"></script>\n'
     scripts = extra_js + (f"<script>window.TOOL={json.dumps(js_cfg, ensure_ascii=False)};</script>\n"
                f'<script src="{asset("tool.js")}"></script>')
     # keyboard: Enter/Space on the dropzone opens the file picker
@@ -2382,6 +2388,90 @@ def build_article(art: dict, lang: str) -> str:
 MANIFEST = ROOT / ".build-manifest.json"
 
 
+# ════════════════════════════════════════════════════════════════════════════
+# INSTALLABLE APP (PWA): manifests + share target page
+# A file shared to the installed app is POSTed to /share/ (/he/share/), stored by
+# /sw.js and offered to the matching tools. The share page is noindex and not in
+# the sitemap.
+# ════════════════════════════════════════════════════════════════════════════
+SHARE_PRIORITY = ["pdf-to-word", "compress-pdf", "merge-pdf", "sign-pdf", "translate-pdf", "split-pdf",
+                  "pdf-to-jpg", "ocr-pdf", "pdf-to-excel", "jpg-to-pdf", "word-to-pdf", "transcribe-audio",
+                  "protect-pdf", "unlock-pdf", "rotate-pdf", "redact-pdf", "watermark-pdf", "pdf-to-powerpoint"]
+SHARE_ACCEPT = ["application/pdf", ".pdf", "image/jpeg", "image/png", "image/webp", ".jpg", ".jpeg", ".png", ".webp",
+                "audio/*", "video/mp4", ".mp3", ".m4a", ".ogg", ".opus", ".wav", ".aac", ".amr", ".mp4",
+                "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                "application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                "application/vnd.ms-powerpoint", "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx"]
+SHARE_UI = {
+    "en": {"title": "Open with PDFPro", "h1": "What should we do with this file?",
+           "loading": "Loading the shared file…",
+           "pick": "Pick a tool. The file will be loaded into it, ready to run.",
+           "pick_multi": "Pick a tool. The files will be loaded into it, ready to run.",
+           "empty": "No shared file was found. Share the file to PDFPro again, or open a tool and choose it there.",
+           "unsupported": "None of our tools accepts this type of file yet.",
+           "all": "See all tools"},
+    "he": {"title": "פתיחה ב-PDFPro", "h1": "מה לעשות עם הקובץ?",
+           "loading": "טוען את הקובץ ששיתפתם…",
+           "pick": "בחרו כלי. הקובץ ייטען אליו ויהיה מוכן להפעלה.",
+           "pick_multi": "בחרו כלי. הקבצים ייטענו אליו ויהיו מוכנים להפעלה.",
+           "empty": "לא נמצא קובץ משותף. שתפו שוב ל-PDFPro, או פתחו כלי ובחרו את הקובץ שם.",
+           "unsupported": "אף אחד מהכלים שלנו עדיין לא מקבל קובץ מהסוג הזה.",
+           "all": "לכל הכלים"},
+}
+
+
+def web_manifest(lang: str) -> str:
+    he = lang == "he"
+    m = {
+        "id": "/he/" if he else "/",
+        "name": "PDFPro – כלי PDF בעברית" if he else "PDFPro – Free PDF Tools",
+        "short_name": "PDFPro",
+        "description": ("המרה, איחוד, דחיסה, חתימה ותרגום של PDF, בחינם ובלי טקסט הפוך." if he else
+                        "Convert, merge, compress, sign and translate PDFs for free. Hebrew-friendly."),
+        "lang": lang, "dir": "rtl" if he else "ltr",
+        "start_url": "/he/" if he else "/", "scope": "/",
+        "display": "standalone",
+        "theme_color": "#0D1B2A", "background_color": "#F8F5F0",
+        "categories": ["productivity", "utilities", "business"],
+        "icons": [
+            {"src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+            {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+            {"src": "/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable"},
+            {"src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
+        ],
+        "shortcuts": [
+            {"name": TOOL_BY_SLUG[s][lang]["name"], "url": url(lang, s)}
+            for s in ("pdf-to-word", "merge-pdf", "compress-pdf", "sign-pdf")
+        ],
+        "share_target": {
+            "action": url(lang, "share"), "method": "POST", "enctype": "multipart/form-data",
+            "params": {"files": [{"name": "files", "accept": SHARE_ACCEPT}]},
+        },
+    }
+    return json.dumps(m, ensure_ascii=False, indent=1) + "\n"
+
+
+def build_share(lang: str) -> str:
+    t = SHARE_UI[lang]
+    tools = [{"slug": s, "name": TOOL_BY_SLUG[s][lang]["name"], "url": url(lang, s),
+              "accept": TOOL_BY_SLUG[s]["api"]["accept"], "multi": TOOL_BY_SLUG[s]["api"]["multi"]}
+             for s in SHARE_PRIORITY]
+    body = f"""<div class="container narrow share-page">
+<h1>{esc(t['h1'])}</h1>
+<ul class="share-files" id="share-files"></ul>
+<p class="share-status" id="share-status" role="status">{esc(t['loading'])}</p>
+<div class="share-tools" id="share-tools"></div>
+<p id="share-all" hidden><a class="share-tool" href="{url(lang, 'tools')}">{esc(t['all'])}</a></p>
+</div>"""
+    cfg = {"tools": tools, "t": {k: t[k] for k in ("pick", "pick_multi", "empty", "unsupported")}}
+    scripts = (f'<script src="{asset("shared-files.js")}"></script>\n'
+               f"<script>window.SHARE={json.dumps(cfg, ensure_ascii=False)};</script>\n"
+               f'<script src="{asset("share.js")}"></script>')
+    return page(lang=lang, slug="share", title=t["title"], desc=t["title"], body=body,
+                scripts=scripts, noindex=True)
+
+
 def main() -> None:
     sync_home_stats()
     manifest = json.loads(MANIFEST.read_text()) if MANIFEST.exists() else {}
@@ -2397,13 +2487,22 @@ def main() -> None:
         for art in ARTICLES:
             outputs[url(lang, "blog/" + art["slug"])] = build_article(art, lang)
 
+    # app files: not part of the sitemap
+    for lang in LANGS:
+        f = ROOT / url(lang, "share").strip("/") / "index.html"
+        f.parent.mkdir(parents=True, exist_ok=True)
+        f.write_text(build_share(lang), encoding="utf-8")
+        (ROOT / url(lang).strip("/") / "site.webmanifest").write_text(web_manifest(lang), encoding="utf-8")
+
     written = 0
     for path, html_doc in outputs.items():
         f = ROOT / path.strip("/") / "index.html"
         f.parent.mkdir(parents=True, exist_ok=True)
         # lastmod only moves when the page content (ignoring asset hashes) changes
         # ignore asset hashes and tracking IDs: changing them is not a content update
-        stable = re.sub(r"\?v=[0-9a-f]{8}|G-[A-Z0-9]{6,12}", "", html_doc)
+        # ...and app plumbing that is not page content (manifest path, shared-file loader)
+        stable = re.sub(r"\?v=[0-9a-f]{8}|G-[A-Z0-9]{6,12}|<script src=\"/assets/shared-files\.js[^>]*></script>\n", "", html_doc)
+        stable = stable.replace('href="/he/site.webmanifest"', 'href="/site.webmanifest"')
         h = hashlib.md5(stable.encode()).hexdigest()
         if manifest.get(path, {}).get("hash") != h:
             manifest[path] = {"hash": h, "lastmod": today}

@@ -1,11 +1,107 @@
 {
-  "name": "PDFPro",
-  "short_name": "PDFPro",
-  "icons": [
-    {"src": "/icon-192.png", "sizes": "192x192", "type": "image/png"},
-    {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png"}
-  ],
-  "theme_color": "#0D1B2A",
-  "background_color": "#F8F5F0",
-  "display": "browser"
+ "id": "/",
+ "name": "PDFPro – Free PDF Tools",
+ "short_name": "PDFPro",
+ "description": "Convert, merge, compress, sign and translate PDFs for free. Hebrew-friendly.",
+ "lang": "en",
+ "dir": "ltr",
+ "start_url": "/",
+ "scope": "/",
+ "display": "standalone",
+ "theme_color": "#0D1B2A",
+ "background_color": "#F8F5F0",
+ "categories": [
+  "productivity",
+  "utilities",
+  "business"
+ ],
+ "icons": [
+  {
+   "src": "/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "/icon-maskable-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "maskable"
+  },
+  {
+   "src": "/icon-maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ],
+ "shortcuts": [
+  {
+   "name": "PDF to Word",
+   "url": "/pdf-to-word/"
+  },
+  {
+   "name": "Merge PDF",
+   "url": "/merge-pdf/"
+  },
+  {
+   "name": "Compress PDF",
+   "url": "/compress-pdf/"
+  },
+  {
+   "name": "Sign PDF",
+   "url": "/sign-pdf/"
+  }
+ ],
+ "share_target": {
+  "action": "/share/",
+  "method": "POST",
+  "enctype": "multipart/form-data",
+  "params": {
+   "files": [
+    {
+     "name": "files",
+     "accept": [
+      "application/pdf",
+      ".pdf",
+      "image/jpeg",
+      "image/png",
+      "image/webp",
+      ".jpg",
+      ".jpeg",
+      ".png",
+      ".webp",
+      "audio/*",
+      "video/mp4",
+      ".mp3",
+      ".m4a",
+      ".ogg",
+      ".opus",
+      ".wav",
+      ".aac",
+      ".amr",
+      ".mp4",
+      "application/msword",
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "application/vnd.ms-excel",
+      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "application/vnd.ms-powerpoint",
+      "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      ".doc",
+      ".docx",
+      ".xls",
+      ".xlsx",
+      ".ppt",
+      ".pptx"
+     ]
+    }
+   ]
+  }
+ }
 }

@@ -215,3 +215,12 @@ details p{margin:.8rem 0 0}
 .wl-box p{flex-basis:100%;margin:0}
 .wl-box input{flex:1 1 200px;padding:.55rem .7rem;border:1px solid var(--border);border-radius:8px;font:inherit;background:white}
 .wl-box .wl-msg{color:var(--err);min-height:0}
+
+/* ── SHARE TARGET (installed app) ── */
+.share-page{padding-top:2rem;padding-bottom:3rem}
+.share-files{list-style:none;padding:0;margin:1rem 0;display:grid;gap:.4rem}
+.share-files li{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:.6rem .9rem;font-weight:600;overflow-wrap:anywhere}
+.share-status{color:var(--muted);margin:.5rem 0 1rem}
+.share-tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:.6rem}
+.share-tool{display:block;background:var(--white);border:1px solid var(--border);border-radius:10px;padding:.85rem 1rem;font-weight:700;color:var(--navy);text-decoration:none}
+.share-tool:hover,.share-tool:focus-visible{border-color:var(--red);color:var(--red-dark)}
