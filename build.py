@@ -97,6 +97,7 @@ UI = {
                 "wrong_password": "Wrong password. Check it and try again.",
                 "merge_need_two": "Add at least one more PDF to merge.",
                 "too_many_files": "You can merge up to 20 files at a time.",
+                "scan_too_long": "This is a scanned document longer than 30 pages. Split it into shorter parts and convert each one.",
                 "split_bad_range": "Check the page ranges. Use numbers like 1-3, 5, 8-10.",
                 "split_out_of_range": "One of the pages you entered doesn't exist in this PDF.",
                 "no_text": "This PDF has no selectable text (it looks like a scan). Run it through OCR first, then convert.",
@@ -170,6 +171,7 @@ UI = {
                 "wrong_password": "הסיסמה שגויה. בדקו אותה ונסו שוב.",
                 "merge_need_two": "הוסיפו לפחות עוד PDF אחד למיזוג.",
                 "too_many_files": "אפשר למזג עד 20 קבצים בכל פעם.",
+                "scan_too_long": "זה מסמך סרוק של יותר מ-30 עמודים. פצלו אותו לחלקים קצרים יותר והמירו כל חלק.",
                 "split_bad_range": "בדקו את טווחי העמודים. כותבים מספרים כמו 1-3, 5, 8-10.",
                 "split_out_of_range": "אחד העמודים שהזנתם לא קיים ב-PDF הזה.",
                 "no_text": "אין ב-PDF טקסט שאפשר לבחור (נראה שזו סריקה). העבירו אותו קודם ב-OCR ואז המירו.",
@@ -194,7 +196,7 @@ UI = {
 # ════════════════════════════════════════════════════════════════════════════
 TOOLS = [
     {
-        "slug": "pdf-to-word", "limit": 20,
+        "slug": "pdf-to-word", "limit": 20, "timeout": 330,
         "api": {"endpoint": "/api/convert/pdf-to-word", "field": "file", "multi": False, "accept": ".pdf", "result": "file"},
         "options": [],
         "en": {
@@ -213,7 +215,7 @@ TOOLS = [
                 ("Is it free?", "Yes. There's no sign-up and no watermark. Each tool has an hourly limit to keep the service available for everyone."),
                 ("Will the formatting be kept?", "Text, fonts, tables and images are kept as closely as possible. Very complex layouts, like magazines with overlapping elements, may need small fixes afterwards."),
                 ("Does it work with Hebrew PDFs?", "Yes. Right-to-left text is detected so Hebrew words and sentences don't come out reversed. Mixed Hebrew and English paragraphs keep their order."),
-                ("Can I convert a scanned PDF?", "A scanned PDF is an image of text, so there's nothing to convert directly. Use the OCR tool and choose Word as the output format instead."),
+                ("Can I convert a scanned PDF?", "Yes. When the pages are scans, the text is read with OCR (Hebrew and English) and the Word file is built from it, so you get editable text rather than pictures of pages. The layout is simpler than the original, and it works on scans of up to 30 pages; check names and numbers, since OCR can misread a letter."),
                 ("What's the maximum file size?", f"Up to {MAX_MB} MB per file."),
             ],
             "related": ["ocr-pdf", "pdf-to-excel", "compress-pdf"],
@@ -234,7 +236,7 @@ TOOLS = [
                 ("זה באמת בחינם?", "כן. בלי הרשמה ובלי סימן מים. לכל כלי יש מגבלה שעתית כדי שהשירות יישאר זמין לכולם."),
                 ("העיצוב נשמר?", "טקסט, גופנים, טבלאות ותמונות נשמרים כמה שיותר קרוב למקור. פריסות מורכבות מאוד, כמו עיתון עם אלמנטים חופפים, עשויות לדרוש תיקונים קטנים."),
                 ("זה עובד עם PDF בעברית?", "כן. הכלי מזהה טקסט מימין לשמאל כך שמילים ומשפטים בעברית לא יוצאים הפוכים. פסקאות שמשלבות עברית ואנגלית שומרות על הסדר."),
-                ("אפשר להמיר PDF סרוק?", "PDF סרוק הוא בעצם תמונה של טקסט, ולכן אין מה להמיר ישירות. השתמשו בכלי ה-OCR ובחרו Word כפורמט הפלט."),
+                ("אפשר להמיר PDF סרוק?", "כן. כשהעמודים סרוקים, הטקסט מזוהה ב-OCR (עברית ואנגלית) וקובץ ה-Word נבנה ממנו, כך שמקבלים טקסט שאפשר לערוך ולא תמונות של עמודים. העיצוב פשוט יותר מהמקור, וזה עובד על סריקות של עד 30 עמודים. כדאי לבדוק שמות ומספרים, כי OCR יכול לטעות באות."),
                 ("מה גודל הקובץ המקסימלי?", f"עד {MAX_MB}MB לקובץ."),
             ],
             "related": ["ocr-pdf", "pdf-to-excel", "compress-pdf"],
