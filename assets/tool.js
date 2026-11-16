@@ -95,6 +95,14 @@
   });
   zone.addEventListener('drop', function (e) { if (e.dataTransfer && e.dataTransfer.files) addFiles(e.dataTransfer.files); });
 
+  // file(s) shared to the installed app (see /sw.js and the share page)
+  if (/[?&]shared=1/.test(location.search) && window.PDFProShared) {
+    window.PDFProShared.load().then(function (list) {
+      if (list.length) { addFiles(list); track('share_open', { files: list.length }); }
+      try { history.replaceState(null, '', location.pathname); } catch (e) {}
+    });
+  }
+
   function saveBlob(blob, filename) {
     var a = document.createElement('a');
     a.href = URL.createObjectURL(blob); a.download = filename;
